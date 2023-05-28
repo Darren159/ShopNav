@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "name": "Store 1",
+    "coordinates": [1, 1]
+  },
+  {
+    "id": 2,
+    "name": "Store 2",
+    "coordinates": [2, 2]
+  }
+]
