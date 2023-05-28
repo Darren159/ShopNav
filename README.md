@@ -1,28 +1,39 @@
 # ShopNav
-Orbital Project, Mr.Impatient
+
+## Team Name
+Mr Impatient
+
+## Problem Motivation
+
+Large shopping malls can be a confusing and time-consuming task. Shoppers often struggle to find specific stores or services, and they may miss out on new stores that match their interests. Furthermore, it might be a hassle to find a directory at the mall
 
 ## Development Plan
 
 We plan to start by developing the core features of the app: mall navigation and shop search. Once these features are stable, we will implement personalized recommendations. Throughout the development process, we will continue to refine the user interface and improve the accuracy of our recommendations.
 
-## Level of Achievement
-Apollo
+## Proposed Level of Achievement
 
-ShopNav is a mobile application that provides a  One-stop solution for efficient mall navigation and personalized shop recommendation.
+Apollo 11
 
 ## Description
 
+ShopNav is a mobile application that provides a  one-stop solution for efficient mall navigation and personalized shop recommendation.
+
 It simplifies the mall navigation experience by providing users with an interactive mall directory, a powerful shop search feature, and personalized shop recommendations. This application aims to streamline the shopping experience, save time, and introduce users to new stores that align with their preferences.
 
-## Problem Motivation
 
-Navigating large shopping malls can be a confusing and time-consuming task. Shoppers often struggle to find specific stores or services, and they may miss out on new stores that match their interests.
 
 ## Solution Description & Impact
 
-Our app provides a detailed, interactive directory of shopping malls, making it easy for users to find specific shops and services. Additionally, our personalized recommendation feature introduces users to shops they may be interested in, enhancing their shopping experience and potentially increasing foot traffic for stores. This solution makes shopping trips more efficient and enjoyable, benefiting both shoppers and stores.
+Our application aims to provide a **detailed and interactive directory** of shopping malls to show the overall layuout of the mall.
+
+Having a **search function** also makes it easier for users to find specific shops and services. 
+
+
+Additionally, our **personalized recommendation** feature introduces users to shops they may be interested in, enhancing their shopping experience and potentially increasing foot traffic for stores. This solution makes shopping trips more efficient and enjoyable, benefiting both shoppers and stores.
 
 ## Core Features & User Stories(UNSURE OF STORIES)
+
 1. **Mall Directory**: As a user, I want to be able to see the layout of the mall so that I know what are the stores available.
 2. **Mall Navigation**: As a user, I want to be able to navigate the mall efficiently so I can spend less time finding the stores I need.
 3. **Shop Search**: As a user, I want to search for specific stores so I can easily locate them in the mall.
@@ -36,7 +47,13 @@ Our app provides a detailed, interactive directory of shopping malls, making it 
 
 ## How the App Works
 
-When the user opens the app, they can select their current mall, search for stores, or view personalized recommendations. The interactive map guides them to their chosen store, and the personalized recommendations adapt based on the user's shopping history and preferences.
+When the user opens the app, they can select their current mall or malls that they are interested in. They can then look at the overall layout of the mall.
+
+They can use the navigation function, input the initial stall and destination stall, and the application will provide the shortest path from the initial store to the destination store.
+
+They can also search for a specific store that they are interested in. ShopNav will list out the details of the store like opening hours, location and promotions. It will also show the existing malls that have that store. 
+
+Users can also view their personalized recommendations. The application will have an accumulation of scores of different stores based on their shopping history and preferences, and then recommend a stall for them when queried.
 
 ## System Design
 
