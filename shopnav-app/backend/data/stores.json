@@ -1,12 +1,132 @@
 [
   {
-    "id": 1,
-    "name": "Store 1",
-    "coordinates": [1, 1]
+    "name": "Tim Ho Wan",
+    "x": 365,
+    "y": 40
   },
   {
-    "id": 2,
-    "name": "Store 2",
-    "coordinates": [2, 2]
+    "name": "ROYCE",
+    "x": 360,
+    "y": 90
+  },
+  {
+    "name": "Haagen Dazs",
+    "x": 363,
+    "y": 125
+  },
+  {
+    "name": "Laderach Chocolatier Suisse",
+    "x": 363,
+    "y": 155
+  },
+  {
+    "name": "Nasty Cookie",
+    "x": 365,
+    "y": 193
+  },
+  {
+    "name": "Fong Sheng Hao",
+    "x": 380,
+    "y": 255
+  },
+  {
+    "name": "playmade",
+    "x": 340,
+    "y": 290
+  },
+  {
+    "name": "Greendot",
+    "x": 378,
+    "y": 355
+  },
+  {
+    "name": "COLLIN'S",
+    "x": 370,
+    "y": 385
+  },
+  {
+    "name": "Brotzeit",
+    "x": 370,
+    "y": 450
+  },
+  {
+    "name": "Gochi-So Shokudo",
+    "x": 215,
+    "y": 460
+  },
+  {
+    "name": "Samsung Experience Store",
+    "x": 158,
+    "y": 475
+  },
+  {
+    "name": "Sephora",
+    "x": 278,
+    "y": 327
+  },
+  {
+    "name": "HEYTEA",
+    "x": 230,
+    "y": 330
+  },
+  {
+    "name": "Clarins",
+    "x": 215,
+    "y": 375
+  },
+  {
+    "name": "Sulwhasoo",
+    "x": 168,
+    "y": 375
+  },
+  {
+    "name": "HOOGA",
+    "x": 238,
+    "y": 275
+  },
+  {
+    "name": "Shake Shack",
+    "x": 285,
+    "y": 250
+  },
+  {
+    "name": "BLACK BY BLUE BRAVE",
+    "x": 285,
+    "y": 130
+  },
+  {
+    "name": "Garmin",
+    "x": 300,
+    "y": 130
+  },
+  {
+    "name": "SONY",
+    "x": 200,
+    "y": 145
+  },
+  {
+    "name": "ASICS",
+    "x": 190,
+    "y": 170
+  },
+  {
+    "name": "POP MART",
+    "x": 180,
+    "y": 186
+  },
+  {
+    "name": "MOBOT",
+    "x": 172,
+    "y": 210
+  },
+  {
+    "name": "QCD",
+    "x": 149,
+    "y": 241
+  },
+  {
+    "name": "Tommy Hilfiger",
+    "x": 120,
+    "y": 300
   }
 ]
