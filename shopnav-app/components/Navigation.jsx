@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View } from "react-native";
+import { View, StyleSheet } from "react-native";
 import { Button, TextInput } from "react-native-paper";
 import FloorPlan from "./FloorPlan";
 import db from "../firebaseConfig";
@@ -35,19 +35,37 @@ export default function Navigation() {
   };
 
   return (
-    <View>
-      <TextInput
-        label="Enter first store name"
-        value={store1}
-        onChangeText={setStore1}
-      />
-      <TextInput
-        label="Enter second store name"
-        value={store2}
-        onChangeText={setStore2}
-      />
-      <Button onPress={handleSubmit}>Find Route</Button>
-      <FloorPlan coords1={coords1} coords2={coords2} />
+    <View style={styles.container}>
+      <View style={styles.inputContainer}>
+        <TextInput
+          label="Enter first store name"
+          value={store1}
+          onChangeText={setStore1}
+        />
+        <TextInput
+          label="Enter second store name"
+          value={store2}
+          onChangeText={setStore2}
+        />
+        <Button onPress={handleSubmit}>Find Route</Button>
+      </View>
+      <View style={styles.mapContainer}>
+        <FloorPlan coords1={coords1} coords2={coords2} />
+      </View>
     </View>
   );
 }
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    flexDirection: "column",
+  },
+  inputContainer: {
+    padding: 10,
+  },
+  mapContainer: {
+    flex: 2,
+    justifyContent: "flex-start",
+    alignItems: "center",
+  },
+});
