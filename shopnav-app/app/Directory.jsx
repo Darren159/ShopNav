@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { SvgUri } from "react-native-svg";
 import { View, Dimensions } from "react-native";
 import SvgPanZoom from "react-native-svg-pan-zoom";
