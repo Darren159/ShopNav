@@ -50,6 +50,7 @@ export default function App() {
         </View>
       </View>
       <SvgPanZoom
+        key={svgUrl}
         canvasHeight={760}
         canvasWidth={800}
         minScale={0.5}
