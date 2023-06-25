@@ -1,15 +1,9 @@
 // Script to upload SVG data to Firestore
-const {
-  initializeApp,
-  applicationDefault,
-  cert,
-} = require("firebase-admin/app");
-const {
-  getFirestore,
-  Timestamp,
-  FieldValue,
-  Filter,
-} = require("firebase-admin/firestore");
+const { initializeApp, cert } = require("firebase-admin/app");
+const { getFirestore } = require("firebase-admin/firestore");
+const fs = require("fs");
+const util = require("util");
+const parseString = util.promisify(require("xml2js").parseString);
 
 const serviceAccount = require("./key.json");
 
@@ -19,38 +13,43 @@ initializeApp({
 
 const db = getFirestore();
 
-// Assume this is your SVG data in JSON format
-let svgData = {
-  svgElement1: {
-    id: "svgElement1",
-    data: {
-      type: "store",
-      name: "Store Name",
-      coordinates: { x: 10, y: 20 },
-    }, // Replace with actual SVG data
-  },
-  svgElement2: {
-    id: "svgElement2",
-    data: {
-      type: "store",
-      name: "Store Name",
-      coordinates: { x: 10, y: 20 },
-    },
-  }, // Replace with actual SVG data
-};
-// More SVG elements...;
+const mallName = process.argv[2];
+const svgFilePath = process.argv[3];
 
-//Input name of mall to save data to. This serves as the collection name
-const mallName = "Westgate";
+async function uploadSVGData(mallName, svgFilePath) {
+  const svgString = fs.readFileSync(svgFilePath, "utf-8");
+  const svgJSObject = await parseString(svgString);
 
-async function uploadSVGData() {
-  for (let element in svgData) {
-    let docRef = db.collection("Westgate").doc(svgData[element].id);
-    await docRef.set(svgData[element].data);
-    console.log(`Document ${svgData[element].id} uploaded successfully`);
-  }
+  svgJSObject.svg.g.forEach((layer) => {
+    if (layer.$["inkscape:label"] === "Nodes") {
+      layer.circle.forEach((node) => {
+        const nodeID = node.$.id;
+        const x = node.$.cx;
+        const y = node.$.cy;
+        // Check if the 'desc' tag exists for this node
+        if (!node.desc || node.desc.length === 0) {
+          console.error(`Node ${nodeID} does not have a 'desc' tag.`);
+          return; // Skip this node and move on to the next one
+        }
+        const desc = node.desc[0]._;
+        const parts = desc
+          .split("\n")
+          .map((part) => part.split("=").map((p) => p.trim()));
+        const data = {
+          coordinates: { x, y },
+          adjacent: parts[0][1].split(", "),
+          level: parseInt(parts[1][1], 10),
+        };
+
+        const docRef = db.collection(mallName).doc(nodeID);
+        docRef
+          .set(data)
+          .then(() => console.log(`Document ${nodeID} uploaded successfully`));
+      });
+    }
+  });
 }
 
-uploadSVGData()
+uploadSVGData(mallName, svgFilePath)
   .then(() => console.log("All SVG data uploaded successfully"))
   .catch((error) => console.error("Failed to upload SVG data:", error));
