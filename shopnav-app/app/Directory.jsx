@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { SvgUri } from "react-native-svg";
 import { View, Dimensions } from "react-native";
 import SvgPanZoom from "react-native-svg-pan-zoom";
-import storage from "../firebaseConfig";
+import { storage } from "../firebaseConfig";
 import { getDownloadURL, ref } from "firebase/storage";
 import { Picker } from "@react-native-picker/picker";
 import { SafeAreaView } from "react-native-safe-area-context";
