@@ -24,8 +24,8 @@ async function uploadSVGData(mallName, svgFilePath) {
     if (layer.$["inkscape:label"] === "Nodes") {
       layer.circle.forEach((node) => {
         const nodeID = node.$.id;
-        const x = node.$.cx;
-        const y = node.$.cy;
+        const x = parseFloat(node.$.cx);
+        const y = parseFloat(node.$.cy);
         // Check if the 'desc' tag exists for this node
         if (!node.desc || node.desc.length === 0) {
           console.error(`Node ${nodeID} does not have a 'desc' tag.`);

@@ -12,19 +12,23 @@ export default function LevelButtons({
 
   useEffect(() => {
     const fetchLevels = async () => {
-      const mallDocRef = doc(db, "malls", currentMall);
-      const mallDocSnap = await getDoc(mallDocRef);
-      if (mallDocSnap.exists()) {
-        const levelsData = Array.from(
-          { length: mallDocSnap.data().levels },
-          (_, i) => i + 1
-        );
-        setLevels(levelsData);
-        setCurrentLevel(levelsData[0]); // Set the first level as the current level
+      if (currentMall) {
+        // Check if currentMall is set
+        const mallDocRef = doc(db, "malls", currentMall);
+        const mallDocSnap = await getDoc(mallDocRef);
+        if (mallDocSnap.exists()) {
+          const levelsData = Array.from(
+            { length: mallDocSnap.data().levels },
+            (_, i) => i + 1
+          );
+          setLevels(levelsData);
+          setCurrentLevel(levelsData[0]); // Set the first level as the current level
+        }
       }
     };
     fetchLevels();
   }, [currentMall]);
+
   return (
     <View style={styles.levelContainer}>
       {levels.map((level, index) => (

@@ -15,16 +15,12 @@ export default function Directory() {
       >
         <MallPicker currentMall={currentMall} setCurrentMall={setCurrentMall} />
       </View>
-      {currentMall && (
-        <>
-          <Floorplan mallName={currentMall} currentLevel={currentLevel} />
-          <LevelButtons
-            currentMall={currentMall}
-            currentLevel={currentLevel}
-            setCurrentLevel={setCurrentLevel}
-          />
-        </>
-      )}
+      <Floorplan currentMall={currentMall} currentLevel={currentLevel} />
+      <LevelButtons
+        currentMall={currentMall}
+        currentLevel={currentLevel}
+        setCurrentLevel={setCurrentLevel}
+      />
     </SafeAreaView>
   );
 }

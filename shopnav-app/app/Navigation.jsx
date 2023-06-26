@@ -1,11 +1,17 @@
-import { doc, getDoc } from "firebase/firestore";
-import { db } from "../firebaseConfig";
-import { useState } from "react";
-import { Button, TextInput, Text, View } from "react-native";
+import { useState, useEffect } from "react";
+import { Button, TextInput, Text, View, Dimensions } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import Floorplan from "../Components/Floorplan";
+import { Svg, Line, SvgUri } from "react-native-svg";
 import MallPicker from "../Components/MallPicker";
+import SvgPanZoom from "react-native-svg-pan-zoom";
+import { dijkstra } from "../services/dijkstra";
+import { getNodeIDFromStoreName, getGraph } from "../services/databaseService";
+import { fetchSvgUrl } from "../services/storageService";
+import StoreInput from "../Components/StoreInput";
 import LevelButtons from "../Components/LevelButtons";
+
+const screenWidth = Dimensions.get("window").width;
+const screenHeight = Dimensions.get("window").height;
 
 export default function Navigation() {
   const [currentMall, setCurrentMall] = useState(null);
@@ -14,44 +20,49 @@ export default function Navigation() {
   const [endStoreName, setEndStoreName] = useState("");
   const [startStoreError, setStartStoreError] = useState(false);
   const [endStoreError, setEndStoreError] = useState(false);
+  const [graph, setGraph] = useState({});
+  const [path, setPath] = useState([]);
+  const [svgUrl, setSvgUrl] = useState(null);
 
-  async function getNodeIDFromStoreName(
-    mallName,
-    storeName,
-    isStartStore = true
-  ) {
-    const formattedStoreName = storeName.replace(/\s/g, "-").toLowerCase();
-    const documentID = `${mallName.toLowerCase()}-${formattedStoreName}-node`;
-    const docRef = doc(db, mallName, documentID);
-    const docSnap = await getDoc(docRef);
-    if (docSnap.exists()) {
-      console.log("Document data:", docSnap.data());
-      return true;
-    } else {
-      // Mark the corresponding TextInput as error
-      isStartStore ? setStartStoreError(true) : setEndStoreError(true);
-      return false;
+  useEffect(() => {
+    if (currentMall) {
+      fetchSvgUrl(currentMall, currentLevel).then((url) => setSvgUrl(url));
     }
-  }
+  }, [currentMall, currentLevel]);
+
+  useEffect(() => {
+    if (currentMall) {
+      getGraph(currentMall).then((nodes) => setGraph(nodes));
+    }
+  }, [currentMall]);
 
   const handleClick = async () => {
     // Clear the previous errors
     setStartStoreError(false);
     setEndStoreError(false);
 
-    const startStoreExists = await getNodeIDFromStoreName(
-      mallName,
-      startStoreName,
-      true
-    );
-    const endStoreExists = await getNodeIDFromStoreName(
-      mallName,
-      endStoreName,
-      false
-    );
-    if (startStoreExists && endStoreExists) {
-      console.log("Start and End stores exist");
-      // Continue processing...
+    try {
+      const startNodeId = await getNodeIDFromStoreName(
+        currentMall,
+        startStoreName
+      );
+      const endNodeId = await getNodeIDFromStoreName(currentMall, endStoreName);
+
+      if (startNodeId && endNodeId) {
+        const path = dijkstra(graph, startNodeId, endNodeId);
+        if (path !== null) {
+          setPath(path);
+        } else {
+          setPath([]);
+        }
+      }
+    } catch (error) {
+      if (error.message === "Start store does not exist") {
+        setStartStoreError(true);
+      }
+      if (error.message === "End store does not exist") {
+        setEndStoreError(true);
+      }
     }
   };
 
@@ -66,71 +77,58 @@ export default function Navigation() {
         }}
       >
         <MallPicker currentMall={currentMall} setCurrentMall={setCurrentMall} />
-        <View style={{ flexDirection: "row", alignItems: "center" }}>
-          <View
-            style={{
-              flexDirection: "row",
-              justifyContent: "space-between",
-              alignItems: "center",
-              width: 250,
-            }}
-          >
-            <TextInput
-              onChangeText={setStartStoreName}
-              value={startStoreName}
-              placeholder="Enter start store"
-              style={{
-                height: 50,
-                width: 150,
-                borderColor: startStoreError ? "red" : "#000",
-                borderWidth: 1,
-              }}
-            />
-            <Text style={{ color: "red" }}>
-              {startStoreError ? "Invalid start store" : " "}
-            </Text>
-          </View>
-        </View>
-        <View style={{ flexDirection: "row", alignItems: "center" }}>
-          <View
-            style={{
-              flexDirection: "row",
-              justifyContent: "space-between",
-              alignItems: "center",
-              width: 250,
-            }}
-          >
-            <TextInput
-              onChangeText={setEndStoreName}
-              value={endStoreName}
-              placeholder="Enter end store"
-              style={{
-                height: 50,
-                width: 150,
-                borderColor: endStoreError ? "red" : "#000",
-                borderWidth: 1,
-              }}
-            />
-            <Text style={{ color: "red" }}>
-              {endStoreError ? "Invalid end store" : " "}
-            </Text>
-          </View>
-        </View>
-
+        <StoreInput
+          storeName={startStoreName}
+          setStoreName={setStartStoreName}
+          error={startStoreError}
+          placeholder="Enter start store"
+        />
+        <StoreInput
+          storeName={endStoreName}
+          setStoreName={setEndStoreName}
+          error={endStoreError}
+          placeholder="Enter end store"
+        />
         <View style={{ width: 150 }}>
           <Button title="Get Directions" onPress={handleClick} />
         </View>
       </View>
-      {currentMall && (
-        <>
-          <Floorplan mallName={currentMall} currentLevel={currentLevel} />
-          <LevelButtons
-            currentMall={currentMall}
-            currentLevel={currentLevel}
-            setCurrentLevel={setCurrentLevel}
-          />
-        </>
-      )}
+      <View style={{ flex: 0.9, justifyContent: "flex-end" }}>
+        <SvgPanZoom
+          canvasHeight={screenHeight * 0.4}
+          canvasWidth={screenWidth}
+          minScale={0.5}
+          maxScale={3}
+          initialZoom={1.0}
+          style={{ justifyContent: "flex-end" }}
+        >
+          {svgUrl && <SvgUri uri={svgUrl} width="100%" height="100%" />}
+          <Svg height="610" width="773" viewBox={`0 0 773 610`}>
+            {path.map((node, index) => {
+              if (index < path.length - 1) {
+                const currentNode = graph[node];
+                const nextNode = graph[path[index + 1]];
+                return (
+                  <Line
+                    x1={currentNode.coordinates.x}
+                    y1={currentNode.coordinates.y}
+                    x2={nextNode.coordinates.x}
+                    y2={nextNode.coordinates.y}
+                    stroke="red"
+                    strokeWidth="2"
+                    key={index}
+                  />
+                );
+              }
+            })}
+          </Svg>
+        </SvgPanZoom>
+      </View>
+      <LevelButtons
+        currentMall={currentMall}
+        currentLevel={currentLevel}
+        setCurrentLevel={setCurrentLevel}
+      />
     </SafeAreaView>
   );
 }

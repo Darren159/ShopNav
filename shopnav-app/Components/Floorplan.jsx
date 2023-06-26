@@ -2,22 +2,18 @@ import { useState, useEffect } from "react";
 import { SvgUri } from "react-native-svg";
 import { View, Dimensions } from "react-native";
 import SvgPanZoom from "react-native-svg-pan-zoom";
-import { storage } from "../firebaseConfig";
-import { getDownloadURL, ref } from "firebase/storage";
+import { fetchSvgUrl } from "../services/storageService";
 
 const { width, height } = Dimensions.get("window");
 
-export default function Floorplan({ mallName, currentLevel }) {
+export default function Floorplan({ currentMall, currentLevel }) {
   const [svgUrl, setSvgUrl] = useState(null);
 
   useEffect(() => {
-    const fetchSvgUrl = async () => {
-      const svgPath = `/${mallName}/${currentLevel}.svg`;
-      const url = await getDownloadURL(ref(storage, svgPath));
-      setSvgUrl(url);
-    };
-    fetchSvgUrl();
-  }, [mallName, currentLevel]);
+    if (currentMall) {
+      fetchSvgUrl(currentMall, currentLevel).then((url) => setSvgUrl(url));
+    }
+  }, [currentMall, currentLevel]);
 
   return (
     <View style={{ flex: 0.9 }}>

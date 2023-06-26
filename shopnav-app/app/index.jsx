@@ -1,7 +1,5 @@
 import { StyleSheet, Text, View, LogBox } from "react-native";
 
-LogBox.ignoreAllLogs();
-
 export default function Page() {
   return (
     <View style={styles.container}>
