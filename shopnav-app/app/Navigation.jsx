@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Button, TextInput, Text, View, Dimensions } from "react-native";
+import { Button, View, Dimensions } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Svg, Line, SvgUri } from "react-native-svg";
 import MallPicker from "../Components/MallPicker";
@@ -70,7 +70,7 @@ export default function Navigation() {
     <SafeAreaView style={{ flex: 1 }}>
       <View
         style={{
-          flex: 0.1,
+          flex: 0.3,
           flexDirection: "column",
           justifyContent: "space-between",
           alignItems: "center",
@@ -93,7 +93,7 @@ export default function Navigation() {
           <Button title="Get Directions" onPress={handleClick} />
         </View>
       </View>
-      <View style={{ flex: 0.9, justifyContent: "flex-end" }}>
+      <View style={{ flex: 0.7, justifyContent: "flex-end" }}>
         <SvgPanZoom
           canvasHeight={screenHeight * 0.4}
           canvasWidth={screenWidth}
