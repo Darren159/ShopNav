@@ -24,9 +24,6 @@ export default function Floorplan({ currentMall, currentLevel }) {
         minScale={0.5}
         maxScale={3}
         initialZoom={1.0}
-        onZoom={(zoom) => {
-          console.log("onZoom:" + zoom);
-        }}
       >
         {svgUrl && <SvgUri uri={svgUrl} width="100%" height="100%" />}
       </SvgPanZoom>

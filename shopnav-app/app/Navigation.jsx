@@ -95,6 +95,7 @@ export default function Navigation() {
       </View>
       <View style={{ flex: 0.7, justifyContent: "flex-end" }}>
         <SvgPanZoom
+          key={svgUrl}
           canvasHeight={screenHeight * 0.4}
           canvasWidth={screenWidth}
           minScale={0.5}
