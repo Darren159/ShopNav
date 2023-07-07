@@ -10,6 +10,7 @@
     "prepare": "husky install .husky"
   },
   "dependencies": {
+    "@expo/metro-config": "^0.10.6",
     "@react-native-picker/picker": "2.4.8",
     "@react-navigation/native": "^6.1.7",
     "expo": "^48.0.19",
@@ -19,6 +20,7 @@
     "expo-status-bar": "~1.4.4",
     "firebase": "^9.23.0",
     "firebase-admin": "^11.9.0",
+    "prop-types": "^15.8.1",
     "react": "18.2.0",
     "react-native": "0.71.8",
     "react-native-gesture-handler": "~2.9.0",

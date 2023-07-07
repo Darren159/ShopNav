@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+/* eslint-disable import/no-unresolved */
 // Script to upload SVG data to Firestore
 const { initializeApp, cert } = require("firebase-admin/app");
 const { getFirestore } = require("firebase-admin/firestore");
@@ -16,8 +18,8 @@ const db = getFirestore();
 const mallName = process.argv[2];
 const svgFilePath = process.argv[3];
 
-async function uploadSVGData(mallName, svgFilePath) {
-  const svgString = fs.readFileSync(svgFilePath, "utf-8");
+async function uploadSVGData(mall, filePath) {
+  const svgString = fs.readFileSync(filePath, "utf-8");
   const svgJSObject = await parseString(svgString);
 
   svgJSObject.svg.g.forEach((layer) => {
@@ -41,7 +43,7 @@ async function uploadSVGData(mallName, svgFilePath) {
           level: parseInt(parts[1][1], 10),
         };
 
-        const docRef = db.collection(mallName).doc(nodeID);
+        const docRef = db.collection(mall).doc(nodeID);
         docRef
           .set(data)
           .then(() => console.log(`Document ${nodeID} uploaded successfully`));

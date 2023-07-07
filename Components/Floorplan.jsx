@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 import { SvgUri } from "react-native-svg";
 import { View, Dimensions } from "react-native";
 import SvgPanZoom from "react-native-svg-pan-zoom";
-import { fetchSvgUrl } from "../services/storageService";
+import fetchSvgUrl from "../services/storageService";
 
 const { width, height } = Dimensions.get("window");
 
@@ -30,3 +31,8 @@ export default function Floorplan({ currentMall, currentLevel }) {
     </View>
   );
 }
+
+Floorplan.propTypes = {
+  currentMall: PropTypes.string.isRequired,
+  currentLevel: PropTypes.number.isRequired,
+};
