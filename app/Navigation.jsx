@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Button, View, Dimensions } from "react-native";
+import { Button, View, Dimensions, StyleSheet } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Svg, Line, SvgUri } from "react-native-svg";
 import SvgPanZoom from "react-native-svg-pan-zoom";
@@ -45,41 +45,32 @@ export default function Navigation() {
     setStartStoreError(false);
     setEndStoreError(false);
 
+    let startNodeId;
+    let endNodeId;
     try {
-      const startNodeId = await getNodeIDFromStoreName(
-        currentMall,
-        startStoreName
-      );
-      const endNodeId = await getNodeIDFromStoreName(currentMall, endStoreName);
-
-      if (startNodeId && endNodeId) {
-        const shortestPath = dijkstra(graph, startNodeId, endNodeId);
-        if (shortestPath !== null) {
-          setPath(shortestPath);
-        } else {
-          setPath([]);
-        }
-      }
+      startNodeId = await getNodeIDFromStoreName(currentMall, startStoreName);
     } catch (error) {
-      if (error.message === "Start store does not exist") {
-        setStartStoreError(true);
-      }
-      if (error.message === "End store does not exist") {
-        setEndStoreError(true);
+      setStartStoreError(true);
+    }
+    try {
+      endNodeId = await getNodeIDFromStoreName(currentMall, endStoreName);
+    } catch (error) {
+      setEndStoreError(true);
+    }
+
+    if (startNodeId && endNodeId) {
+      const shortestPath = dijkstra(graph, startNodeId, endNodeId);
+      if (shortestPath !== null) {
+        setPath(shortestPath);
+      } else {
+        setPath([]);
       }
     }
   };
 
   return (
-    <SafeAreaView style={{ flex: 1 }}>
-      <View
-        style={{
-          flex: 0.3,
-          flexDirection: "column",
-          justifyContent: "space-between",
-          alignItems: "center",
-        }}
-      >
+    <SafeAreaView style={styles.container}>
+      <View style={styles.inputContainer}>
         {currentMall && (
           <MallPicker
             currentMall={currentMall}
@@ -99,11 +90,11 @@ export default function Navigation() {
           error={endStoreError}
           placeholder="Enter end store"
         />
-        <View style={{ width: 150 }}>
+        <View style={styles.buttonContainer}>
           <Button title="Get Directions" onPress={handleClick} />
         </View>
       </View>
-      <View style={{ flex: 0.7, justifyContent: "flex-end" }}>
+      <View style={styles.mapView}>
         <SvgPanZoom
           key={svgUrl}
           canvasHeight={screenHeight * 0.4}
@@ -146,3 +137,15 @@ export default function Navigation() {
     </SafeAreaView>
   );
 }
+
+const styles = StyleSheet.create({
+  container: { flex: 1 },
+  inputContainer: {
+    flex: 0.3,
+    flexDirection: "column",
+    justifyContent: "space-between",
+    alignItems: "center",
+  },
+  mapView: { flex: 0.7, justifyContent: "flex-end" },
+  buttonContainer: { width: 150 },
+});

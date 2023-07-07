@@ -10,7 +10,7 @@ export async function getNodeIDFromStoreName(currentMall, storeName) {
   if (docSnap.exists()) {
     return docSnap.id;
   }
-  throw new Error(`${storeName} does not exist`);
+  throw new Error();
 }
 
 export async function getGraph(currentMall) {
