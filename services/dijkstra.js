@@ -1,11 +1,12 @@
+/* eslint-disable no-restricted-syntax */
 // The dijkstra function finds the shortest path between two nodes
-export function dijkstra(graph, startNode, endNode) {
+export default function dijkstra(graph, startNode, endNode) {
   let unvisitedNodes = Object.keys(graph);
-  let distances = {};
-  let previousNodes = {};
-  let visitedNodes = {};
+  const distances = {};
+  const previousNodes = {};
+  const visitedNodes = {};
 
-  for (let node of unvisitedNodes) {
+  for (const node of unvisitedNodes) {
     distances[node] = Infinity;
     previousNodes[node] = null;
   }
@@ -19,7 +20,7 @@ export function dijkstra(graph, startNode, endNode) {
       return closestNode;
     });
     if (currentNode === endNode) {
-      let path = [];
+      const path = [];
       while (previousNodes[currentNode] !== null) {
         path.unshift(currentNode);
         currentNode = previousNodes[currentNode];
@@ -30,9 +31,9 @@ export function dijkstra(graph, startNode, endNode) {
     visitedNodes[currentNode] = true;
     unvisitedNodes = unvisitedNodes.filter((node) => node !== currentNode);
 
-    for (let adjacentNode of graph[currentNode].adjacent) {
+    for (const adjacentNode of graph[currentNode].adjacent) {
       if (!visitedNodes[adjacentNode]) {
-        let newDistance =
+        const newDistance =
           distances[currentNode] +
           distance(
             graph[currentNode].coordinates,

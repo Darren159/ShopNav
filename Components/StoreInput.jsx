@@ -1,4 +1,5 @@
 import { View, Text, TextInput } from "react-native";
+import PropTypes from "prop-types";
 
 export default function StoreInput({
   storeName,
@@ -23,3 +24,9 @@ export default function StoreInput({
     </View>
   );
 }
+StoreInput.propTypes = {
+  storeName: PropTypes.string.isRequired,
+  setStoreName: PropTypes.func.isRequired,
+  error: PropTypes.bool.isRequired,
+  placeholder: PropTypes.string.isRequired,
+};

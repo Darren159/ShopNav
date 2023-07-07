@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { collection, doc, getDoc, getDocs } from "firebase/firestore";
 import { db } from "../firebaseConfig";
 
@@ -8,17 +9,34 @@ export async function getNodeIDFromStoreName(currentMall, storeName) {
   const docSnap = await getDoc(docRef);
   if (docSnap.exists()) {
     return docSnap.id;
-  } else {
-    throw new Error(`${storeName} does not exist`);
   }
+  throw new Error(`${storeName} does not exist`);
 }
 
 export async function getGraph(currentMall) {
   const mallNodesCollection = collection(db, currentMall);
   const nodesSnapshot = await getDocs(mallNodesCollection);
-  let nodes = {};
-  nodesSnapshot.docs.forEach((doc) => {
-    nodes[doc.id] = doc.data();
+  const nodeGraph = {};
+  nodesSnapshot.docs.forEach((node) => {
+    nodeGraph[node.id] = node.data();
   });
-  return nodes;
+  return nodeGraph;
 }
+
+export const useMalls = () => {
+  const [malls, setMalls] = useState([]);
+  const [currentMall, setCurrentMall] = useState(null);
+
+  useEffect(() => {
+    const fetchMalls = async () => {
+      const mallCollection = collection(db, "malls");
+      const mallSnapshot = await getDocs(mallCollection);
+      const mallList = mallSnapshot.docs.map((mall) => mall.id);
+      setMalls(mallList);
+      setCurrentMall(mallList[0]); // Set the first mall as the current mall
+    };
+    fetchMalls();
+  }, []);
+
+  return { malls, currentMall, setCurrentMall };
+};

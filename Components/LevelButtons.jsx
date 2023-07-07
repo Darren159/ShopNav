@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 import { View, TouchableOpacity, Text, StyleSheet } from "react-native";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../firebaseConfig";
@@ -27,13 +28,13 @@ export default function LevelButtons({
       }
     };
     fetchLevels();
-  }, [currentMall]);
+  }, [currentMall, setCurrentLevel]);
 
   return (
     <View style={styles.levelContainer}>
-      {levels.map((level, index) => (
+      {levels.map((level) => (
         <TouchableOpacity
-          key={index}
+          key={level}
           style={[
             styles.levelButton,
             currentLevel === level ? styles.activeLevelButton : {},
@@ -76,3 +77,9 @@ const styles = StyleSheet.create({
     fontSize: 20,
   },
 });
+
+LevelButtons.propTypes = {
+  currentMall: PropTypes.string.isRequired,
+  currentLevel: PropTypes.number.isRequired,
+  setCurrentLevel: PropTypes.func.isRequired,
+};
