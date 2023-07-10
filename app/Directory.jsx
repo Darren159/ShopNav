@@ -20,7 +20,9 @@ export default function Directory() {
               malls={malls}
             />
           </View>
-          <Floorplan currentMall={currentMall} currentLevel={currentLevel} />
+          <View style={styles.mapContainer}>
+            <Floorplan currentMall={currentMall} currentLevel={currentLevel} />
+          </View>
           <LevelButtons
             currentMall={currentMall}
             currentLevel={currentLevel}
@@ -38,5 +40,8 @@ const styles = StyleSheet.create({
     flex: 0.1,
     flexDirection: "row",
     justifyContent: "center",
+  },
+  mapContainer: {
+    flex: 0.9,
   },
 });

@@ -1,34 +1,33 @@
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { SvgUri } from "react-native-svg";
-import { View, Dimensions } from "react-native";
-import SvgPanZoom from "react-native-svg-pan-zoom";
+import { ActivityIndicator } from "react-native";
 import fetchSvgUrl from "../services/storageService";
-
-const { width, height } = Dimensions.get("window");
 
 export default function Floorplan({ currentMall, currentLevel }) {
   const [svgUrl, setSvgUrl] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     if (currentMall) {
-      fetchSvgUrl(currentMall, currentLevel).then((url) => setSvgUrl(url));
+      setIsLoading(true);
+      fetchSvgUrl(currentMall, currentLevel).then((url) => {
+        setSvgUrl(url);
+        setIsLoading(false); // set loading state to false after SVG is fetched
+      });
     }
   }, [currentMall, currentLevel]);
 
-  return (
-    <View style={{ flex: 0.9 }}>
-      <SvgPanZoom
-        key={svgUrl}
-        canvasHeight={height}
-        canvasWidth={width}
-        minScale={0.5}
-        maxScale={3}
-        initialZoom={1.0}
-      >
-        {svgUrl && <SvgUri uri={svgUrl} width="100%" height="100%" />}
-      </SvgPanZoom>
-    </View>
+  return isLoading ? (
+    <ActivityIndicator size="large" /> // show spinner if isLoading is true
+  ) : (
+    <SvgUri
+      key={currentLevel}
+      uri={svgUrl}
+      width="100%"
+      height="100%"
+      style={{ backgroundColor: "#33AAFF" }}
+    />
   );
 }
 

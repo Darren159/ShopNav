@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
-import { Button, View, Dimensions, StyleSheet } from "react-native";
+import { Button, View, StyleSheet } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { Svg, Line, SvgUri } from "react-native-svg";
-import SvgPanZoom from "react-native-svg-pan-zoom";
+import { Svg, Line } from "react-native-svg";
 import MallPicker from "../Components/MallPicker";
 import dijkstra from "../services/dijkstra";
 import {
@@ -10,12 +9,9 @@ import {
   getGraph,
   useMalls,
 } from "../services/databaseService";
-import fetchSvgUrl from "../services/storageService";
 import StoreInput from "../Components/StoreInput";
 import LevelButtons from "../Components/LevelButtons";
-
-const screenWidth = Dimensions.get("window").width;
-const screenHeight = Dimensions.get("window").height;
+import Floorplan from "../Components/Floorplan";
 
 export default function Navigation() {
   const { malls, currentMall, setCurrentMall } = useMalls();
@@ -26,13 +22,6 @@ export default function Navigation() {
   const [endStoreError, setEndStoreError] = useState(false);
   const [graph, setGraph] = useState({});
   const [path, setPath] = useState([]);
-  const [svgUrl, setSvgUrl] = useState(null);
-
-  useEffect(() => {
-    if (currentMall) {
-      fetchSvgUrl(currentMall, currentLevel).then((url) => setSvgUrl(url));
-    }
-  }, [currentMall, currentLevel]);
 
   useEffect(() => {
     if (currentMall) {
@@ -94,38 +83,35 @@ export default function Navigation() {
           <Button title="Get Directions" onPress={handleClick} />
         </View>
       </View>
-      <View style={styles.mapView}>
-        <SvgPanZoom
-          key={svgUrl}
-          canvasHeight={screenHeight * 0.4}
-          canvasWidth={screenWidth}
-          minScale={0.5}
-          maxScale={3}
-          initialZoom={1.0}
-          style={{ justifyContent: "flex-end" }}
+      <View style={styles.mapContainer}>
+        {currentMall && (
+          <Floorplan currentMall={currentMall} currentLevel={currentLevel} />
+        )}
+        <Svg
+          style={styles.overlayPath}
+          height="100%"
+          width="100%"
+          viewBox="0 0 760 600"
         >
-          {svgUrl && <SvgUri uri={svgUrl} width="100%" height="100%" />}
-          <Svg height="610" width="773" viewBox="0 0 773 610">
-            {path.map((node, index) => {
-              if (index < path.length - 1) {
-                const currentNode = graph[node];
-                const nextNode = graph[path[index + 1]];
-                return (
-                  <Line
-                    x1={currentNode.coordinates.x}
-                    y1={currentNode.coordinates.y}
-                    x2={nextNode.coordinates.x}
-                    y2={nextNode.coordinates.y}
-                    stroke="red"
-                    strokeWidth="2"
-                    key={node}
-                  />
-                );
-              }
-              return null;
-            })}
-          </Svg>
-        </SvgPanZoom>
+          {path.map((node, index) => {
+            if (index < path.length - 1) {
+              const currentNode = graph[node];
+              const nextNode = graph[path[index + 1]];
+              return (
+                <Line
+                  x1={currentNode.coordinates.x}
+                  y1={currentNode.coordinates.y}
+                  x2={nextNode.coordinates.x}
+                  y2={nextNode.coordinates.y}
+                  stroke="red"
+                  strokeWidth="2"
+                  key={node}
+                />
+              );
+            }
+            return null;
+          })}
+        </Svg>
       </View>
       {currentMall && (
         <LevelButtons
@@ -141,11 +127,19 @@ export default function Navigation() {
 const styles = StyleSheet.create({
   container: { flex: 1 },
   inputContainer: {
-    flex: 0.3,
+    flex: 0.1,
     flexDirection: "column",
     justifyContent: "space-between",
     alignItems: "center",
   },
-  mapView: { flex: 0.7, justifyContent: "flex-end" },
-  buttonContainer: { width: 150 },
+  mapContainer: {
+    flex: 0.9,
+  },
+  overlayPath: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+  },
 });
