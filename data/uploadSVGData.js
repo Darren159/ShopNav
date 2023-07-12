@@ -22,9 +22,18 @@ async function uploadSVGData(mall, filePath) {
   const svgString = fs.readFileSync(filePath, "utf-8");
   const svgJSObject = await parseString(svgString);
 
+  if (!svgJSObject.svg.g) {
+    console.error("No layers found in the SVG file.");
+    return;
+  }
+
   svgJSObject.svg.g.forEach((layer) => {
     if (layer.$["inkscape:label"] === "Nodes") {
-      layer.circle.forEach((node) => {
+      if (!layer.ellipse) {
+        console.error(`No nodes found in the layer ${layer.$.id}.`);
+        return; // Skip this layer and move on to the next one
+      }
+      layer.ellipse.forEach((node) => {
         const nodeID = node.$.id;
         const x = parseFloat(node.$.cx);
         const y = parseFloat(node.$.cy);
