@@ -42,6 +42,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   mapContainer: {
-    flex: 0.9,
+    flex: 0.5,
   },
 });

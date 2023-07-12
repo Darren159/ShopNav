@@ -127,13 +127,13 @@ export default function Navigation() {
 const styles = StyleSheet.create({
   container: { flex: 1 },
   inputContainer: {
-    flex: 0.1,
+    flex: 0.3,
     flexDirection: "column",
     justifyContent: "space-between",
     alignItems: "center",
   },
   mapContainer: {
-    flex: 0.9,
+    flex: 0.5,
   },
   overlayPath: {
     position: "absolute",
