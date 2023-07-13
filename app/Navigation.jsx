@@ -85,33 +85,34 @@ export default function Navigation() {
       </View>
       <View style={styles.mapContainer}>
         {currentMall && (
-          <Floorplan currentMall={currentMall} currentLevel={currentLevel} />
+          <Floorplan currentMall={currentMall} currentLevel={currentLevel}>
+            <Svg
+              style={styles.overlayPath}
+              height="100%"
+              width="100%"
+              viewBox="0 0 760 600"
+            >
+              {path.map((node, index) => {
+                if (index < path.length - 1) {
+                  const currentNode = graph[node];
+                  const nextNode = graph[path[index + 1]];
+                  return (
+                    <Line
+                      x1={currentNode.coordinates.x}
+                      y1={currentNode.coordinates.y}
+                      x2={nextNode.coordinates.x}
+                      y2={nextNode.coordinates.y}
+                      stroke="red"
+                      strokeWidth="2"
+                      key={node}
+                    />
+                  );
+                }
+                return null;
+              })}
+            </Svg>
+          </Floorplan>
         )}
-        <Svg
-          style={styles.overlayPath}
-          height="100%"
-          width="100%"
-          viewBox="0 0 760 600"
-        >
-          {path.map((node, index) => {
-            if (index < path.length - 1) {
-              const currentNode = graph[node];
-              const nextNode = graph[path[index + 1]];
-              return (
-                <Line
-                  x1={currentNode.coordinates.x}
-                  y1={currentNode.coordinates.y}
-                  x2={nextNode.coordinates.x}
-                  y2={nextNode.coordinates.y}
-                  stroke="red"
-                  strokeWidth="2"
-                  key={node}
-                />
-              );
-            }
-            return null;
-          })}
-        </Svg>
       </View>
       {currentMall && (
         <LevelButtons
@@ -133,7 +134,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   mapContainer: {
-    flex: 0.5,
+    flex: 0.6,
   },
   overlayPath: {
     position: "absolute",

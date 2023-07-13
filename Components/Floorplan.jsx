@@ -9,7 +9,7 @@ import Animated, {
 } from "react-native-reanimated";
 import fetchSvgUrl from "../services/storageService";
 
-export default function Floorplan({ currentMall, currentLevel }) {
+export default function Floorplan({ currentMall, currentLevel, children }) {
   const [svgUrl, setSvgUrl] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -71,6 +71,7 @@ export default function Floorplan({ currentMall, currentLevel }) {
           height="100%"
           style={{ backgroundColor: "#33AAFF" }}
         />
+        {children}
       </Animated.View>
     </GestureDetector>
   );
@@ -79,4 +80,9 @@ export default function Floorplan({ currentMall, currentLevel }) {
 Floorplan.propTypes = {
   currentMall: PropTypes.string.isRequired,
   currentLevel: PropTypes.number.isRequired,
+  children: PropTypes.node,
+};
+
+Floorplan.defaultProps = {
+  children: null,
 };
