@@ -7,7 +7,7 @@
    width="760"
    height="600"
    viewBox="0 0 760 600"
-   sodipodi:docname="WestgateL2.svg"
+   sodipodi:docname="2.svg"
    inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -24,27 +24,31 @@
      inkscape:pageopacity="0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#505050"
-     showgrid="false"
-     inkscape:zoom="3.4410691"
-     inkscape:cx="498.82753"
-     inkscape:cy="403.36301"
+     showgrid="true"
+     inkscape:zoom="3.045231"
+     inkscape:cx="119.03859"
+     inkscape:cy="318.85923"
      inkscape:window-width="2560"
      inkscape:window-height="1494"
      inkscape:window-x="-11"
      inkscape:window-y="-11"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg33481">
+     inkscape:current-layer="layer2">
     <inkscape:grid
        type="xygrid"
        id="grid33934"
        originx="0"
        originy="0" />
+    <inkscape:grid
+       type="xygrid"
+       id="grid26481" />
   </sodipodi:namedview>
   <g
      inkscape:groupmode="layer"
      id="layer6"
      inkscape:label="Layout"
-     transform="translate(46.497177,-112.17444)">
+     transform="translate(46.497177,-112.17444)"
+     sodipodi:insensitive="true">
     <path
        style="display:inline;fill:#d6d6d6;fill-opacity:1;stroke-width:0.999941"
        d="M 557.34734,113.47173 150.5639,112.17444 v 20.43244 H -46.497177 V 695.6339 H 132.38364 v 16.54054 H 713.50282 L 675.8437,220.8231 c 0,0 -14.28449,-97.62164 -118.49636,-107.35137 z"
@@ -54,46 +58,47 @@
      inkscape:groupmode="layer"
      id="layer7"
      inkscape:label="Shops"
-     style="fill:#ffffff;stroke:#000000;stroke-width:0.6;stroke-dasharray:none;stroke-opacity:1">
+     style="fill:#ffffff;stroke:#000000;stroke-width:0.6;stroke-dasharray:none;stroke-opacity:1"
+     sodipodi:insensitive="true">
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       d="M 264.25262,20.234355 V 77.30679 H 215.9907 v 29.18971 l 55.23953,29.33494 62.79865,-100.493946 -22.82264,-15.248362 z"
+       d="m 268.29098,10.370814 v 57.072435 h -48.26192 v 29.18971 L 275.26859,125.9679 338.06724,25.473953 315.2446,10.225591 Z"
        id="path33576" />
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       d="M 335.3296,36.491027 272.42202,137.33044 326.28407,171.3201 388.5749,68.529621 Z"
+       d="M 339.36796,26.627486 276.46038,127.4669 330.32243,161.45656 392.61326,58.66608 Z"
        id="path33578" />
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       d="m 390.52791,69.761874 -62.39362,102.585106 54.88994,34.29773 63.21594,-102.89318 z"
+       d="M 394.56627,59.898333 332.17265,162.48344 387.06259,196.78117 450.27853,93.887989 Z"
        id="path33580" />
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       d="m 447.67924,105.7026 -62.702,101.55823 53.86205,32.96278 65.58011,-107.82218 -13.97946,-8.52309 -3.59767,5.8532 z"
+       d="m 451.7176,95.839059 -62.702,101.558231 53.86205,32.96278 65.58011,-107.82218 -13.97946,-8.52309 -3.59767,5.8532 z"
        id="path33582" />
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       d="m 484.16974,170.4986 -43.68582,70.85458 44.61092,26.90421 42.65793,-71.05996 z"
+       d="m 488.2081,160.63506 -43.68582,70.85458 44.61092,26.90421 42.65793,-71.05996 z"
        id="path33584" />
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       d="m 519.42676,228.00377 -27.85613,44.97726 32.07053,20.02411 26.93102,-45.49069 z"
+       d="m 517.78557,216.39979 -27.30592,45.3134 32.31218,19.63178 26.37462,-45.81552 z"
        id="path33588" />
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       d="m 545.84383,186.41521 -25.38917,39.84286 65.47733,40.76706 25.49196,-40.04824 z"
+       d="m 543.69383,174.49237 -24.90171,40.14932 65.96929,39.96606 25.002,-40.35594 z"
        id="path33590" />
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       d="m 552.01124,248.54132 -27.1366,44.97726 32.48169,20.33219 27.54776,-45.79876 z"
+       d="m 550.61792,236.5387 -26.58645,45.30464 32.72707,19.93482 26.98756,-46.13108 z"
        id="path33592" />
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       d="m 165.36607,131.22052 -2.1072,18.4838 50.16161,8.8825 16.96037,-25.31255 -36.74748,-22.33459 -13.36272,22.79668 z"
+       d="m 167.69093,121.05445 -2.1072,18.4838 50.16161,8.8825 16.96037,-25.31255 -36.74748,-22.33459 -13.36272,22.79668 z"
        id="path33594" />
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       d="m 149.07383,147.90728 -11.30691,62.63956 H 213.1121 V 160.4352 Z"
+       d="m 151.39869,137.74121 -11.30691,62.63956 h 75.34518 v -50.11164 z"
        id="path33596" />
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
@@ -105,15 +110,15 @@
        id="path33602" />
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       d="m 596.31379,280.57992 -25.49195,41.07512 29.39798,18.48381 24.56685,-40.66438 z"
+       d="m 592.61496,264.95144 -25.49195,41.07512 29.39798,18.48381 24.56685,-40.66438 z"
        id="path33604" />
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       d="m 626.63689,299.78254 -25.0808,41.07512 37.92957,23.00206 24.46406,-41.1778 z"
+       d="m 622.93806,284.15406 -25.0808,41.07512 37.92957,23.00206 24.46406,-41.1778 z"
        id="path33606" />
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       d="m 665.46617,324.03978 -24.9526,41.15489 28.06171,17.35423 29.70634,-1.02687 -3.70044,-41.58856 H 690.264 Z"
+       d="m 661.76734,308.4113 -24.9526,41.15489 28.06171,17.35423 29.70634,-1.02687 -3.70044,-41.58856 h -4.31718 z"
        id="path33608" />
     <rect
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
@@ -202,19 +207,19 @@
        id="path33696" />
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       d="m 619.85274,244.74188 -22.71663,34.50309 93.53905,58.73743 h 4.21439 v -9.2419 h 8.73716 v -32.75741 z"
+       d="m 616.15391,229.1134 -22.71663,34.50309 93.53905,58.73743 h 4.21439 v -9.2419 h 8.73716 v -32.75741 z"
        id="path33698" />
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       d="m 632.59872,222.04788 -12.02645,21.15368 85.21304,50.62508 v 34.19504 h 13.05435 l -1.0279,-56.58097 z"
+       d="m 628.89989,206.4194 -12.02645,21.15368 85.21304,50.62508 v 34.19504 h 13.05435 l -1.0279,-56.58097 z"
        id="path33700" />
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       d="m 649.66189,191.34422 -15.72689,28.54721 86.85767,51.24121 0.10279,56.88904 h 19.32455 l -5.24229,-87.49 z"
+       d="m 645.96306,175.71574 -15.72689,28.54721 86.85767,51.24121 0.10279,56.88904 h 19.32455 l -5.24229,-87.49 z"
        id="path33702" />
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       d="m 372.95079,217.63229 -19.11897,30.80635 31.86494,18.68918 17.67992,-30.60097 z"
+       d="m 352.72063,203.88063 -19.11897,30.80635 31.86494,18.68918 17.67992,-30.60097 z"
        id="path33704" />
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
@@ -303,16 +308,17 @@
        id="path33736" />
     <path
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       d="m 746.43572,385.46889 -21.51435,1.45222 v 16.55536 h -7.5591 v 13.94137 h 31.10859 z"
+       d="m 742.65782,383.91624 -21.51435,1.45222 v 16.55536 h -7.5591 v 13.94137 h 31.10859 z"
        id="path34297" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer8"
-     inkscape:label="Traversals">
+     inkscape:label="Traversals"
+     sodipodi:insensitive="true">
     <g
        id="g32588-11-6"
-       transform="matrix(0.06099775,0,0,0.06093701,55.640334,183.91127)"
+       transform="matrix(0.06099775,0,0,0.06093701,48.844204,179.80183)"
        style="fill:#000000">
       <path
          d="m 218.2,69.69 c 18.75,0 33.92,-15.17 33.9,-33.9 0.02,-18.7 -15.15,-33.88 -33.9,-33.9 -18.68,0.03 -33.85,15.2 -33.9,33.9 0.05,18.73 15.22,33.9 33.9,33.9"
@@ -326,11 +332,11 @@
          d="m 379.2,72.19 h 70.9 c 17.22,0.04 28.82,19.32 28.8,30.8 0.03,11.53 -8.21,32.99 -29.3,33 H 407 c -18.08,-0.01 -26.08,2.53 -36.5,12.9 l -203.6,203.7 c -8.28,8.25 -18.74,11.52 -32.2,11.5 H 67.6 c -17.28,0.02 -32.48,-14.58 -32.5,-33.7 0.02,-19.22 14.52,-29.96 29.5,-30 h 46.1 c 13.42,0.04 22.25,-3.79 29.9,-11.5 L 347.7,81.79 c 8.56,-8.5 16.98,-9.56 31.5,-9.6"
          fill="#ffffff"
          id="path32577-9-0"
-         style="fill:#ffffff;stroke-width:1.00053516;stroke-dasharray:none;fill-opacity:1" />
+         style="fill:#ffffff;fill-opacity:1;stroke-width:1.00054;stroke-dasharray:none" />
     </g>
     <g
        id="g32588-11-6-2"
-       transform="matrix(0.06099775,0,0,0.06093701,429.52484,267.55941)"
+       transform="matrix(0.06099775,0,0,0.06093701,367.9632,239.59483)"
        style="fill:#000000">
       <path
          d="m 218.2,69.69 c 18.75,0 33.92,-15.17 33.9,-33.9 0.02,-18.7 -15.15,-33.88 -33.9,-33.9 -18.68,0.03 -33.85,15.2 -33.9,33.9 0.05,18.73 15.22,33.9 33.9,33.9"
@@ -348,7 +354,7 @@
     </g>
     <g
        id="g32588-11-6-7"
-       transform="matrix(0.06099775,0,0,0.06093701,606.87286,447.05441)"
+       transform="matrix(0.06087793,0,0,0.06093716,578.75489,437.14027)"
        style="fill:#000000;stroke:#000000;stroke-opacity:1">
       <path
          d="m 218.2,69.69 c 18.75,0 33.92,-15.17 33.9,-33.9 0.02,-18.7 -15.15,-33.88 -33.9,-33.9 -18.68,0.03 -33.85,15.2 -33.9,33.9 0.05,18.73 15.22,33.9 33.9,33.9"
@@ -366,28 +372,29 @@
     </g>
     <g
        id="g1446"
-       style="display:inline;stroke-width:10.7949;stroke-dasharray:none;fill:#000000"
-       transform="matrix(0.03509337,0,0,0.03505843,42.212196,317.03151)">
+       style="display:inline;fill:#000000;stroke-width:10.7949;stroke-dasharray:none"
+       transform="matrix(0.03509337,0,0,0.03505843,29.757393,307.25652)">
       <path
          d="m -464.71428,569.80622 c -8.43764,-8.43767 -12.69907,-18.66513 -12.69907,-30.76762 0,-12.1025 4.17619,-22.32995 12.69907,-30.76759 8.43767,-8.43767 18.66514,-12.69911 30.76763,-12.69911 12.10249,0 22.32995,4.26144 30.76762,12.69911 8.43764,8.43764 12.69908,18.66509 12.69908,30.76759 0,12.10249 -4.26144,22.32995 -12.69908,30.76762 -8.43767,8.43767 -18.66513,12.69911 -30.76762,12.69911 -12.10249,0 -22.32996,-4.26144 -30.76763,-12.69911 z m -55.56919,207.53224 c 2.72732,2.13074 5.88081,3.15345 9.46041,3.15345 3.57962,0 6.81831,-1.02271 9.46039,-3.15345 2.72732,-2.13074 4.09098,-5.53989 4.09098,-10.39792 v -112.16117 -5.45464 c 0,-1.78979 0.93754,-2.983 2.72732,-3.57961 1.78983,-0.59659 3.32395,-0.9375 4.51715,-0.9375 1.1932,0 2.72732,0.34091 4.51711,0.9375 1.78982,0.59661 2.72733,1.78982 2.72733,3.57961 v 270.34588 c 0,5.45466 1.96027,9.97175 5.8808,13.55138 3.92052,3.57963 8.60809,5.45466 13.97753,5.45466 5.45464,0 10.057,-1.78981 13.97752,-5.45466 3.92053,-3.57963 5.88077,-8.09672 5.88077,-13.55138 V 813.90164 754.24143 c 0,-2.98299 1.19321,-4.94327 3.57965,-5.88077 2.38641,-0.93754 4.1762,-1.36366 5.45464,-1.36366 1.19321,0 2.89778,0.42612 4.94327,1.36366 2.04547,0.9375 3.15346,2.89778 3.15346,5.88077 v 59.66021 105.76897 c 0,5.45466 1.96027,9.97175 5.8808,13.55138 3.92052,3.57963 8.6081,5.45466 13.97753,5.45466 6.05123,0 10.82404,-1.78981 14.4889,-5.45466 3.57961,-3.57963 5.45464,-8.09672 5.45464,-13.55138 l 0.93751,-270.34588 c 0,-1.78979 0.93753,-2.983 2.72732,-3.57961 1.78982,-0.59659 3.32393,-0.9375 4.51714,-0.9375 1.1932,0 2.72732,0.34091 4.51711,0.9375 1.78982,0.59661 2.72736,1.78982 2.72736,3.57961 v 5.45464 112.07593 c 0,4.85806 1.36363,8.26721 4.09095,10.39792 2.72735,2.13073 5.71035,3.15348 9.03428,3.15348 3.32391,0 6.30694,-1.02275 9.03426,-3.15348 2.72732,-2.13071 4.09098,-5.53986 4.09098,-10.39792 V 642.16551 c 0,-12.01725 -4.09098,-22.92657 -12.18773,-32.55742 -8.09676,-9.63086 -19.1765,-14.48889 -32.98357,-14.48889 h -48.83614 -0.9375 -45.17128 c -13.89231,0 -23.94931,4.85803 -30.25625,14.48889 -6.30693,9.63085 -9.46041,20.45492 -9.46041,32.55742 v 124.77503 c -0.0852,4.77282 1.27845,8.26718 4.00577,10.39792 z M -51.524846,425.59904 c 5.45466,5.11373 8.09677,11.59108 8.09677,19.43214 v 538.90197 c 0,7.84106 -2.72733,14.31846 -8.09677,19.43215 -5.45466,5.1138 -12.01727,7.6706 -19.85833,7.6706 H -587.69948 c -7.84106,0 -14.4889,-2.5568 -19.85831,-7.6706 -5.36943,-5.11369 -8.09675,-11.59109 -8.09675,-19.43215 V 445.03118 c 0,-7.84106 2.72732,-14.31841 8.09675,-19.43214 5.36941,-5.11373 12.01725,-7.67062 19.85831,-7.67062 h 516.231084 c 7.92628,0 14.48889,2.55689 19.94355,7.67062 z m -37.07456,37.50066 H -570.48326 V 965.86463 H -88.599406 Z M -225.9883,582.50533 c 12.01728,0 22.32996,-4.17622 30.76761,-12.69911 8.4377,-8.43767 12.61387,-18.66513 12.61387,-30.76762 0,-12.1025 -4.17617,-22.32995 -12.61387,-30.76759 -8.43765,-8.43767 -18.66511,-12.69911 -30.76761,-12.69911 -12.10249,0 -22.32994,4.26144 -30.76759,12.69911 -8.43765,8.43764 -12.69909,18.66509 -12.69909,30.76759 0,12.10249 4.17622,22.32995 12.69909,30.76762 8.43765,8.43767 18.6651,12.69911 30.76759,12.69911 z m -86.33683,194.83313 c 2.72733,2.13074 5.88081,3.15345 9.46044,3.15345 3.57962,0 6.81832,-1.02271 9.46038,-3.15345 2.72733,-2.13074 4.091,-5.53989 4.091,-10.39792 v -112.16117 -5.45464 c 0,-1.78979 0.93751,-2.983 2.72733,-3.57961 1.78981,-0.59659 3.32391,-0.9375 4.51714,-0.9375 1.19318,0 2.72728,0.34091 4.51714,0.9375 1.78977,0.59661 2.72728,1.78982 2.72728,3.57961 v 270.34588 c 0,5.45466 1.96026,9.97175 5.88081,13.55138 3.92051,3.57963 8.60814,5.45466 13.97753,5.45466 5.36944,0 10.05697,-1.78981 13.97752,-5.45466 3.9205,-3.57963 5.88081,-8.09672 5.88081,-13.55138 V 813.90164 754.24143 c 0,-2.98299 1.19317,-4.94327 3.57957,-5.88077 2.38641,-0.93754 4.17627,-1.36366 5.45466,-1.36366 1.2784,0 2.98299,0.42612 5.45466,1.36366 2.38641,0.9375 3.57958,2.89778 3.57958,5.88077 v 59.66021 105.76897 c 0,5.45466 1.78986,9.97175 5.45466,13.55138 3.57963,3.57963 8.43765,5.45466 14.4889,5.45466 5.45466,0 10.05702,-1.78981 13.97753,-5.45466 3.92055,-3.57963 5.8808,-8.09672 5.8808,-13.55138 V 649.40997 c 0,-1.78981 0.93752,-2.98302 2.72733,-3.57961 1.78977,-0.59662 3.32392,-0.93753 4.5171,-0.93753 1.19322,0 2.72733,0.34091 4.51714,0.93753 1.78982,0.59659 2.72733,1.7898 2.72733,3.57961 v 5.45465 112.07592 c 0,4.85803 1.36367,8.26718 4.091,10.39792 2.72733,2.13074 5.88076,3.15345 9.46038,3.15345 3.57963,0 6.81833,-1.02271 9.46044,-3.15345 2.64206,-2.13074 4.09094,-5.53989 4.09094,-10.39792 V 642.16551 c 0,-12.01725 -4.17621,-22.92657 -12.61386,-32.55742 -8.43765,-9.63086 -19.60263,-14.48889 -33.49494,-14.48889 h -47.89861 -0.93752 -0.93752 -44.31897 c -13.89231,0 -24.11977,4.85803 -30.76761,14.48889 -6.64784,9.63085 -9.9718,20.45492 -9.9718,32.55742 v 124.77503 c 0.17049,4.77282 1.53415,8.26718 4.26143,10.39792 z m 146.5936,-478.73045 c -12.35815,0 -32.046,0 -32.046,0 0,0 0,-5.36939 0,-13.55133 0,-25.22773 0,-74.40479 0,-93.24039 0,0 0.17044,-4.43187 -5.53988,-4.43187 -5.71032,0 -40.73941,0 -48.7509,0 -8.0115,0 -6.56262,5.28417 -6.56262,5.28417 0,19.34697 0,66.90465 0,93.0699 0,9.11945 0,15.08548 0,15.08548 0,0 -24.54587,0 -34.68811,0 -10.05702,0 -0.76708,8.77858 -0.76708,8.77858 l 61.44999,74.31961 c 0,0 5.02851,5.88076 10.31268,0.59654 7.24443,-7.32964 59.57496,-76.70592 59.57496,-76.70592 0,0 9.37517,-9.20477 -2.98304,-9.20477 z M -493.35116,263.9199 c 12.35819,0 32.04604,0 32.04604,0 0,0 0,5.36944 0,13.55138 0,25.22777 0,74.40478 0,93.24038 0,0 -0.17046,4.43188 5.53989,4.43188 5.71031,0 40.73938,0 48.75089,0 8.0115,0 6.56263,-5.28417 6.56263,-5.28417 0,-19.34697 0,-66.90466 0,-93.0699 0,-9.11951 0,-15.08549 0,-15.08549 0,0 24.5459,0 34.68811,0 10.05704,0 0.76708,-8.77862 0.76708,-8.77862 l -61.45,-74.31952 c 0,0 -5.02848,-5.88081 -10.3127,-0.59664 -7.24444,7.3297 -59.57493,76.70602 -59.57493,76.70602 0,0 -9.37518,9.20468 2.98299,9.20468 z"
          id="path32116"
-         style="stroke-width:9.19935;stroke-dasharray:none;fill:#000000" />
+         style="fill:#000000;stroke-width:9.19935;stroke-dasharray:none" />
     </g>
     <g
        id="g1446-5"
-       style="display:inline;stroke-width:10.7949;stroke-dasharray:none;fill:#000000"
-       transform="matrix(0.03509337,0,0,0.03505843,705.66823,375.12049)">
+       style="display:inline;fill:#000000;stroke-width:10.7949;stroke-dasharray:none"
+       transform="matrix(0.03509337,0,0,0.03505843,689.46674,359.5824)">
       <path
          d="m -547.56025,627.7984 c -8.43764,-8.43767 -12.69907,-18.66513 -12.69907,-30.76762 0,-12.1025 4.17619,-22.32995 12.69907,-30.76759 8.43767,-8.43767 18.66514,-12.69911 30.76763,-12.69911 12.10249,0 22.32995,4.26144 30.76762,12.69911 8.43764,8.43764 12.69908,18.66509 12.69908,30.76759 0,12.10249 -4.26144,22.32995 -12.69908,30.76762 -8.43767,8.43767 -18.66513,12.69911 -30.76762,12.69911 -12.10249,0 -22.32996,-4.26144 -30.76763,-12.69911 z m -55.56919,207.53224 c 2.72732,2.13074 5.88081,3.15345 9.46041,3.15345 3.57962,0 6.81831,-1.02271 9.46039,-3.15345 2.72732,-2.13074 4.09098,-5.53989 4.09098,-10.39792 v -112.16117 -5.45464 c 0,-1.78979 0.93754,-2.983 2.72732,-3.57961 1.78983,-0.59659 3.32395,-0.9375 4.51715,-0.9375 1.1932,0 2.72732,0.34091 4.51711,0.9375 1.78982,0.59661 2.72733,1.78982 2.72733,3.57961 v 270.34588 c 0,5.45466 1.96027,9.97175 5.8808,13.55138 3.92052,3.57963 8.60809,5.45466 13.97753,5.45466 5.45464,0 10.057,-1.78981 13.97752,-5.45466 3.92053,-3.57963 5.88077,-8.09672 5.88077,-13.55138 V 871.89382 812.23361 c 0,-2.98299 1.19321,-4.94327 3.57965,-5.88077 2.38641,-0.93754 4.1762,-1.36366 5.45464,-1.36366 1.19321,0 2.89778,0.42612 4.94327,1.36366 2.04547,0.9375 3.15346,2.89778 3.15346,5.88077 v 59.66021 105.76897 c 0,5.45466 1.96027,9.97175 5.8808,13.55138 3.92052,3.57963 8.6081,5.45466 13.97753,5.45466 6.05123,0 10.82404,-1.78981 14.4889,-5.45466 3.57961,-3.57963 5.45464,-8.09672 5.45464,-13.55138 l 0.93751,-270.34588 c 0,-1.78979 0.93753,-2.983 2.72732,-3.57961 1.78982,-0.59659 3.32393,-0.9375 4.51714,-0.9375 1.1932,0 2.72732,0.34091 4.51711,0.9375 1.78982,0.59661 2.72736,1.78982 2.72736,3.57961 v 5.45464 112.07593 c 0,4.85806 1.36363,8.26721 4.09095,10.39792 2.72735,2.13073 5.71035,3.15348 9.03428,3.15348 3.32391,0 6.30694,-1.02275 9.03426,-3.15348 2.72732,-2.13071 4.09098,-5.53986 4.09098,-10.39792 V 700.15769 c 0,-12.01725 -4.09098,-22.92657 -12.18773,-32.55742 -8.09676,-9.63086 -19.1765,-14.48889 -32.98357,-14.48889 h -48.83614 -0.9375 -45.17128 c -13.89231,0 -23.94931,4.85803 -30.25625,14.48889 -6.30693,9.63085 -9.46041,20.45492 -9.46041,32.55742 v 124.77503 c -0.0852,4.77282 1.27845,8.26718 4.00577,10.39792 z m 468.75862,-351.73942 c 5.45466,5.11373 8.09677,11.59108 8.09677,19.43214 v 538.90194 c 0,7.8411 -2.72733,14.3185 -8.09677,19.4322 -5.45466,5.1138 -12.01727,7.6706 -19.85833,7.6706 h -516.3163 c -7.84106,0 -14.4889,-2.5568 -19.85831,-7.6706 -5.36943,-5.1137 -8.09675,-11.5911 -8.09675,-19.4322 V 503.02336 c 0,-7.84106 2.72732,-14.31841 8.09675,-19.43214 5.36941,-5.11373 12.01725,-7.67062 19.85831,-7.67062 h 516.23108 c 7.92628,0 14.48889,2.55689 19.94355,7.67062 z m -37.07456,37.50066 h -481.88385 v 502.76492 h 481.88385 z m -137.38889,119.40563 c 12.01728,0 22.32996,-4.17622 30.76761,-12.69911 8.4377,-8.43767 12.61387,-18.66513 12.61387,-30.76762 0,-12.1025 -4.17617,-22.32995 -12.61387,-30.76759 -8.43765,-8.43767 -18.66511,-12.69911 -30.76761,-12.69911 -12.10249,0 -22.32994,4.26144 -30.76759,12.69911 -8.43765,8.43764 -12.69909,18.66509 -12.69909,30.76759 0,12.10249 4.17622,22.32995 12.69909,30.76762 8.43765,8.43767 18.6651,12.69911 30.76759,12.69911 z m -86.33683,194.83313 c 2.72733,2.13074 5.88081,3.15345 9.46044,3.15345 3.57962,0 6.81832,-1.02271 9.46038,-3.15345 2.72733,-2.13074 4.091,-5.53989 4.091,-10.39792 v -112.16117 -5.45464 c 0,-1.78979 0.93751,-2.983 2.72733,-3.57961 1.78981,-0.59659 3.32391,-0.9375 4.51714,-0.9375 1.19318,0 2.72728,0.34091 4.51714,0.9375 1.78977,0.59661 2.72728,1.78982 2.72728,3.57961 v 270.34588 c 0,5.45466 1.96026,9.97175 5.88081,13.55138 3.92051,3.57963 8.60814,5.45466 13.97753,5.45466 5.36944,0 10.05697,-1.78981 13.97752,-5.45466 3.9205,-3.57963 5.88081,-8.09672 5.88081,-13.55138 V 871.89382 812.23361 c 0,-2.98299 1.19317,-4.94327 3.57957,-5.88077 2.38641,-0.93754 4.17627,-1.36366 5.45466,-1.36366 1.2784,0 2.98299,0.42612 5.45466,1.36366 2.38641,0.9375 3.57958,2.89778 3.57958,5.88077 v 59.66021 105.76897 c 0,5.45466 1.78986,9.97175 5.45466,13.55138 3.57963,3.57963 8.43765,5.45466 14.4889,5.45466 5.45466,0 10.05702,-1.78981 13.97753,-5.45466 3.92055,-3.57963 5.8808,-8.09672 5.8808,-13.55138 V 707.40215 c 0,-1.78981 0.93752,-2.98302 2.72733,-3.57961 1.78977,-0.59662 3.32392,-0.93753 4.5171,-0.93753 1.19322,0 2.72733,0.34091 4.51714,0.93753 1.78982,0.59659 2.72733,1.7898 2.72733,3.57961 v 5.45465 112.07592 c 0,4.85803 1.36367,8.26718 4.091,10.39792 2.72733,2.13074 5.88076,3.15345 9.46038,3.15345 3.57963,0 6.81833,-1.02271 9.46044,-3.15345 2.64206,-2.13074 4.09094,-5.53989 4.09094,-10.39792 V 700.15769 c 0,-12.01725 -4.17621,-22.92657 -12.61386,-32.55742 -8.43765,-9.63086 -19.60263,-14.48889 -33.49494,-14.48889 h -47.89861 -0.93752 -0.93752 -44.31897 c -13.89231,0 -24.11977,4.85803 -30.76761,14.48889 -6.64784,9.63085 -9.9718,20.45492 -9.9718,32.55742 v 124.77503 c 0.17049,4.77282 1.53415,8.26718 4.26143,10.39792 z m 146.5936,-478.73045 c -12.35815,0 -32.046,0 -32.046,0 0,0 0,-5.36939 0,-13.55133 0,-25.22773 0,-74.40479 0,-93.24039 0,0 0.17044,-4.43187 -5.53988,-4.43187 -5.71032,0 -40.73941,0 -48.7509,0 -8.0115,0 -6.56262,5.28417 -6.56262,5.28417 0,19.34697 0,66.90465 0,93.0699 0,9.11945 0,15.08548 0,15.08548 0,0 -24.54587,0 -34.68811,0 -10.05702,0 -0.76708,8.77858 -0.76708,8.77858 l 61.44999,74.31961 c 0,0 5.02851,5.88076 10.31268,0.59654 7.24443,-7.32964 59.57496,-76.70592 59.57496,-76.70592 0,0 9.37517,-9.20477 -2.98304,-9.20477 z m -327.61963,-34.68811 c 12.35819,0 32.04604,0 32.04604,0 0,0 0,5.36944 0,13.55138 0,25.22777 0,74.40478 0,93.24038 0,0 -0.17046,4.43188 5.53989,4.43188 5.71031,0 40.73938,0 48.75089,0 8.0115,0 6.56263,-5.28417 6.56263,-5.28417 0,-19.34697 0,-66.90466 0,-93.0699 0,-9.11951 0,-15.08549 0,-15.08549 0,0 24.5459,0 34.68811,0 10.05704,0 0.76708,-8.77862 0.76708,-8.77862 l -61.45,-74.31952 c 0,0 -5.02848,-5.88081 -10.3127,-0.59664 -7.24444,7.3297 -59.57493,76.70602 -59.57493,76.70602 0,0 -9.37518,9.20468 2.98299,9.20468 z"
          id="path32116-3"
-         style="stroke-width:9.19935;stroke-dasharray:none;fill:#000000" />
+         style="fill:#000000;stroke-width:9.19935;stroke-dasharray:none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer9"
      inkscape:label="Text"
-     style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0;stroke-dasharray:none;stroke-opacity:1">
+     style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+     sodipodi:insensitive="true">
     <text
        xml:space="preserve"
        style="font-size:9.33333px;line-height:0.9;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
@@ -401,30 +408,30 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.33276px;line-height:0.9;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0;stroke-linecap:butt;stroke-linejoin:bevel;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       x="271.93015"
-       y="91.030899"
+       x="275.96649"
+       y="81.162445"
        id="text1857"
        transform="scale(1.0004982,0.99950204)"><tspan
          sodipodi:role="line"
-         x="271.93015"
-         y="91.030899"
+         x="275.96649"
+         y="81.162445"
          id="tspan1859"
          style="stroke-width:0">Artary</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:9.33276px;line-height:0.9;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       x="197.34999"
-       y="138.90094"
+       x="199.67369"
+       y="128.72981"
        id="text34131"
        transform="scale(1.0004982,0.99950204)"><tspan
          sodipodi:role="line"
          id="tspan34129"
-         x="197.34999"
-         y="138.90094"
-         style="stroke-width:0">Gong Cha &amp;</tspan><tspan
+         x="199.67369"
+         y="128.72981"
+         style="stroke-width:0">Gong Cha and</tspan><tspan
          sodipodi:role="line"
-         x="197.34999"
-         y="147.30043"
+         x="199.67369"
+         y="137.1293"
          id="tspan34133"
          style="stroke-width:0">Coconut Queen</tspan></text>
     <text
@@ -458,7 +465,7 @@
          style="stroke-width:0">The</tspan><tspan
          sodipodi:role="line"
          x="549.04413"
-         y="512.91162"
+         y="512.91156"
          id="tspan34319"
          style="stroke-width:0">Underground</tspan></text>
     <text
@@ -476,14 +483,14 @@
     <text
        xml:space="preserve"
        style="font-size:9.33276px;line-height:0.9;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       x="459.83313"
-       y="501.31561"
+       x="463.28735"
+       y="498.98083"
        id="text34327"
        transform="scale(1.0004982,0.99950204)"><tspan
          sodipodi:role="line"
          id="tspan34325"
-         x="459.83313"
-         y="501.31561"
+         x="463.28735"
+         y="498.98083"
          style="stroke-width:0">Miniso</tspan></text>
     <text
        xml:space="preserve"
@@ -580,18 +587,18 @@
     <text
        xml:space="preserve"
        style="font-size:9.33276px;line-height:0.9;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       x="175.63643"
-       y="179.92346"
+       x="177.96013"
+       y="169.75233"
        id="text34137"
        transform="scale(1.0004982,0.99950204)"><tspan
          sodipodi:role="line"
          id="tspan34135"
-         x="175.63643"
-         y="179.92346"
+         x="177.96013"
+         y="169.75233"
          style="stroke-width:0">Pavilion</tspan><tspan
          sodipodi:role="line"
-         x="175.63643"
-         y="188.32295"
+         x="177.96013"
+         y="178.15182"
          id="tspan34139"
          style="stroke-width:0">Banana Leaf</tspan></text>
     <text
@@ -870,149 +877,149 @@
     <text
        xml:space="preserve"
        style="font-size:9.33276px;line-height:0.9;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       x="437.39682"
-       y="184.86928"
+       x="441.43317"
+       y="175.00082"
        id="text34237"
        transform="scale(1.0004982,0.99950204)"><tspan
          sodipodi:role="line"
          id="tspan34235"
-         x="437.39682"
-         y="184.86928"
+         x="441.43317"
+         y="175.00082"
          style="stroke-width:0">YISHION</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:9.33276px;line-height:0.9;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       x="483.73148"
-       y="221.83955"
+       x="487.76782"
+       y="211.9711"
        id="text34241"
        transform="scale(1.0004982,0.99950204)"><tspan
          sodipodi:role="line"
          id="tspan34239"
-         x="483.73148"
-         y="221.83955"
+         x="487.76782"
+         y="211.9711"
          style="stroke-width:0">Recoil</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:9.33276px;line-height:0.9;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       x="562.12067"
-       y="224.38368"
+       x="561.70551"
+       y="212.88847"
        id="text34245"
        transform="scale(1.0004982,0.99950204)"><tspan
          sodipodi:role="line"
          id="tspan34243"
-         x="562.12067"
-         y="224.38368"
+         x="561.70551"
+         y="212.88847"
          style="stroke-width:0">EAGLE EYE</tspan><tspan
          sodipodi:role="line"
-         x="562.12067"
-         y="232.78317"
+         x="561.70551"
+         y="221.28796"
          id="tspan34247"
          style="stroke-width:0">CENTRE</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:9.33276px;line-height:0.9;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       x="521.14752"
-       y="260.70737"
+       x="520.73236"
+       y="249.21216"
        id="text34251"
        transform="scale(1.0004982,0.99950204)"><tspan
          sodipodi:role="line"
          id="tspan34249"
-         x="521.14752"
-         y="260.70737"
+         x="520.73236"
+         y="249.21216"
          style="stroke-width:0">OWNDAYS</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:9.33276px;line-height:0.9;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       x="555.09631"
-       y="282.11221"
+       x="554.68115"
+       y="270.617"
        id="text34255"
        transform="scale(1.0004982,0.99950204)"><tspan
          sodipodi:role="line"
          id="tspan34253"
-         x="555.09631"
-         y="282.11221"
+         x="554.68115"
+         y="270.617"
          style="stroke-width:0">Superga</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:9.33276px;line-height:0.9;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       x="678.21326"
-       y="229.99786"
+       x="674.5163"
+       y="214.3616"
        id="text34259"
        transform="scale(1.0004982,0.99950204)"><tspan
          sodipodi:role="line"
          id="tspan34257"
-         x="678.21326"
-         y="229.99786"
+         x="674.5163"
+         y="214.3616"
          style="stroke-width:0">Income</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:9.33276px;line-height:0.9;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       x="656.39197"
-       y="249.0562"
+       x="652.69501"
+       y="233.41994"
        id="text34263"
        transform="scale(1.0004982,0.99950204)"><tspan
          sodipodi:role="line"
          id="tspan34261"
-         x="656.39197"
-         y="249.0562"
+         x="652.69501"
+         y="233.41994"
          style="stroke-width:0">Singapore</tspan><tspan
          sodipodi:role="line"
-         x="656.39197"
-         y="257.45569"
+         x="652.69501"
+         y="241.81943"
          id="tspan34265"
          style="stroke-width:0">Post</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:9.33276px;line-height:0.9;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       x="650.14795"
-       y="284.99048"
+       x="646.45099"
+       y="269.35422"
        id="text34269"
        transform="scale(1.0004982,0.99950204)"><tspan
          sodipodi:role="line"
          id="tspan34267"
-         x="650.14795"
-         y="284.99048"
+         x="646.45099"
+         y="269.35422"
          style="stroke-width:0">Adrift Anapauo</tspan><tspan
          sodipodi:role="line"
-         x="650.14795"
-         y="293.38995"
+         x="646.45099"
+         y="277.75369"
          id="tspan34271"
-         style="stroke-width:0">Massage &amp; Spa</tspan></text>
+         style="stroke-width:0">Massage and Spa</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:9.33276px;line-height:0.9;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       x="597.42035"
-       y="311.75235"
+       x="593.72339"
+       y="296.11609"
        id="text34275"
        transform="scale(1.0004982,0.99950204)"><tspan
          sodipodi:role="line"
          id="tspan34273"
-         x="597.42035"
-         y="311.75235"
+         x="593.72339"
+         y="296.11609"
          style="stroke-width:0">LANEIGE</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:9.33276px;line-height:0.9;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       x="631.68109"
-       y="334.07834"
+       x="629.43414"
+       y="317.79004"
        id="text34279"
        transform="scale(1.0004982,0.99950204)"><tspan
          sodipodi:role="line"
          id="tspan34277"
-         x="631.68109"
-         y="334.07834"
+         x="629.43414"
+         y="317.79004"
          style="stroke-width:0">Kaleido</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:9.33276px;line-height:0.9;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       x="671.68207"
-       y="358.75085"
+       x="667.98511"
+       y="343.11459"
        id="text34283"
        transform="scale(1.0004982,0.99950204)"><tspan
          sodipodi:role="line"
          id="tspan34281"
-         x="671.68207"
-         y="358.75085"
+         x="667.98511"
+         y="343.11459"
          style="stroke-width:0">Lenskart</tspan></text>
     <text
        xml:space="preserve"
@@ -1041,26 +1048,26 @@
     <text
        xml:space="preserve"
        style="font-size:9.33276px;line-height:0.9;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       x="377.58389"
-       y="245.7885"
+       x="357.3638"
+       y="232.02998"
        id="text34295"
        transform="scale(1.0004982,0.99950204)"><tspan
          sodipodi:role="line"
          id="tspan34293"
-         x="377.58389"
-         y="245.7885"
+         x="357.3638"
+         y="232.02998"
          style="stroke-width:0">Talisman's</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:9.33276px;line-height:0.9;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       x="711.93402"
-       y="423.50879"
+       x="705.23267"
+       y="423.45602"
        id="text34301"
        transform="scale(1.0004982,0.99950204)"><tspan
          sodipodi:role="line"
          id="tspan34299"
-         x="711.93402"
-         y="423.50879"
+         x="705.23267"
+         y="423.45602"
          style="stroke-width:0">Xpressflower.com</tspan></text>
     <text
        xml:space="preserve"
@@ -1079,5 +1086,1249 @@
          y="481.23734"
          id="tspan34307"
          style="stroke-width:0">Paradise</tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Nodes"
+     style="fill:#000000">
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-escalator-node-2-1"
+       cx="24.099644"
+       cy="306.93765"
+       inkscape:label="westgate-escalator-node-2-1"
+       rx="1.6268204"
+       ry="1.6252006"
+       transform="translate(46.497177,-112.17444)">
+      <desc
+         id="desc7118">adjacent=westgate-node-2-1, westgate-escalator-node-1-1
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-node-2-1"
+       cx="106.45245"
+       cy="196.38841"
+       inkscape:label="westgate-node-2-2"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7118-2">adjacent=westgate-node-2-1, westgate-escalator-node-2-1
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-node-2-2"
+       cx="106.45245"
+       cy="217.65927"
+       inkscape:label="westgate-node-2-2"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7118-2-6">adjacent=westgate-node-2-1, westgate-node-2-3, westgate-node-2-50
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-node-2-3"
+       cx="236.58174"
+       cy="216.03407"
+       inkscape:label="westgate-node-2-3"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7118-2-6-4">adjacent=westgate-miam-miam-node, westgate-node-2-2, westgate-node-2-4
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-node-2-4"
+       cx="236.58174"
+       cy="173.7197"
+       inkscape:label="westgate-node-2-4"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7118-2-6-4-58">adjacent=westgate-pavilion-banana-leaf-node, westgate-node-2-3, westgate-node-2-5, westgate-node-2-6
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-node-2-6"
+       cx="325.32657"
+       cy="221.92967"
+       inkscape:label="westgate-node-2-6"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7118-2-6-4-58-93">adjacent=westgate-node-2-4, westgate-node-2-7
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-node-2-10"
+       cx="346.50513"
+       cy="191.36496"
+       inkscape:label="westgate-node-2-10"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7118-2-6-4-58-93-5">adjacent=westgate-node-2-6, westgate-node-2-11
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-node-2-11"
+       cx="415.93866"
+       cy="232.05563"
+       inkscape:label="westgate-node-2-11"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7118-2-6-4-58-93-5-2">adjacent=westgate-yishion-node, westgate-node-2-10, westgate-node-2-12
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-yishion-node"
+       cx="422.82843"
+       cy="219.03604"
+       inkscape:label="westgate-yishion-node"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7118-2-6-4-58-93-5-2-9">adjacent=westgate-yishion-node, westgate-node-2-11
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-node-2-7"
+       cx="318.30469"
+       cy="235.89949"
+       inkscape:label="westgate-node-2-7"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7118-2-6-4-58-93-9">adjacent=westgate-node-2-6, westgate-node-2-8
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-node-2-8"
+       cx="350.69043"
+       cy="256.13947"
+       inkscape:label="westgate-node-2-8"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7118-2-6-4-58-93-9-7">adjacent=westgate-talismans-node, westgate-refash-node, westgate-node-2-7, westgate-node-2-9
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-node-2-9"
+       cx="388.28799"
+       cy="277.44876"
+       inkscape:label="westgate-node-2-9"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7118-2-6-4-58-93-9-7-7">adjacent=westgate-node-2-8, westgate-node-2-12
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-refash-node"
+       cx="346.69458"
+       cy="262.58908"
+       inkscape:label="westgate-refash-node"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7118-2-6-4-58-93-9-7-2">adjacent=westgate-node-2-8
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-talismans-node"
+       cx="355.1062"
+       cy="248.16255"
+       inkscape:label="westgate-talismans-node"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7118-2-6-4-58-93-9-7-5">adjacent=westgate-node-2-8
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-node-2-5"
+       cx="236.58174"
+       cy="143.66061"
+       inkscape:label="westgate-node-2-5"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7118-2-6-4-58-9">adjacent=westgate-gong-cha-and-coconut-queen-node, westgate-artary-node, westgate-node-2-4
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-gong-cha-and-coconut-queen-node"
+       cx="224.99611"
+       cy="138.28174"
+       inkscape:label="westgate-gong-cha-and-coconut-queen-node"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7118-2-6-4-58-9-2">adjacent=westgate-node-2-5
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-artary-node"
+       cx="252.90735"
+       cy="114.81777"
+       inkscape:label="westgate-artary-node"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7118-2-6-4-58-9-2-5">adjacent=westgate-node-2-5
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-pavilion-banana-leaf-node"
+       cx="217.2034"
+       cy="173.7197"
+       inkscape:label="westgate-pavilion-banana-leaf-node"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7118-2-6-4-58-5">adjacent=westgate-node-2-4
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-miam-miam-node"
+       cx="236.58174"
+       cy="228.55023"
+       inkscape:label="westgate-miam-miam-node"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7118-2-6-4-5">adjacent=westgate-node-2-3
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;paint-order:stroke fill markers"
+       id="westgate-elevator-node-2-2"
+       cx="-16.941357"
+       cy="448.93765"
+       inkscape:label="westgate-elevator-node-2-2"
+       rx="1.6268204"
+       ry="1.6252006"
+       transform="translate(46.497177,-112.17444)">
+      <desc
+         id="desc8860">adjacent=westgate-node-2-48, westgate-elevator-node-1-2
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-escalator-node-2-2"
+       cx="389.91483"
+       cy="253.7632"
+       inkscape:label="westgate-escalator-node-2-2"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880">adjacent=westgate-node-2-12, westgate-escalator-node-1-2
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-node-2-13"
+       cx="427.57666"
+       cy="279.07397"
+       inkscape:label="westgate-node-2-13"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3">adjacent=westgate-the-wallet-shop-node, westgate-node-2-12, westgate-node-2-14
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-node-2-12"
+       cx="398.0502"
+       cy="258.81641"
+       inkscape:label="westgate-node-2-12"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-8">adjacent=westgate-node-2-9, westgate-node-2-11, westgate-node-2-13, westgate-escalator-node-2-2
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-node-2-14"
+       cx="448.73721"
+       cy="292.33612"
+       inkscape:label="westgate-node-2-14"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7">adjacent=westgate-recoil-node, westgate-kimoj-node, westgate-node-2-13, westgate-node-2-15
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-node-2-15"
+       cx="484.7338"
+       cy="312.85028"
+       inkscape:label="westgate-node-2-15"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3">adjacent=westgate-glimpse-node, westgate-owndays-node, westgate-node-2-14, westgate-node-2-16
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-node-2-16"
+       cx="521.53473"
+       cy="334.4357"
+       inkscape:label="westgate-node-2-16"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0">adjacent=westgate-node-2-15, westgate-node-2-17, westgate-node-2-28
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-node-2-28"
+       cx="509.64603"
+       cy="354.38232"
+       inkscape:label="westgate-node-2-28"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-0">adjacent=westgate-oro-gold-cosmetics-node, westgate-node-2-16, westgate-node-2-29
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-node-2-29"
+       cx="548.04083"
+       cy="376.51016"
+       inkscape:label="westgate-node-2-29"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-0-3">adjacent=westgate-irvins-salted-egg-node, westgate-node-2-28, westgate-node-2-30
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-irvins-salted-egg-node"
+       cx="551.13031"
+       cy="370.56573"
+       inkscape:label="westgate-irvins-salted-egg-node"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-0-3-3">adjacent=westgate-node-2-29
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-node-2-30"
+       cx="601.12482"
+       cy="397.41"
+       inkscape:label="westgate-node-2-30"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-0-3-7">adjacent=westgate-node-2-23, westgate-node-2-24, westgate-node-2-25, westgate-node-2-29, westgate-node-2-31
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-node-2-31"
+       cx="601.12482"
+       cy="436.09174"
+       inkscape:label="westgate-node-2-31"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-0-3-7-3-6">adjacent=westgate-node-2-30, westgate-node-2-32, westgate-node-2-33, westgate-escalator-node-2-3
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-node-2-33"
+       cx="539.51984"
+       cy="436.09174"
+       inkscape:label="westgate-node-2-33"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-0-3-7-3-6-3">adjacent=westgate-hysses-node, westgate-the-underground-node, westgate-node-2-31, westgate-node-2-34
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-node-2-34"
+       cx="505.61847"
+       cy="436.09174"
+       inkscape:label="westgate-node-2-34"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-0-3-7-3-6-3-49">adjacent=westgate-yves-rocher-node, westgate-bega-node, westgate-node-2-33, westgate-node-2-35
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-node-2-35"
+       cx="464.25052"
+       cy="436.09174"
+       inkscape:label="westgate-node-2-35"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6">adjacent=westgate-miniso-node, westgate-node-2-34, westgate-node-2-36
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-node-2-36"
+       cx="423.44901"
+       cy="436.09174"
+       inkscape:label="westgate-node-2-36"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9">adjacent=westgate-ncat-node, westgate-node-2-35, westgate-node-2-37
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-node-2-37"
+       cx="386.83438"
+       cy="436.09174"
+       inkscape:label="westgate-node-2-37"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4">adjacent=westgate-osmose-node, westgate-curry-times-node, westgate-node-2-36, westgate-node-2-38
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-node-2-38"
+       cx="329.02933"
+       cy="436.09174"
+       inkscape:label="westgate-node-2-38"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-9">adjacent=westgate-pop-mart-node, westgate-node-2-37, westgate-node-2-39
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-node-2-39"
+       cx="278.98996"
+       cy="436.09174"
+       inkscape:label="westgate-node-2-39"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-9-95">adjacent=westgate-thefaceshop-node, westgate-menya-musashi-node, westgate-node-2-38, westgate-node-2-40
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-node-2-40"
+       cx="240.42015"
+       cy="436.09174"
+       inkscape:label="westgate-node-2-40"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-9-95-5">adjacent=westgate-typo-node, westgate-node-2-39, westgate-node-2-41
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-node-2-41"
+       cx="225.90034"
+       cy="436.09174"
+       inkscape:label="westgate-node-2-41"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-9-95-5-3">adjacent=westgate-honolulu-cafe-node, westgate-node-2-40, westgate-node-2-42
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-honolulu-cafe-node"
+       cx="225.90034"
+       cy="511.6557"
+       inkscape:label="westgate-honolulu-cafe-node"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-9-95-5-3-9">adjacent=westgate-node-2-41
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-node-2-42"
+       cx="201.70883"
+       cy="436.09174"
+       inkscape:label="westgate-node-2-42"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-9-95-5-3-8">adjacent=westgate-fancl-node, westgate-souperstar-node, westgate-node-2-41, westgate-node-2-43
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-node-2-43"
+       cx="141.64284"
+       cy="436.09174"
+       inkscape:label="westgate-node-2-43"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-9-95-5-3-8-2">adjacent=westgate-jinjja-chicken-node, westgate-node-2-42, westgate-node-2-44
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-node-2-45"
+       cx="71.262054"
+       cy="436.09174"
+       inkscape:label="westgate-node-2-45"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-9-95-5-3-8-2-8">adjacent=westgate-starbucks-node, westgate-node-2-44, westgate-node-2-46
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-node-2-44"
+       cx="106.45245"
+       cy="436.09174"
+       inkscape:label="westgate-node-2-44"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-9-95-5-3-8-2-8-4">adjacent=westgate-node-2-43, westgate-node-2-45, westgate-node-2-47
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-node-2-47"
+       cx="106.45245"
+       cy="377.63968"
+       inkscape:label="westgate-node-2-47"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-9-95-5-3-8-2-8-4-1">adjacent=westgate-decathlon-node, westgate-node-2-44, westgate-node-2-48
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-node-2-48"
+       cx="106.45245"
+       cy="336.76321"
+       inkscape:label="westgate-node-2-48"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-9-95-5-3-8-2-8-4-1-0">adjacent=westgate-coffesmith-node, westgate-node-2-47, westgate-node-2-49, westgate-elevator-node-2-2
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-node-2-49"
+       cx="106.45245"
+       cy="281.89246"
+       inkscape:label="westgate-node-2-49"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-9-95-5-3-8-2-8-4-1-0-1">adjacent=westgate-lady-m-confections-node, westgate-node-2-48, westgate-node-2-50
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-node-2-50"
+       cx="106.45245"
+       cy="261.45874"
+       inkscape:label="westgate-node-2-50"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-9-95-5-3-8-2-8-4-1-0-1-2">adjacent=westgate-toast-box-node, westgate-node-2-49, westgate-node-2-2
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-toast-box-node"
+       cx="58.078342"
+       cy="261.45874"
+       inkscape:label="westgate-toast-box-node"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-9-95-5-3-8-2-8-4-1-0-1-2-5">adjacent=westgate-node-2-50
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-lady-m-confections-node"
+       cx="160.49686"
+       cy="281.89246"
+       inkscape:label="westgate-lady-m-confections-node"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-9-95-5-3-8-2-8-4-1-0-1-9">adjacent=westgate-node-2-49
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-coffesmith-node"
+       cx="160.49686"
+       cy="336.76321"
+       inkscape:label="westgate-coffesmith-node"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-9-95-5-3-8-2-8-4-1-0-6">adjacent=westgate-node-2-48
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-decathlon-node"
+       cx="160.49686"
+       cy="377.63968"
+       inkscape:label="westgate-decathlon-node"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-9-95-5-3-8-2-8-4-1-7">adjacent=westgate-node-2-47
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-node-2-46"
+       cx="71.262054"
+       cy="416.38879"
+       inkscape:label="westgate-node-2-46"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-9-95-5-3-8-2-8-9">adjacent=westgate-breadtalk-cafe-node, westgate-node-2-45
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-breadtalk-cafe-node"
+       cx="56.892239"
+       cy="416.38879"
+       inkscape:label="westgate-breadtalk-cafe-node"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-9-95-5-3-8-2-8-9-9">adjacent=westgate-node-2-46
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-starbucks-node"
+       cx="71.262054"
+       cy="482.74664"
+       inkscape:label="westgate-starbucks-node"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-9-95-5-3-8-2-8-8">adjacent=westgate-node-2-45
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-jinjja-chicken-node"
+       cx="141.64284"
+       cy="482.74664"
+       inkscape:label="westgate-jinjja-chicken-node"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-9-95-5-3-8-2-7">adjacent=westgate-node-2-43
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-souperstar-node"
+       cx="201.70883"
+       cy="480.72528"
+       inkscape:label="westgate-souperstar-node"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-9-95-5-3-8-5">adjacent=westgate-node-2-42
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-fancl-node"
+       cx="201.70883"
+       cy="404.14648"
+       inkscape:label="westgate-fancl-node"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-9-95-5-3-8-5-6">adjacent=westgate-node-2-42
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-typo-node"
+       cx="240.42015"
+       cy="404.14648"
+       inkscape:label="westgate-typo-node"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-9-95-5-5">adjacent=westgate-node-2-40
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-thefaceshop-node"
+       cx="278.98996"
+       cy="403.77936"
+       inkscape:label="westgate-thefaceshop-node"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-9-95-0">adjacent=westgate-node-2-39
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-menya-musashi-node"
+       cx="278.98996"
+       cy="511.6557"
+       inkscape:label="westgate-menya-musashi-node"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-9-95-0-7">adjacent=westgate-node-2-39
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-pop-mart-node"
+       cx="329.55179"
+       cy="403.44986"
+       inkscape:label="westgate-pop-mart-node"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-9-9">adjacent=westgate-node-2-38
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-curry-times-node"
+       cx="386.83438"
+       cy="496.56262"
+       inkscape:label="westgate-curry-times-node"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-5">adjacent=westgate-node-2-37
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-osmose-node"
+       cx="386.83438"
+       cy="403.67905"
+       inkscape:label="westgate-osmose-node"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-5-5">adjacent=westgate-node-2-37
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-ncat-node"
+       cx="423.44901"
+       cy="403.67905"
+       inkscape:label="westgate-ncat-node"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-7">adjacent=westgate-node-2-36
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-miniso-node"
+       cx="464.25052"
+       cy="469.99716"
+       inkscape:label="westgate-miniso-node"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-8">adjacent=westgate-node-2-35
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-yves-rocher-node"
+       cx="505.61847"
+       cy="418.3591"
+       inkscape:label="westgate-yves-rocher-node"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-0-3-7-3-6-3-49-1">adjacent=westgate-node-2-34
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-bega-node"
+       cx="505.61847"
+       cy="469.25833"
+       inkscape:label="westgate-bega-node"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-0-3-7-3-6-3-49-1-1">adjacent=westgate-node-2-34
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-hysses-node"
+       cx="539.51984"
+       cy="418.3591"
+       inkscape:label="westgate-hysses-node"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-0-3-7-3-6-3-4">adjacent=westgate-node-2-33
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-the-underground-node"
+       cx="539.51984"
+       cy="469.25833"
+       inkscape:label="westgate-the-underground-node"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-0-3-7-3-6-3-6">adjacent=westgate-node-2-33
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-node-2-32"
+       cx="652.10663"
+       cy="436.20782"
+       inkscape:label="westgate-node-2-32"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-0-3-7-3-6-9">adjacent=westgate-paradise-dynasty-node, westgate-node-2-25, westgate-node-2-31
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-paradise-dynasty-node"
+       cx="653.73346"
+       cy="481.03201"
+       inkscape:label="westgate-paradise-dynasty-node"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-0-3-7-3-6-9-2">adjacent=westgate-node-2-32
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-node-2-17"
+       cx="538.46204"
+       cy="307.31094"
+       inkscape:label="westgate-node-2-17"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-9">adjacent=westgate-superga-node, westgate-node-2-16, westgate-node-2-18
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-node-2-18"
+       cx="557.4281"
+       cy="317.27725"
+       inkscape:label="westgate-node-2-18"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-9-6">adjacent=westgate-node-2-17, westgate-node-2-19, westgate-node-2-22
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-node-2-22"
+       cx="575.01953"
+       cy="326.75577"
+       inkscape:label="westgate-node-2-22"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-9-6-8">adjacent=westgate-myeureka-node, westgate-laneige-node, westgate-node-2-18, westgate-node-2-23
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-node-2-23"
+       cx="612.06769"
+       cy="348.8161"
+       inkscape:label="westgate-node-2-23"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-9-6-8-52">adjacent=westgate-kaleido-node, westgate-node-2-22, westgate-node-2-24, westgate-node-2-30
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-node-2-24"
+       cx="652.10663"
+       cy="370.69644"
+       inkscape:label="westgate-node-2-24"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-9-6-8-52-9">adjacent=westgate-lenskart-node, westgate-node-2-23, westgate-node-2-25, westgate-node-2-30
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-node-2-25"
+       cx="652.10663"
+       cy="412.01096"
+       inkscape:label="westgate-node-2-25"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-9-6-8-52-9-73">adjacent=westgate-node-2-24, westgate-node-2-26, westgate-node-2-30, westgate-node-2-32
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-node-2-26"
+       cx="676.19983"
+       cy="411.89487"
+       inkscape:label="westgate-node-2-26"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-9-6-8-52-9-73-8">adjacent=westgate-node-2-25, westgate-node-2-27, westgate-elevator-node-2-1
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-node-2-27"
+       cx="699.28735"
+       cy="411.89487"
+       inkscape:label="westgate-node-2-27"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-9-6-8-52-9-73-8-92">adjacent=westgate-xpressflowercom-node, westgate-canton-paradise-node, westgate-node-2-26
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-canton-paradise-node"
+       cx="699.28735"
+       cy="451.27942"
+       inkscape:label="westgate-canton-paradise-node"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-9-6-8-52-9-73-8-92-4">adjacent=westgate-node-2-27
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-xpressflowercom-node"
+       cx="715.21667"
+       cy="411.89487"
+       inkscape:label="westgate-xpressflowercom-node"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-9-6-8-52-9-73-8-9">adjacent=westgate-node-2-27
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-lenskart-node"
+       cx="656.75348"
+       cy="362.21597"
+       inkscape:label="westgate-lenskart-node"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-9-6-8-52-9-7">adjacent=westgate-node-2-24
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-kaleido-node"
+       cx="618.00299"
+       cy="338.28156"
+       inkscape:label="westgate-kaleido-node"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-9-6-8-52-7">adjacent=westgate-node-2-23
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-laneige-node"
+       cx="580.52167"
+       cy="315.11423"
+       inkscape:label="westgate-laneige-node"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-9-6-8-5">adjacent=westgate-node-2-22
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-myeureka-node"
+       cx="568.97247"
+       cy="338.52753"
+       inkscape:label="westgate-myeureka-node"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-9-6-8-5-4">adjacent=westgate-node-2-22
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-node-2-19"
+       cx="602.05548"
+       cy="242.16486"
+       inkscape:label="westgate-node-2-19"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-9-6-6">adjacent=westgate-eagle-eye-centre-node, westgate-adrift-anapauo-massage-and-spa-node, westgate-node-2-18, westgate-node-2-20
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-node-2-20"
+       cx="618.89136"
+       cy="215.40904"
+       inkscape:label="westgate-node-2-20"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-9-6-6-0">adjacent=westgate-singapore-post-node, westgate-node-2-19, westgate-node-2-21
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-node-2-21"
+       cx="632.89661"
+       cy="188.5253"
+       inkscape:label="westgate-node-2-21"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-9-6-6-0-6">adjacent=westgate-income-node, westgate-node-2-20
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-income-node"
+       cx="639.83875"
+       cy="191.30145"
+       inkscape:label="westgate-income-node"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-9-6-6-0-6-5">adjacent=westgate-node-2-21
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-singapore-post-node"
+       cx="624.9552"
+       cy="218.04922"
+       inkscape:label="westgate-singapore-post-node"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-9-6-6-0-3">adjacent=westgate-node-2-20
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-adrift-anapauo-massage-and-spa-node"
+       cx="607.92926"
+       cy="245.41525"
+       inkscape:label="westgate-adrift-anapauo-massage-and-spa-node"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-9-6-6-6">adjacent=westgate-node-2-19
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-eagle-eye-centre-node"
+       cx="596.78735"
+       cy="239.24162"
+       inkscape:label="westgate-eagle-eye-centre-node"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-9-6-6-9">adjacent=westgate-node-2-19
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-oro-gold-cosmetics-node"
+       cx="505.76596"
+       cy="360.70798"
+       inkscape:label="westgate-oro-gold-cosmetics-node"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-1">adjacent=westgate-node-2-28
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-superga-node"
+       cx="545.16394"
+       cy="295.5477"
+       inkscape:label="westgate-superga-node"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-0-1-0">adjacent=westgate-node-2-17
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-glimpse-node"
+       cx="470.91525"
+       cy="338.71622"
+       inkscape:label="westgate-glimpse-node"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-8">adjacent=westgate-node-2-15
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-owndays-node"
+       cx="508.20764"
+       cy="272.81134"
+       inkscape:label="westgate-owndays-node"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-3-8-6">adjacent=westgate-node-2-15
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-kimoj-node"
+       cx="434.42618"
+       cy="316.5845"
+       inkscape:label="westgate-kimoj-node"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-7">adjacent= westgate-node-2-14
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-recoil-node"
+       cx="473.79495"
+       cy="250.05908"
+       inkscape:label="westgate-recoil-node"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-7-7-7">adjacent= westgate-node-2-14
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="westgate-the-wallet-shop-node"
+       cx="413.29593"
+       cy="303.06854"
+       inkscape:label="westgate-the-wallet-shop-node"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc7880-3-9">adjacent=westgate-node-2-13
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;paint-order:stroke fill markers"
+       id="westgate-elevator-node-2-1"
+       cx="676.19983"
+       cy="398.10721"
+       inkscape:label="westgate-elevator-node-2-1"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc8289">adjacent=westgate-node-2-26, westgate-elevator-node-1-1
+level=2</desc>
+    </ellipse>
+    <ellipse
+       style="display:inline;fill:#000000;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;paint-order:stroke fill markers"
+       id="westgate-escalator-node-2-3"
+       cx="601.12482"
+       cy="450.76321"
+       inkscape:label="westgate-escalator-node-2-3"
+       rx="1.6268204"
+       ry="1.6252006">
+      <desc
+         id="desc8293">adjacent=westgate-node-1-26, westgate-escalator-node-1-3
+level=2</desc>
+    </ellipse>
   </g>
 </svg>
