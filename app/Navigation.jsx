@@ -92,24 +92,26 @@ export default function Navigation() {
               width="100%"
               viewBox="0 0 760 600"
             >
-              {path.map((node, index) => {
-                if (index < path.length - 1) {
-                  const currentNode = graph[node];
-                  const nextNode = graph[path[index + 1]];
-                  return (
-                    <Line
-                      x1={currentNode.coordinates.x}
-                      y1={currentNode.coordinates.y}
-                      x2={nextNode.coordinates.x}
-                      y2={nextNode.coordinates.y}
-                      stroke="red"
-                      strokeWidth="2"
-                      key={node}
-                    />
-                  );
-                }
-                return null;
-              })}
+              {path
+                .filter((node) => graph[node].level === currentLevel)
+                .map((node, index, levelNodes) => {
+                  if (index < levelNodes.length - 1) {
+                    const currentNode = graph[node];
+                    const nextNode = graph[levelNodes[index + 1]];
+                    return (
+                      <Line
+                        x1={currentNode.coordinates.x}
+                        y1={currentNode.coordinates.y}
+                        x2={nextNode.coordinates.x}
+                        y2={nextNode.coordinates.y}
+                        stroke="red"
+                        strokeWidth="2"
+                        key={node}
+                      />
+                    );
+                  }
+                  return null;
+                })}
             </Svg>
           </Floorplan>
         )}
