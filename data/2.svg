@@ -26,7 +26,7 @@
      inkscape:deskcolor="#505050"
      showgrid="true"
      inkscape:zoom="3.045231"
-     inkscape:cx="119.03859"
+     inkscape:cx="119.36697"
      inkscape:cy="318.85923"
      inkscape:window-width="2560"
      inkscape:window-height="1494"
@@ -1091,9 +1091,9 @@
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="Nodes"
-     style="fill:#000000">
+     style="fill:none">
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-escalator-node-2-1"
        cx="24.099644"
        cy="306.93765"
@@ -1106,7 +1106,7 @@
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-1"
        cx="106.45245"
        cy="196.38841"
@@ -1118,7 +1118,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-2"
        cx="106.45245"
        cy="217.65927"
@@ -1130,7 +1130,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-3"
        cx="236.58174"
        cy="216.03407"
@@ -1142,7 +1142,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-4"
        cx="236.58174"
        cy="173.7197"
@@ -1154,7 +1154,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-6"
        cx="325.32657"
        cy="221.92967"
@@ -1166,7 +1166,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-10"
        cx="346.50513"
        cy="191.36496"
@@ -1178,7 +1178,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-11"
        cx="415.93866"
        cy="232.05563"
@@ -1190,7 +1190,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-yishion-node"
        cx="422.82843"
        cy="219.03604"
@@ -1202,7 +1202,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-7"
        cx="318.30469"
        cy="235.89949"
@@ -1214,7 +1214,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-8"
        cx="350.69043"
        cy="256.13947"
@@ -1226,7 +1226,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-9"
        cx="388.28799"
        cy="277.44876"
@@ -1238,7 +1238,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-refash-node"
        cx="346.69458"
        cy="262.58908"
@@ -1250,7 +1250,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-talismans-node"
        cx="355.1062"
        cy="248.16255"
@@ -1262,7 +1262,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-5"
        cx="236.58174"
        cy="143.66061"
@@ -1274,7 +1274,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-gong-cha-and-coconut-queen-node"
        cx="224.99611"
        cy="138.28174"
@@ -1286,7 +1286,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-artary-node"
        cx="252.90735"
        cy="114.81777"
@@ -1298,7 +1298,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-pavilion-banana-leaf-node"
        cx="217.2034"
        cy="173.7197"
@@ -1310,7 +1310,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-miam-miam-node"
        cx="236.58174"
        cy="228.55023"
@@ -1322,7 +1322,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;paint-order:stroke fill markers"
+       style="display:inline;fill:none;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;paint-order:stroke fill markers"
        id="westgate-elevator-node-2-2"
        cx="-16.941357"
        cy="448.93765"
@@ -1335,7 +1335,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-escalator-node-2-2"
        cx="389.91483"
        cy="253.7632"
@@ -1347,7 +1347,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-13"
        cx="427.57666"
        cy="279.07397"
@@ -1359,7 +1359,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-12"
        cx="398.0502"
        cy="258.81641"
@@ -1371,7 +1371,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-14"
        cx="448.73721"
        cy="292.33612"
@@ -1383,7 +1383,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-15"
        cx="484.7338"
        cy="312.85028"
@@ -1395,7 +1395,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-16"
        cx="521.53473"
        cy="334.4357"
@@ -1407,7 +1407,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-28"
        cx="509.64603"
        cy="354.38232"
@@ -1419,7 +1419,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-29"
        cx="548.04083"
        cy="376.51016"
@@ -1431,7 +1431,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-irvins-salted-egg-node"
        cx="551.13031"
        cy="370.56573"
@@ -1443,7 +1443,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-30"
        cx="601.12482"
        cy="397.41"
@@ -1455,7 +1455,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-31"
        cx="601.12482"
        cy="436.09174"
@@ -1467,7 +1467,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-33"
        cx="539.51984"
        cy="436.09174"
@@ -1479,7 +1479,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-34"
        cx="505.61847"
        cy="436.09174"
@@ -1491,7 +1491,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-35"
        cx="464.25052"
        cy="436.09174"
@@ -1503,7 +1503,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-36"
        cx="423.44901"
        cy="436.09174"
@@ -1515,7 +1515,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-37"
        cx="386.83438"
        cy="436.09174"
@@ -1527,7 +1527,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-38"
        cx="329.02933"
        cy="436.09174"
@@ -1539,7 +1539,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-39"
        cx="278.98996"
        cy="436.09174"
@@ -1551,7 +1551,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-40"
        cx="240.42015"
        cy="436.09174"
@@ -1563,7 +1563,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-41"
        cx="225.90034"
        cy="436.09174"
@@ -1575,7 +1575,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-honolulu-cafe-node"
        cx="225.90034"
        cy="511.6557"
@@ -1587,7 +1587,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-42"
        cx="201.70883"
        cy="436.09174"
@@ -1599,7 +1599,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-43"
        cx="141.64284"
        cy="436.09174"
@@ -1611,7 +1611,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-45"
        cx="71.262054"
        cy="436.09174"
@@ -1623,7 +1623,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-44"
        cx="106.45245"
        cy="436.09174"
@@ -1635,7 +1635,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-47"
        cx="106.45245"
        cy="377.63968"
@@ -1647,7 +1647,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-48"
        cx="106.45245"
        cy="336.76321"
@@ -1659,7 +1659,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-49"
        cx="106.45245"
        cy="281.89246"
@@ -1671,7 +1671,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-50"
        cx="106.45245"
        cy="261.45874"
@@ -1683,7 +1683,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-toast-box-node"
        cx="58.078342"
        cy="261.45874"
@@ -1695,7 +1695,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-lady-m-confections-node"
        cx="160.49686"
        cy="281.89246"
@@ -1707,7 +1707,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-coffesmith-node"
        cx="160.49686"
        cy="336.76321"
@@ -1719,7 +1719,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-decathlon-node"
        cx="160.49686"
        cy="377.63968"
@@ -1731,7 +1731,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-46"
        cx="71.262054"
        cy="416.38879"
@@ -1743,7 +1743,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-breadtalk-cafe-node"
        cx="56.892239"
        cy="416.38879"
@@ -1755,7 +1755,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-starbucks-node"
        cx="71.262054"
        cy="482.74664"
@@ -1767,7 +1767,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-jinjja-chicken-node"
        cx="141.64284"
        cy="482.74664"
@@ -1779,7 +1779,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-souperstar-node"
        cx="201.70883"
        cy="480.72528"
@@ -1791,7 +1791,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-fancl-node"
        cx="201.70883"
        cy="404.14648"
@@ -1803,7 +1803,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-typo-node"
        cx="240.42015"
        cy="404.14648"
@@ -1815,7 +1815,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-thefaceshop-node"
        cx="278.98996"
        cy="403.77936"
@@ -1827,7 +1827,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-menya-musashi-node"
        cx="278.98996"
        cy="511.6557"
@@ -1839,7 +1839,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-pop-mart-node"
        cx="329.55179"
        cy="403.44986"
@@ -1851,7 +1851,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-curry-times-node"
        cx="386.83438"
        cy="496.56262"
@@ -1863,7 +1863,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-osmose-node"
        cx="386.83438"
        cy="403.67905"
@@ -1875,7 +1875,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-ncat-node"
        cx="423.44901"
        cy="403.67905"
@@ -1887,7 +1887,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-miniso-node"
        cx="464.25052"
        cy="469.99716"
@@ -1899,7 +1899,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-yves-rocher-node"
        cx="505.61847"
        cy="418.3591"
@@ -1911,7 +1911,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-bega-node"
        cx="505.61847"
        cy="469.25833"
@@ -1923,7 +1923,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-hysses-node"
        cx="539.51984"
        cy="418.3591"
@@ -1935,7 +1935,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-the-underground-node"
        cx="539.51984"
        cy="469.25833"
@@ -1947,7 +1947,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-32"
        cx="652.10663"
        cy="436.20782"
@@ -1959,7 +1959,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-paradise-dynasty-node"
        cx="653.73346"
        cy="481.03201"
@@ -1971,7 +1971,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-17"
        cx="538.46204"
        cy="307.31094"
@@ -1983,7 +1983,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-18"
        cx="557.4281"
        cy="317.27725"
@@ -1995,7 +1995,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-22"
        cx="575.01953"
        cy="326.75577"
@@ -2007,7 +2007,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-23"
        cx="612.06769"
        cy="348.8161"
@@ -2019,7 +2019,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-24"
        cx="652.10663"
        cy="370.69644"
@@ -2031,7 +2031,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-25"
        cx="652.10663"
        cy="412.01096"
@@ -2043,7 +2043,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-26"
        cx="676.19983"
        cy="411.89487"
@@ -2055,7 +2055,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-27"
        cx="699.28735"
        cy="411.89487"
@@ -2067,7 +2067,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-canton-paradise-node"
        cx="699.28735"
        cy="451.27942"
@@ -2079,7 +2079,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-xpressflowercom-node"
        cx="715.21667"
        cy="411.89487"
@@ -2091,7 +2091,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-lenskart-node"
        cx="656.75348"
        cy="362.21597"
@@ -2103,7 +2103,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-kaleido-node"
        cx="618.00299"
        cy="338.28156"
@@ -2115,7 +2115,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-laneige-node"
        cx="580.52167"
        cy="315.11423"
@@ -2127,7 +2127,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-myeureka-node"
        cx="568.97247"
        cy="338.52753"
@@ -2139,7 +2139,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-19"
        cx="602.05548"
        cy="242.16486"
@@ -2151,7 +2151,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-20"
        cx="618.89136"
        cy="215.40904"
@@ -2163,7 +2163,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-21"
        cx="632.89661"
        cy="188.5253"
@@ -2175,7 +2175,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-income-node"
        cx="639.83875"
        cy="191.30145"
@@ -2187,7 +2187,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-singapore-post-node"
        cx="624.9552"
        cy="218.04922"
@@ -2199,7 +2199,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-adrift-anapauo-massage-and-spa-node"
        cx="607.92926"
        cy="245.41525"
@@ -2211,7 +2211,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-eagle-eye-centre-node"
        cx="596.78735"
        cy="239.24162"
@@ -2223,7 +2223,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-oro-gold-cosmetics-node"
        cx="505.76596"
        cy="360.70798"
@@ -2235,7 +2235,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-superga-node"
        cx="545.16394"
        cy="295.5477"
@@ -2247,7 +2247,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-glimpse-node"
        cx="470.91525"
        cy="338.71622"
@@ -2259,7 +2259,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-owndays-node"
        cx="508.20764"
        cy="272.81134"
@@ -2271,7 +2271,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-kimoj-node"
        cx="434.42618"
        cy="316.5845"
@@ -2283,7 +2283,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-recoil-node"
        cx="473.79495"
        cy="250.05908"
@@ -2295,7 +2295,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-the-wallet-shop-node"
        cx="413.29593"
        cy="303.06854"
@@ -2307,7 +2307,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;paint-order:stroke fill markers"
+       style="display:inline;fill:none;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;paint-order:stroke fill markers"
        id="westgate-elevator-node-2-1"
        cx="676.19983"
        cy="398.10721"
@@ -2319,7 +2319,7 @@ level=2</desc>
 level=2</desc>
     </ellipse>
     <ellipse
-       style="display:inline;fill:#000000;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;paint-order:stroke fill markers"
+       style="display:inline;fill:none;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;paint-order:stroke fill markers"
        id="westgate-escalator-node-2-3"
        cx="601.12482"
        cy="450.76321"

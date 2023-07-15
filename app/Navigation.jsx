@@ -136,7 +136,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   mapContainer: {
-    flex: 0.6,
+    flex: 0.7,
   },
   overlayPath: {
     position: "absolute",

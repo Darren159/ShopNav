@@ -1,13 +1,15 @@
 import { useState } from "react";
 import { View, StyleSheet } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { useMalls } from "../services/databaseService";
+import Svg, { Path } from "react-native-svg";
+import { useMalls, useStores } from "../services/databaseService";
 import Floorplan from "../Components/Floorplan";
 import MallPicker from "../Components/MallPicker";
 import LevelButtons from "../Components/LevelButtons";
 
 export default function Directory() {
   const { malls, currentMall, setCurrentMall } = useMalls();
+  const { stores } = useStores(currentMall);
   const [currentLevel, setCurrentLevel] = useState(1);
   return (
     <SafeAreaView style={styles.safeAreaView}>
@@ -21,7 +23,27 @@ export default function Directory() {
             />
           </View>
           <View style={styles.mapContainer}>
-            <Floorplan currentMall={currentMall} currentLevel={currentLevel} />
+            <Floorplan currentMall={currentMall} currentLevel={currentLevel}>
+              <Svg
+                style={styles.overlayStores}
+                height="100%"
+                width="100%"
+                viewBox="0 0 760 600"
+              >
+                {stores
+                  .filter((store) => store.level === currentLevel)
+                  .map((store) => (
+                    <Path
+                      d={store.coordinates}
+                      fill="none"
+                      stroke="transparent"
+                      strokeWidth="1"
+                      key={store.id}
+                      onPress={() => console.log("Store clicked:", store.id)}
+                    />
+                  ))}
+              </Svg>
+            </Floorplan>
           </View>
           <LevelButtons
             currentMall={currentMall}
@@ -42,6 +64,13 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   mapContainer: {
-    flex: 0.5,
+    flex: 0.8,
+  },
+  overlayStores: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
   },
 });
