@@ -26,14 +26,14 @@
      inkscape:deskcolor="#505050"
      showgrid="true"
      inkscape:zoom="3.045231"
-     inkscape:cx="119.36697"
-     inkscape:cy="318.85923"
-     inkscape:window-width="2560"
-     inkscape:window-height="1494"
-     inkscape:window-x="-11"
-     inkscape:window-y="-11"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="layer2">
+     inkscape:cx="280.93107"
+     inkscape:cy="127.90491"
+     inkscape:window-width="1276"
+     inkscape:window-height="1481"
+     inkscape:window-x="1262"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer7">
     <inkscape:grid
        type="xygrid"
        id="grid33934"
@@ -57,225 +57,399 @@
   <g
      inkscape:groupmode="layer"
      id="layer7"
-     inkscape:label="Shops"
+     inkscape:label="Stores"
      style="fill:#ffffff;stroke:#000000;stroke-width:0.6;stroke-dasharray:none;stroke-opacity:1"
      sodipodi:insensitive="true">
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        d="m 268.29098,10.370814 v 57.072435 h -48.26192 v 29.18971 L 275.26859,125.9679 338.06724,25.473953 315.2446,10.225591 Z"
-       id="path33576" />
-    <path
-       style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       d="M 339.36796,26.627486 276.46038,127.4669 330.32243,161.45656 392.61326,58.66608 Z"
-       id="path33578" />
-    <path
-       style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       d="M 394.56627,59.898333 332.17265,162.48344 387.06259,196.78117 450.27853,93.887989 Z"
-       id="path33580" />
+       id="westgate-artary"
+       inkscape:label="westgate-artary">
+      <desc
+         id="desc1628">level=2</desc>
+    </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        d="m 451.7176,95.839059 -62.702,101.558231 53.86205,32.96278 65.58011,-107.82218 -13.97946,-8.52309 -3.59767,5.8532 z"
-       id="path33582" />
+       id="westgate-yishion"
+       inkscape:label="westgate-yishion">
+      <desc
+         id="desc1624">level=2</desc>
+    </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        d="m 488.2081,160.63506 -43.68582,70.85458 44.61092,26.90421 42.65793,-71.05996 z"
-       id="path33584" />
+       id="westgate-recoil"
+       inkscape:label="westgate-recoil">
+      <desc
+         id="desc1622">level=2</desc>
+    </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        d="m 517.78557,216.39979 -27.30592,45.3134 32.31218,19.63178 26.37462,-45.81552 z"
-       id="path33588" />
+       id="westgate-owndays"
+       inkscape:label="westgate-owndays">
+      <desc
+         id="desc1620">level=2</desc>
+    </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        d="m 543.69383,174.49237 -24.90171,40.14932 65.96929,39.96606 25.002,-40.35594 z"
-       id="path33590" />
+       id="westgate-eagle-eye-centre"
+       inkscape:label="westgate-eagle-eye-centre">
+      <desc
+         id="desc1618">level=2</desc>
+    </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        d="m 550.61792,236.5387 -26.58645,45.30464 32.72707,19.93482 26.98756,-46.13108 z"
-       id="path33592" />
+       id="westgate-superga"
+       inkscape:label="westgate-superga">
+      <desc
+         id="desc1616">level=2</desc>
+    </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        d="m 167.69093,121.05445 -2.1072,18.4838 50.16161,8.8825 16.96037,-25.31255 -36.74748,-22.33459 -13.36272,22.79668 z"
-       id="path33594" />
+       id="westgate-gong-cha-and-coconut-queen"
+       inkscape:label="westgate-gong-cha-and-coconut-queen">
+      <desc
+         id="desc1614">level=2</desc>
+    </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        d="m 151.39869,137.74121 -11.30691,62.63956 h 75.34518 v -50.11164 z"
-       id="path33596" />
+       id="westgate-pavilion-banana-leaf"
+       inkscape:label="westgate-pavilion-banana-leaf">
+      <desc
+         id="desc1612">level=2</desc>
+    </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        d="m 553.14193,328.63781 -9.35391,14.27361 31.14542,18.58648 8.32601,-14.68435 z"
-       id="path33600" />
+       id="westgate-myeureka"
+       inkscape:label="westgate-myeureka">
+      <desc
+         id="desc1610">level=2</desc>
+    </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        d="m 543.42827,344.40038 -9.61088,15.30049 30.99123,18.17574 9.14832,-15.30048 z"
-       id="path33602" />
+       id="westgate-irvins-salted-egg"
+       inkscape:label="westgate-irvins-salted-egg">
+      <desc
+         id="desc1608">level=2</desc>
+    </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        d="m 592.61496,264.95144 -25.49195,41.07512 29.39798,18.48381 24.56685,-40.66438 z"
-       id="path33604" />
+       id="westgate-laneige"
+       inkscape:label="westgate-laneige">
+      <desc
+         id="desc1606">level=2</desc>
+    </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        d="m 622.93806,284.15406 -25.0808,41.07512 37.92957,23.00206 24.46406,-41.1778 z"
-       id="path33606" />
+       id="westgate-kaleido"
+       inkscape:label="westgate-kaleido">
+      <desc
+         id="desc1604">level=2</desc>
+    </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        d="m 661.76734,308.4113 -24.9526,41.15489 28.06171,17.35423 29.70634,-1.02687 -3.70044,-41.58856 h -4.31718 z"
-       id="path33608" />
-    <rect
-       style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       id="rect33662"
-       width="51.314632"
-       height="79.146255"
-       x="3.6091728"
-       y="369.34918" />
-    <rect
-       style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       id="rect33664"
-       width="85.330566"
-       height="70.578125"
-       x="12.331209"
-       y="481.89658" />
+       id="westgate-lenskart"
+       inkscape:label="westgate-lenskart">
+      <desc
+         id="desc1602">level=2</desc>
+    </path>
+    <path
+       id="westgate-breadtalk-cafe"
+       style="stroke-width:0.599963;stroke-linejoin:bevel;paint-order:stroke fill markers"
+       inkscape:label="westgate-breadtalk-cafe"
+       d="M 3.6091728,369.34918 H 54.923805 v 79.14626 H 3.6091728 Z">
+      <desc
+         id="desc1598">level=2</desc>
+    </path>
+    <path
+       id="westgate-starbucks"
+       style="stroke-width:0.599963;stroke-linejoin:bevel;paint-order:stroke fill markers"
+       inkscape:label="westgate-starbucks"
+       d="M 12.331209,481.89658 H 97.661776 V 552.4747 H 12.331209 Z">
+      <desc
+         id="desc1594">level=2</desc>
+    </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        d="m 100.85984,481.02527 v 71.88513 h 22.53193 V 527.35125 H 172.962 v -46.32598 z"
-       id="path33666" />
+       id="westgate-jinjja-chicken"
+       inkscape:label="westgate-jinjja-chicken">
+      <desc
+         id="desc1592">level=2</desc>
+    </path>
     <path
-       style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       d="m 183.13769,479.42783 v 31.65849 h 6.10544 v 58.37944 h 44.91848 v -59.39599 h -21.07827 v -30.64194 z"
-       id="path33668" />
-    <rect
-       style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       id="rect33670"
-       width="49.424858"
-       height="62.445667"
-       x="254.80374"
-       y="510.06973" />
+       id="westgate-menya-musashi"
+       style="stroke-width:0.599963;stroke-linejoin:bevel;paint-order:stroke fill markers"
+       d="M 254.80374,510.06973 H 304.2286 V 572.5154 H 254.80374 Z"
+       inkscape:label="westgate-menya-musashi">
+      <desc
+         id="desc1413">level=2</desc>
+    </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        d="m 336.3575,510.70328 v 60.68849 h 62.5992 v -76.70778 h -28.37008 v 16.22466 z"
-       id="path33672" />
-    <rect
-       style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       id="rect33674"
-       width="47.283466"
-       height="102.27705"
-       x="438.53088"
-       y="468.39587" />
+       id="westgate-curry-times"
+       inkscape:label="westgate-curry-times">
+      <desc
+         id="desc1410">level=2</desc>
+    </path>
+    <path
+       id="westgate-miniso"
+       style="stroke-width:0.599963;stroke-linejoin:bevel;paint-order:stroke fill markers"
+       inkscape:label="westgate-miniso"
+       d="m 438.53088,468.39587 h 47.28347 v 102.27705 h -47.28347 z">
+      <desc
+         id="desc1406">level=2</desc>
+    </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        d="m 488.07577,467.77978 v 104.12543 h 68.66382 V 546.02789 H 532.27553 V 467.5744 Z"
-       id="path33676" />
-    <rect
-       style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       id="rect33678"
-       width="50.058804"
-       height="23.310131"
-       x="576.16693"
-       y="480.51303" />
-    <rect
-       style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       id="rect33680"
-       width="56.020634"
-       height="48.879395"
-       x="159.25006"
-       y="254.70258" />
+       id="westgate-bega"
+       inkscape:label="westgate-bega">
+      <desc
+         id="desc1404">level=2</desc>
+    </path>
+    <path
+       id="westgate-lady-m-confections"
+       style="stroke-width:0.599963;stroke-linejoin:bevel;paint-order:stroke fill markers"
+       inkscape:label="westgate-lady-m-confections"
+       d="m 159.25006,254.70258 h 56.02063 v 48.87939 h -56.02063 z">
+      <desc
+         id="desc1399">level=2</desc>
+    </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        d="m 159.35286,226.97689 v 26.39076 h 57.56248 v 50.83046 h 42.14395 V 226.8742 Z"
-       id="path33682" />
-    <path
-       style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       d="m 261.01231,227.38764 v 77.52929 h 34.4347 l 32.68728,-54.7326 -36.90167,-22.79669 z"
-       id="path33684" />
+       id="westgate-miam-miam"
+       inkscape:label="westgate-miam-miam">
+      <desc
+         id="desc1397">level=2</desc>
+    </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        d="m 158.8389,312.41314 v 39.63749 h 56.22621 V 348.97 h 28.06172 v -36.45418 z"
-       id="path33686" />
-    <rect
-       style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       id="rect33688"
-       width="46.872311"
-       height="62.02343"
-       x="9.2792301"
-       y="228.51721" />
+       id="westgate-coffesmith"
+       inkscape:label="westgate-coffesmith">
+      <desc
+         id="desc1394">level=2</desc>
+    </path>
+    <path
+       id="westgate-toast-box"
+       style="stroke-width:0.599963;stroke-linejoin:bevel;paint-order:stroke fill markers"
+       inkscape:label="westgate-toast-box"
+       d="M 9.2792301,228.51721 H 56.151541 v 62.02343 H 9.2792301 Z">
+      <desc
+         id="desc1390">level=2</desc>
+    </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        d="m 533.61809,467.95525 v 67.67368 h 31.69006 V 481.46094 H 541.32256 V 467.6648 Z"
-       id="path33694" />
-    <path
-       style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       d="m 667.21057,479.42783 h -22.38654 v 93.95894 h 111.78738 l -7.84982,-123.4391 H 667.5013 Z"
-       id="path33696" />
+       id="westgate-the-underground"
+       inkscape:label="westgate-the-underground">
+      <desc
+         id="desc1388">level=2</desc>
+    </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        d="m 616.15391,229.1134 -22.71663,34.50309 93.53905,58.73743 h 4.21439 v -9.2419 h 8.73716 v -32.75741 z"
-       id="path33698" />
+       id="westgate-adrift-anapauo-massage-and-spa"
+       inkscape:label="westgate-adrift-anapauo-massage-and-spa">
+      <desc
+         id="desc610">level=2</desc>
+    </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        d="m 628.89989,206.4194 -12.02645,21.15368 85.21304,50.62508 v 34.19504 h 13.05435 l -1.0279,-56.58097 z"
-       id="path33700" />
+       id="westgate-singapore-post"
+       inkscape:label="westgate-singapore-post">
+      <desc
+         id="desc608">level=2</desc>
+    </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        d="m 645.96306,175.71574 -15.72689,28.54721 86.85767,51.24121 0.10279,56.88904 h 19.32455 l -5.24229,-87.49 z"
-       id="path33702" />
+       id="westgate-income"
+       inkscape:label="westgate-income">
+      <desc
+         id="desc606">level=2</desc>
+    </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        d="m 352.72063,203.88063 -19.11897,30.80635 31.86494,18.68918 17.67992,-30.60097 z"
-       id="path33704" />
+       id="westgate-talismans"
+       inkscape:label="westgate-talismans">
+      <desc
+         id="desc604">level=2</desc>
+    </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        d="m 158.94169,353.1802 v 33.16815 l 16.85758,16.32736 h 8.53158 v -27.41764 h 30.73426 V 353.1802 Z"
-       id="path33706" />
-    <rect
-       style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       id="rect33708"
-       width="28.884035"
-       height="24.234322"
-       x="185.76991"
-       y="378.03061" />
-    <rect
-       style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       id="rect33710"
-       width="43.377445"
-       height="51.857338"
-       x="216.81255"
-       y="350.51028" />
-    <rect
-       style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       id="rect33712"
-       width="33.817963"
-       height="51.549274"
-       x="261.52628"
-       y="350.71567" />
-    <rect
-       style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       id="rect33714"
-       width="44.713718"
-       height="47.955204"
-       x="303.6702"
-       y="353.89899" />
+       id="westgate-decathlon"
+       inkscape:label="westgate-decathlon">
+      <desc
+         id="desc602">level=2</desc>
+    </path>
+    <path
+       id="westgate-fancl"
+       style="stroke-width:0.599963;stroke-linejoin:bevel;paint-order:stroke fill markers"
+       d="m 185.76991,378.03061 h 28.88404 v 24.23432 h -28.88404 z"
+       inkscape:label="westgate-fancl">
+      <desc
+         id="desc598">level=2</desc>
+    </path>
+    <path
+       id="westgate-typo"
+       style="stroke-width:0.599963;stroke-linejoin:bevel;paint-order:stroke fill markers"
+       inkscape:label="westgate-typo"
+       d="m 216.81255,350.51028 h 43.37744 v 51.85734 h -43.37744 z">
+      <desc
+         id="desc595">level=2</desc>
+    </path>
+    <path
+       id="westgate-thefaceshop"
+       style="stroke-width:0.599963;stroke-linejoin:bevel;paint-order:stroke fill markers"
+       d="m 261.52628,350.71567 h 33.81796 v 51.54927 h -33.81796 z"
+       inkscape:label="westgate-thefaceshop">
+      <desc
+         id="desc593">level=2</desc>
+    </path>
+    <path
+       id="westgate-pop-mart"
+       style="stroke-width:0.599963;stroke-linejoin:bevel;paint-order:stroke fill markers"
+       d="m 303.6702,353.89899 h 44.71371 v 47.9552 H 303.6702 Z"
+       inkscape:label="westgate-pop-mart">
+      <desc
+         id="desc590">level=2</desc>
+    </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        d="m 334.40449,254.39453 -30.83706,50.5224 v 7.80427 h 45.12488 l 22.20267,-35.73535 z"
-       id="path33716" />
-    <path
-       style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       d="m 372.43684,277.70467 -22.40825,36.24879 v 23.72088 h 26.41707 l 26.21149,-41.48588 z"
-       id="path33718" />
+       id="westgate-refash"
+       inkscape:label="westgate-refash">
+      <desc
+         id="desc587">level=2</desc>
+    </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        d="m 403.58225,297.11265 -25.49195,40.56169 18.70781,11.80909 26.21148,-40.45899 z"
-       id="path33720" />
+       id="westgate-the-wallet-shop"
+       inkscape:label="westgate-the-wallet-shop">
+      <desc
+         id="desc584">level=2</desc>
+    </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        d="m 350.02859,339.6254 v 62.63956 h 46.9751 v -50.93314 l -20.04408,-12.11717 z"
-       id="path33722" />
-    <rect
+       id="westgate-osmose"
+       inkscape:label="westgate-osmose">
+      <desc
+         id="desc582">level=2</desc>
+    </path>
+    <path
+       id="westgate-ncat"
+       style="stroke-width:0.599963;stroke-linejoin:bevel;paint-order:stroke fill markers"
+       d="m 399.05948,369.61023 h 42.34954 v 32.55203 h -42.34954 z"
+       inkscape:label="westgate-ncat">
+      <desc
+         id="desc580">level=2</desc>
+    </path>
+    <path
+       id="westgate-yves-rocher"
+       style="stroke-width:0.599963;stroke-linejoin:bevel;paint-order:stroke fill markers"
+       d="m 472.45163,388.4021 h 45.53604 v 28.03377 h -45.53604 z"
+       inkscape:label="westgate-yves-rocher">
+      <desc
+         id="desc576">level=2</desc>
+    </path>
+    <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       id="rect33724"
-       width="42.349541"
-       height="32.552032"
-       x="399.05948"
-       y="369.61023" />
+       d="m 527.54719,373.20432 -8.22323,14.17092 v 29.47139 h 33.40681 v -28.85527 z"
+       id="westgate-hysses"
+       inkscape:label="westgate-hysses">
+      <desc
+         id="desc573">level=2</desc>
+    </path>
+    <path
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       d="m 424.34586,309.74325 -26.21149,41.07513 v 16.94348 h 42.76071 v -16.73811 l 14.39062,-22.38594 z"
+       id="westgate-kimoj"
+       inkscape:label="westgate-kimoj">
+      <desc
+         id="desc571">level=2</desc>
+    </path>
+    <path
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       d="m 456.93035,329.15125 -13.97946,23.00207 v 16.43004 h 28.57567 l 12.4376,-21.97518 z"
+       id="westgate-glimpse"
+       inkscape:label="westgate-glimpse">
+      <desc
+         id="desc569">level=2</desc>
+    </path>
+    <path
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       d="m 486.22554,347.73774 -14.08225,21.56444 v 15.71124 h 45.9472 l 8.01763,-12.73329 z"
+       id="westgate-oro-gold-cosmetics"
+       inkscape:label="westgate-oro-gold-cosmetics">
+      <desc
+         id="desc567">level=2</desc>
+    </path>
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       d="m 742.65782,383.91624 -21.51435,1.45222 v 16.55536 h -7.5591 v 13.94137 h 31.10859 z"
+       id="westgate-xpressflowercom"
+       inkscape:label="westgate-xpressflowercom">
+      <desc
+         id="desc565">level=2</desc>
+    </path>
+    <path
+       style="fill:none;stroke:none;stroke-width:0.593;stroke-linejoin:bevel;paint-order:stroke fill markers"
+       d="m 643.524,479.40681 40.51131,0.089 v 94.19094 H 643.524 Z"
+       id="westgate-paradise-dynasty"
+       inkscape:label="westgate-paradise-dynasty">
+      <desc
+         id="desc700">level=2</desc>
+    </path>
+    <path
+       style="fill:none;stroke:none;stroke-width:0.593;stroke-linejoin:bevel;paint-order:stroke fill markers"
+       d="m 666.1857,449.64769 v 29.75912 l 17.84961,-0.0271 -0.2023,94.30704 72.07773,-0.0333 -8.06107,-124.00577 z"
+       id="westgate-canton-paradise"
+       inkscape:label="westgate-canton-paradise">
+      <desc
+         id="desc1381">level=2</desc>
+    </path>
+    <path
+       style="fill:none;stroke:none;stroke-width:0.593;stroke-linejoin:bevel;paint-order:stroke fill markers"
+       d="m 182.83771,479.12785 v 32.08132 h 30.36451 v -31.95571 z"
+       id="westgate-souperstar"
+       inkscape:label="westgate-souperstar">
+      <desc
+         id="desc1587">level=2</desc>
+    </path>
+    <path
+       style="fill:none;stroke:none;stroke-width:0.593;stroke-linejoin:bevel;paint-order:stroke fill markers"
+       d="m 189.12801,511.20917 v 58.55657 l 45.33358,-0.2919 -0.51872,-58.26467 z"
+       id="westgate-honolulu-cafe"
+       inkscape:label="westgate-honolulu-cafe">
+      <desc
+         id="desc1589">level=2</desc>
+    </path>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer1"
+     inkscape:label="Blank"
+     sodipodi:insensitive="true">
     <rect
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="rect33726"
@@ -283,33 +457,37 @@
        height="32.552032"
        x="443.15646"
        y="369.71289" />
+    <path
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       d="m 372.43684,277.70467 -22.40825,36.24879 v 23.72088 h 26.41707 l 26.21149,-41.48588 z"
+       id="path33718" />
+    <path
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       d="m 666.21052,479.42783 h -22.38654 v 93.95894 h 111.78738 l -7.84982,-123.4391 h -81.26029 z"
+       id="path33696" />
+    <path
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       d="m 261.01231,227.38764 v 77.52929 h 34.4347 l 32.68728,-54.7326 -36.90167,-22.79669 z"
+       id="path33684" />
     <rect
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       id="rect33728"
-       width="45.536041"
-       height="28.03377"
-       x="472.45163"
-       y="388.4021" />
+       id="rect33678"
+       width="50.058804"
+       height="23.310131"
+       x="576.16693"
+       y="480.51303" />
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       d="m 527.54719,373.20432 -8.22323,14.17092 v 29.47139 h 33.40681 v -28.85527 z"
-       id="path33730" />
+       d="m 183.13769,479.42783 v 31.65849 h 6.10544 v 58.37944 h 44.91848 v -59.39599 h -21.07827 v -30.64194 z"
+       id="path33668" />
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       d="m 424.34586,309.74325 -26.21149,41.07513 v 16.94348 h 42.76071 v -16.73811 l 14.39062,-22.38594 z"
-       id="path33732" />
+       d="M 394.56627,59.898333 332.17265,162.48344 387.06259,196.78117 450.27853,93.887989 Z"
+       id="path33580" />
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       d="m 456.93035,329.15125 -13.97946,23.00207 v 16.43004 h 28.57567 l 12.4376,-21.97518 z"
-       id="path33734" />
-    <path
-       style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       d="m 486.22554,347.73774 -14.08225,21.56444 v 15.71124 h 45.9472 l 8.01763,-12.73329 z"
-       id="path33736" />
-    <path
-       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       d="m 742.65782,383.91624 -21.51435,1.45222 v 16.55536 h -7.5591 v 13.94137 h 31.10859 z"
-       id="path34297" />
+       d="M 339.36796,26.627486 276.46038,127.4669 330.32243,161.45656 392.61326,58.66608 Z"
+       id="path33578" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -437,18 +615,18 @@
     <text
        xml:space="preserve"
        style="font-size:9.33276px;line-height:0.9;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       x="671.38245"
-       y="524.85345"
+       x="664.39502"
+       y="522.06567"
        id="text34311"
        transform="scale(1.0004982,0.99950204)"><tspan
          sodipodi:role="line"
          id="tspan34309"
-         x="671.38245"
-         y="524.85345"
+         x="664.39502"
+         y="522.06567"
          style="stroke-width:0">Paradise</tspan><tspan
          sodipodi:role="line"
-         x="671.38245"
-         y="533.25293"
+         x="664.39502"
+         y="530.46515"
          id="tspan34313"
          style="stroke-width:0">Dynasty</tspan></text>
     <text
@@ -1091,7 +1269,8 @@
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="Nodes"
-     style="fill:none">
+     style="fill:none"
+     sodipodi:insensitive="true">
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-escalator-node-2-1"
