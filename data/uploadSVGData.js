@@ -52,10 +52,45 @@ async function uploadSVGData(mall, filePath) {
           level: parseInt(parts[1][1], 10),
         };
 
-        const docRef = db.collection(mall).doc(nodeID);
+        const docRef = db
+          .collection("malls")
+          .doc(mall)
+          .collection("nodes")
+          .doc(nodeID);
         docRef
           .set(data)
           .then(() => console.log(`Document ${nodeID} uploaded successfully`));
+      });
+    } else if (layer.$["inkscape:label"] === "Stores") {
+      if (!layer.path) {
+        console.error(`No store paths found in the layer ${layer.$.id}.`);
+        return;
+      }
+      layer.path.forEach((path) => {
+        const storeID = path.$.id;
+        const coordinates = path.$.d;
+
+        // Check if the 'desc' tag exists for this path
+        if (!path.desc || path.desc.length === 0) {
+          console.error(`Store path ${storeID} does not have a 'desc' tag.`);
+          return; // Skip this store path and move on to the next one
+        }
+        const desc = path.desc[0]._;
+        const level = parseInt(desc.split("=")[1].trim(), 10); // Parse the level information from the 'desc' tag
+
+        const data = {
+          coordinates,
+          level,
+        };
+
+        const docRef = db
+          .collection("malls")
+          .doc(mall)
+          .collection("stores")
+          .doc(storeID);
+        docRef
+          .set(data)
+          .then(() => console.log(`Document ${storeID} uploaded successfully`));
       });
     }
   });

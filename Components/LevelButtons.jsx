@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { View, TouchableOpacity, Text, StyleSheet } from "react-native";
-import { doc, getDoc } from "firebase/firestore";
-import { db } from "../firebaseConfig";
+import { getLevelsData } from "../services/databaseService";
 
 export default function LevelButtons({
   currentMall,
@@ -13,19 +12,10 @@ export default function LevelButtons({
 
   useEffect(() => {
     const fetchLevels = async () => {
-      if (currentMall) {
-        // Check if currentMall is set
-        const mallDocRef = doc(db, "malls", currentMall);
-        const mallDocSnap = await getDoc(mallDocRef);
-        if (mallDocSnap.exists()) {
-          const levelsData = Array.from(
-            { length: mallDocSnap.data().levels },
-            (_, i) => i + 1
-          );
-          setLevels(levelsData);
-          setCurrentLevel(levelsData[0]); // Set the first level as the current level
-        }
-      }
+      // Check if currentMall is set
+      const levelsData = await getLevelsData(currentMall);
+      setLevels(levelsData);
+      setCurrentLevel(levelsData[0]); // Set the first level as the current level
     };
     fetchLevels();
   }, [currentMall, setCurrentLevel]);
