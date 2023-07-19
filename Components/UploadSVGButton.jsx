@@ -21,16 +21,13 @@ export default function UploadSVGButton({ currentMall }) {
       });
 
       const svgString = await FileSystem.readAsStringAsync(newUri);
-      const svgBase64 = await FileSystem.readAsStringAsync(newUri, {
-        encoding: FileSystem.EncodingType.Base64,
-      });
 
       const uploadSVGData = httpsCallable(functions, "uploadSVGData");
       await uploadSVGData({ svg: svgString, mall: currentMall });
 
       const uploadMallLayout = httpsCallable(functions, "uploadMallLayout");
       await uploadMallLayout({
-        svg: svgBase64,
+        svg: svgString,
         mall: currentMall,
         filename,
       });

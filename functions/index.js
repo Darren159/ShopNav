@@ -121,7 +121,7 @@ exports.uploadMallLayout = onCall(async (request) => {
   const svgData = request.data.svg;
 
   // Convert SVG data from base64 to buffer
-  const svgBuffer = Buffer.from(svgData, "base64");
+  const svgBuffer = Buffer.from(svgData, "utf-8");
 
   const bucket = getStorage().bucket("gs://shopnav-33436.appspot.com");
 
