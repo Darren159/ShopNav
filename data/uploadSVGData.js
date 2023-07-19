@@ -53,7 +53,7 @@ async function uploadSVGData(mall, filePath) {
         };
 
         const docRef = db
-          .collection("malls")
+          .collection("review")
           .doc(mall)
           .collection("nodes")
           .doc(nodeID);
@@ -84,7 +84,7 @@ async function uploadSVGData(mall, filePath) {
         };
 
         const docRef = db
-          .collection("malls")
+          .collection("review")
           .doc(mall)
           .collection("stores")
           .doc(storeID);
