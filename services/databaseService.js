@@ -13,6 +13,17 @@ export async function getNodeIDFromStoreName(currentMall, storeName) {
   throw new Error();
 }
 
+export async function getStore(currentMall, storeName) {
+  const formattedStoreName = storeName.replace(/\s/g, "-").toLowerCase();
+  const documentID = `${currentMall.toLowerCase()}-${formattedStoreName}`;
+  const docRef = doc(db, "malls", currentMall, "stores", documentID);
+  const docSnap = await getDoc(docRef);
+  if (docSnap.exists()) {
+    return docSnap.id;
+  }
+  throw new Error();
+}
+
 export async function getGraph(currentMall) {
   const mallNodesCollection = collection(db, "malls", currentMall, "nodes");
   const nodesSnapshot = await getDocs(mallNodesCollection);

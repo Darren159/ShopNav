@@ -5,7 +5,7 @@ import * as FileSystem from "expo-file-system";
 import { httpsCallable } from "firebase/functions";
 import { functions } from "../firebaseConfig";
 
-export default function UploadButton({ currentMall }) {
+export default function UploadSVGButton({ currentMall }) {
   const uploadSvg = async () => {
     const result = await DocumentPicker.getDocumentAsync({
       type: "image/svg+xml",
@@ -40,6 +40,6 @@ export default function UploadButton({ currentMall }) {
   return <Button title="Upload SVG" onPress={uploadSvg} />;
 }
 
-UploadButton.propTypes = {
+UploadSVGButton.propTypes = {
   currentMall: PropTypes.string.isRequired,
 };

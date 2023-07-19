@@ -134,3 +134,25 @@ exports.uploadMallLayout = onCall(async (request) => {
     },
   });
 });
+
+exports.uploadStoreData = onCall(async (request) => {
+  logger.log(request);
+  const mallName = request.data.mall;
+  const storeDocId = request.data.store;
+  const promoInfo = request.data.promo;
+
+  if (!mallName || mallName.trim() === "") {
+    logger.error("mallName is not a non-empty string.");
+    return; // Stop processing this request
+  }
+  const data = {
+    promoInfo,
+  };
+  const docRef = db
+    .collection("review")
+    .doc(mallName)
+    .collection("stores")
+    .doc(storeDocId);
+  await docRef.set(data);
+  return { result: "Store data uploaded successfully" };
+});
