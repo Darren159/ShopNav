@@ -2,8 +2,8 @@ import { Button } from "react-native";
 import * as DocumentPicker from "expo-document-picker";
 import PropTypes from "prop-types";
 import * as FileSystem from "expo-file-system";
-import { getFunctions, httpsCallable } from "firebase/functions";
-import { uploadSVGData } from "../services/databaseService";
+import { httpsCallable } from "firebase/functions";
+import { functions } from "../firebaseConfig";
 
 export default function UploadButton({ currentMall }) {
   const uploadSvg = async () => {
@@ -12,6 +12,7 @@ export default function UploadButton({ currentMall }) {
       copyToCacheDirectory: false,
     });
     if (result.type !== "cancel") {
+      const filename = result.name;
       const newUri = FileSystem.documentDirectory + result.uri.split("/").pop();
 
       await FileSystem.copyAsync({
@@ -20,14 +21,19 @@ export default function UploadButton({ currentMall }) {
       });
 
       const svgString = await FileSystem.readAsStringAsync(newUri);
+      const svgBase64 = await FileSystem.readAsStringAsync(newUri, {
+        encoding: FileSystem.EncodingType.Base64,
+      });
 
-      const functions = getFunctions();
-      const parseSVGData = httpsCallable(functions, "parseSVGData");
-      const {
-        data: { nodeData, storeData },
-      } = await parseSVGData({ svg: svgString });
+      const uploadSVGData = httpsCallable(functions, "uploadSVGData");
+      await uploadSVGData({ svg: svgString, mall: currentMall });
 
-      uploadSVGData(currentMall, nodeData, storeData);
+      const uploadMallLayout = httpsCallable(functions, "uploadMallLayout");
+      await uploadMallLayout({
+        svg: svgBase64,
+        mall: currentMall,
+        filename,
+      });
     }
   };
 
