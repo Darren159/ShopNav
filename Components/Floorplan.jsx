@@ -7,7 +7,7 @@ import Animated, {
   useSharedValue,
   useAnimatedStyle,
 } from "react-native-reanimated";
-import { fetchSvgUrl } from "../services/storageService";
+import fetchSvgUrl from "../services/storageService";
 
 export default function Floorplan({ currentMall, currentLevel, children }) {
   const [svgUrl, setSvgUrl] = useState(null);
