@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { collection, doc, getDoc, getDocs } from "firebase/firestore";
+import { collection, doc, getDoc, getDocs, setDoc } from "firebase/firestore";
 import { db } from "../firebaseConfig";
 
 export async function getNodeIDFromStoreName(currentMall, storeName) {
@@ -75,4 +75,26 @@ export async function getLevelsData(currentMall) {
     }
   }
   return [];
+}
+
+export async function uploadSVGData(currentMall, nodeData, storeData) {
+  const nodeRef = collection(db, "review", currentMall, "nodes");
+  const nodePromises = nodeData.map((node) =>
+    setDoc(doc(nodeRef, node.nodeID), {
+      coordinates: node.coordinates,
+      adjacent: node.adjacent,
+      level: node.level,
+    })
+  );
+
+  const storeRef = collection(db, "review", currentMall, "stores");
+  const storePromises = storeData.map((store) =>
+    setDoc(doc(storeRef, store.storeID), {
+      coordinates: store.coordinates,
+      level: store.level,
+    })
+  );
+
+  // Wait for all uploads to finish
+  await Promise.all([...nodePromises, ...storePromises]);
 }
