@@ -1,19 +1,19 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { Button, View, StyleSheet } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Svg, Line } from "react-native-svg";
 import MallPicker from "../components/MallPicker";
 import dijkstra from "../utils/dijkstra";
-import useMalls from "../hooks/useMalls";
 import getGraph from "../services/getGraph";
 import getNodeIDFromStoreName from "../services/getNodeIDFromStoreName";
 import StoreInput from "../components/StoreInput";
 import LevelButtons from "../components/LevelButtons";
 import Floorplan from "../components/Floorplan";
 import useStoreInput from "../hooks/useStoreInput";
+import { MallContext } from "../context/MallProvider";
 
 export default function Navigation() {
-  const { malls, currentMall, setCurrentMall } = useMalls();
+  const { malls, currentMall, setCurrentMall } = useContext(MallContext);
   const [currentLevel, setCurrentLevel] = useState(1);
   const [graph, setGraph] = useState({});
   const [path, setPath] = useState([]);

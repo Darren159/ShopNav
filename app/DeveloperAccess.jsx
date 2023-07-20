@@ -1,14 +1,14 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { View, StyleSheet, TextInput } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import UploadSVGButton from "../components/UploadSVGButton";
 import UploadStoreButton from "../components/UploadStoreButton";
 import MallPicker from "../components/MallPicker";
-import useMalls from "../hooks/useMalls";
+import { MallContext } from "../context/MallProvider";
 import StoreInput from "../components/StoreInput";
 
 export default function DeveloperAccess() {
-  const { malls, currentMall, setCurrentMall } = useMalls();
+  const { malls, currentMall, setCurrentMall } = useContext(MallContext);
   const [storeName, setStoreName] = useState("");
   const [storeError, setStoreError] = useState(false);
   const [promoInfo, setPromoInfo] = useState("");
