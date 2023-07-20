@@ -2,7 +2,7 @@ import { Button } from "react-native";
 import PropTypes from "prop-types";
 import { httpsCallable } from "firebase/functions";
 import { functions } from "../firebaseConfig";
-import { getStore } from "../services/databaseService";
+import getStore from "../services/getStore";
 
 export default function UploadStoreButton({
   currentMall,

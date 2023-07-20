@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { View, TouchableOpacity, Text, StyleSheet } from "react-native";
-import { getLevelsData } from "../services/databaseService";
+import getLevels from "../services/getLevels";
 
 export default function LevelButtons({
   currentMall,
@@ -13,7 +13,7 @@ export default function LevelButtons({
   useEffect(() => {
     const fetchLevels = async () => {
       // Check if currentMall is set
-      const levelsData = await getLevelsData(currentMall);
+      const levelsData = await getLevels(currentMall);
       setLevels(levelsData);
       setCurrentLevel(levelsData[0]); // Set the first level as the current level
     };
