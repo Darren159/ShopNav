@@ -7,17 +7,17 @@ import Animated, {
   useSharedValue,
   useAnimatedStyle,
 } from "react-native-reanimated";
-import fetchSvgUrl from "../services/storageService";
+import fetchSVGUrl from "../services/fetchSVGUrl";
 
 export default function Floorplan({ currentMall, currentLevel, children }) {
-  const [svgUrl, setSvgUrl] = useState(null);
+  const [svgUrl, setSVGUrl] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     if (currentMall) {
       setIsLoading(true);
-      fetchSvgUrl(currentMall, currentLevel).then((url) => {
-        setSvgUrl(url);
+      fetchSVGUrl(currentMall, currentLevel).then((url) => {
+        setSVGUrl(url);
         setIsLoading(false); // set loading state to false after SVG is fetched
       });
     }
