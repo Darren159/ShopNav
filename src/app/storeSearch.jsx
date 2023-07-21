@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import {
   Text,
   View,
@@ -6,17 +6,18 @@ import {
   FlatList,
   StyleSheet,
   Image,
-  TouchableOpacity,
   SafeAreaView,
 } from "react-native";
 import { collection, getDocs } from "firebase/firestore";
 import filter from "lodash.filter";
-import { useRouter } from "expo-router";
-import { db } from "../../../firebaseConfig";
-import SearchBar from "../../components/SearchBar";
+import { Link } from "expo-router";
+import { db } from "../../firebaseConfig";
+import SearchBar from "../components/SearchBar";
+import MallPicker from "../components/MallPicker";
+import { MallContext } from "./context/mallProvider";
 
 export default function StoreSearch() {
-  // mall picker
+  const { malls, currentMall, setCurrentMall } = useContext(MallContext);
 
   // const  navigation = useNavigation();
   // for filtering search function
@@ -38,18 +39,6 @@ export default function StoreSearch() {
 
   const contains = (item, query) => item.includes(query);
 
-  // for handling pressing of location
-  const router = useRouter();
-
-  // for pop out of details page
-  const pressHandler = async (location) => {
-    // console.log(location);
-    router.push({
-      pathname: "/PlaceDetailsScreen",
-      params: { locName: location },
-    });
-  };
-
   const [isLoading, setIsLoading] = useState(false);
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
@@ -58,7 +47,7 @@ export default function StoreSearch() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const colRef = collection(db, "malls", "Westgate", "stores");
+        const colRef = collection(db, "malls", currentMall, "stores");
 
         // await until data is fetched
         const storeListSnapShot = await getDocs(colRef);
@@ -90,7 +79,7 @@ export default function StoreSearch() {
     };
     setIsLoading(true);
     fetchData();
-  }, []);
+  }, [currentMall]);
 
   // loading interface
   if (isLoading) {
@@ -114,29 +103,40 @@ export default function StoreSearch() {
 
   return (
     <SafeAreaView style={styles.mainContainer}>
-      <View style={{ flex: 1, paddingBottom: 70 }}>
-        <Text>Store Search</Text>
-        <SearchBar onSearch={handleSearch} />
-
-        <FlatList
-          data={data}
-          keyExtractor={(item, index) => index.toString()}
-          renderItem={({ item }) => (
-            <TouchableOpacity onPress={() => pressHandler(item)}>
-              <View style={styles.itemContainer}>
-                <Image
-                  source={{
-                    uri: "https://frameandkeyrealestate.files.wordpress.com/2019/04/clock-icon.png",
-                  }}
-                  style={styles.image}
-                />
-                <Text style={styles.textName}>{item}</Text>
-                {/* {console.log(JSON.stringify(item))} */}
-              </View>
-            </TouchableOpacity>
-          )}
-        />
-      </View>
+      {currentMall && (
+        <View style={{ flex: 1, paddingBottom: 70 }}>
+          <MallPicker
+            currentMall={currentMall}
+            setCurrentMall={setCurrentMall}
+            malls={malls}
+          />
+          <Text>Store Search</Text>
+          <SearchBar onSearch={handleSearch} />
+          <FlatList
+            data={data}
+            keyExtractor={(item, index) => index.toString()}
+            renderItem={({ item }) => (
+              <Link
+                href={{
+                  pathname: "/placeDetails",
+                  params: { locName: item },
+                }}
+              >
+                <View style={styles.itemContainer}>
+                  <Image
+                    source={{
+                      uri: "https://frameandkeyrealestate.files.wordpress.com/2019/04/clock-icon.png",
+                    }}
+                    style={styles.image}
+                  />
+                  <Text style={styles.textName}>{item}</Text>
+                  {/* {console.log(JSON.stringify(item))} */}
+                </View>
+              </Link>
+            )}
+          />
+        </View>
+      )}
     </SafeAreaView>
   );
 }

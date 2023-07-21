@@ -11,11 +11,11 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { useLocalSearchParams } from "expo-router";
-import googleImg from "../../services/googleImg";
-import googleCall from "../../services/google_API_call";
-import fetchPlaceDetails from "../../services/fetchPlaceDetails";
+import googleImg from "../services/googleImg";
+import googleCall from "../services/google_API_call";
+import fetchPlaceDetails from "../services/fetchPlaceDetails";
 
-export default function PlaceDetailsScreen() {
+export default function PlaceDetails() {
   // collapsible opening hours
   const [isCollapsed, setIsCollapsed] = useState(true);
 

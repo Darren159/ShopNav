@@ -64,13 +64,7 @@ export default function Floorplan({ currentMall, currentLevel, children }) {
   ) : (
     <GestureDetector gesture={composed}>
       <Animated.View style={animatedStyle}>
-        <SvgUri
-          key={currentLevel}
-          uri={svgUrl}
-          width="100%"
-          height="100%"
-          style={{ backgroundColor: "#33AAFF" }}
-        />
+        <SvgUri key={currentLevel} uri={svgUrl} width="100%" height="100%" />
         {children}
       </Animated.View>
     </GestureDetector>
