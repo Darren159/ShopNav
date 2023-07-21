@@ -1,5 +1,5 @@
 import { doc, getDoc } from "firebase/firestore";
-import { db } from "../firebaseConfig";
+import { db } from "../../firebaseConfig";
 
 export default async function getNodeIDFromStoreName(currentMall, storeName) {
   const formattedStoreName = storeName.replace(/\s/g, "-").toLowerCase();

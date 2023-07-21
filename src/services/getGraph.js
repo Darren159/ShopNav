@@ -1,5 +1,5 @@
 import { collection, getDocs } from "firebase/firestore";
-import { db } from "../firebaseConfig";
+import { db } from "../../firebaseConfig";
 
 export default async function getGraph(currentMall) {
   const mallNodesCollection = collection(db, "malls", currentMall, "nodes");

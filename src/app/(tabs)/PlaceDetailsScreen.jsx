@@ -10,7 +10,7 @@ import {
   SafeAreaView,
   TouchableOpacity,
 } from "react-native";
-import { useSearchParams } from "expo-router";
+import { useLocalSearchParams } from "expo-router";
 import googleImg from "../../services/googleImg";
 import googleCall from "../../services/google_API_call";
 import fetchPlaceDetails from "../../services/fetchPlaceDetails";
@@ -28,8 +28,8 @@ export default function PlaceDetailsScreen() {
   const [error, setError] = useState(null);
 
   // check locName is the name of the item user pressed
-  const { locName } = useSearchParams();
-  console.log(locName);
+  const { locName } = useLocalSearchParams();
+  // console.log(locName);
 
   useEffect(() => {
     const fetchDetails = async () => {
@@ -52,7 +52,7 @@ export default function PlaceDetailsScreen() {
     fetchDetails();
   }, [locName]);
 
-  console.log(placeDetails);
+  // console.log(placeDetails);
 
   // loading interface
   if (isLoading) {

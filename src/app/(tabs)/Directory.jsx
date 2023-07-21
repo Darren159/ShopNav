@@ -40,7 +40,7 @@ export default function Directory() {
                       stroke="transparent"
                       strokeWidth="1"
                       key={store.id}
-                      onPress={() => console.log("Store clicked:", store.id)}
+                      // onPress={() => console.log("Store clicked:", store.id)}
                     />
                   ))}
               </Svg>

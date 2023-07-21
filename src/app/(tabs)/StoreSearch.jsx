@@ -12,7 +12,7 @@ import {
 import { collection, getDocs } from "firebase/firestore";
 import filter from "lodash.filter";
 import { useRouter } from "expo-router";
-import { db } from "../../firebaseConfig";
+import { db } from "../../../firebaseConfig";
 import SearchBar from "../../components/SearchBar";
 
 export default function StoreSearch() {
@@ -43,7 +43,7 @@ export default function StoreSearch() {
 
   // for pop out of details page
   const pressHandler = async (location) => {
-    console.log(location);
+    // console.log(location);
     router.push({
       pathname: "/PlaceDetailsScreen",
       params: { locName: location },
@@ -65,7 +65,7 @@ export default function StoreSearch() {
 
         const storeList = storeListSnapShot.docs.map((doc) => doc.id);
 
-        console.log(storeList);
+        // console.log(storeList);
         // sorting the list by alphabets
         storeList.sort((a, b) =>
           a.toLowerCase().localeCompare(b.toLowerCase())
@@ -83,7 +83,7 @@ export default function StoreSearch() {
 
         setIsLoading(false);
       } catch (err) {
-        console.error("Error fetching data: ", err);
+        // console.error("Error fetching data: ", err);
         setError(err);
         setIsLoading(false);
       }
@@ -131,7 +131,7 @@ export default function StoreSearch() {
                   style={styles.image}
                 />
                 <Text style={styles.textName}>{item}</Text>
-                {console.log(JSON.stringify(item))}
+                {/* {console.log(JSON.stringify(item))} */}
               </View>
             </TouchableOpacity>
           )}

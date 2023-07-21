@@ -1,11 +1,8 @@
-import { createContext, useState, useEffect, useMemo } from "react";
-import PropTypes from "prop-types";
+import { useState, useEffect } from "react";
 import { collection, getDocs } from "firebase/firestore";
-import { db } from "../firebaseConfig";
+import { db } from "../../firebaseConfig";
 
-export const MallContext = createContext();
-
-export function MallProvider({ children }) {
+export default function useMalls() {
   const [malls, setMalls] = useState([]);
   const [currentMall, setCurrentMall] = useState(null);
 
@@ -19,14 +16,6 @@ export function MallProvider({ children }) {
     };
     fetchMalls();
   }, []);
-  const value = useMemo(
-    () => ({ malls, currentMall, setCurrentMall }),
-    [malls, currentMall]
-  );
 
-  return <MallContext.Provider value={value}>{children}</MallContext.Provider>;
+  return { malls, currentMall, setCurrentMall };
 }
-
-MallProvider.propTypes = {
-  children: PropTypes.node.isRequired,
-};
