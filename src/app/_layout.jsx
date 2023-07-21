@@ -1,5 +1,6 @@
-import { Stack } from "expo-router";
-import { MallProvider } from "../context/MallProvider";
+import { Stack, Link } from "expo-router";
+import { Button } from "react-native";
+import { MallProvider } from "./context/MallProvider";
 
 export default function Layout() {
   return (
@@ -10,6 +11,7 @@ export default function Layout() {
             backgroundColor: "#4340DF",
           },
           headerTitle: "",
+          headerRight: DeveloperAccessButton,
         }}
       >
         <Stack.Screen
@@ -20,5 +22,13 @@ export default function Layout() {
         />
       </Stack>
     </MallProvider>
+  );
+}
+
+function DeveloperAccessButton() {
+  return (
+    <Link href="/developerAccess" asChild>
+      <Button title="Developer Access" />
+    </Link>
   );
 }
