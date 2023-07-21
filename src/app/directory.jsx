@@ -2,16 +2,17 @@ import { useState, useEffect, useContext } from "react";
 import { Button, View, StyleSheet } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Svg, { Line, Path } from "react-native-svg";
-import useStoreList from "../../hooks/useStoreList";
-import dijkstra from "../../utils/dijkstra";
-import getGraph from "../../services/getGraph";
-import getNodeIDFromStoreName from "../../services/getNodeIDFromStoreName";
-import StoreInput from "../../components/StoreInput";
-import useStoreInput from "../../hooks/useStoreInput";
-import Floorplan from "../../components/Floorplan";
-import MallPicker from "../../components/MallPicker";
-import { MallContext } from "../../context/MallProvider";
-import LevelButtons from "../../components/LevelButtons";
+import { Link } from "expo-router";
+import useStoreList from "../hooks/useStoreList";
+import dijkstra from "../utils/dijkstra";
+import getGraph from "../services/getGraph";
+import getNodeIDFromStoreName from "../services/getNodeIDFromStoreName";
+import StoreInput from "../components/StoreInput";
+import useStoreInput from "../hooks/useStoreInput";
+import Floorplan from "../components/Floorplan";
+import MallPicker from "../components/MallPicker";
+import { MallContext } from "../context/MallProvider";
+import LevelButtons from "../components/LevelButtons";
 
 export default function Directory() {
   const { malls, currentMall, setCurrentMall } = useContext(MallContext);
@@ -41,28 +42,31 @@ export default function Directory() {
     <SafeAreaView style={styles.safeAreaView}>
       {currentMall && (
         <>
-          <View style={styles.inputContainer}>
-            {currentMall && (
+          <View style={styles.row}>
+            <View style={styles.inputContainer}>
               <MallPicker
                 currentMall={currentMall}
                 setCurrentMall={setCurrentMall}
                 malls={malls}
               />
-            )}
-            <StoreInput
-              storeName={startStore.storeName}
-              setStoreName={startStore.setStoreName}
-              error={startStore.storeError}
-              placeholder="Enter start store"
-            />
-            <StoreInput
-              storeName={endStore.storeName}
-              setStoreName={endStore.setStoreName}
-              error={endStore.storeError}
-              placeholder="Enter end store"
-            />
-            <View style={styles.buttonContainer}>
+              <StoreInput
+                storeName={startStore.storeName}
+                setStoreName={startStore.setStoreName}
+                error={startStore.storeError}
+                placeholder="Enter start store"
+              />
+              <StoreInput
+                storeName={endStore.storeName}
+                setStoreName={endStore.setStoreName}
+                error={endStore.storeError}
+                placeholder="Enter end store"
+              />
               <Button title="Get Directions" onPress={calculatePath} />
+            </View>
+            <View style={styles.sideButtonContainer}>
+              <Link href="/storeSearch" asChild>
+                <Button title="Store Search" />
+              </Link>
             </View>
           </View>
           <View style={styles.mapContainer}>
@@ -122,12 +126,17 @@ export default function Directory() {
 const styles = StyleSheet.create({
   safeAreaView: { flex: 1 },
   inputContainer: {
-    flex: 0.1,
+    flex: 0.2,
     flexDirection: "column",
     alignItems: "center",
   },
+  row: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+  },
   mapContainer: {
-    flex: 0.9,
+    flex: 0.8,
   },
   overlay: {
     position: "absolute",

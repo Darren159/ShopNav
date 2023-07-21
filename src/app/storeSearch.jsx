@@ -6,16 +6,15 @@ import {
   FlatList,
   StyleSheet,
   Image,
-  TouchableOpacity,
   SafeAreaView,
 } from "react-native";
 import { collection, getDocs } from "firebase/firestore";
 import filter from "lodash.filter";
-import { useRouter } from "expo-router";
-import { db } from "../../../firebaseConfig";
-import SearchBar from "../../components/SearchBar";
-import MallPicker from "../../components/MallPicker";
-import { MallContext } from "../../context/MallProvider";
+import { Link } from "expo-router";
+import { db } from "../../firebaseConfig";
+import SearchBar from "../components/SearchBar";
+import MallPicker from "../components/MallPicker";
+import { MallContext } from "../context/MallProvider";
 
 export default function StoreSearch() {
   const { malls, currentMall, setCurrentMall } = useContext(MallContext);
@@ -39,18 +38,6 @@ export default function StoreSearch() {
   };
 
   const contains = (item, query) => item.includes(query);
-
-  // for handling pressing of location
-  const router = useRouter();
-
-  // for pop out of details page
-  const pressHandler = async (location) => {
-    // console.log(location);
-    router.push({
-      pathname: "/PlaceDetailsScreen",
-      params: { locName: location },
-    });
-  };
 
   const [isLoading, setIsLoading] = useState(false);
   const [data, setData] = useState([]);
@@ -129,7 +116,12 @@ export default function StoreSearch() {
             data={data}
             keyExtractor={(item, index) => index.toString()}
             renderItem={({ item }) => (
-              <TouchableOpacity onPress={() => pressHandler(item)}>
+              <Link
+                href={{
+                  pathname: "/placeDetails",
+                  params: { locName: item },
+                }}
+              >
                 <View style={styles.itemContainer}>
                   <Image
                     source={{
@@ -140,7 +132,7 @@ export default function StoreSearch() {
                   <Text style={styles.textName}>{item}</Text>
                   {/* {console.log(JSON.stringify(item))} */}
                 </View>
-              </TouchableOpacity>
+              </Link>
             )}
           />
         </View>
