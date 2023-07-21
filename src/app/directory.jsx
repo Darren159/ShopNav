@@ -11,7 +11,7 @@ import StoreInput from "../components/StoreInput";
 import useStoreInput from "../hooks/useStoreInput";
 import Floorplan from "../components/Floorplan";
 import MallPicker from "../components/MallPicker";
-import { MallContext } from "./context/MallProvider";
+import { MallContext } from "./context/mallProvider";
 import LevelButtons from "../components/LevelButtons";
 
 export default function Directory() {

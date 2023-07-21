@@ -1,18 +1,25 @@
 import { useState, useContext } from "react";
-import { Stack } from "expo-router";
-import { View, StyleSheet, TextInput } from "react-native";
+import { Stack, router } from "expo-router";
+import { Button, View, StyleSheet, TextInput } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import UploadSVGButton from "../components/UploadSVGButton";
-import UploadStoreButton from "../components/UploadStoreButton";
-import MallPicker from "../components/MallPicker";
-import { MallContext } from "./context/MallProvider";
-import StoreInput from "../components/StoreInput";
+import { AuthContext } from "../context/auth";
+import UploadSVGButton from "../../components/UploadSVGButton";
+import UploadStoreButton from "../../components/UploadStoreButton";
+import MallPicker from "../../components/MallPicker";
+import { MallContext } from "../context/mallProvider";
+import StoreInput from "../../components/StoreInput";
 
 export default function DeveloperAccess() {
   const { malls, currentMall, setCurrentMall } = useContext(MallContext);
   const [storeName, setStoreName] = useState("");
   const [storeError, setStoreError] = useState(false);
   const [promoInfo, setPromoInfo] = useState("");
+  const { signout } = useContext(AuthContext);
+
+  const handleSignOut = async () => {
+    await signout();
+    router.replace("/sign-in");
+  };
 
   return (
     <>
@@ -56,6 +63,7 @@ export default function DeveloperAccess() {
             />
           </>
         )}
+        <Button title="Sign Out" onPress={handleSignOut} />
       </SafeAreaView>
     </>
   );

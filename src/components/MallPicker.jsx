@@ -1,7 +1,7 @@
 import { View } from "react-native";
 import { Picker } from "@react-native-picker/picker";
 import { useContext } from "react";
-import { MallContext } from "../app/context/MallProvider";
+import { MallContext } from "../app/context/mallProvider";
 
 export default function MallPicker() {
   const { currentMall, setCurrentMall, malls } = useContext(MallContext);
