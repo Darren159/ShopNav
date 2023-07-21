@@ -2,7 +2,7 @@ import { useState, useEffect, useContext } from "react";
 import { Button, View, StyleSheet } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Svg, { Line, Path } from "react-native-svg";
-import { Link } from "expo-router";
+import { Link, router } from "expo-router";
 import useStoreList from "../hooks/useStoreList";
 import dijkstra from "../utils/dijkstra";
 import getGraph from "../services/getGraph";
@@ -106,7 +106,12 @@ export default function Directory() {
                       stroke="transparent"
                       strokeWidth="1"
                       key={store.id}
-                      // onPress={() => console.log("Store clicked:", store.id)}
+                      onPress={() =>
+                        router.push({
+                          pathname: "/placeDetails",
+                          params: { locName: store.id },
+                        })
+                      }
                     />
                   ))}
               </Svg>
