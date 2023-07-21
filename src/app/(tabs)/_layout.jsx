@@ -16,7 +16,6 @@ export default function Layout() {
           }}
         />
         <Tabs.Screen name="Directory" />
-        <Tabs.Screen name="Navigation" />
         <Tabs.Screen
           name="DeveloperAccess"
           options={{
