@@ -81,18 +81,18 @@ export default function PlaceDetailsScreen() {
                     <ScrollView 
                         showsVerticalScrollIndicator = {false}
                         >
-                        <Text style = {{fontSize:40,fontWeight:'bold', textAlign: 'center'}}> 
+                        <Text style = {styles.placeName}> 
                             {placeDetails.name}
                         </Text>
 
 
                          <FlatList 
-                            style = {{ borderRadius: 10}}
+                            style = {styles.googleImgContainer}
                             data={placeDetails.photos}
                             keyExtractor={(item, index) => index.toString()}
                             renderItem = {({item}) =>
                                 <View>
-                                    <Image source = {{ uri: googleImg(item.photo_reference) }} style={{width: 353, height: 300, padding: 10 , borderWidth: 2, borderRadius: 10}}/>
+                                    <Image source = {{ uri: googleImg(item.photo_reference) }} style={styles.googleImage}/>
                                 </View>
                             }
                             horizontal
@@ -101,66 +101,72 @@ export default function PlaceDetailsScreen() {
                             bounces = {false}
                         />
 
-                        <View style= {{ flexDirection: 'row' , paddingTop: 10, alignItems: 'center'}}>
+                        <View style= {styles.formattedAddressContainer}>
                             
                             <Image 
-                                style = {{ height: 20, width:20 }}
-                                source = {{ uri: 'https://th.bing.com/th?id=OIP.LKqhdSDlLwqivERFPsNMbwHaJu&w=218&h=286&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2'}}
+                                style = {styles.formattedAddressIcon}
+                                source = {{ uri: 'https://cdn3.iconfinder.com/data/icons/flat-pro-basic-set-1-1/32/location-gray-512.png'}}
                             />
 
-                            <Text style= {{ flex: 3, paddingLeft: 10 }}>{placeDetails.formatted_address}</Text>
+                            <Text style= {styles.formattedAddressText}>
+                                {placeDetails.formatted_address}
+                            </Text>
                         
-                            <Text style= {{ flex: 2, fontSize: 30 ,textAlign: 'right'}}>{placeDetails.rating} ⭐</Text> 
+                            <Text style= {styles.ratingText}>
+                                {placeDetails.rating} ⭐
+                            </Text> 
                         
                         </View >
 
-                        <View style={{ borderTopWidth: 0.2 }}>
-                            <Text style={{ fontWeight: 'bold', fontSize: 25, color: placeDetails.business_status === 'OPERATIONAL' ? 'green' : 'red' }}> 
+                        <View style={styles.businessStatusContainer}>
+                            <Text style={ [styles.businessStatusText , { color: placeDetails.business_status === 'OPERATIONAL' ? 'green' : 'red' }] }> 
                             
                                 {placeDetails.business_status}
                             
                             </Text>
                         </View>
 
-                        <View style={{ borderTopWidth: 0.2 }}>
-                            <Text style = {{ fontSize: 25, fontWeight: 'bold', color: placeDetails.opening_hours.open_now? 'green' : 'red' }}>
-                                {placeDetails.opening_hours.open_now? '✔OPEN':'✗CLOSED'}
+                        <View style={{ borderTopWidth: 0.2, padding: 10 }}>
+                            <Text style = {{ paddingLeft: 35, fontSize: 25, fontWeight: 'bold', color: placeDetails.opening_hours.open_now? 'green' : 'red' }}>
+                                {placeDetails.opening_hours.open_now? 'OPEN':'CLOSED'}
                             </Text>
                         </View>
 
-                        <View style={{ borderTopWidth: 0.2, flexDirection: 'row', alignItems: 'center'}}>
+                        <View style={{ padding: 10, borderTopWidth: 0.2, flexDirection: 'row', alignItems: 'center'}}>
                             <Image 
-                            style = {{ height: 20, width:20 }}
+                            style = {{ height: 25, width: 25 }}
                             source = {{ uri: 'https://th.bing.com/th?id=OIP.K1oS9ypne1epe_3H9nahtAHaIS&w=236&h=264&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2'}}/>
-                            <Text style = {{ fontSize: 20 , fontWeight: 'bold', paddingLeft: 10}}>{placeDetails.formatted_phone_number}</Text>
+                            <Text style = {{ fontSize: 25 , fontWeight: 'bold', paddingLeft: 10}}>{placeDetails.formatted_phone_number}</Text>
                         </View>
                         
                         
-                        <TouchableOpacity onPress={handlePress} style = {{ flexDirection: 'row', borderTopWidth: 0.2}}>
+                        <TouchableOpacity onPress={handlePress} style = {{ padding: 10, flexDirection: 'row', borderTopWidth: 0.2 }}>
                             <Image
-                            style = {{height: 20, width: 20}}
+                            style = {{height: 25, width: 25}}
                             source={{ uri: 'https://frameandkeyrealestate.files.wordpress.com/2019/04/clock-icon.png'}}
                             />
-                            <Text style={{ flex: 4, paddingLeft: 10, fontWeight: 'bold', fontSize: 20}}>
+                            <Text style={{ flex: 4, paddingLeft: 10, fontWeight: 'bold', fontSize: 25}}>
                                 OPENING HOURS:
                             </Text>
                             <Text style={{ flex: 1, textAlign: 'right', fontSize: 25}}> {isCollapsed? '▼' :'▲' }</Text>
                         </TouchableOpacity>
                         {!isCollapsed && placeDetails.opening_hours.weekday_text.map((item) => (
-                            <View key={item.id}>
+                            <View 
+                                style = {{ padding: 10, paddingLeft:45}}
+                                key={item.id}>
                                 <Text>{item}</Text>
                             </View>
                         ))}
                                 
                         
                         
-                        <View style = {{ borderTopWidth: 0.2, flexDirection: 'row', alignItems: 'center'}}>
+                        <View style = {{ padding: 10, borderTopWidth: 0.2, flexDirection: 'row', alignItems: 'center'}}>
                             
                             <Image 
-                                style = {{ height: 20, width:20 }}
-                                source = {{ uri: 'https://th.bing.com/th/id/OIP.S4IQczGnladra9zutNSl1wHaGL?w=209&h=180&c=7&r=0&o=5&pid=1.7'}}
+                                style = {{ height: 30, width: 30 }}
+                                source = {{ uri: 'https://www.pngall.com/wp-content/uploads/10/Message-Background-PNG.png'}}
                             />
-                            <Text style={{ paddingLeft:10, fontWeight: 'bold', fontSize: 20 }}>
+                            <Text style={{ paddingLeft:8, fontWeight: 'bold', fontSize: 25 }}>
                                 Reviews:
                             </Text>    
                         </View>
@@ -241,4 +247,47 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems:  'center',
     },
+    placeName: {
+        fontSize:40,
+        fontWeight:'bold', 
+        textAlign: 'center'
+    },
+    googleImageContainer: { 
+        borderRadius: 10
+    },
+    googleImage: {
+        width: 353, 
+        height: 300, 
+        padding: 10, 
+        borderWidth: 2, 
+        borderRadius: 10
+    },
+    formattedAddressContainer: { 
+        flexDirection: 'row' ,
+        padding: 10, 
+        alignItems: 'center'
+    },
+    formattedAddressIcon: { 
+        height: 30, 
+        width: 30 
+    },
+    formattedAddressText: { 
+        flex: 3, 
+        paddingLeft: 10 
+    },
+    ratingText: { 
+        flex: 2, 
+        fontSize: 30, 
+        textAlign: 'right'
+    },
+    businessStatusContainer: { 
+        borderTopWidth: 0.2, 
+        padding: 10 
+    },
+    businessStatusText: {
+        paddingLeft: 35, 
+        fontWeight: 'bold', 
+        fontSize: 25
+    }
+
 })
