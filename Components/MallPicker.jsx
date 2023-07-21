@@ -1,8 +1,11 @@
 import { View } from "react-native";
-import PropTypes from "prop-types";
 import { Picker } from "@react-native-picker/picker";
+import { useContext } from "react";
+import { MallContext } from "../context/MallProvider";
 
-export default function MallPicker({ currentMall, setCurrentMall, malls }) {
+export default function MallPicker() {
+  const { currentMall, setCurrentMall, malls } = useContext(MallContext);
+
   return (
     <View style={{ height: 50, width: 150 }}>
       <Picker
@@ -16,8 +19,3 @@ export default function MallPicker({ currentMall, setCurrentMall, malls }) {
     </View>
   );
 }
-MallPicker.propTypes = {
-  currentMall: PropTypes.string.isRequired,
-  setCurrentMall: PropTypes.func.isRequired,
-  malls: PropTypes.arrayOf(PropTypes.string).isRequired,
-};

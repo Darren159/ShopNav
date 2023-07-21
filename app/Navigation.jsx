@@ -1,59 +1,38 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { Button, View, StyleSheet } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Svg, Line } from "react-native-svg";
-import MallPicker from "../Components/MallPicker";
-import dijkstra from "../services/dijkstra";
-import {
-  getNodeIDFromStoreName,
-  getGraph,
-  useMalls,
-} from "../services/databaseService";
-import StoreInput from "../Components/StoreInput";
-import LevelButtons from "../Components/LevelButtons";
-import Floorplan from "../Components/Floorplan";
+import MallPicker from "../components/MallPicker";
+import dijkstra from "../utils/dijkstra";
+import getGraph from "../services/getGraph";
+import getNodeIDFromStoreName from "../services/getNodeIDFromStoreName";
+import StoreInput from "../components/StoreInput";
+import LevelButtons from "../components/LevelButtons";
+import Floorplan from "../components/Floorplan";
+import useStoreInput from "../hooks/useStoreInput";
+import { MallContext } from "../context/MallProvider";
 
 export default function Navigation() {
-  const { malls, currentMall, setCurrentMall } = useMalls();
+  const { malls, currentMall, setCurrentMall } = useContext(MallContext);
   const [currentLevel, setCurrentLevel] = useState(1);
-  const [startStoreName, setStartStoreName] = useState("");
-  const [endStoreName, setEndStoreName] = useState("");
-  const [startStoreError, setStartStoreError] = useState(false);
-  const [endStoreError, setEndStoreError] = useState(false);
   const [graph, setGraph] = useState({});
   const [path, setPath] = useState([]);
 
+  const startStore = useStoreInput(currentMall);
+  const endStore = useStoreInput(currentMall);
   useEffect(() => {
     if (currentMall) {
       getGraph(currentMall).then((nodes) => setGraph(nodes));
     }
   }, [currentMall]);
 
-  const handleClick = async () => {
-    // Clear the previous errors
-    setStartStoreError(false);
-    setEndStoreError(false);
-
-    let startNodeId;
-    let endNodeId;
-    try {
-      startNodeId = await getNodeIDFromStoreName(currentMall, startStoreName);
-    } catch (error) {
-      setStartStoreError(true);
-    }
-    try {
-      endNodeId = await getNodeIDFromStoreName(currentMall, endStoreName);
-    } catch (error) {
-      setEndStoreError(true);
-    }
+  const calculatePath = async () => {
+    const startNodeId = await startStore.handleClick(getNodeIDFromStoreName);
+    const endNodeId = await endStore.handleClick(getNodeIDFromStoreName);
 
     if (startNodeId && endNodeId) {
       const shortestPath = dijkstra(graph, startNodeId, endNodeId);
-      if (shortestPath !== null) {
-        setPath(shortestPath);
-      } else {
-        setPath([]);
-      }
+      setPath(shortestPath !== null ? shortestPath : []);
     }
   };
 
@@ -68,19 +47,19 @@ export default function Navigation() {
           />
         )}
         <StoreInput
-          storeName={startStoreName}
-          setStoreName={setStartStoreName}
-          error={startStoreError}
+          storeName={startStore.storeName}
+          setStoreName={startStore.setStoreName}
+          error={startStore.storeError}
           placeholder="Enter start store"
         />
         <StoreInput
-          storeName={endStoreName}
-          setStoreName={setEndStoreName}
-          error={endStoreError}
+          storeName={endStore.storeName}
+          setStoreName={endStore.setStoreName}
+          error={endStore.storeError}
           placeholder="Enter end store"
         />
         <View style={styles.buttonContainer}>
-          <Button title="Get Directions" onPress={handleClick} />
+          <Button title="Get Directions" onPress={calculatePath} />
         </View>
       </View>
       <View style={styles.mapContainer}>
