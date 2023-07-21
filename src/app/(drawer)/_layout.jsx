@@ -1,5 +1,5 @@
 import { Stack } from "expo-router";
-import { MallProvider } from "../context/MallProvider";
+import { MallProvider } from "../../context/MallProvider";
 
 export default function Layout() {
   return (
@@ -15,6 +15,7 @@ export default function Layout() {
         <Stack.Screen
           name="placeDetails"
           options={{
+            // Set the presentation mode to modal for our modal route.
             presentation: "modal",
           }}
         />
