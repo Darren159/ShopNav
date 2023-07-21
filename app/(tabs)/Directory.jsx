@@ -1,15 +1,16 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { View, StyleSheet } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Svg, { Path } from "react-native-svg";
-import { useMalls, useStores } from "../../services/databaseService";
-import Floorplan from "../../Components/Floorplan";
-import MallPicker from "../../Components/MallPicker";
-import LevelButtons from "../../Components/LevelButtons";
+import useStoreList from "../../hooks/useStoreList";
+import Floorplan from "../../components/Floorplan";
+import MallPicker from "../../components/MallPicker";
+import { MallContext } from "../../context/MallProvider";
+import LevelButtons from "../../components/LevelButtons";
 
 export default function Directory() {
-  const { malls, currentMall, setCurrentMall } = useMalls();
-  const { stores } = useStores(currentMall);
+  const { malls, currentMall, setCurrentMall } = useContext(MallContext);
+  const { stores } = useStoreList(currentMall);
   const [currentLevel, setCurrentLevel] = useState(1);
   return (
     <SafeAreaView style={styles.safeAreaView}>
