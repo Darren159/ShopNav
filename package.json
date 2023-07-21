@@ -24,7 +24,7 @@
     "@expo/metro-config": "^0.10.6",
     "@react-native-picker/picker": "2.4.8",
     "@react-navigation/native": "^6.1.7",
-    "expo": "^48.0.19",
+    "expo": "^48.0.20",
     "expo-constants": "~14.2.1",
     "expo-document-picker": "~11.2.2",
     "expo-file-system": "~15.2.2",
