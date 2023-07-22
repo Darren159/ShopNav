@@ -17,7 +17,7 @@ export default function StoreInput({
           borderColor: error ? "red" : "#000", paddingLeft: 10
         }}
       />
-      {error && <Text style={{ color: "red" }}>Invalid store name</Text>}
+      {error && <Text style={{ color: "red", paddingLeft:10 }}>Invalid store name</Text>}
     </View>
   );
 }

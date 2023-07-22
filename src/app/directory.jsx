@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from "react";
-import { View, StyleSheet, Image, Text, TouchableOpacity } from "react-native";
+import { View, StyleSheet, Image, Text, TouchableOpacity, ActivityIndicator } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Svg, { Line, Path } from "react-native-svg";
 import { Link } from "expo-router";
@@ -22,9 +22,22 @@ export default function Directory() {
   const [currentLevel, setCurrentLevel] = useState(1);
   const startStore = useStoreInput(currentMall);
   const endStore = useStoreInput(currentMall);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
+
+
   useEffect(() => {
-    if (currentMall) {
-      getGraph(currentMall).then((nodes) => setGraph(nodes));
+    try {
+      if (currentMall) {
+        setIsLoading(true);
+        getGraph(currentMall).then((nodes) => setGraph(nodes));
+        setIsLoading(false);
+      }
+      
+    } catch (err) {
+      setError(err);
+      setIsLoading(false);
+
     }
   }, [currentMall]);
 
@@ -38,8 +51,27 @@ export default function Directory() {
     }
   };
 
+  if (isLoading) {
+    return (
+      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+        <ActivityIndicator size="large" color="#5500dc" />
+      </View>
+    );
+  }
+
+  // error interface
+  if (error) {
+    return (
+      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+        <Text>
+          Error in fetching data ... Please check your internet connection!
+        </Text>
+      </View>
+    );
+  }
+
   return (
-    <SafeAreaView style={{ flex:1, marginTop:-50 ,backgroundColor:'white' }}>
+    <SafeAreaView style={styles.safeAreaContainer}>
       {currentMall && (
         <>
           <View style={{ flexDirection:'row' , flex: 0.3}}>
@@ -122,7 +154,7 @@ export default function Directory() {
           </View>
 
 
-          <View style={{flex:0.7}}>
+          <View style={{flex:0.7, marginBottom: 100}}>
             <Floorplan currentMall={currentMall} currentLevel={currentLevel}>
               <Svg
                 style={{}}
@@ -198,4 +230,9 @@ const styles = StyleSheet.create({
     right: 0,
     bottom: 0,
   },
+  safeAreaContainer: { 
+    flex:1 , 
+    marginTop:-50 ,
+    backgroundColor:'white' 
+  }
 });
