@@ -7,10 +7,11 @@ import {
   StyleSheet,
   Image,
   SafeAreaView,
+  TouchableOpacity,
 } from "react-native";
 import { collection, getDocs } from "firebase/firestore";
 import filter from "lodash.filter";
-import { Link } from "expo-router";
+import { useRouter } from "expo-router";
 import { db } from "../../firebaseConfig";
 import SearchBar from "../components/SearchBar";
 import MallPicker from "../components/MallPicker";
@@ -18,6 +19,7 @@ import { MallContext } from "../context/MallProvider";
 
 export default function StoreSearch() {
   const { malls, currentMall, setCurrentMall } = useContext(MallContext);
+  const router = useRouter();
 
   // const  navigation = useNavigation();
   // for filtering search function
@@ -101,6 +103,12 @@ export default function StoreSearch() {
     );
   }
 
+  // for pop out of details page
+    const pressHandler = async (location) => {
+        
+        router.push({ pathname: '/placeDetails', params: { locName: location }});
+    }
+
   return (
     <SafeAreaView style={styles.mainContainer}>
       {currentMall && (
@@ -124,12 +132,7 @@ export default function StoreSearch() {
               data={data}
               keyExtractor={(item, index) => index.toString()}
               renderItem={({ item }) => (
-                <Link
-                  href={{
-                    pathname: "/placeDetails",
-                    params: { locName: item },
-                  }}
-                >
+                <TouchableOpacity onPress={ () => pressHandler(item) }>
                   <View style={styles.itemContainer}>
                     <Image
                       source={{
@@ -140,7 +143,7 @@ export default function StoreSearch() {
                     <Text style={styles.textName}>{item}</Text>
                     {console.log(JSON.stringify(item))}
                   </View>
-                </Link>
+                </TouchableOpacity>
               )}
             />
           </View>
