@@ -154,7 +154,7 @@ export default function Directory() {
           </View>
 
 
-          <View style={{flex:0.7, marginBottom: 100}}>
+          <View style={{flex:0.7}}>
             <Floorplan currentMall={currentMall} currentLevel={currentLevel}>
               <Svg
                 style={{}}
