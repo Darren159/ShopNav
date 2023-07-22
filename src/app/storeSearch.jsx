@@ -61,14 +61,14 @@ export default function StoreSearch() {
         );
 
         // filter out the unnecessary nodes
-        const filteredStoreList = storeList.filter(
-          (item) => item && !item.toLowerCase().includes("aesop")
-        );
+        // const filteredStoreList = storeList.filter(
+        //  (item) => item && !item.toLowerCase().includes("aesop")
+        // );
 
-        setFullData(filteredStoreList);
+        setFullData(storeList);
 
         // set data to full data set initially
-        setData(filteredStoreList);
+        setData(storeList);
 
         setIsLoading(false);
       } catch (err) {
@@ -105,36 +105,45 @@ export default function StoreSearch() {
     <SafeAreaView style={styles.mainContainer}>
       {currentMall && (
         <View style={{ flex: 1, paddingBottom: 70 }}>
-          <MallPicker
-            currentMall={currentMall}
-            setCurrentMall={setCurrentMall}
-            malls={malls}
-          />
-          <Text>Store Search</Text>
-          <SearchBar onSearch={handleSearch} />
-          <FlatList
-            data={data}
-            keyExtractor={(item, index) => index.toString()}
-            renderItem={({ item }) => (
-              <Link
-                href={{
-                  pathname: "/placeDetails",
-                  params: { locName: item },
-                }}
-              >
-                <View style={styles.itemContainer}>
-                  <Image
-                    source={{
-                      uri: "https://frameandkeyrealestate.files.wordpress.com/2019/04/clock-icon.png",
-                    }}
-                    style={styles.image}
-                  />
-                  <Text style={styles.textName}>{item}</Text>
-                  {/* {console.log(JSON.stringify(item))} */}
-                </View>
-              </Link>
-            )}
-          />
+          
+          <View style={{flex:0.1}}>
+            <MallPicker
+              currentMall={currentMall}
+              setCurrentMall={setCurrentMall}
+              malls={malls}
+            />
+          </View>
+
+          <View style={{flex:0.1}}>
+            <Text>Store Search</Text>
+            <SearchBar onSearch={handleSearch} />
+          </View>
+
+          <View style={{flex:0.8}}>
+            <FlatList
+              data={data}
+              keyExtractor={(item, index) => index.toString()}
+              renderItem={({ item }) => (
+                <Link
+                  href={{
+                    pathname: "/placeDetails",
+                    params: { locName: item },
+                  }}
+                >
+                  <View style={styles.itemContainer}>
+                    <Image
+                      source={{
+                        uri: "https://frameandkeyrealestate.files.wordpress.com/2019/04/clock-icon.png",
+                      }}
+                      style={styles.image}
+                    />
+                    <Text style={styles.textName}>{item}</Text>
+                    {console.log(JSON.stringify(item))}
+                  </View>
+                </Link>
+              )}
+            />
+          </View>
         </View>
       )}
     </SafeAreaView>

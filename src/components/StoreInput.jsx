@@ -8,16 +8,13 @@ export default function StoreInput({
   placeholder,
 }) {
   return (
-    <View style={{ flexDirection: "row", alignItems: "center" }}>
+    <View>
       <TextInput
         onChangeText={setStoreName}
         value={storeName}
         placeholder={placeholder}
-        style={{
-          height: 50,
-          width: 150,
-          borderColor: error ? "red" : "#000",
-          borderWidth: 1,
+        style={{  
+          borderColor: error ? "red" : "#000", paddingLeft: 10
         }}
       />
       {error && <Text style={{ color: "red" }}>Invalid store name</Text>}

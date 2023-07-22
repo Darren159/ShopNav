@@ -1,21 +1,25 @@
-import { View } from "react-native";
-import { Picker } from "@react-native-picker/picker";
 import { useContext } from "react";
+import { View } from "react-native";
+import { Dropdown } from 'react-native-element-dropdown';
 import { MallContext } from "../context/MallProvider";
 
 export default function MallPicker() {
   const { currentMall, setCurrentMall, malls } = useContext(MallContext);
 
-  return (
-    <View style={{ height: 50, width: 150 }}>
-      <Picker
-        selectedValue={currentMall}
-        onValueChange={(value) => setCurrentMall(value)}
-      >
-        {malls.map((mall) => (
-          <Picker.Item key={mall} label={mall} value={mall} />
-        ))}
-      </Picker>
-    </View>
-  );
+  console.log(currentMall)
+  console.log(malls)
+  
+    return (
+      <View >
+        <Dropdown
+          data={malls}
+          labelField="label"
+          valueField="value"
+          placeholder={currentMall}
+          value={currentMall}
+          onSelect={(selectedItem) => setCurrentMall(selectedItem.value)}
+        />
+      </View>
+    );
+  
 }
