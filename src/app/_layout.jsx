@@ -1,24 +1,37 @@
-import { Stack } from "expo-router";
-import { MallProvider } from "../context/MallProvider";
+import { Stack, Link } from "expo-router";
+import { Button } from "react-native";
+import { MallProvider } from "./context/mallProvider";
+import { AuthProvider } from "./context/auth";
 
 export default function Layout() {
   return (
-    <MallProvider>
-      <Stack
-        screenOptions={{
-          headerStyle: {
-            backgroundColor: "#4340DF",
-          },
-          headerTitle: "",
-        }}
-      >
-        <Stack.Screen
-          name="placeDetails"
-          options={{
-            presentation: "modal",
+    <AuthProvider>
+      <MallProvider>
+        <Stack
+          screenOptions={{
+            headerStyle: {
+              backgroundColor: "#4340DF",
+            },
+            headerTitle: "",
+            headerRight: DeveloperAccessButton,
           }}
-        />
-      </Stack>
-    </MallProvider>
+        >
+          <Stack.Screen
+            name="placeDetails"
+            options={{
+              presentation: "modal",
+            }}
+          />
+        </Stack>
+      </MallProvider>
+    </AuthProvider>
+  );
+}
+
+function DeveloperAccessButton() {
+  return (
+    <Link href="/(auth)/sign-in" asChild>
+      <Button title="Developer Access" />
+    </Link>
   );
 }

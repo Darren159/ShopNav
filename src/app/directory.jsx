@@ -1,8 +1,15 @@
 import { useState, useEffect, useContext } from "react";
-import { View, StyleSheet, Image, Text, TouchableOpacity, ActivityIndicator } from "react-native";
+import {
+  View,
+  StyleSheet,
+  Image,
+  Text,
+  TouchableOpacity,
+  ActivityIndicator,
+} from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Svg, { Line, Path } from "react-native-svg";
-import { Link } from "expo-router";
+import { Link, router } from "expo-router";
 import useStoreList from "../hooks/useStoreList";
 import dijkstra from "../utils/dijkstra";
 import getGraph from "../services/getGraph";
@@ -11,7 +18,7 @@ import StoreInput from "../components/StoreInput";
 import useStoreInput from "../hooks/useStoreInput";
 import Floorplan from "../components/Floorplan";
 import MallPicker from "../components/MallPicker";
-import { MallContext } from "../context/MallProvider";
+import { MallContext } from "./context/mallProvider";
 import LevelButtons from "../components/LevelButtons";
 
 export default function Directory() {
@@ -25,7 +32,6 @@ export default function Directory() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
-
   useEffect(() => {
     try {
       if (currentMall) {
@@ -33,11 +39,9 @@ export default function Directory() {
         getGraph(currentMall).then((nodes) => setGraph(nodes));
         setIsLoading(false);
       }
-      
     } catch (err) {
       setError(err);
       setIsLoading(false);
-
     }
   }, [currentMall]);
 
@@ -74,24 +78,41 @@ export default function Directory() {
     <SafeAreaView style={styles.safeAreaContainer}>
       {currentMall && (
         <>
-          <View style={{ flexDirection:'row' , flex: 0.3}}>
-            <View style ={{flex:0.1 , paddingTop:75 , paddingLeft:20}}>
+          <View style={{ flexDirection: "row", flex: 0.3 }}>
+            <View style={{ flex: 0.1, paddingTop: 75, paddingLeft: 20 }}>
               <Image
-                style ={{ height:30, width:30}}
-                source={{ uri: "https://th.bing.com/th/id/OIP.beeEDyY2Mzow-Gd3ZlwAdAHaHa?w=189&h=189&c=7&r=0&o=5&pid=1.7"}}
+                style={{ height: 30, width: 30 }}
+                source={{
+                  uri: "https://th.bing.com/th/id/OIP.beeEDyY2Mzow-Gd3ZlwAdAHaHa?w=189&h=189&c=7&r=0&o=5&pid=1.7",
+                }}
               />
               <Image
-                style ={{ height:40, width:30 }}
-                source={{ uri: "https://i.stack.imgur.com/k59em.png"}}
+                style={{ height: 40, width: 30 }}
+                source={{ uri: "https://i.stack.imgur.com/k59em.png" }}
               />
               <Image
-                style ={{ height:30, width:30 }}
-                source={{ uri: "https://conjunctconsulting.org/wp-content/uploads/2017/02/Place-Icon.png"}}
+                style={{ height: 30, width: 30 }}
+                source={{
+                  uri: "https://conjunctconsulting.org/wp-content/uploads/2017/02/Place-Icon.png",
+                }}
               />
             </View>
-            <View style={{flexDirection: 'column', flex: 0.8 , alignItems: 'center'}}>
-
-              <View style = {{ flex:0.3 , width:150 , padding:3, marginBottom:10, borderWidth:1}}>
+            <View
+              style={{
+                flexDirection: "column",
+                flex: 0.8,
+                alignItems: "center",
+              }}
+            >
+              <View
+                style={{
+                  flex: 0.3,
+                  width: 150,
+                  padding: 3,
+                  marginBottom: 10,
+                  borderWidth: 1,
+                }}
+              >
                 <MallPicker
                   currentMall={currentMall}
                   setCurrentMall={setCurrentMall}
@@ -99,8 +120,17 @@ export default function Directory() {
                 />
               </View>
 
-              <View style = {{ flex:0.3 , width: 270 , borderWidth: 1, borderRadius:10, justifyContent: 'center', padding:3 , marginBottom:15}}>
-              
+              <View
+                style={{
+                  flex: 0.3,
+                  width: 270,
+                  borderWidth: 1,
+                  borderRadius: 10,
+                  justifyContent: "center",
+                  padding: 3,
+                  marginBottom: 15,
+                }}
+              >
                 <StoreInput
                   storeName={startStore.storeName}
                   setStoreName={startStore.setStoreName}
@@ -109,7 +139,17 @@ export default function Directory() {
                 />
               </View>
 
-              <View style = {{ flex:0.3, width: 270, borderWidth: 1, borderRadius:10 , justifyContent: 'center', padding:3, marginBottom:5}}>
+              <View
+                style={{
+                  flex: 0.3,
+                  width: 270,
+                  borderWidth: 1,
+                  borderRadius: 10,
+                  justifyContent: "center",
+                  padding: 3,
+                  marginBottom: 5,
+                }}
+              >
                 <StoreInput
                   storeName={endStore.storeName}
                   setStoreName={endStore.setStoreName}
@@ -117,51 +157,62 @@ export default function Directory() {
                   placeholder="Enter destination"
                 />
               </View>
-
-
             </View>
 
-            <View style= {{flex:0.1, marginRight:25}}>
-              <View style={{ borderWidth:1, backgroundColor: 'white', alignItems:'center', justifyContent: 'center', width:55, height: 55 ,borderRadius:10 , marginRight:10, marginTop:64}}>
-                
-                  <Link 
-                    href={{
-                        pathname: "/storeSearch",
-                        
+            <View style={{ flex: 0.1, marginRight: 25 }}>
+              <View
+                style={{
+                  borderWidth: 1,
+                  backgroundColor: "white",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  width: 55,
+                  height: 55,
+                  borderRadius: 10,
+                  marginRight: 10,
+                  marginTop: 64,
+                }}
+              >
+                <Link
+                  href={{
+                    pathname: "/storeSearch",
+                  }}
+                >
+                  <Image
+                    style={{ height: 30, width: 30 }}
+                    source={{
+                      uri: "https://th.bing.com/th/id/OIP.lL3Tke2NpekjvyzN7R9ALwAAAA?pid=ImgDet&w=196&h=196&c=7",
                     }}
-                    >
-                    
-                      <Image 
-                        style = {{height:30, width:30}}
-                        source={{ uri: "https://th.bing.com/th/id/OIP.lL3Tke2NpekjvyzN7R9ALwAAAA?pid=ImgDet&w=196&h=196&c=7"}} 
-                      />
-                      <Text style ={{fontSize:5}}>StoreSearch</Text>
-
-                    
-                    </Link>
-                  
+                  />
+                  <Text style={{ fontSize: 5 }}>StoreSearch</Text>
+                </Link>
               </View>
 
-              <View style = {{ height:55, width:55, backgroundColor: "white" , marginTop:17, justifyContent:'center', alignItems:'center'}}>
-                    <TouchableOpacity onPress={calculatePath} color= 'black' >
-                      <Image
-                        style = {{ height:50, width:50}}
-                        source={{uri:'https://th.bing.com/th/id/R.adb1e7f0422d05a53e5844dd0aa3648b?rik=ci7tAX%2buprqGQQ&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fimg_416750.png&ehk=MJrZ8noxdKUB%2b4V9CZBO%2bZwfEpLYUdgrL0rjR8Zb2a0%3d&risl=&pid=ImgRaw&r=0'}}
-                      />
-                    </TouchableOpacity>
+              <View
+                style={{
+                  height: 55,
+                  width: 55,
+                  backgroundColor: "white",
+                  marginTop: 17,
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <TouchableOpacity onPress={calculatePath} color="black">
+                  <Image
+                    style={{ height: 50, width: 50 }}
+                    source={{
+                      uri: "https://th.bing.com/th/id/R.adb1e7f0422d05a53e5844dd0aa3648b?rik=ci7tAX%2buprqGQQ&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fimg_416750.png&ehk=MJrZ8noxdKUB%2b4V9CZBO%2bZwfEpLYUdgrL0rjR8Zb2a0%3d&risl=&pid=ImgRaw&r=0",
+                    }}
+                  />
+                </TouchableOpacity>
               </View>
             </View>
           </View>
 
-
-          <View style={{flex:0.7}}>
+          <View style={{ flex: 0.7 }}>
             <Floorplan currentMall={currentMall} currentLevel={currentLevel}>
-              <Svg
-                style={{}}
-                height="100%"
-                width="100%"
-                viewBox="0 0 760 600"
-              >
+              <Svg style={{}} height="100%" width="100%" viewBox="0 0 760 600">
                 {path
                   .filter((node) => graph[node].level === currentLevel)
                   .map((node, index, levelNodes) => {
@@ -191,7 +242,12 @@ export default function Directory() {
                       stroke="transparent"
                       strokeWidth="1"
                       key={store.id}
-                      // onPress={() => console.log("Store clicked:", store.id)}
+                      onPress={() =>
+                        router.push({
+                          pathname: "/placeDetails",
+                          params: { locName: store.id },
+                        })
+                      }
                     />
                   ))}
               </Svg>
@@ -230,9 +286,8 @@ const styles = StyleSheet.create({
     right: 0,
     bottom: 0,
   },
-  safeAreaContainer: { 
-    flex:1 , 
-    marginTop:-50 ,
-    backgroundColor:'white' 
-  }
+  safeAreaContainer: {
+    flex: 1,
+    backgroundColor: "white",
+  },
 });

@@ -15,7 +15,7 @@ import { useRouter } from "expo-router";
 import { db } from "../../firebaseConfig";
 import SearchBar from "../components/SearchBar";
 import MallPicker from "../components/MallPicker";
-import { MallContext } from "../context/MallProvider";
+import { MallContext } from "./context/mallProvider";
 
 export default function StoreSearch() {
   const { malls, currentMall, setCurrentMall } = useContext(MallContext);
