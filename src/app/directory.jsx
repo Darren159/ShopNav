@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext, useRef } from "react";
+import { useState, useEffect, useContext } from "react";
 import {
   View,
   StyleSheet,
@@ -6,7 +6,6 @@ import {
   Text,
   TouchableOpacity,
   ActivityIndicator,
-  Alert,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Svg, { Line, Path } from "react-native-svg";
@@ -31,7 +30,6 @@ export default function Directory() {
   const startStore = useStoreInput(currentMall);
   const endStore = useStoreInput(currentMall);
   const [isLoading, setIsLoading] = useState(false);
-  const [isButtonPressed, setButtonPressed] = useState(false);
 
   const router = useRouter();
 
@@ -45,7 +43,6 @@ export default function Directory() {
 
   const calculatePath = async () => {
     setIsLoading(true);
-    setButtonPressed(true);
     const startNodeId = `${await startStore.handleClick(fetchStore)}-node`;
     const endNodeId = `${await endStore.handleClick(fetchStore)}-node`;
 
@@ -57,32 +54,6 @@ export default function Directory() {
     setIsLoading(false);
   };
 
-  // handle wrong input error
-  const startError = useRef(startStore.storeError);
-  const endError = useRef(endStore.storeError);
-
-  useEffect(() => {
-    startError.current = startStore.storeError;
-    endError.current = endStore.storeError;
-  }, [startStore.storeError, endStore.storeError]);
-
-  useEffect(() => {
-    if ((isButtonPressed && startError.current) || endError.current) {
-      Alert.alert(
-        "Invalid Store Input",
-        "Try re-typing the store inputs, make sure that there are no symbols used, and double check your spacings",
-        [
-          {
-            text: "OK",
-            onPress: () => {
-              // console.log(" ok, close storeInput error ");
-              setButtonPressed(false);
-            },
-          },
-        ]
-      );
-    }
-  }, [isButtonPressed]);
   // for navigation to storeSearch
 
   const handleStoreSearch = () => {
