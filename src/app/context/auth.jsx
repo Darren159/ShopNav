@@ -1,4 +1,5 @@
 import { createContext, useState, useEffect, useMemo } from "react";
+import { Alert } from "react-native";
 import {
   onAuthStateChanged,
   signInWithEmailAndPassword,
@@ -30,8 +31,30 @@ export function AuthProvider({ children }) {
       signin: async (email, password) => {
         try {
           await signInWithEmailAndPassword(auth, email, password);
-        } catch (e) {
-          console.error(e);
+        } catch (error) {
+          let errorMessage;
+          
+          switch (error.code) {
+            case 'auth/user-not-found':
+              errorMessage = 'There is no user record corresponding to this identifier. The user may have been deleted.';
+              break;
+            case 'auth/wrong-password':
+              errorMessage = 'The password is invalid or the user does not have a password.';
+              break;
+            case 'auth/invalid-email':
+              errorMessage = 'The email address is badly formatted.';
+              break;
+            default:
+              errorMessage = 'Something went wrong. Please try again later.';
+          }
+      
+          Alert.alert(
+            "Authentication Failed",
+            errorMessage,
+            [
+              { text: "OK" }
+            ]
+          );
         }
       },
       signout: async () => {
