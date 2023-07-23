@@ -7,6 +7,7 @@ import {
   SafeAreaView,
 } from "react-native";
 import { collection, getDocs } from "firebase/firestore";
+import { Stack } from "expo-router";
 import { db } from "../../firebaseConfig";
 import SearchBar from "../components/SearchBar";
 import { MallContext } from "./context/mallProvider";
@@ -95,14 +96,21 @@ export default function StoreSearch() {
   }
 
   return (
-    <SafeAreaView style={styles.mainContainer}>
-      {currentMall && (
-        <View style={{ flex: 1, paddingBottom: 70 }}>
-          <SearchBar onSearch={handleSearch} />
-          <StoreList data={data} />
-        </View>
-      )}
-    </SafeAreaView>
+    <>
+      <Stack.Screen
+        options={{
+          headerRight: null,
+        }}
+      />
+      <SafeAreaView style={styles.mainContainer}>
+        {currentMall && (
+          <View style={{ flex: 1, paddingBottom: 70 }}>
+            <SearchBar onSearch={handleSearch} />
+            <StoreList data={data} />
+          </View>
+        )}
+      </SafeAreaView>
+    </>
   );
 }
 
