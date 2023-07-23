@@ -25,14 +25,14 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#505050"
      showgrid="true"
-     inkscape:zoom="3.045231"
-     inkscape:cx="280.93107"
-     inkscape:cy="127.90491"
-     inkscape:window-width="1276"
-     inkscape:window-height="1481"
-     inkscape:window-x="1262"
-     inkscape:window-y="0"
-     inkscape:window-maximized="0"
+     inkscape:zoom="2.1533035"
+     inkscape:cx="397.52873"
+     inkscape:cy="273.0688"
+     inkscape:window-width="2560"
+     inkscape:window-height="1494"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
      inkscape:current-layer="layer7">
     <inkscape:grid
        type="xygrid"
@@ -58,15 +58,15 @@
      inkscape:groupmode="layer"
      id="layer7"
      inkscape:label="Stores"
-     style="fill:#ffffff;stroke:#000000;stroke-width:0.6;stroke-dasharray:none;stroke-opacity:1"
-     sodipodi:insensitive="true">
+     style="fill:#ffffff;stroke:#000000;stroke-width:0.6;stroke-dasharray:none;stroke-opacity:1">
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        d="m 268.29098,10.370814 v 57.072435 h -48.26192 v 29.18971 L 275.26859,125.9679 338.06724,25.473953 315.2446,10.225591 Z"
        id="westgate-artary"
        inkscape:label="westgate-artary">
       <desc
-         id="desc1628">level=2</desc>
+         id="desc1628">level=2
+name=Artary</desc>
     </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
@@ -74,7 +74,8 @@
        id="westgate-yishion"
        inkscape:label="westgate-yishion">
       <desc
-         id="desc1624">level=2</desc>
+         id="desc1624">level=2
+name=YISHION</desc>
     </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
@@ -82,7 +83,8 @@
        id="westgate-recoil"
        inkscape:label="westgate-recoil">
       <desc
-         id="desc1622">level=2</desc>
+         id="desc1622">level=2
+name=Recoil</desc>
     </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
@@ -90,7 +92,8 @@
        id="westgate-owndays"
        inkscape:label="westgate-owndays">
       <desc
-         id="desc1620">level=2</desc>
+         id="desc1620">level=2
+name=OWNDAYS</desc>
     </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
@@ -98,7 +101,8 @@
        id="westgate-eagle-eye-centre"
        inkscape:label="westgate-eagle-eye-centre">
       <desc
-         id="desc1618">level=2</desc>
+         id="desc1618">level=2
+name=EAGLE EYE CENTRE</desc>
     </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
@@ -106,7 +110,8 @@
        id="westgate-superga"
        inkscape:label="westgate-superga">
       <desc
-         id="desc1616">level=2</desc>
+         id="desc1616">level=2
+name=Superga</desc>
     </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
@@ -114,7 +119,8 @@
        id="westgate-gong-cha-and-coconut-queen"
        inkscape:label="westgate-gong-cha-and-coconut-queen">
       <desc
-         id="desc1614">level=2</desc>
+         id="desc1614">level=2
+name=Gong Cha and Coconut Queen</desc>
     </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
@@ -122,7 +128,8 @@
        id="westgate-pavilion-banana-leaf"
        inkscape:label="westgate-pavilion-banana-leaf">
       <desc
-         id="desc1612">level=2</desc>
+         id="desc1612">level=2
+name=Pavilion Banana Leaf</desc>
     </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
@@ -130,7 +137,8 @@
        id="westgate-myeureka"
        inkscape:label="westgate-myeureka">
       <desc
-         id="desc1610">level=2</desc>
+         id="desc1610">level=2
+name=myEureka</desc>
     </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
@@ -138,7 +146,8 @@
        id="westgate-irvins-salted-egg"
        inkscape:label="westgate-irvins-salted-egg">
       <desc
-         id="desc1608">level=2</desc>
+         id="desc1608">level=2
+name=Irvins Salted Egg</desc>
     </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
@@ -146,7 +155,8 @@
        id="westgate-laneige"
        inkscape:label="westgate-laneige">
       <desc
-         id="desc1606">level=2</desc>
+         id="desc1606">level=2
+name=LANEIGE</desc>
     </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
@@ -154,7 +164,8 @@
        id="westgate-kaleido"
        inkscape:label="westgate-kaleido">
       <desc
-         id="desc1604">level=2</desc>
+         id="desc1604">level=2
+name=Kaleido</desc>
     </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
@@ -162,7 +173,8 @@
        id="westgate-lenskart"
        inkscape:label="westgate-lenskart">
       <desc
-         id="desc1602">level=2</desc>
+         id="desc1602">level=2
+name=Lenskart</desc>
     </path>
     <path
        id="westgate-breadtalk-cafe"
@@ -170,7 +182,8 @@
        inkscape:label="westgate-breadtalk-cafe"
        d="M 3.6091728,369.34918 H 54.923805 v 79.14626 H 3.6091728 Z">
       <desc
-         id="desc1598">level=2</desc>
+         id="desc1598">level=2
+name=BreadTalk Cafe</desc>
     </path>
     <path
        id="westgate-starbucks"
@@ -178,7 +191,8 @@
        inkscape:label="westgate-starbucks"
        d="M 12.331209,481.89658 H 97.661776 V 552.4747 H 12.331209 Z">
       <desc
-         id="desc1594">level=2</desc>
+         id="desc1594">level=2
+name=Starbucks</desc>
     </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
@@ -186,7 +200,8 @@
        id="westgate-jinjja-chicken"
        inkscape:label="westgate-jinjja-chicken">
       <desc
-         id="desc1592">level=2</desc>
+         id="desc1592">level=2
+name=JINJJA Chicken</desc>
     </path>
     <path
        id="westgate-menya-musashi"
@@ -194,7 +209,8 @@
        d="M 254.80374,510.06973 H 304.2286 V 572.5154 H 254.80374 Z"
        inkscape:label="westgate-menya-musashi">
       <desc
-         id="desc1413">level=2</desc>
+         id="desc1413">level=2
+name=Menya Musashi</desc>
     </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
@@ -202,7 +218,8 @@
        id="westgate-curry-times"
        inkscape:label="westgate-curry-times">
       <desc
-         id="desc1410">level=2</desc>
+         id="desc1410">level=2
+name=Curry Times</desc>
     </path>
     <path
        id="westgate-miniso"
@@ -210,7 +227,8 @@
        inkscape:label="westgate-miniso"
        d="m 438.53088,468.39587 h 47.28347 v 102.27705 h -47.28347 z">
       <desc
-         id="desc1406">level=2</desc>
+         id="desc1406">level=2
+name=Miniso</desc>
     </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
@@ -218,7 +236,8 @@
        id="westgate-bega"
        inkscape:label="westgate-bega">
       <desc
-         id="desc1404">level=2</desc>
+         id="desc1404">level=2
+name=BEGA</desc>
     </path>
     <path
        id="westgate-lady-m-confections"
@@ -226,7 +245,8 @@
        inkscape:label="westgate-lady-m-confections"
        d="m 159.25006,254.70258 h 56.02063 v 48.87939 h -56.02063 z">
       <desc
-         id="desc1399">level=2</desc>
+         id="desc1399">level=2
+name=LADY M CONFECTIONS</desc>
     </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
@@ -234,7 +254,8 @@
        id="westgate-miam-miam"
        inkscape:label="westgate-miam-miam">
       <desc
-         id="desc1397">level=2</desc>
+         id="desc1397">level=2
+name=Miam Miam</desc>
     </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
@@ -242,7 +263,8 @@
        id="westgate-coffesmith"
        inkscape:label="westgate-coffesmith">
       <desc
-         id="desc1394">level=2</desc>
+         id="desc1394">level=2
+name=Coffesmith</desc>
     </path>
     <path
        id="westgate-toast-box"
@@ -250,7 +272,8 @@
        inkscape:label="westgate-toast-box"
        d="M 9.2792301,228.51721 H 56.151541 v 62.02343 H 9.2792301 Z">
       <desc
-         id="desc1390">level=2</desc>
+         id="desc1390">level=2
+name=Toast Box</desc>
     </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
@@ -258,7 +281,8 @@
        id="westgate-the-underground"
        inkscape:label="westgate-the-underground">
       <desc
-         id="desc1388">level=2</desc>
+         id="desc1388">level=2
+name=The Underground</desc>
     </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
@@ -266,7 +290,8 @@
        id="westgate-adrift-anapauo-massage-and-spa"
        inkscape:label="westgate-adrift-anapauo-massage-and-spa">
       <desc
-         id="desc610">level=2</desc>
+         id="desc610">level=2
+name=Adrift Anapauo Massage and Spa</desc>
     </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
@@ -274,7 +299,8 @@
        id="westgate-singapore-post"
        inkscape:label="westgate-singapore-post">
       <desc
-         id="desc608">level=2</desc>
+         id="desc608">level=2
+name=Singapore Post</desc>
     </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
@@ -282,7 +308,8 @@
        id="westgate-income"
        inkscape:label="westgate-income">
       <desc
-         id="desc606">level=2</desc>
+         id="desc606">level=2
+name=Income</desc>
     </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
@@ -290,7 +317,8 @@
        id="westgate-talismans"
        inkscape:label="westgate-talismans">
       <desc
-         id="desc604">level=2</desc>
+         id="desc604">level=2
+name=Talisman's</desc>
     </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
@@ -298,7 +326,8 @@
        id="westgate-decathlon"
        inkscape:label="westgate-decathlon">
       <desc
-         id="desc602">level=2</desc>
+         id="desc602">level=2
+name=Decathlon</desc>
     </path>
     <path
        id="westgate-fancl"
@@ -306,7 +335,8 @@
        d="m 185.76991,378.03061 h 28.88404 v 24.23432 h -28.88404 z"
        inkscape:label="westgate-fancl">
       <desc
-         id="desc598">level=2</desc>
+         id="desc598">level=2
+name=Fancl</desc>
     </path>
     <path
        id="westgate-typo"
@@ -314,7 +344,8 @@
        inkscape:label="westgate-typo"
        d="m 216.81255,350.51028 h 43.37744 v 51.85734 h -43.37744 z">
       <desc
-         id="desc595">level=2</desc>
+         id="desc595">level=2
+name=Typo</desc>
     </path>
     <path
        id="westgate-thefaceshop"
@@ -322,7 +353,8 @@
        d="m 261.52628,350.71567 h 33.81796 v 51.54927 h -33.81796 z"
        inkscape:label="westgate-thefaceshop">
       <desc
-         id="desc593">level=2</desc>
+         id="desc593">level=2
+name=THEFACESHOP</desc>
     </path>
     <path
        id="westgate-pop-mart"
@@ -330,7 +362,8 @@
        d="m 303.6702,353.89899 h 44.71371 v 47.9552 H 303.6702 Z"
        inkscape:label="westgate-pop-mart">
       <desc
-         id="desc590">level=2</desc>
+         id="desc590">level=2
+name=POP MART</desc>
     </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
@@ -338,7 +371,8 @@
        id="westgate-refash"
        inkscape:label="westgate-refash">
       <desc
-         id="desc587">level=2</desc>
+         id="desc587">level=2
+name=Refash</desc>
     </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
@@ -346,7 +380,8 @@
        id="westgate-the-wallet-shop"
        inkscape:label="westgate-the-wallet-shop">
       <desc
-         id="desc584">level=2</desc>
+         id="desc584">level=2
+name=The Wallet Shop</desc>
     </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
@@ -354,7 +389,8 @@
        id="westgate-osmose"
        inkscape:label="westgate-osmose">
       <desc
-         id="desc582">level=2</desc>
+         id="desc582">level=2
+name=OSMOSE</desc>
     </path>
     <path
        id="westgate-ncat"
@@ -362,7 +398,8 @@
        d="m 399.05948,369.61023 h 42.34954 v 32.55203 h -42.34954 z"
        inkscape:label="westgate-ncat">
       <desc
-         id="desc580">level=2</desc>
+         id="desc580">level=2
+name=N.Cat</desc>
     </path>
     <path
        id="westgate-yves-rocher"
@@ -370,7 +407,8 @@
        d="m 472.45163,388.4021 h 45.53604 v 28.03377 h -45.53604 z"
        inkscape:label="westgate-yves-rocher">
       <desc
-         id="desc576">level=2</desc>
+         id="desc576">level=2
+name=Yves Rocher</desc>
     </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
@@ -378,7 +416,8 @@
        id="westgate-hysses"
        inkscape:label="westgate-hysses">
       <desc
-         id="desc573">level=2</desc>
+         id="desc573">level=2
+name=HYSSES</desc>
     </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
@@ -386,7 +425,8 @@
        id="westgate-kimoj"
        inkscape:label="westgate-kimoj">
       <desc
-         id="desc571">level=2</desc>
+         id="desc571">level=2
+name=KIMOJ</desc>
     </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
@@ -394,7 +434,8 @@
        id="westgate-glimpse"
        inkscape:label="westgate-glimpse">
       <desc
-         id="desc569">level=2</desc>
+         id="desc569">level=2
+name=Glimpse</desc>
     </path>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
@@ -402,7 +443,8 @@
        id="westgate-oro-gold-cosmetics"
        inkscape:label="westgate-oro-gold-cosmetics">
       <desc
-         id="desc567">level=2</desc>
+         id="desc567">level=2
+name=ORO GOLD Cosmetics</desc>
     </path>
     <path
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.599963;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
@@ -410,7 +452,8 @@
        id="westgate-xpressflowercom"
        inkscape:label="westgate-xpressflowercom">
       <desc
-         id="desc565">level=2</desc>
+         id="desc565">level=2
+name=Xpressflower.com</desc>
     </path>
     <path
        style="fill:none;stroke:none;stroke-width:0.593;stroke-linejoin:bevel;paint-order:stroke fill markers"
@@ -418,7 +461,8 @@
        id="westgate-paradise-dynasty"
        inkscape:label="westgate-paradise-dynasty">
       <desc
-         id="desc700">level=2</desc>
+         id="desc700">level=2
+name=Paradise Dynasty</desc>
     </path>
     <path
        style="fill:none;stroke:none;stroke-width:0.593;stroke-linejoin:bevel;paint-order:stroke fill markers"
@@ -426,7 +470,8 @@
        id="westgate-canton-paradise"
        inkscape:label="westgate-canton-paradise">
       <desc
-         id="desc1381">level=2</desc>
+         id="desc1381">level=2
+name=Canton Paradise</desc>
     </path>
     <path
        style="fill:none;stroke:none;stroke-width:0.593;stroke-linejoin:bevel;paint-order:stroke fill markers"
@@ -434,7 +479,8 @@
        id="westgate-souperstar"
        inkscape:label="westgate-souperstar">
       <desc
-         id="desc1587">level=2</desc>
+         id="desc1587">level=2
+name=SOUPERSTAR</desc>
     </path>
     <path
        style="fill:none;stroke:none;stroke-width:0.593;stroke-linejoin:bevel;paint-order:stroke fill markers"
@@ -442,7 +488,8 @@
        id="westgate-honolulu-cafe"
        inkscape:label="westgate-honolulu-cafe">
       <desc
-         id="desc1589">level=2</desc>
+         id="desc1589">level=2
+name=Honolulu Cafe</desc>
     </path>
   </g>
   <g

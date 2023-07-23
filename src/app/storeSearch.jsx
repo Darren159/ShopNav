@@ -19,7 +19,6 @@ import { MallContext } from "./context/mallProvider";
 export default function StoreSearch() {
   const { malls, currentMall, setCurrentMall } = useContext(MallContext);
 
-  // const  navigation = useNavigation();
   // for filtering search function
   const handleSearch = (query) => {
     if (query) {
@@ -37,7 +36,7 @@ export default function StoreSearch() {
     }
   };
 
-  const contains = (item, query) => item.includes(query);
+  const contains = ({ name }, query) => name.toLowerCase().includes(query);
 
   const [isLoading, setIsLoading] = useState(false);
   const [data, setData] = useState([]);
@@ -52,23 +51,21 @@ export default function StoreSearch() {
         // await until data is fetched
         const storeListSnapShot = await getDocs(colRef);
 
-        const storeList = storeListSnapShot.docs.map((doc) => doc.id);
+        const storeList = storeListSnapShot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
 
         // console.log(storeList);
         // sorting the list by alphabets
         storeList.sort((a, b) =>
-          a.toLowerCase().localeCompare(b.toLowerCase())
+          a.name.toLowerCase().localeCompare(b.name.toLowerCase())
         );
 
-        // filter out the unnecessary nodes
-        const filteredStoreList = storeList.filter(
-          (item) => item && !item.toLowerCase().includes("aesop")
-        );
-
-        setFullData(filteredStoreList);
+        setFullData(storeList);
 
         // set data to full data set initially
-        setData(filteredStoreList);
+        setData(storeList);
 
         setIsLoading(false);
       } catch (err) {
@@ -119,7 +116,7 @@ export default function StoreSearch() {
               <Link
                 href={{
                   pathname: "/placeDetails",
-                  params: { locName: item },
+                  params: { locName: item.id },
                 }}
               >
                 <View style={styles.itemContainer}>
@@ -129,7 +126,7 @@ export default function StoreSearch() {
                     }}
                     style={styles.image}
                   />
-                  <Text style={styles.textName}>{item}</Text>
+                  <Text style={styles.textName}>{item.name}</Text>
                   {/* {console.log(JSON.stringify(item))} */}
                 </View>
               </Link>

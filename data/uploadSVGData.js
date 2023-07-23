@@ -18,6 +18,21 @@ const db = getFirestore();
 const mallName = process.argv[2];
 const svgFilePath = process.argv[3];
 
+// Helper function to parse description into an object
+function parseDesc(desc) {
+  const parts = desc.split("\n").map((part) => {
+    const splitParts = part.split("=");
+    return { key: splitParts[0].trim(), value: splitParts[1].trim() };
+  });
+
+  const parsed = {};
+  parts.forEach(({ key, value }) => {
+    parsed[key] = value;
+  });
+
+  return parsed;
+}
+
 async function uploadSVGData(mall, filePath) {
   const svgString = fs.readFileSync(filePath, "utf-8");
   const svgJSObject = await parseString(svgString);
@@ -42,18 +57,21 @@ async function uploadSVGData(mall, filePath) {
           console.error(`Node ${nodeID} does not have a 'desc' tag.`);
           return; // Skip this node and move on to the next one
         }
-        const desc = node.desc[0]._;
-        const parts = desc
-          .split("\n")
-          .map((part) => part.split("=").map((p) => p.trim()));
+        const desc = parseDesc(node.desc[0]._);
+
+        if (!desc.adjacent || !desc.level) {
+          console.error(`Node ${nodeID} has incomplete 'desc' tag.`);
+          return; // Skip this node and move on to the next one
+        }
+
         const data = {
           coordinates: { x, y },
-          adjacent: parts[0][1].split(", "),
-          level: parseInt(parts[1][1], 10),
+          adjacent: desc.adjacent.split(", "),
+          level: parseInt(desc.level, 10),
         };
 
         const docRef = db
-          .collection("review")
+          .collection("malls")
           .doc(mall)
           .collection("nodes")
           .doc(nodeID);
@@ -75,16 +93,21 @@ async function uploadSVGData(mall, filePath) {
           console.error(`Store path ${storeID} does not have a 'desc' tag.`);
           return; // Skip this store path and move on to the next one
         }
-        const desc = path.desc[0]._;
-        const level = parseInt(desc.split("=")[1].trim(), 10); // Parse the level information from the 'desc' tag
+        const desc = parseDesc(path.desc[0]._);
+
+        if (!desc.level || !desc.name) {
+          console.error(`Store path ${storeID} has incomplete 'desc' tag.`);
+          return; // Skip this store path and move on to the next one
+        }
 
         const data = {
           coordinates,
-          level,
+          level: parseInt(desc.level, 10),
+          name: desc.name,
         };
 
         const docRef = db
-          .collection("review")
+          .collection("malls")
           .doc(mall)
           .collection("stores")
           .doc(storeID);
