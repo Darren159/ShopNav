@@ -1,47 +1,43 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect, useContext, useCallback } from "react";
 import {
   Text,
   View,
   ActivityIndicator,
-  FlatList,
   StyleSheet,
-  Image,
   SafeAreaView,
 } from "react-native";
 import { collection, getDocs } from "firebase/firestore";
-import filter from "lodash.filter";
-import { Link } from "expo-router";
 import { db } from "../../firebaseConfig";
 import SearchBar from "../components/SearchBar";
 import MallPicker from "../components/MallPicker";
 import { MallContext } from "./context/mallProvider";
+import StoreList from "../components/StoreList";
 
 export default function StoreSearch() {
   const { malls, currentMall, setCurrentMall } = useContext(MallContext);
-
-  // for filtering search function
-  const handleSearch = (query) => {
-    if (query) {
-      const formattedQuery = query.toLowerCase();
-      const filteredData = filter(
-        fullData,
-        (item) => item && contains(item, formattedQuery)
-      );
-      setData(filteredData);
-
-      // console.log(`Searching for ${query}`);
-    } else {
-      // If query is cleared, reset the data to the full list
-      setData(fullData);
-    }
-  };
-
-  const contains = ({ name }, query) => name.toLowerCase().includes(query);
-
   const [isLoading, setIsLoading] = useState(false);
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
   const [fullData, setFullData] = useState([]);
+
+  // for filtering search function
+  const handleSearch = useCallback(
+    (query) => {
+      if (query) {
+        const formattedQuery = query.toLowerCase();
+        const filteredData = fullData.filter(
+          (item) => item && item.name.toLowerCase().includes(formattedQuery)
+        );
+        setData(filteredData);
+
+        // console.log(`Searching for ${query}`);
+      } else {
+        // If query is cleared, reset the data to the full list
+        setData(fullData);
+      }
+    },
+    [fullData]
+  );
 
   useEffect(() => {
     const fetchData = async () => {
@@ -66,11 +62,10 @@ export default function StoreSearch() {
 
         // set data to full data set initially
         setData(storeList);
-
-        setIsLoading(false);
       } catch (err) {
         // console.error("Error fetching data: ", err);
         setError(err);
+      } finally {
         setIsLoading(false);
       }
     };
@@ -109,29 +104,7 @@ export default function StoreSearch() {
           />
           <Text>Store Search</Text>
           <SearchBar onSearch={handleSearch} />
-          <FlatList
-            data={data}
-            keyExtractor={(item, index) => index.toString()}
-            renderItem={({ item }) => (
-              <Link
-                href={{
-                  pathname: "/placeDetails",
-                  params: { locName: item.id },
-                }}
-              >
-                <View style={styles.itemContainer}>
-                  <Image
-                    source={{
-                      uri: "https://frameandkeyrealestate.files.wordpress.com/2019/04/clock-icon.png",
-                    }}
-                    style={styles.image}
-                  />
-                  <Text style={styles.textName}>{item.name}</Text>
-                  {/* {console.log(JSON.stringify(item))} */}
-                </View>
-              </Link>
-            )}
-          />
+          <StoreList data={data} />
         </View>
       )}
     </SafeAreaView>
@@ -142,29 +115,5 @@ const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
     marginHorizontal: 20,
-  },
-  itemContainer: {
-    flexDirection: "row",
-    alignItems: "center",
-    padding: 10,
-    marginLeft: 0,
-    marginTop: 10,
-    borderRadius: 10,
-    borderTopWidth: 0.2,
-    height: 100,
-  },
-  textName: {
-    flex: 1,
-    fontSize: 17,
-    marginLeft: 10,
-    fontWeight: "600",
-  },
-  image: {
-    marginLeft: 10,
-    marginTop: 5,
-    marginBottom: 5,
-    width: 25,
-    height: 25,
-    borderRadius: 5,
   },
 });

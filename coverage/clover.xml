@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1690087745766" clover="3.2.0">
-  <project timestamp="1690087745766" name="All files">
+<coverage generated="1690097555899" clover="3.2.0">
+  <project timestamp="1690097555899" name="All files">
     <metrics statements="43" coveredstatements="36" conditionals="10" coveredconditionals="9" methods="15" coveredmethods="11" elements="68" coveredelements="56" complexity="0" loc="43" ncloc="43" packages="1" files="4" classes="4"/>
     <file name="Floorplan.jsx" path="C:\Users\Darre\Projects\ShopNav\src\components\Floorplan.jsx">
       <metrics statements="27" coveredstatements="20" conditionals="4" coveredconditionals="3" methods="8" coveredmethods="4"/>
