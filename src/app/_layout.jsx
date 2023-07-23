@@ -1,7 +1,8 @@
 import { Stack, Link } from "expo-router";
-import { Button } from "react-native";
+import { View, Button } from "react-native";
 import { MallProvider } from "./context/mallProvider";
 import { AuthProvider } from "./context/auth";
+import MallPicker from "../components/MallPicker";
 
 export default function Layout() {
   return (
@@ -10,10 +11,12 @@ export default function Layout() {
         <Stack
           screenOptions={{
             headerStyle: {
-              backgroundColor: "#4340DF",
+              backgroundColor: "#B6D0D0",
             },
             headerTitle: "",
+            headerLeft: MallPicker,
             headerRight: DeveloperAccessButton,
+            headerBackVisible: true,
           }}
         >
           <Stack.Screen
@@ -30,8 +33,13 @@ export default function Layout() {
 
 function DeveloperAccessButton() {
   return (
-    <Link href="/(auth)/sign-in" asChild>
-      <Button title="Developer Access" />
-    </Link>
+    <View style={{ flexDirection: "row" }}>
+      <Link href="/storeSearch" asChild>
+        <Button title="Store Search" />
+      </Link>
+      <Link href="/(auth)/sign-in" asChild>
+        <Button title="Developer Access" />
+      </Link>
+    </View>
   );
 }
