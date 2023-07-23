@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect, useContext, useRef } from "react";
 import { View, StyleSheet, Image, Text, TouchableOpacity, ActivityIndicator, Alert } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Svg, { Line, Path } from "react-native-svg";
@@ -24,6 +24,7 @@ export default function Directory() {
   const startStore = useStoreInput(currentMall);
   const endStore = useStoreInput(currentMall);
   const [isLoading, setIsLoading] = useState(false);
+  const [isButtonPressed, setButtonPressed] = useState(false);
 
 
   const router = useRouter();
@@ -39,6 +40,7 @@ export default function Directory() {
 
   const calculatePath = async () => {
     setIsLoading(true);
+    setButtonPressed(true);
     const startNodeId = await startStore.handleClick(getNodeIDFromStoreName);
     const endNodeId = await endStore.handleClick(getNodeIDFromStoreName);
 
@@ -46,33 +48,42 @@ export default function Directory() {
       const shortestPath = dijkstra(graph, startNodeId, endNodeId);
       setPath(shortestPath !== null ? shortestPath : []);
     }
+    
+
     setIsLoading(false);
   };
 
-  if (isLoading) {
-    return (
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-        <ActivityIndicator size="large" color="#5500dc" />
-      </View>
-    );
-  }
-
-
-
+ 
   // handle wrong input error
-  if(startStore.storeError || endStore.storeError) {
-    Alert.alert(
-      "Invalid Store Input",
-      "Try re-typing the store inputs, make sure that there are no symbols used, and double check your spacings ",
-      [
-        {text:'OK',
-          onPress: () => {
-            console.log(" ok, close storeInput error ");
-          }
-        } 
-      ]
-    )
-  }
+  const startError = useRef(startStore.storeError);
+  const endError = useRef(endStore.storeError);
+
+  useEffect(() => {
+      startError.current = startStore.storeError;
+      endError.current = endStore.storeError;
+  }, [startStore.storeError, endStore.storeError]);
+
+  
+  useEffect(() => {
+    if (isButtonPressed && startError.current || endError.current) {
+      Alert.alert(
+        "Invalid Store Input",
+        "Try re-typing the store inputs, make sure that there are no symbols used, and double check your spacings",
+        [
+          {
+            text:'OK',
+            onPress: () => {
+              console.log(" ok, close storeInput error ");
+              setButtonPressed(false);
+              
+              
+            }
+          } 
+        ]
+      );
+    }
+    
+  }, [isButtonPressed]);
   // for navigation to storeSearch
 
 
@@ -82,6 +93,11 @@ export default function Directory() {
 
   return (
     <SafeAreaView style={{ flex:1 ,backgroundColor:'white' }}>
+      {isLoading && (
+        <View style={styles.loadingOverlay}>
+          <ActivityIndicator size="large" color="#5500dc" />
+        </View>
+      )}
       {currentMall && (
         <>
           <View style = {{ flex:0.05, width:150 , borderWidth:1, marginLeft:10}}>
@@ -241,5 +257,15 @@ const styles = StyleSheet.create({
   safeAreaContainer: {
     flex: 1,
     backgroundColor: "white",
+  },
+  loadingOverlay: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    top: 0,
+    bottom: 0,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'rgba(0, 0, 0, 0)',  // transparent background
   },
 });
