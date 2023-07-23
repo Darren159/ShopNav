@@ -15,7 +15,7 @@ import { useRouter } from "expo-router";
 import { db } from "../../firebaseConfig";
 import SearchBar from "../components/SearchBar";
 import MallPicker from "../components/MallPicker";
-import { MallContext } from "../context/MallProvider";
+import { MallContext } from "./context/MallProvider";
 
 export default function StoreSearch() {
   const { malls, currentMall, setCurrentMall } = useContext(MallContext);
@@ -71,7 +71,7 @@ export default function StoreSearch() {
 
         // set data to full data set initially
         setData(storeList);
-
+        
         setIsLoading(false);
       } catch (err) {
         // console.error("Error fetching data: ", err);
@@ -79,9 +79,11 @@ export default function StoreSearch() {
         setIsLoading(false);
       }
     };
-    setIsLoading(true);
-    fetchData();
-  }, [currentMall]);
+    if (!data.length) {
+      setIsLoading(true);
+      fetchData();
+    }
+  }, [currentMall, data]);
 
   // loading interface
   if (isLoading) {
@@ -145,6 +147,7 @@ export default function StoreSearch() {
                   </View>
                 </TouchableOpacity>
               )}
+             
             />
           </View>
         </View>

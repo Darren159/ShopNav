@@ -1,7 +1,7 @@
 import { createContext, useState, useEffect, useMemo } from "react";
 import PropTypes from "prop-types";
 import { collection, getDocs } from "firebase/firestore";
-import { db } from "../../firebaseConfig";
+import { db } from "../../../firebaseConfig";
 
 export const MallContext = createContext();
 

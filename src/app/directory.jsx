@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from "react";
-import { View, StyleSheet, Image, Text, TouchableOpacity } from "react-native";
+import { View, StyleSheet, Image, Text, TouchableOpacity, ActivityIndicator, Alert } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Svg, { Line, Path } from "react-native-svg";
 import { useRouter } from "expo-router";
@@ -11,8 +11,9 @@ import StoreInput from "../components/StoreInput";
 import useStoreInput from "../hooks/useStoreInput";
 import Floorplan from "../components/Floorplan";
 import MallPicker from "../components/MallPicker";
-import { MallContext } from "../context/MallProvider";
+import { MallContext } from "./context/MallProvider";
 import LevelButtons from "../components/LevelButtons";
+
 
 export default function Directory() {
   const { malls, currentMall, setCurrentMall } = useContext(MallContext);
@@ -23,23 +24,21 @@ export default function Directory() {
   const startStore = useStoreInput(currentMall);
   const endStore = useStoreInput(currentMall);
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(null);
+
+
+  const router = useRouter();
+
   useEffect(() => {
-    try {
       if (currentMall) {
         setIsLoading(true);
         getGraph(currentMall).then((nodes) => setGraph(nodes));
         setIsLoading(false);
       }
-      
-    } catch (err) {
-      setError(err);
-      setIsLoading(false);
-
-    }
+  
   }, [currentMall]);
 
   const calculatePath = async () => {
+    setIsLoading(true);
     const startNodeId = await startStore.handleClick(getNodeIDFromStoreName);
     const endNodeId = await endStore.handleClick(getNodeIDFromStoreName);
 
@@ -47,6 +46,7 @@ export default function Directory() {
       const shortestPath = dijkstra(graph, startNodeId, endNodeId);
       setPath(shortestPath !== null ? shortestPath : []);
     }
+    setIsLoading(false);
   };
 
   if (isLoading) {
@@ -57,18 +57,24 @@ export default function Directory() {
     );
   }
 
-  // error interface
-  if (error) {
-    return (
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-        <Text>
-          Error in fetching data ... Please check your internet connection!
-        </Text>
-      </View>
-    );
+
+
+  // handle wrong input error
+  if(startStore.storeError || endStore.storeError) {
+    Alert.alert(
+      "Invalid Store Input",
+      "Try re-typing the store inputs, make sure that there are no symbols used, and double check your spacings ",
+      [
+        {text:'OK',
+          onPress: () => {
+            console.log(" ok, close storeInput error ");
+          }
+        } 
+      ]
+    )
   }
   // for navigation to storeSearch
-  const router = useRouter();
+
 
   const handleStoreSearch = () => {
     router.push({ pathname: '/storeSearch'})
@@ -125,7 +131,7 @@ export default function Directory() {
              
             </View>
             <View style = {{flex:0.9}}>
-              
+              <Text> </Text>
             </View>
           </View>
             
@@ -155,17 +161,10 @@ export default function Directory() {
                       />
                     </TouchableOpacity>
               </View>
-
           </View>
-
-          <View style={{flex:0.7}}>
+          <View style={{ flex: 0.7 }}>
             <Floorplan currentMall={currentMall} currentLevel={currentLevel}>
-              <Svg
-                style={{}}
-                height="100%"
-                width="100%"
-                viewBox="0 0 760 600"
-              >
+              <Svg style={{}} height="100%" width="100%" viewBox="0 0 760 600">
                 {path
                   .filter((node) => graph[node].level === currentLevel)
                   .map((node, index, levelNodes) => {
@@ -195,7 +194,12 @@ export default function Directory() {
                       stroke="transparent"
                       strokeWidth="1"
                       key={store.id}
-                      // onPress={() => console.log("Store clicked:", store.id)}
+                      onPress={() =>
+                        router.push({
+                          pathname: "/placeDetails",
+                          params: { locName: store.id },
+                        })
+                      }
                     />
                   ))}
               </Svg>
@@ -233,5 +237,9 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     bottom: 0,
+  },
+  safeAreaContainer: {
+    flex: 1,
+    backgroundColor: "white",
   },
 });
