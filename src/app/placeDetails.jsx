@@ -11,8 +11,8 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { useLocalSearchParams } from "expo-router";
-import googleImg from "../services/googleImg";
-import googleCall from "../services/google_API_call";
+import fetchImage from "../services/fetchImage";
+import fetchPlaceID from "../services/fetchPlaceID";
 import fetchPlaceDetails from "../services/fetchPlaceDetails";
 
 export default function PlaceDetails() {
@@ -34,8 +34,8 @@ export default function PlaceDetails() {
   useEffect(() => {
     const fetchDetails = async () => {
       try {
-        // get placce_Id using google places API
-        const placeId = await googleCall(locName);
+        // get place_Id using google places API
+        const placeId = await fetchPlaceID(locName);
 
         // using place_Id to get unique place details
         const results = await fetchPlaceDetails(placeId);
@@ -87,7 +87,7 @@ export default function PlaceDetails() {
             renderItem={({ item }) => (
               <View>
                 <Image
-                  source={{ uri: googleImg(item.photo_reference) }}
+                  source={{ uri: fetchImage(item.photo_reference) }}
                   style={styles.googleImage}
                 />
               </View>

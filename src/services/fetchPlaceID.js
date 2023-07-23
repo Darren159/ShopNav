@@ -1,7 +1,7 @@
 // eslint-disable-next-line import/no-unresolved
 import { GOOGLE_PLACES_API_KEY } from "@env";
 
-export default async function googleCall(storeName) {
+export default async function fetchPlaceID(storeName) {
   // encode the location string to be URL-friendly
   const encodedLocation = encodeURIComponent(`${storeName} Singapore `);
 

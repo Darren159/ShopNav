@@ -1,7 +1,7 @@
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../../firebaseConfig";
 
-export default async function getLevels(currentMall) {
+export default async function fetchLevels(currentMall) {
   if (currentMall) {
     // Check if currentMall is set
     const mallDocRef = doc(db, "malls", currentMall);

@@ -1,7 +1,7 @@
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../firebaseConfig";
 
-export default async function getGraph(currentMall) {
+export default async function fetchNodes(currentMall) {
   const mallNodesCollection = collection(db, "malls", currentMall, "nodes");
   const nodesSnapshot = await getDocs(mallNodesCollection);
   const nodeGraph = {};

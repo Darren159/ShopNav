@@ -5,8 +5,8 @@ import Svg, { Line, Path } from "react-native-svg";
 import { Link, router } from "expo-router";
 import useStoreList from "../hooks/useStoreList";
 import dijkstra from "../utils/dijkstra";
-import getGraph from "../services/getGraph";
-import getNodeIDFromStoreName from "../services/getNodeIDFromStoreName";
+import fetchNodes from "../services/fetchNodes";
+import fetchStore from "../services/fetchStore";
 import StoreInput from "../components/StoreInput";
 import useStoreInput from "../hooks/useStoreInput";
 import Floorplan from "../components/Floorplan";
@@ -24,13 +24,13 @@ export default function Directory() {
   const endStore = useStoreInput(currentMall);
   useEffect(() => {
     if (currentMall) {
-      getGraph(currentMall).then((nodes) => setGraph(nodes));
+      fetchNodes(currentMall).then((nodes) => setGraph(nodes));
     }
   }, [currentMall]);
 
   const calculatePath = async () => {
-    const startNodeId = await startStore.handleClick(getNodeIDFromStoreName);
-    const endNodeId = await endStore.handleClick(getNodeIDFromStoreName);
+    const startNodeId = `${await startStore.handleClick(fetchStore)}-node`;
+    const endNodeId = `${await endStore.handleClick(fetchStore)}-node`;
 
     if (startNodeId && endNodeId) {
       const shortestPath = dijkstra(graph, startNodeId, endNodeId);

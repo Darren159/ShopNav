@@ -1,6 +1,6 @@
 import { httpsCallable } from "firebase/functions";
 import { functions } from "../../firebaseConfig";
-import getStore from "../services/getStore";
+import fetchStore from "../services/fetchStore";
 
 export default function useUploadStore(
   currentMall,
@@ -13,7 +13,7 @@ export default function useUploadStore(
     setStoreError(false);
 
     try {
-      const storeDocId = await getStore(currentMall, storeName);
+      const storeDocId = await fetchStore(currentMall, storeName);
       const uploadStoreData = httpsCallable(functions, "uploadStoreData");
       await uploadStoreData({
         mall: currentMall,
