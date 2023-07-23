@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1690086049746" clover="3.2.0">
-  <project timestamp="1690086049746" name="All files">
-    <metrics statements="41" coveredstatements="34" conditionals="10" coveredconditionals="9" methods="14" coveredmethods="10" elements="65" coveredelements="53" complexity="0" loc="41" ncloc="41" packages="1" files="3" classes="3"/>
+<coverage generated="1690087745766" clover="3.2.0">
+  <project timestamp="1690087745766" name="All files">
+    <metrics statements="43" coveredstatements="36" conditionals="10" coveredconditionals="9" methods="15" coveredmethods="11" elements="68" coveredelements="56" complexity="0" loc="43" ncloc="43" packages="1" files="4" classes="4"/>
     <file name="Floorplan.jsx" path="C:\Users\Darre\Projects\ShopNav\src\components\Floorplan.jsx">
       <metrics statements="27" coveredstatements="20" conditionals="4" coveredconditionals="3" methods="8" coveredmethods="4"/>
       <line num="13" count="4" type="stmt"/>
@@ -51,6 +51,11 @@
       <metrics statements="2" coveredstatements="2" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
       <line num="10" count="2" type="stmt"/>
       <line num="27" count="1" type="stmt"/>
+    </file>
+    <file name="UploadButton.jsx" path="C:\Users\Darre\Projects\ShopNav\src\components\UploadButton.jsx">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="5" count="2" type="stmt"/>
+      <line num="8" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>

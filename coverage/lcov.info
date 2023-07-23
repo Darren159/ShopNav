@@ -104,3 +104,16 @@ BRDA:23,1,1,1
 BRF:4
 BRH:4
 end_of_record
+TN:
+SF:src\components\UploadButton.jsx
+FN:4,UploadButton
+FNF:1
+FNH:1
+FNDA:2,UploadButton
+DA:5,2
+DA:8,1
+LF:2
+LH:2
+BRF:0
+BRH:0
+end_of_record
