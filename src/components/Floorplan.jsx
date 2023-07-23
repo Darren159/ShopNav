@@ -28,6 +28,7 @@ export default function Floorplan({ currentMall, currentLevel, children }) {
   const translateY = useSharedValue(0);
 
   const panGesture = Gesture.Pan()
+    .withTestId("pan")
     .onStart(() => {
       context.value = { x: translateX.value, y: translateY.value };
     })
@@ -42,6 +43,7 @@ export default function Floorplan({ currentMall, currentLevel, children }) {
   const savedScale = useSharedValue(1);
 
   const pinchGesture = Gesture.Pinch()
+    .withTestId("pinch")
     .onUpdate((e) => {
       scale.value = savedScale.value * e.scale;
     })
