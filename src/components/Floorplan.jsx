@@ -91,6 +91,12 @@ export default function Floorplan({ currentMall, currentLevel, children }) {
               // console.log("close map fetch error & reload")
             },
           },
+          {
+            text: "Exit",
+            onPress: () => {
+              // console.log("close map fetch error & not reload")
+            },
+          },
         ]
       );
     }
