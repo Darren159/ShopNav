@@ -69,9 +69,11 @@ export default function StoreSearch() {
         setIsLoading(false);
       }
     };
-    setIsLoading(true);
-    fetchData();
-  }, [currentMall]);
+    if (!data.length) {
+      setIsLoading(true);
+      fetchData();
+    }
+  }, [currentMall, data]);
 
   // loading interface
   if (isLoading) {

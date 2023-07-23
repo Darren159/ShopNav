@@ -1,4 +1,5 @@
-import { View, Text, TextInput } from "react-native";
+import { useEffect } from "react";
+import { View, Text, TextInput, Alert } from "react-native";
 import PropTypes from "prop-types";
 
 export default function StoreInput({
@@ -7,20 +8,41 @@ export default function StoreInput({
   error,
   placeholder,
 }) {
+  // handle wrong input error
+  useEffect(() => {
+    // only show the Alert once
+    if (error) {
+      Alert.alert(
+        "Invalid Store Input",
+        "Try re-typing the store inputs, make sure that there are no symbols used, and double check your spacings",
+        [
+          {
+            text: "OK",
+            onPress: () => {
+              // console.log(" ok, close storeInput error ");
+            },
+          },
+        ]
+      );
+    }
+  }, [error]);
+
   return (
-    <View style={{ flexDirection: "row", alignItems: "center" }}>
+    <View>
       <TextInput
         onChangeText={setStoreName}
         value={storeName}
         placeholder={placeholder}
         style={{
-          height: 50,
-          width: 150,
           borderColor: error ? "red" : "#000",
-          borderWidth: 1,
+          paddingLeft: 10,
         }}
       />
-      {error && <Text style={{ color: "red" }}>Invalid store name</Text>}
+      {error && (
+        <Text style={{ color: "red", paddingLeft: 10 }}>
+          Invalid store name
+        </Text>
+      )}
     </View>
   );
 }

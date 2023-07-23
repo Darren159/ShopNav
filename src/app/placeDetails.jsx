@@ -34,6 +34,7 @@ export default function PlaceDetails() {
   useEffect(() => {
     const fetchDetails = async () => {
       try {
+        setIsLoading(true);
         // get place_Id using google places API
         const placeId = await fetchPlaceID(locName);
 
@@ -48,7 +49,7 @@ export default function PlaceDetails() {
         setIsLoading(false);
       }
     };
-    setIsLoading(true);
+
     fetchDetails();
   }, [locName]);
 
