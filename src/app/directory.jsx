@@ -129,7 +129,7 @@ export default function Directory() {
                       key={store.id}
                       onPress={() =>
                         router.push({
-                          pathname: "/placeDetails",
+                          pathname: "/storeDetails",
                           params: { locName: store.id },
                         })
                       }

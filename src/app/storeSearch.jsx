@@ -9,12 +9,11 @@ import {
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../firebaseConfig";
 import SearchBar from "../components/SearchBar";
-import MallPicker from "../components/MallPicker";
 import { MallContext } from "./context/mallProvider";
 import StoreList from "../components/StoreList";
 
 export default function StoreSearch() {
-  const { malls, currentMall, setCurrentMall } = useContext(MallContext);
+  const { currentMall } = useContext(MallContext);
   const [isLoading, setIsLoading] = useState(false);
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
@@ -99,12 +98,6 @@ export default function StoreSearch() {
     <SafeAreaView style={styles.mainContainer}>
       {currentMall && (
         <View style={{ flex: 1, paddingBottom: 70 }}>
-          <MallPicker
-            currentMall={currentMall}
-            setCurrentMall={setCurrentMall}
-            malls={malls}
-          />
-          <Text>Store Search</Text>
           <SearchBar onSearch={handleSearch} />
           <StoreList data={data} />
         </View>

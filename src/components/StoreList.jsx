@@ -8,13 +8,13 @@ export default function StoreList({ data }) {
       data={data}
       keyExtractor={(item, index) => index.toString()}
       renderItem={({ item }) => (
-        <Link
-          href={{
-            pathname: "/placeDetails",
-            params: { locName: item.id },
-          }}
-        >
-          <View style={styles.itemContainer}>
+        <View style={styles.itemContainer}>
+          <Link
+            href={{
+              pathname: "/storeDetails",
+              params: { locName: item.id },
+            }}
+          >
             <Image
               source={{
                 uri: "https://frameandkeyrealestate.files.wordpress.com/2019/04/clock-icon.png",
@@ -23,8 +23,8 @@ export default function StoreList({ data }) {
             />
             <Text style={styles.textName}>{item.name}</Text>
             {/* {console.log(JSON.stringify(item))} */}
-          </View>
-        </Link>
+          </Link>
+        </View>
       )}
     />
   );
@@ -35,25 +35,18 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     padding: 10,
-    marginLeft: 0,
-    marginTop: 10,
-    borderRadius: 10,
-    borderTopWidth: 0.2,
+    borderBottomWidth: 0.2,
     height: 100,
   },
   textName: {
     flex: 1,
     fontSize: 17,
-    marginLeft: 10,
+    paddingLeft: 10,
     fontWeight: "600",
   },
   image: {
-    marginLeft: 10,
-    marginTop: 5,
-    marginBottom: 5,
     width: 25,
     height: 25,
-    borderRadius: 5,
   },
 });
 StoreList.propTypes = {

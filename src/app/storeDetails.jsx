@@ -11,11 +11,13 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { useLocalSearchParams } from "expo-router";
+import { FontAwesome, Feather } from "@expo/vector-icons";
 import fetchImage from "../services/fetchImage";
 import fetchPlaceID from "../services/fetchPlaceID";
 import fetchPlaceDetails from "../services/fetchPlaceDetails";
+import StarRating from "../components/StarRating";
 
-export default function PlaceDetails() {
+export default function StoreDetails() {
   // collapsible opening hours
   const [isCollapsed, setIsCollapsed] = useState(true);
 
@@ -74,7 +76,6 @@ export default function PlaceDetails() {
       </View>
     );
   }
-
   if (placeDetails != null) {
     return (
       <SafeAreaView style={styles.mainContainer}>
@@ -82,42 +83,49 @@ export default function PlaceDetails() {
           <Text style={styles.placeName}>{placeDetails.name}</Text>
 
           <FlatList
-            style={styles.googleImgContainer}
             data={placeDetails.photos}
             keyExtractor={(item, index) => index.toString()}
             renderItem={({ item }) => (
-              <View>
-                <Image
-                  source={{ uri: fetchImage(item.photo_reference) }}
-                  style={styles.googleImage}
-                />
-              </View>
+              <Image
+                source={{ uri: fetchImage(item.photo_reference) }}
+                style={styles.googleImage}
+              />
             )}
             horizontal
             showsHorizontalScrollIndicator={false}
-            pagingEnabled
-            bounces={false}
+            decelerationRate="fast"
+            snapToInterval={
+              styles.googleImage.width + 2 * styles.googleImage.margin
+            }
+            snapToAlignment="center"
           />
 
-          <View style={styles.formattedAddressContainer}>
-            <Image
-              style={styles.formattedAddressIcon}
-              source={{
-                uri: "https://cdn3.iconfinder.com/data/icons/flat-pro-basic-set-1-1/32/location-gray-512.png",
-              }}
-            />
+          <View style={styles.detailsContainer}>
+            <FontAwesome name="map-marker" size={24} color="grey" />
 
             <Text style={styles.formattedAddressText}>
               {placeDetails.formatted_address}
             </Text>
 
-            <Text style={styles.ratingText}>{placeDetails.rating} ⭐</Text>
+            <Text style={styles.ratingText}>{placeDetails.rating} </Text>
+            <FontAwesome name="star" size={24} color="#FDCC0D" />
           </View>
 
-          <View style={styles.businessStatusContainer}>
+          <View style={styles.detailsContainer}>
+            <FontAwesome
+              name={
+                placeDetails.business_status === "OPERATIONAL"
+                  ? "check-circle"
+                  : "times-circle"
+              }
+              size={24}
+              color={
+                placeDetails.business_status === "OPERATIONAL" ? "green" : "red"
+              }
+            />
             <Text
               style={[
-                styles.businessStatusText,
+                styles.details,
                 {
                   color:
                     placeDetails.business_status === "OPERATIONAL"
@@ -126,91 +134,51 @@ export default function PlaceDetails() {
                 },
               ]}
             >
-              {placeDetails.business_status}
+              {placeDetails.business_status.charAt(0) +
+                placeDetails.business_status.slice(1).toLowerCase()}
             </Text>
           </View>
 
-          <View style={{ borderTopWidth: 0.2, padding: 10 }}>
-            <Text
-              style={{
-                paddingLeft: 35,
-                fontSize: 25,
-                fontWeight: "bold",
-                color: placeDetails.opening_hours.open_now ? "green" : "red",
-              }}
-            >
-              {placeDetails.opening_hours.open_now ? "OPEN" : "CLOSED"}
-            </Text>
-          </View>
-
-          <View
-            style={{
-              padding: 10,
-              borderTopWidth: 0.2,
-              flexDirection: "row",
-              alignItems: "center",
-            }}
-          >
-            <Image
-              style={{ height: 25, width: 25 }}
-              source={{
-                uri: "https://th.bing.com/th?id=OIP.K1oS9ypne1epe_3H9nahtAHaIS&w=236&h=264&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2",
-              }}
-            />
-            <Text style={{ fontSize: 25, fontWeight: "bold", paddingLeft: 10 }}>
+          <View style={styles.detailsContainer}>
+            <FontAwesome name="phone" size={24} color="grey" />
+            <Text style={styles.details}>
               {placeDetails.formatted_phone_number}
             </Text>
           </View>
 
           <TouchableOpacity
             onPress={handlePress}
-            style={{ padding: 10, flexDirection: "row", borderTopWidth: 0.2 }}
+            style={styles.detailsContainer}
           >
-            <Image
-              style={{ height: 25, width: 25 }}
-              source={{
-                uri: "https://frameandkeyrealestate.files.wordpress.com/2019/04/clock-icon.png",
-              }}
-            />
+            <Feather name="clock" size={24} color="grey" />
+            <Text style={styles.details}>Operating Hours:</Text>
             <Text
-              style={{
-                flex: 4,
-                paddingLeft: 10,
-                fontWeight: "bold",
-                fontSize: 25,
-              }}
+              style={[
+                styles.details,
+                { paddingLeft: 5 },
+                {
+                  color: placeDetails.opening_hours.open_now ? "green" : "red",
+                },
+              ]}
             >
-              OPENING HOURS:
+              {placeDetails.opening_hours.open_now ? "Open" : "Closed"}
             </Text>
-            <Text style={{ flex: 1, textAlign: "right", fontSize: 25 }}>
-              {" "}
-              {isCollapsed ? "▼" : "▲"}
-            </Text>
+            <FontAwesome
+              name={isCollapsed ? "chevron-down" : "chevron-up"}
+              size={24}
+              color="grey"
+              style={{ marginLeft: "auto" }}
+            />
           </TouchableOpacity>
           {!isCollapsed &&
             placeDetails.opening_hours.weekday_text.map((item) => (
-              <View style={{ padding: 10, paddingLeft: 45 }} key={item.id}>
+              <View style={{ padding: 5, paddingLeft: 45 }} key={item.id}>
                 <Text>{item}</Text>
               </View>
             ))}
-
-          <View
-            style={{
-              padding: 10,
-              borderTopWidth: 0.2,
-              flexDirection: "row",
-              alignItems: "center",
-            }}
-          >
-            <Image
-              style={{ height: 30, width: 30 }}
-              source={{
-                uri: "https://www.pngall.com/wp-content/uploads/10/Message-Background-PNG.png",
-              }}
-            />
-            <Text style={{ paddingLeft: 8, fontWeight: "bold", fontSize: 25 }}>
-              Reviews:
-            </Text>
+          <View style={[styles.detailsContainer, { borderBottomWidth: 0 }]}>
+            <FontAwesome name="commenting" size={24} color="grey" />
+            <Text style={styles.details}>Reviews:</Text>
           </View>
 
           <FlatList
@@ -218,19 +186,15 @@ export default function PlaceDetails() {
             keyExtractor={(item, index) => index.toString()}
             renderItem={({ item }) => (
               <View style={styles.itemContainer}>
-                <Text style={{ textAlign: "right" }}>{item.rating}⭐</Text>
                 <Image
-                  style={{ height: 50, width: 50, borderRadius: 25 }}
+                  style={{ height: 75, width: 75 }}
                   source={{ uri: item.profile_photo_url }}
                 />
-
-                <Text style={{ padding: 10, fontWeight: "bold", fontSize: 25 }}>
+                <Text style={{ fontSize: 20, fontWeight: "bold" }}>
                   {item.author_name}
                 </Text>
-
-                <Text style={{ fontSize: 10 }}>
-                  {item.relative_time_deescriptioin}
-                </Text>
+                <Text>{item.relative_time_description}</Text>
+                <StarRating rating={item.rating} />
 
                 <Text>{item.text}</Text>
               </View>
@@ -238,7 +202,11 @@ export default function PlaceDetails() {
             horizontal
             showsHorizontalScrollIndicator={false}
             pagingEnabled
-            bounces={false}
+            decelerationRate="fast"
+            snapToInterval={
+              styles.itemContainer.width + 2 * styles.itemContainer.margin
+            }
+            snapToAlignment="center"
           />
         </ScrollView>
       </SafeAreaView>
@@ -254,71 +222,42 @@ const styles = StyleSheet.create({
   itemContainer: {
     alignItems: "center",
     padding: 10,
-    marginLeft: 0,
-    marginTop: 20,
     borderRadius: 10,
     borderWidth: 1,
-    width: 353,
-  },
-  textName: {
-    flex: 1,
-    fontSize: 17,
-    marginLeft: 10,
-    fontWeight: "600",
-  },
-  image: {
-    marginLeft: 10,
-    marginTop: 5,
-    marginBottom: 5,
-    width: 50,
-    height: 50,
-    borderRadius: 5,
-  },
-  imageContainer: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
+    width: 300,
+    margin: 5,
   },
   placeName: {
     fontSize: 40,
     fontWeight: "bold",
     textAlign: "center",
   },
-  googleImageContainer: {
-    borderRadius: 10,
-  },
   googleImage: {
-    width: 353,
+    width: 300,
     height: 300,
-    padding: 10,
-    borderWidth: 2,
+    borderWidth: 1,
     borderRadius: 10,
+    borderColor: "black",
+    margin: 5,
   },
-  formattedAddressContainer: {
+  detailsContainer: {
     flexDirection: "row",
     padding: 10,
     alignItems: "center",
-  },
-  formattedAddressIcon: {
-    height: 30,
-    width: 30,
+    borderBottomWidth: 0.2,
   },
   formattedAddressText: {
-    flex: 3,
+    flex: 0.8,
     paddingLeft: 10,
   },
   ratingText: {
-    flex: 2,
-    fontSize: 30,
+    flex: 0.2,
+    fontSize: 24,
     textAlign: "right",
   },
-  businessStatusContainer: {
-    borderTopWidth: 0.2,
-    padding: 10,
-  },
-  businessStatusText: {
-    paddingLeft: 35,
+  details: {
+    paddingLeft: 10,
     fontWeight: "bold",
-    fontSize: 25,
+    fontSize: 20,
   },
 });
