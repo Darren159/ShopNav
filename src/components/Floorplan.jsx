@@ -1,13 +1,14 @@
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { SvgUri } from "react-native-svg";
-import { ActivityIndicator, Alert } from "react-native";
+import { ActivityIndicator, Alert, StyleSheet, View } from "react-native";
 import { GestureDetector, Gesture } from "react-native-gesture-handler";
 import Animated, {
   useSharedValue,
   useAnimatedStyle,
 } from "react-native-reanimated";
 import fetchSVGUrl from "../services/fetchSVGUrl";
+
 
 export default function Floorplan({ currentMall, currentLevel, children }) {
   const [svgUrl, setSVGUrl] = useState(null);
@@ -24,7 +25,7 @@ export default function Floorplan({ currentMall, currentLevel, children }) {
           const url = await fetchSVGUrl(currentMall, currentLevel);
             
           // try error fetching data
-          // a;
+          a;
 
            setSVGUrl(url);
           
@@ -81,30 +82,55 @@ export default function Floorplan({ currentMall, currentLevel, children }) {
       Alert.alert(
         "Error in fetching map data",
         "Try reloading the app with better internet connection",
-        [
+        [ 
+          // reload button
           {
             text: 'Reload',
             onPress: () => {
               setReload(prevReload => !prevReload); // use functional update here as well
               console.log("close map fetch error & reload")
             }
+          },
+          // exit button
+          {
+            text: 'Exit',
+            onPress: () => {
+              console.log("close map & not reload")
+            }
+
           }
         ]
       )
     }
   }, [error]); // this effect depends on error and reload
 
-  return isLoading ? (
-    <ActivityIndicator size="large" /> // show spinner if isLoading is true
-  ) : (
-    <GestureDetector gesture={composed}>
-      <Animated.View style={animatedStyle}>
-        <SvgUri key={currentLevel} uri={svgUrl} width="100%" height="100%" />
-        {children}
-      </Animated.View>
-    </GestureDetector>
-  );
+  return (
+      isLoading ? (
+        <View style = {styles.loadingOverlay}>
+          <ActivityIndicator size="large" color="#5500dc" /> 
+        </View>
+      ) :
+       <GestureDetector gesture={composed}>
+        <Animated.View style={animatedStyle}>
+          <SvgUri key={currentLevel} uri={svgUrl} width="100%" height="100%" />
+          {children}
+        </Animated.View>
+      </GestureDetector>
+      
+  )
 }
+
+const styles = StyleSheet.create({
+  loadingOverlay: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    top: 0,
+    bottom: 0,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+})
 
 Floorplan.propTypes = {
   currentMall: PropTypes.string.isRequired,

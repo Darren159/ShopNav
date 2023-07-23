@@ -113,6 +113,11 @@ export default function StoreSearch() {
 
   return (
     <SafeAreaView style={styles.mainContainer}>
+      {isLoading && (
+        <View style={styles.loadingOverlay}>
+          <ActivityIndicator size="large" color="#5500dc" />
+        </View>
+      )}
       {currentMall && (
         <View style={{ flex: 1, paddingBottom: 70 }}>
           
@@ -184,5 +189,14 @@ const styles = StyleSheet.create({
     width: 25,
     height: 25,
     borderRadius: 5,
+  },
+  loadingOverlay: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    top: 0,
+    bottom: 0,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });

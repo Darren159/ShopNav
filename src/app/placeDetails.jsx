@@ -37,13 +37,10 @@ export default function PlaceDetails() {
         setIsLoading(true);
         // get placce_Id using google places API
         const placeId = await googleCall(locName);
-
         // using place_Id to get unique place details
         const results = await fetchPlaceDetails(placeId);
-
         setPlaceDetails(results);
         setIsLoading(false);
-        // check results obtained
       } catch (err) {
         setError(err);
         setIsLoading(false);
@@ -52,17 +49,6 @@ export default function PlaceDetails() {
     
     fetchDetails();
   }, [locName]);
-
-  // console.log(placeDetails);
-
-  // loading interface
-  if (isLoading) {
-    return (
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-        <ActivityIndicator size="large" color="#5500dc" />
-      </View>
-    );
-  }
 
   // error interface
   if (error) {
@@ -75,176 +61,183 @@ export default function PlaceDetails() {
     );
   }
 
-  if (placeDetails != null) {
     return (
       <SafeAreaView style={styles.mainContainer}>
-        <ScrollView showsVerticalScrollIndicator={false}>
-          <Text style={styles.placeName}>{placeDetails.name}</Text>
+        {isLoading && (
+        <View style={ styles.loadingOverlay}>
+          <ActivityIndicator size="large" color="#5500dc" />
+        </View>
+        )}
+        {placeDetails && (
+          <ScrollView showsVerticalScrollIndicator={false}>
+            <Text style={styles.placeName}>{placeDetails.name}</Text>
 
-          <FlatList
-            style={styles.googleImgContainer}
-            data={placeDetails.photos}
-            keyExtractor={(item, index) => index.toString()}
-            renderItem={({ item }) => (
-              <View>
-                <Image
-                  source={{ uri: googleImg(item.photo_reference) }}
-                  style={styles.googleImage}
-                />
-              </View>
-            )}
-            horizontal
-            showsHorizontalScrollIndicator={false}
-            pagingEnabled
-            bounces={false}
-          />
-
-          <View style={styles.formattedAddressContainer}>
-            <Image
-              style={styles.formattedAddressIcon}
-              source={{
-                uri: "https://cdn3.iconfinder.com/data/icons/flat-pro-basic-set-1-1/32/location-gray-512.png",
-              }}
+            <FlatList
+              style={styles.googleImgContainer}
+              data={placeDetails.photos}
+              keyExtractor={(item, index) => index.toString()}
+              renderItem={({ item }) => (
+                <View>
+                  <Image
+                    source={{ uri: googleImg(item.photo_reference) }}
+                    style={styles.googleImage}
+                  />
+                </View>
+              )}
+              horizontal
+              showsHorizontalScrollIndicator={false}
+              pagingEnabled
+              bounces={false}
             />
 
-            <Text style={styles.formattedAddressText}>
-              {placeDetails.formatted_address}
-            </Text>
+            <View style={styles.formattedAddressContainer}>
+              <Image
+                style={styles.formattedAddressIcon}
+                source={{
+                  uri: "https://cdn3.iconfinder.com/data/icons/flat-pro-basic-set-1-1/32/location-gray-512.png",
+                }}
+              />
 
-            <Text style={styles.ratingText}>{placeDetails.rating} ⭐</Text>
-          </View>
+              <Text style={styles.formattedAddressText}>
+                {placeDetails.formatted_address}
+              </Text>
 
-          <View style={styles.businessStatusContainer}>
-            <Text
-              style={[
-                styles.businessStatusText,
-                {
-                  color:
-                    placeDetails.business_status === "OPERATIONAL"
-                      ? "green"
-                      : "red",
-                },
-              ]}
-            >
-              {placeDetails.business_status}
-            </Text>
-          </View>
+              <Text style={styles.ratingText}>{placeDetails.rating} ⭐</Text>
+            </View>
 
-          <View style={{ borderTopWidth: 0.2, padding: 10 }}>
-            <Text
+            <View style={styles.businessStatusContainer}>
+              <Text
+                style={[
+                  styles.businessStatusText,
+                  {
+                    color:
+                      placeDetails.business_status === "OPERATIONAL"
+                        ? "green"
+                        : "red",
+                  },
+                ]}
+              >
+                {placeDetails.business_status}
+              </Text>
+            </View>
+
+            <View style={{ borderTopWidth: 0.2, padding: 10 }}>
+              <Text
+                style={{
+                  paddingLeft: 35,
+                  fontSize: 25,
+                  fontWeight: "bold",
+                  color: placeDetails.opening_hours.open_now ? "green" : "red",
+                }}
+              >
+                {placeDetails.opening_hours.open_now ? "OPEN" : "CLOSED"}
+              </Text>
+            </View>
+
+            <View
               style={{
-                paddingLeft: 35,
-                fontSize: 25,
-                fontWeight: "bold",
-                color: placeDetails.opening_hours.open_now ? "green" : "red",
+                padding: 10,
+                borderTopWidth: 0.2,
+                flexDirection: "row",
+                alignItems: "center",
               }}
             >
-              {placeDetails.opening_hours.open_now ? "OPEN" : "CLOSED"}
-            </Text>
-          </View>
+              <Image
+                style={{ height: 25, width: 25 }}
+                source={{
+                  uri: "https://th.bing.com/th?id=OIP.K1oS9ypne1epe_3H9nahtAHaIS&w=236&h=264&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2",
+                }}
+              />
+              <Text style={{ fontSize: 25, fontWeight: "bold", paddingLeft: 10 }}>
+                {placeDetails.formatted_phone_number}
+              </Text>
+            </View>
 
-          <View
-            style={{
-              padding: 10,
-              borderTopWidth: 0.2,
-              flexDirection: "row",
-              alignItems: "center",
-            }}
-          >
-            <Image
-              style={{ height: 25, width: 25 }}
-              source={{
-                uri: "https://th.bing.com/th?id=OIP.K1oS9ypne1epe_3H9nahtAHaIS&w=236&h=264&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2",
-              }}
-            />
-            <Text style={{ fontSize: 25, fontWeight: "bold", paddingLeft: 10 }}>
-              {placeDetails.formatted_phone_number}
-            </Text>
-          </View>
+            <TouchableOpacity
+              onPress={handlePress}
+              style={{ padding: 10, flexDirection: "row", borderTopWidth: 0.2 }}
+            >
+              <Image
+                style={{ height: 25, width: 25 }}
+                source={{
+                  uri: "https://frameandkeyrealestate.files.wordpress.com/2019/04/clock-icon.png",
+                }}
+              />
+              <Text
+                style={{
+                  flex: 4,
+                  paddingLeft: 10,
+                  fontWeight: "bold",
+                  fontSize: 25,
+                }}
+              >
+                OPENING HOURS:
+              </Text>
+              <Text style={{ flex: 1, textAlign: "right", fontSize: 25 }}>
+                {" "}
+                {isCollapsed ? "▼" : "▲"}
+              </Text>
+            </TouchableOpacity>
+            {!isCollapsed &&
+              placeDetails.opening_hours.weekday_text.map((item) => (
+                <View style={{ padding: 10, paddingLeft: 45 }} key={item.id}>
+                  <Text>{item}</Text>
+                </View>
+              ))}
 
-          <TouchableOpacity
-            onPress={handlePress}
-            style={{ padding: 10, flexDirection: "row", borderTopWidth: 0.2 }}
-          >
-            <Image
-              style={{ height: 25, width: 25 }}
-              source={{
-                uri: "https://frameandkeyrealestate.files.wordpress.com/2019/04/clock-icon.png",
-              }}
-            />
-            <Text
+            <View
               style={{
-                flex: 4,
-                paddingLeft: 10,
-                fontWeight: "bold",
-                fontSize: 25,
+                padding: 10,
+                borderTopWidth: 0.2,
+                flexDirection: "row",
+                alignItems: "center",
               }}
             >
-              OPENING HOURS:
-            </Text>
-            <Text style={{ flex: 1, textAlign: "right", fontSize: 25 }}>
-              {" "}
-              {isCollapsed ? "▼" : "▲"}
-            </Text>
-          </TouchableOpacity>
-          {!isCollapsed &&
-            placeDetails.opening_hours.weekday_text.map((item) => (
-              <View style={{ padding: 10, paddingLeft: 45 }} key={item.id}>
-                <Text>{item}</Text>
-              </View>
-            ))}
+              <Image
+                style={{ height: 30, width: 30 }}
+                source={{
+                  uri: "https://www.pngall.com/wp-content/uploads/10/Message-Background-PNG.png",
+                }}
+              />
+              <Text style={{ paddingLeft: 8, fontWeight: "bold", fontSize: 25 }}>
+                Reviews:
+              </Text>
+            </View>
 
-          <View
-            style={{
-              padding: 10,
-              borderTopWidth: 0.2,
-              flexDirection: "row",
-              alignItems: "center",
-            }}
-          >
-            <Image
-              style={{ height: 30, width: 30 }}
-              source={{
-                uri: "https://www.pngall.com/wp-content/uploads/10/Message-Background-PNG.png",
-              }}
+            <FlatList
+              data={placeDetails.reviews}
+              keyExtractor={(item, index) => index.toString()}
+              renderItem={({ item }) => (
+                <View style={styles.itemContainer}>
+                  <Text style={{ textAlign: "right" }}>{item.rating}⭐</Text>
+                  <Image
+                    style={{ height: 50, width: 50, borderRadius: 25 }}
+                    source={{ uri: item.profile_photo_url }}
+                  />
+
+                  <Text style={{ padding: 10, fontWeight: "bold", fontSize: 25 }}>
+                    {item.author_name}
+                  </Text>
+
+                  <Text style={{ fontSize: 10 }}>
+                    {item.relative_time_deescriptioin}
+                  </Text>
+
+                  <Text>{item.text}</Text>
+                </View>
+              )}
+              horizontal
+              showsHorizontalScrollIndicator={false}
+              pagingEnabled
+              bounces={false}
             />
-            <Text style={{ paddingLeft: 8, fontWeight: "bold", fontSize: 25 }}>
-              Reviews:
-            </Text>
-          </View>
-
-          <FlatList
-            data={placeDetails.reviews}
-            keyExtractor={(item, index) => index.toString()}
-            renderItem={({ item }) => (
-              <View style={styles.itemContainer}>
-                <Text style={{ textAlign: "right" }}>{item.rating}⭐</Text>
-                <Image
-                  style={{ height: 50, width: 50, borderRadius: 25 }}
-                  source={{ uri: item.profile_photo_url }}
-                />
-
-                <Text style={{ padding: 10, fontWeight: "bold", fontSize: 25 }}>
-                  {item.author_name}
-                </Text>
-
-                <Text style={{ fontSize: 10 }}>
-                  {item.relative_time_deescriptioin}
-                </Text>
-
-                <Text>{item.text}</Text>
-              </View>
-            )}
-            horizontal
-            showsHorizontalScrollIndicator={false}
-            pagingEnabled
-            bounces={false}
-          />
-        </ScrollView>
-      </SafeAreaView>
-    );
-  }
+          </ScrollView>
+        )}
+        </SafeAreaView>
+    )
+      
 }
+
 
 const styles = StyleSheet.create({
   mainContainer: {
@@ -320,5 +313,15 @@ const styles = StyleSheet.create({
     paddingLeft: 35,
     fontWeight: "bold",
     fontSize: 25,
+  },
+  loadingOverlay: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    top: 0,
+    bottom: 0,
+    alignItems: 'center',
+    justifyContent: 'center',
+    
   },
 });

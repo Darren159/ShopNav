@@ -34,30 +34,21 @@ export default function Directory() {
         setIsLoading(true);
         getGraph(currentMall).then((nodes) => setGraph(nodes));
         setIsLoading(false);
-      }
-  
+      } 
   }, [currentMall]);
 
   const calculatePath = async () => {
     setIsLoading(true);
-    
     const startNodeId = await startStore.handleClick(getNodeIDFromStoreName);
     const endNodeId = await endStore.handleClick(getNodeIDFromStoreName);
-
     if (startNodeId && endNodeId) {
       const shortestPath = dijkstra(graph, startNodeId, endNodeId);
       setPath(shortestPath !== null ? shortestPath : []);
     }
-    
-
     setIsLoading(false);
   };
-
- 
  
   // for navigation to storeSearch
-
-
   const handleStoreSearch = () => {
     router.push({ pathname: '/storeSearch'})
   }
@@ -69,6 +60,7 @@ export default function Directory() {
           <ActivityIndicator size="large" color="#5500dc" />
         </View>
       )}
+      
       {currentMall && (
         <>
           <View style = {{ flex:0.05, width:150 , borderWidth:1, marginLeft:10}}>
