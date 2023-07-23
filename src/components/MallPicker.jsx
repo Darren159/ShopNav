@@ -9,9 +9,8 @@ export default function MallPicker() {
   return (
     <View
       style={{
-        height: 50,
+        height: 40,
         width: 150,
-        borderColor: "black",
         borderWidth: 1,
         borderRadius: 10,
         backgroundColor: "#ECEEF0",

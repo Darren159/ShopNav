@@ -1,8 +1,9 @@
 import { useState, useEffect, useContext } from "react";
-import { View, StyleSheet, ActivityIndicator, Button } from "react-native";
+import { View, StyleSheet, ActivityIndicator } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Svg, { Line, Path } from "react-native-svg";
 import { useRouter } from "expo-router";
+import { Entypo, FontAwesome5 } from "@expo/vector-icons";
 import useStoreList from "../hooks/useStoreList";
 import dijkstra from "../utils/dijkstra";
 import fetchNodes from "../services/fetchNodes";
@@ -60,19 +61,34 @@ export default function Directory() {
           <View style={styles.row}>
             <View style={styles.inputContainer}>
               <StoreInput
+                icon="circle"
                 storeName={startStore.storeName}
                 setStoreName={startStore.setStoreName}
                 error={startStore.storeError}
                 placeholder="Enter starting point"
               />
+              <Entypo
+                name="dots-three-vertical"
+                size={24}
+                color="black"
+                style={styles.iconStyle}
+              />
               <StoreInput
+                icon="map-pin"
                 storeName={endStore.storeName}
                 setStoreName={endStore.setStoreName}
                 error={endStore.storeError}
                 placeholder="Enter destination"
               />
-              <Button title="Get Directions" onPress={calculatePath} />
             </View>
+            <FontAwesome5.Button
+              name="directions"
+              backgroundColor="#515151"
+              borderRadius={13}
+              onPress={calculatePath}
+            >
+              Go!
+            </FontAwesome5.Button>
           </View>
           <View style={styles.mapContainer}>
             <Floorplan currentMall={currentMall} currentLevel={currentLevel}>
@@ -80,7 +96,7 @@ export default function Directory() {
                 style={styles.overlay}
                 height="100%"
                 width="100%"
-                viewBox="0 0 760 600"
+                viewBox="0 0 600 760"
               >
                 {path
                   .filter((node) => graph[node].level === currentLevel)
@@ -135,18 +151,21 @@ export default function Directory() {
 
 const styles = StyleSheet.create({
   safeAreaView: { flex: 1 },
-  inputContainer: {
-    flex: 0.2,
-    flexDirection: "column",
-    alignItems: "center",
-  },
   row: {
     flexDirection: "row",
-    alignItems: "center",
     justifyContent: "center",
+    alignItems: "center",
+    flex: 0.15,
+  },
+  inputContainer: {
+    alignItems: "center",
+    flex: 0.8,
+  },
+  iconStyle: {
+    marginVertical: 10,
   },
   mapContainer: {
-    flex: 0.8,
+    flex: 0.85,
   },
   overlay: {
     position: "absolute",

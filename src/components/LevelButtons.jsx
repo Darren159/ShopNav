@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     right: 20,
     alignItems: "center",
     justifyContent: "space-between",
-    flexDirection: "row",
+    flexDirection: "column-reverse",
   },
   levelButton: {
     width: 50,
@@ -52,11 +52,7 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     alignItems: "center",
     justifyContent: "center",
-    marginHorizontal: 5,
-    shadowColor: "#000",
-    shadowOpacity: 0.3,
-    shadowOffset: { width: 1, height: 1 },
-    shadowRadius: 2,
+    marginTop: 5,
   },
   activeLevelButton: {
     backgroundColor: "#1ECBE1",

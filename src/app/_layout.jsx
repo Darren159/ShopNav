@@ -1,5 +1,7 @@
 import { Stack, Link } from "expo-router";
-import { View, Button } from "react-native";
+import { View } from "react-native";
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { Ionicons } from "@expo/vector-icons";
 import { MallProvider } from "./context/mallProvider";
 import { AuthProvider } from "./context/auth";
 import MallPicker from "../components/MallPicker";
@@ -15,7 +17,7 @@ export default function Layout() {
             },
             headerTitle: "",
             headerLeft: MallPicker,
-            headerRight: DeveloperAccessButton,
+            headerRight: Icons,
             headerBackVisible: true,
           }}
         >
@@ -31,14 +33,14 @@ export default function Layout() {
   );
 }
 
-function DeveloperAccessButton() {
+function Icons() {
   return (
     <View style={{ flexDirection: "row" }}>
       <Link href="/storeSearch" asChild>
-        <Button title="Store Search" />
+        <Ionicons name="search-outline" size={24} color="black" />
       </Link>
       <Link href="/(auth)/sign-in" asChild>
-        <Button title="Developer Access" />
+        <Ionicons name="hammer-outline" size={24} color="black" />
       </Link>
     </View>
   );

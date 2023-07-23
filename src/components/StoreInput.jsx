@@ -1,5 +1,6 @@
 import { useEffect } from "react";
-import { View, Text, TextInput, Alert } from "react-native";
+import { View, TextInput, Alert, StyleSheet } from "react-native";
+import { Feather } from "@expo/vector-icons";
 import PropTypes from "prop-types";
 
 export default function StoreInput({
@@ -7,6 +8,7 @@ export default function StoreInput({
   setStoreName,
   error,
   placeholder,
+  icon,
 }) {
   // handle wrong input error
   useEffect(() => {
@@ -28,27 +30,35 @@ export default function StoreInput({
   }, [error]);
 
   return (
-    <View>
+    <View style={styles.container}>
+      <Feather name={icon} size={24} color="black" />
       <TextInput
         onChangeText={setStoreName}
         value={storeName}
         placeholder={placeholder}
-        style={{
-          borderColor: error ? "red" : "#000",
-          paddingLeft: 10,
-        }}
+        style={styles.textInput}
       />
-      {error && (
-        <Text style={{ color: "red", paddingLeft: 10 }}>
-          Invalid store name
-        </Text>
-      )}
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flexDirection: "row",
+    alignItems: "center",
+    borderWidth: 1,
+    borderRadius: 10,
+    paddingLeft: 5,
+  },
+  textInput: {
+    flex: 1,
+    paddingLeft: 5,
+  },
+});
 StoreInput.propTypes = {
   storeName: PropTypes.string.isRequired,
   setStoreName: PropTypes.func.isRequired,
   error: PropTypes.bool.isRequired,
   placeholder: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired,
 };
