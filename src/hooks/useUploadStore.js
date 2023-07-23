@@ -1,15 +1,13 @@
-import { Button } from "react-native";
-import PropTypes from "prop-types";
 import { httpsCallable } from "firebase/functions";
 import { functions } from "../../firebaseConfig";
 import getStore from "../services/getStore";
 
-export default function UploadStoreButton({
+export default function useUploadStore(
   currentMall,
   storeName,
   setStoreError,
-  promoInfo,
-}) {
+  promoInfo
+) {
   const uploadStore = async () => {
     // Clear the previous errors
     setStoreError(false);
@@ -27,12 +25,5 @@ export default function UploadStoreButton({
     }
   };
 
-  return <Button title="Upload Store Info" onPress={uploadStore} />;
+  return uploadStore;
 }
-
-UploadStoreButton.propTypes = {
-  currentMall: PropTypes.string.isRequired,
-  storeName: PropTypes.string.isRequired,
-  setStoreError: PropTypes.func.isRequired,
-  promoInfo: PropTypes.string.isRequired,
-};

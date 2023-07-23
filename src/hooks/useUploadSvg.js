@@ -1,11 +1,10 @@
-import { Button } from "react-native";
-import * as DocumentPicker from "expo-document-picker";
-import PropTypes from "prop-types";
-import * as FileSystem from "expo-file-system";
+// useUploadSvg.js
 import { httpsCallable } from "firebase/functions";
+import * as DocumentPicker from "expo-document-picker";
+import * as FileSystem from "expo-file-system";
 import { functions } from "../../firebaseConfig";
 
-export default function UploadSVGButton({ currentMall }) {
+export default function useUploadSvg(currentMall) {
   const uploadSvg = async () => {
     const result = await DocumentPicker.getDocumentAsync({
       type: "image/svg+xml",
@@ -14,14 +13,10 @@ export default function UploadSVGButton({ currentMall }) {
 
     if (result.type !== "cancel") {
       const filename = result.assets[0].name;
-
       const svguri = result.assets[0].uri;
-
       const svgString = await FileSystem.readAsStringAsync(svguri);
-
       const uploadSVGData = httpsCallable(functions, "uploadSVGData");
       await uploadSVGData({ svg: svgString, mall: currentMall });
-
       const uploadMallLayout = httpsCallable(functions, "uploadMallLayout");
       await uploadMallLayout({
         svg: svgString,
@@ -31,9 +26,5 @@ export default function UploadSVGButton({ currentMall }) {
     }
   };
 
-  return <Button title="Upload SVG" onPress={uploadSvg} />;
+  return uploadSvg;
 }
-
-UploadSVGButton.propTypes = {
-  currentMall: PropTypes.string.isRequired,
-};

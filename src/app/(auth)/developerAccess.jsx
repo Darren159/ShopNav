@@ -3,11 +3,12 @@ import { Stack, router } from "expo-router";
 import { Button, View, StyleSheet, TextInput } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { AuthContext } from "../context/auth";
-import UploadSVGButton from "../../components/UploadSVGButton";
-import UploadStoreButton from "../../components/UploadStoreButton";
 import MallPicker from "../../components/MallPicker";
 import { MallContext } from "../context/mallProvider";
 import StoreInput from "../../components/StoreInput";
+import UploadButton from "../../components/UploadButton";
+import useUploadSvg from "../../hooks/useUploadSvg";
+import useUploadStore from "../../hooks/useUploadStore";
 
 export default function DeveloperAccess() {
   const { malls, currentMall, setCurrentMall } = useContext(MallContext);
@@ -15,6 +16,13 @@ export default function DeveloperAccess() {
   const [storeError, setStoreError] = useState(false);
   const [promoInfo, setPromoInfo] = useState("");
   const { signout } = useContext(AuthContext);
+  const uploadSvg = useUploadSvg(currentMall);
+  const uploadStore = useUploadStore(
+    currentMall,
+    storeName,
+    setStoreError,
+    promoInfo
+  );
 
   const handleSignOut = async () => {
     await signout();
@@ -38,7 +46,7 @@ export default function DeveloperAccess() {
                 malls={malls}
               />
             </View>
-            <UploadSVGButton currentMall={currentMall} />
+            <UploadButton title="Upload SVG" onPress={uploadSvg} />
             <StoreInput
               storeName={storeName}
               setStoreName={setStoreName}
@@ -55,12 +63,7 @@ export default function DeveloperAccess() {
                 borderWidth: 1,
               }}
             />
-            <UploadStoreButton
-              currentMall={currentMall}
-              storeName={storeName}
-              setStoreError={setStoreError}
-              promoInfo={promoInfo}
-            />
+            <UploadButton title="Upload Store Info" onPress={uploadStore} />
           </>
         )}
         <Button title="Sign Out" onPress={handleSignOut} />
@@ -71,7 +74,4 @@ export default function DeveloperAccess() {
 
 const styles = StyleSheet.create({
   safeAreaView: { flex: 1 },
-  mapContainer: {
-    flex: 0.8,
-  },
 });
