@@ -30,12 +30,7 @@ export default function MallPicker() {
           {malls.map((mall) => (
             <TouchableOpacity
               key={mall}
-              style={[
-                styles.textContainer,
-                {
-                  backgroundColor: mall === currentMall ? "#2196F3" : "#FFFFFF",
-                },
-              ]}
+              style={styles.textContainer}
               onPress={() => handleSelect(mall)}
             >
               <View style={styles.textContainer}>

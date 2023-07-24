@@ -1,22 +1,34 @@
 import { useState } from "react";
-import { TouchableOpacity, View, Text, ActivityIndicator, Alert } from "react-native";
+import {
+  TouchableOpacity,
+  View,
+  Text,
+  ActivityIndicator,
+  Alert,
+} from "react-native";
 import PropTypes from "prop-types";
 
 export default function UploadButton({ title, onPress }) {
-
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(null);
 
   const handlePress = async () => {
     setIsLoading(true);
-    setError(null);
 
     try {
       await onPress();
-      
-    } catch (err) {
-      setError(err.message);
-      
+      Alert.alert("Success", "Upload successful!");
+    } catch (error) {
+      Alert.alert(
+        `Error in ${title}`,
+        error.message === "Invalid Store Name"
+          ? error.message
+          : `Failed to ${title}`,
+        [
+          {
+            text: "Ok",
+          },
+        ]
+      );
     } finally {
       setIsLoading(false);
     }
@@ -30,27 +42,22 @@ export default function UploadButton({ title, onPress }) {
     );
   }
 
-  if (error) {
-    Alert.alert(
-      `Error in ${title}`,
-      `Failed to ${title}`,
-      [
-        {
-          text:'Ok',
-          onPress: () => {
-          console.log('canceled upload button error message')
-          }
-        }
-      ]
-    );
-  }
-  
   return (
-    <View style = {{ width: 300, padding: 10, marginTop: 30, borderColor: 'grey', backgroundColor: '#B6D0D0' , justifyContent: 'center', alignItems: 'center'}}>
-      <TouchableOpacity onPress={handlePress} >
-        <Text style = {{ color: "white"}}> {title} </Text>
-      </TouchableOpacity>
-    </View>
+    <TouchableOpacity onPress={handlePress}>
+      <View
+        style={{
+          width: 300,
+          padding: 10,
+          marginTop: 30,
+          borderColor: "grey",
+          backgroundColor: "#B6D0D0",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Text style={{ color: "white" }}> {title} </Text>
+      </View>
+    </TouchableOpacity>
   );
 }
 

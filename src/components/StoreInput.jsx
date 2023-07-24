@@ -1,34 +1,13 @@
-import { useEffect } from "react";
-import { View, TextInput, Alert, StyleSheet } from "react-native";
+import { View, TextInput, StyleSheet } from "react-native";
 import { Feather } from "@expo/vector-icons";
 import PropTypes from "prop-types";
 
 export default function StoreInput({
   storeName,
   setStoreName,
-  error,
   placeholder,
   icon,
 }) {
-  // handle wrong input error
-  useEffect(() => {
-    // only show the Alert once
-    if (error) {
-      Alert.alert(
-        "Invalid Store Input",
-        "Try re-typing the store inputs, make sure that there are no symbols used, and double check your spacings",
-        [
-          {
-            text: "OK",
-            onPress: () => {
-              // console.log(" ok, close storeInput error ");
-            },
-          },
-        ]
-      );
-    }
-  }, [error]);
-
   return (
     <View style={styles.container}>
       <Feather name={icon} size={24} color="black" />
@@ -59,7 +38,10 @@ const styles = StyleSheet.create({
 StoreInput.propTypes = {
   storeName: PropTypes.string.isRequired,
   setStoreName: PropTypes.func.isRequired,
-  error: PropTypes.bool.isRequired,
   placeholder: PropTypes.string.isRequired,
-  icon: PropTypes.string.isRequired,
+  icon: PropTypes.string,
+};
+
+StoreInput.defaultProps = {
+  icon: null,
 };

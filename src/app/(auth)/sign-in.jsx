@@ -18,8 +18,8 @@ export default function SignIn() {
     try {
       await signin(email, password);
     } catch (e) {
-      Alert.alert("Sign In Error", e.message, [{ text: "OK" }], {
-        cancelable: false,
+      Alert.alert("Sign In Error", "Invalid Email/Password", [{ text: "OK" }], {
+        cancelable: true,
       });
     }
   };
@@ -31,9 +31,8 @@ export default function SignIn() {
           headerRight: null,
         }}
       />
-      <View style = {{ flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-
-        <View style = {{ borderBottomWidth: 0.3, width: 300, padding: 10}}>
+      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+        <View style={{ borderBottomWidth: 0.3, width: 300, padding: 10 }}>
           <TextInput
             placeholder="Email"
             value={email}
@@ -45,7 +44,7 @@ export default function SignIn() {
           />
         </View>
 
-        <View style = {{ borderBottomWidth: 0.3, width: 300, padding: 10}}>
+        <View style={{ borderBottomWidth: 0.3, width: 300, padding: 10 }}>
           <TextInput
             placeholder="Password"
             value={password}
@@ -56,13 +55,21 @@ export default function SignIn() {
             textContentType="password"
           />
         </View>
-
-        <View style = {{ width: 300, padding: 10, marginTop: 30, borderColor: 'grey', backgroundColor: '#B6D0D0' , justifyContent:'center', alignItems: 'center' }}>
-          <TouchableOpacity onPress={handleSignIn} >
-            <Text style = {{ color: 'white'}}> Sign In</Text>
-          </TouchableOpacity>
-        </View>
-        
+        <TouchableOpacity onPress={handleSignIn}>
+          <View
+            style={{
+              width: 300,
+              padding: 10,
+              marginTop: 30,
+              borderColor: "grey",
+              backgroundColor: "#B6D0D0",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Text style={{ color: "white" }}> Sign In</Text>
+          </View>
+        </TouchableOpacity>
       </View>
     </>
   );
