@@ -1,6 +1,6 @@
 import { render, waitFor, fireEvent } from "@testing-library/react-native";
 import LevelButtons from "../LevelButtons";
-import getLevels from "../../services/getLevels";
+import getLevels from "../../services/fetchLevels";
 
 jest.mock("../../services/getLevels", () => ({
   __esModule: true,
