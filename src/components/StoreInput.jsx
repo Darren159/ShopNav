@@ -1,32 +1,47 @@
-import { View, Text, TextInput } from "react-native";
+import { View, TextInput, StyleSheet } from "react-native";
+import { Feather } from "@expo/vector-icons";
 import PropTypes from "prop-types";
 
 export default function StoreInput({
   storeName,
   setStoreName,
-  error,
   placeholder,
+  icon,
 }) {
   return (
-    <View style={{ flexDirection: "row", alignItems: "center" }}>
+    <View style={styles.container}>
+      <Feather name={icon} size={24} color="black" />
       <TextInput
         onChangeText={setStoreName}
         value={storeName}
         placeholder={placeholder}
-        style={{
-          height: 50,
-          width: 150,
-          borderColor: error ? "red" : "#000",
-          borderWidth: 1,
-        }}
+        style={styles.textInput}
       />
-      {error && <Text style={{ color: "red" }}>Invalid store name</Text>}
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flexDirection: "row",
+    alignItems: "center",
+    borderWidth: 1,
+    borderRadius: 10,
+    paddingLeft: 5,
+    backgroundColor: "#fff",
+  },
+  textInput: {
+    flex: 1,
+    paddingLeft: 5,
+  },
+});
 StoreInput.propTypes = {
   storeName: PropTypes.string.isRequired,
   setStoreName: PropTypes.func.isRequired,
-  error: PropTypes.bool.isRequired,
   placeholder: PropTypes.string.isRequired,
+  icon: PropTypes.string,
+};
+
+StoreInput.defaultProps = {
+  icon: null,
 };

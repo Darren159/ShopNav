@@ -1,7 +1,10 @@
 import { Stack, Link } from "expo-router";
-import { Button } from "react-native";
+import { View } from "react-native";
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { Ionicons } from "@expo/vector-icons";
 import { MallProvider } from "./context/mallProvider";
 import { AuthProvider } from "./context/auth";
+import MallPicker from "../components/MallPicker";
 
 export default function Layout() {
   return (
@@ -10,14 +13,16 @@ export default function Layout() {
         <Stack
           screenOptions={{
             headerStyle: {
-              backgroundColor: "#4340DF",
+              backgroundColor: "#B6D0D0",
             },
             headerTitle: "",
-            headerRight: DeveloperAccessButton,
+            headerLeft: MallPicker,
+            headerRight: Icons,
+            headerBackVisible: true,
           }}
         >
           <Stack.Screen
-            name="placeDetails"
+            name="storeDetails"
             options={{
               presentation: "modal",
             }}
@@ -28,10 +33,20 @@ export default function Layout() {
   );
 }
 
-function DeveloperAccessButton() {
+function Icons() {
   return (
-    <Link href="/(auth)/sign-in" asChild>
-      <Button title="Developer Access" />
-    </Link>
+    <View style={{ flexDirection: "row" }}>
+      <Link href="/storeSearch" asChild>
+        <Ionicons name="search-outline" size={24} color="black" />
+      </Link>
+      <Link href="/(auth)/sign-in" asChild>
+        <Ionicons
+          name="hammer-outline"
+          size={24}
+          color="black"
+          style={{ paddingLeft: 10 }}
+        />
+      </Link>
+    </View>
   );
 }

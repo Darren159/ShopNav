@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { View, TouchableOpacity, Text, StyleSheet } from "react-native";
-import getLevels from "../services/getLevels";
+import fetchLevels from "../services/fetchLevels";
 
 export default function LevelButtons({
   currentMall,
@@ -11,13 +11,11 @@ export default function LevelButtons({
   const [levels, setLevels] = useState([]);
 
   useEffect(() => {
-    const fetchLevels = async () => {
-      // Check if currentMall is set
-      const levelsData = await getLevels(currentMall);
+    (async () => {
+      const levelsData = await fetchLevels(currentMall);
       setLevels(levelsData);
-      setCurrentLevel(levelsData[0]); // Set the first level as the current level
-    };
-    fetchLevels();
+      setCurrentLevel(levelsData[0]);
+    })();
   }, [currentMall, setCurrentLevel]);
 
   return (
@@ -45,7 +43,7 @@ const styles = StyleSheet.create({
     right: 20,
     alignItems: "center",
     justifyContent: "space-between",
-    flexDirection: "row",
+    flexDirection: "column-reverse",
   },
   levelButton: {
     width: 50,
@@ -54,11 +52,7 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     alignItems: "center",
     justifyContent: "center",
-    marginHorizontal: 5,
-    shadowColor: "#000",
-    shadowOpacity: 0.3,
-    shadowOffset: { width: 1, height: 1 },
-    shadowRadius: 2,
+    marginTop: 5,
   },
   activeLevelButton: {
     backgroundColor: "#1ECBE1",

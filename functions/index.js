@@ -14,10 +14,8 @@ initializeApp();
 const db = getFirestore();
 
 exports.uploadSVGData = onCall(async (request) => {
-  logger.log(request);
   const svgString = request.data.svg;
   const mallName = request.data.mall;
-  logger.log(svgString);
   const svgJSObject = await parseStringPromise(svgString, {
     ignoreAttributes: false,
     attributeNamePrefix: "",
@@ -109,8 +107,15 @@ exports.uploadSVGData = onCall(async (request) => {
       });
     }
   });
-  await batch.commit();
-  return { result: "SVG data processed and uploaded successfully" };
+  try {
+    await batch.commit();
+    return {
+      success: true,
+      message: "SVG data processed and uploaded successfully",
+    };
+  } catch (error) {
+    return { success: false, message: error.message };
+  }
 });
 
 exports.uploadMallLayout = onCall(async (request) => {
@@ -128,11 +133,16 @@ exports.uploadMallLayout = onCall(async (request) => {
   // Upload the SVG data to Cloud Storage
   const file = bucket.file(filePath);
 
-  await file.save(svgBuffer, {
-    metadata: {
-      contentType: "image/svg+xml",
-    },
-  });
+  try {
+    await file.save(svgBuffer, {
+      metadata: {
+        contentType: "image/svg+xml",
+      },
+    });
+    return { success: true, message: "SVG file successfully uploaded" };
+  } catch (error) {
+    return { success: false, message: error.message };
+  }
 });
 
 exports.uploadStoreData = onCall(async (request) => {
@@ -153,6 +163,16 @@ exports.uploadStoreData = onCall(async (request) => {
     .doc(mallName)
     .collection("stores")
     .doc(storeDocId);
-  await docRef.set(data);
-  return { result: "Store data uploaded successfully" };
+  try {
+    await docRef.set(data);
+    return {
+      success: true,
+      message: "Store data uploaded successfully",
+    };
+  } catch (error) {
+    return {
+      success: false,
+      message: `Failed to upload store data: ${error.message}`,
+    };
+  }
 });

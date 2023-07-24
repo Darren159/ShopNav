@@ -1,48 +1,43 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect, useContext, useCallback } from "react";
 import {
   Text,
   View,
   ActivityIndicator,
-  FlatList,
   StyleSheet,
-  Image,
   SafeAreaView,
 } from "react-native";
 import { collection, getDocs } from "firebase/firestore";
-import filter from "lodash.filter";
-import { Link } from "expo-router";
+import { Stack } from "expo-router";
 import { db } from "../../firebaseConfig";
 import SearchBar from "../components/SearchBar";
-import MallPicker from "../components/MallPicker";
 import { MallContext } from "./context/mallProvider";
+import StoreList from "../components/StoreList";
 
 export default function StoreSearch() {
-  const { malls, currentMall, setCurrentMall } = useContext(MallContext);
-
-  // const  navigation = useNavigation();
-  // for filtering search function
-  const handleSearch = (query) => {
-    if (query) {
-      const formattedQuery = query.toLowerCase();
-      const filteredData = filter(
-        fullData,
-        (item) => item && contains(item, formattedQuery)
-      );
-      setData(filteredData);
-
-      // console.log(`Searching for ${query}`);
-    } else {
-      // If query is cleared, reset the data to the full list
-      setData(fullData);
-    }
-  };
-
-  const contains = (item, query) => item.includes(query);
-
+  const { currentMall } = useContext(MallContext);
   const [isLoading, setIsLoading] = useState(false);
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
   const [fullData, setFullData] = useState([]);
+
+  // for filtering search function
+  const handleSearch = useCallback(
+    (query) => {
+      if (query) {
+        const formattedQuery = query.toLowerCase();
+        const filteredData = fullData.filter(
+          (item) => item && item.name.toLowerCase().includes(formattedQuery)
+        );
+        setData(filteredData);
+
+        // console.log(`Searching for ${query}`);
+      } else {
+        // If query is cleared, reset the data to the full list
+        setData(fullData);
+      }
+    },
+    [fullData]
+  );
 
   useEffect(() => {
     const fetchData = async () => {
@@ -52,34 +47,33 @@ export default function StoreSearch() {
         // await until data is fetched
         const storeListSnapShot = await getDocs(colRef);
 
-        const storeList = storeListSnapShot.docs.map((doc) => doc.id);
+        const storeList = storeListSnapShot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
 
         // console.log(storeList);
         // sorting the list by alphabets
         storeList.sort((a, b) =>
-          a.toLowerCase().localeCompare(b.toLowerCase())
+          a.name.toLowerCase().localeCompare(b.name.toLowerCase())
         );
 
-        // filter out the unnecessary nodes
-        const filteredStoreList = storeList.filter(
-          (item) => item && !item.toLowerCase().includes("aesop")
-        );
-
-        setFullData(filteredStoreList);
+        setFullData(storeList);
 
         // set data to full data set initially
-        setData(filteredStoreList);
-
-        setIsLoading(false);
+        setData(storeList);
       } catch (err) {
         // console.error("Error fetching data: ", err);
         setError(err);
+      } finally {
         setIsLoading(false);
       }
     };
-    setIsLoading(true);
-    fetchData();
-  }, [currentMall]);
+    if (!data.length) {
+      setIsLoading(true);
+      fetchData();
+    }
+  }, [currentMall, data]);
 
   // loading interface
   if (isLoading) {
@@ -102,42 +96,21 @@ export default function StoreSearch() {
   }
 
   return (
-    <SafeAreaView style={styles.mainContainer}>
-      {currentMall && (
-        <View style={{ flex: 1, paddingBottom: 70 }}>
-          <MallPicker
-            currentMall={currentMall}
-            setCurrentMall={setCurrentMall}
-            malls={malls}
-          />
-          <Text>Store Search</Text>
-          <SearchBar onSearch={handleSearch} />
-          <FlatList
-            data={data}
-            keyExtractor={(item, index) => index.toString()}
-            renderItem={({ item }) => (
-              <Link
-                href={{
-                  pathname: "/placeDetails",
-                  params: { locName: item },
-                }}
-              >
-                <View style={styles.itemContainer}>
-                  <Image
-                    source={{
-                      uri: "https://frameandkeyrealestate.files.wordpress.com/2019/04/clock-icon.png",
-                    }}
-                    style={styles.image}
-                  />
-                  <Text style={styles.textName}>{item}</Text>
-                  {/* {console.log(JSON.stringify(item))} */}
-                </View>
-              </Link>
-            )}
-          />
-        </View>
-      )}
-    </SafeAreaView>
+    <>
+      <Stack.Screen
+        options={{
+          headerRight: null,
+        }}
+      />
+      <SafeAreaView style={styles.mainContainer}>
+        {currentMall && (
+          <View style={{ flex: 1, paddingBottom: 70 }}>
+            <SearchBar onSearch={handleSearch} />
+            <StoreList data={data} />
+          </View>
+        )}
+      </SafeAreaView>
+    </>
   );
 }
 
@@ -145,29 +118,5 @@ const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
     marginHorizontal: 20,
-  },
-  itemContainer: {
-    flexDirection: "row",
-    alignItems: "center",
-    padding: 10,
-    marginLeft: 0,
-    marginTop: 10,
-    borderRadius: 10,
-    borderTopWidth: 0.2,
-    height: 100,
-  },
-  textName: {
-    flex: 1,
-    fontSize: 17,
-    marginLeft: 10,
-    fontWeight: "600",
-  },
-  image: {
-    marginLeft: 10,
-    marginTop: 5,
-    marginBottom: 5,
-    width: 25,
-    height: 25,
-    borderRadius: 5,
   },
 });

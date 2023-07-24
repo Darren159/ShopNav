@@ -1,19 +1,18 @@
 import { useState } from "react";
+import fetchStore from "../services/fetchStore";
 
 export default function useStoreInput(currentMall) {
   const [storeName, setStoreName] = useState("");
-  const [storeError, setStoreError] = useState(false);
 
-  const handleClick = async (getNodeIDFromStoreName) => {
-    setStoreError(false); // Clear the previous errors
-    let nodeId;
+  const handleClick = async () => {
+    let storeId;
     try {
-      nodeId = await getNodeIDFromStoreName(currentMall, storeName);
+      storeId = await fetchStore(currentMall, storeName);
     } catch (error) {
-      setStoreError(true);
+      throw new Error("Invalid Store Name");
     }
-    return nodeId;
+    return storeId;
   };
 
-  return { storeName, setStoreName, storeError, handleClick };
+  return { storeName, setStoreName, handleClick };
 }
