@@ -52,7 +52,7 @@ export default function Floorplan({ currentMall, currentLevel, children }) {
       const newX = event.translationX + context.value.x;
       const newY = event.translationY + context.value.y;
       translateX.value = Math.min(Math.max(newX, -100), 200);
-      translateY.value = Math.min(Math.max(newY, 0), 100);
+      translateY.value = Math.min(Math.max(newY, -200), 100);
     });
 
   const scale = useSharedValue(1);
