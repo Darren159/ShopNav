@@ -49,6 +49,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 10,
     paddingLeft: 5,
+    backgroundColor: "#fff",
   },
   textInput: {
     flex: 1,
