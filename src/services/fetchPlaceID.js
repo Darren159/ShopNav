@@ -1,11 +1,8 @@
-// eslint-disable-next-line import/no-unresolved
-import { GOOGLE_PLACES_API_KEY } from "@env";
-
 export default async function fetchPlaceId(storeName) {
   // encode the location string to be URL-friendly
   const encodedLocation = encodeURIComponent(`${storeName} Singapore `);
 
-  const requestUrl = `https://maps.googleapis.com/maps/api/place/autocomplete/json?input=${encodedLocation}&key=${GOOGLE_PLACES_API_KEY}`;
+  const requestUrl = `https://maps.googleapis.com/maps/api/place/autocomplete/json?input=${encodedLocation}&key=${process.env.GOOGLE_PLACES_API_KEY}`;
 
   const response = await fetch(requestUrl);
 
