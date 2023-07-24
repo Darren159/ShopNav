@@ -1,5 +1,4 @@
 import { useState, useContext } from "react";
-import { Stack } from "expo-router";
 import { View, StyleSheet, TextInput, Text } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { MallContext } from "../context/mallProvider";
@@ -28,56 +27,49 @@ export default function DeveloperAccess() {
   };
 
   return (
-    <>
-      <Stack.Screen
-        options={{
-          headerRight: null,
-        }}
-      />
-      <SafeAreaView style={styles.safeAreaView}>
-        {currentMall && (
-          <>
-            <View style={styles.container}>
-              <Text style={styles.title}>SVG</Text>
-              <View style={{ padding: 10 }}>
-                <Text>{filename ? `Selected file: ${filename}` : " "}</Text>
-              </View>
-
-              <View style={styles.button}>
-                <SelectButton title="Select SVG" onPress={selectFile} />
-              </View>
-              <View style={styles.button}>
-                <UploadButton title="Upload SVG" onPress={uploadSvg} />
-              </View>
+    <SafeAreaView style={styles.safeAreaView}>
+      {currentMall && (
+        <>
+          <View style={styles.container}>
+            <Text style={styles.title}>SVG</Text>
+            <View style={{ padding: 10 }}>
+              <Text>{filename ? `Selected file: ${filename}` : " "}</Text>
             </View>
-            <View style={styles.container}>
-              <Text style={styles.title}>Store Info</Text>
-              <View style={{ padding: 10 }}>
-                <StoreInput
-                  storeName={storeName}
-                  setStoreName={setStoreName}
-                  placeholder="Enter Store"
-                />
-              </View>
 
-              <TextInput
-                onChangeText={setPromoInfo}
-                value={promoInfo}
-                placeholder="Input Promo Info"
-                style={styles.promoInput}
+            <View style={styles.button}>
+              <SelectButton title="Select SVG" onPress={selectFile} />
+            </View>
+            <View style={styles.button}>
+              <UploadButton title="Upload SVG" onPress={uploadSvg} />
+            </View>
+          </View>
+          <View style={styles.container}>
+            <Text style={styles.title}>Store Info</Text>
+            <View style={{ padding: 10 }}>
+              <StoreInput
+                storeName={storeName}
+                setStoreName={setStoreName}
+                placeholder="Enter Store"
               />
-
-              <View style={styles.button}>
-                <UploadButton
-                  title="Upload Store Info"
-                  onPress={handleUploadStore}
-                />
-              </View>
             </View>
-          </>
-        )}
-      </SafeAreaView>
-    </>
+
+            <TextInput
+              onChangeText={setPromoInfo}
+              value={promoInfo}
+              placeholder="Input Promo Info"
+              style={styles.promoInput}
+            />
+
+            <View style={styles.button}>
+              <UploadButton
+                title="Upload Store Info"
+                onPress={handleUploadStore}
+              />
+            </View>
+          </View>
+        </>
+      )}
+    </SafeAreaView>
   );
 }
 

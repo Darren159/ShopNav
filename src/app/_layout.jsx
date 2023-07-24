@@ -1,10 +1,10 @@
 import { Stack, Link } from "expo-router";
 import { View } from "react-native";
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { Ionicons } from "@expo/vector-icons";
 import { MallProvider } from "./context/mallProvider";
 import { AuthProvider } from "./context/auth";
 import MallPicker from "../components/MallPicker";
+import SignOutButton from "../components/SignOutButton";
 
 export default function Layout() {
   return (
@@ -16,15 +16,33 @@ export default function Layout() {
               backgroundColor: "#B6D0D0",
             },
             headerTitle: "",
-            headerLeft: MallPicker,
-            headerRight: Icons,
+
             headerBackVisible: true,
           }}
         >
           <Stack.Screen
+            name="index"
+            options={{
+              headerLeft: MallPicker,
+              headerRight: Icons,
+            }}
+          />
+          <Stack.Screen
+            name="storeSearch"
+            options={{
+              headerLeft: MallPicker,
+            }}
+          />
+          <Stack.Screen
             name="storeDetails"
             options={{
               presentation: "modal",
+            }}
+          />
+          <Stack.Screen
+            name="(auth)/developerAccess"
+            options={{
+              headerRight: SignOutButton,
             }}
           />
         </Stack>

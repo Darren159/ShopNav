@@ -1,6 +1,5 @@
 import { useState, useContext, useEffect } from "react";
 import { Alert, StyleSheet, SafeAreaView } from "react-native";
-import { Stack } from "expo-router";
 import SearchBar from "../components/SearchBar";
 import { MallContext } from "./context/mallProvider";
 import StoreList from "../components/StoreList";
@@ -49,17 +48,10 @@ export default function StoreSearch() {
   }, [query, fullData]);
 
   return (
-    <>
-      <Stack.Screen
-        options={{
-          headerRight: null,
-        }}
-      />
-      <SafeAreaView style={styles.mainContainer}>
-        <SearchBar onSearch={setQuery} />
-        {isLoading ? <Loader /> : <StoreList data={filteredData} />}
-      </SafeAreaView>
-    </>
+    <SafeAreaView style={styles.mainContainer}>
+      <SearchBar onSearch={setQuery} />
+      {isLoading ? <Loader /> : <StoreList data={filteredData} />}
+    </SafeAreaView>
   );
 }
 
