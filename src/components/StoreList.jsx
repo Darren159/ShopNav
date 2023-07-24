@@ -15,14 +15,18 @@ export default function StoreList({ data }) {
               params: { locName: item.id },
             }}
           >
-            <Image
-              source={{
-                uri: "https://frameandkeyrealestate.files.wordpress.com/2019/04/clock-icon.png",
-              }}
-              style={styles.image}
-            />
-            <Text style={styles.textName}>{item.name}</Text>
-            {/* {console.log(JSON.stringify(item))} */}
+            <View style={styles.innerContainer}>
+              <Image
+                source={{
+                  uri:
+                    item.logo ||
+                    "https://frameandkeyrealestate.files.wordpress.com/2019/04/clock-icon.png",
+                }}
+                style={styles.image}
+              />
+              <Text style={styles.textName}>{item.name}</Text>
+              {/* {console.log(JSON.stringify(item))} */}
+            </View>
           </Link>
         </View>
       )}
@@ -32,21 +36,25 @@ export default function StoreList({ data }) {
 
 const styles = StyleSheet.create({
   itemContainer: {
+    justifyContent: "center",
+    borderBottomWidth: 0.2,
+    height: 80,
+  },
+  innerContainer: {
     flexDirection: "row",
     alignItems: "center",
-    padding: 10,
-    borderBottomWidth: 0.2,
-    height: 100,
   },
   textName: {
-    flex: 1,
-    fontSize: 17,
-    paddingLeft: 10,
+    fontSize: 16,
     fontWeight: "600",
   },
   image: {
-    width: 25,
-    height: 25,
+    borderWidth: 1,
+    borderColor: "black",
+    width: 50,
+    height: 50,
+    resizeMode: "contain",
+    marginRight: 10,
   },
 });
 StoreList.propTypes = {

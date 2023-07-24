@@ -104,6 +104,7 @@ async function uploadSVGData(mall, filePath) {
           coordinates,
           level: parseInt(desc.level, 10),
           name: desc.name,
+          logo: desc.logo || "",
         };
 
         const docRef = db
