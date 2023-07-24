@@ -1,18 +1,24 @@
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import { SvgUri } from "react-native-svg";
-import { ActivityIndicator, Alert } from "react-native";
+import { Svg, SvgUri, Line, Path } from "react-native-svg";
+import { View, ActivityIndicator, Alert, StyleSheet } from "react-native";
 import { GestureDetector, Gesture } from "react-native-gesture-handler";
 import Animated, {
   useSharedValue,
   useAnimatedStyle,
 } from "react-native-reanimated";
+import { router } from "expo-router";
 import fetchSVGUrl from "../services/fetchSVGUrl";
 
-export default function Floorplan({ currentMall, currentLevel, children }) {
+export default function Floorplan({
+  currentMall,
+  currentLevel,
+  stores,
+  path,
+  graph,
+}) {
   const [svgUrl, setSVGUrl] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(null);
   const [reload, setReload] = useState(false);
 
   useEffect(() => {
@@ -20,19 +26,24 @@ export default function Floorplan({ currentMall, currentLevel, children }) {
       try {
         if (currentMall) {
           setIsLoading(true);
-          setError(null); // reset the error before fetching
           const url = await fetchSVGUrl(currentMall, currentLevel);
-
-          // try error fetching data
-          // a;
-
           setSVGUrl(url);
-
-          // set loading state to false after SVG is fetched
-          setIsLoading(false);
         }
       } catch (err) {
-        setError(err);
+        Alert.alert(
+          "Error in fetching map data",
+          "Try reloading the app with better internet connection",
+          [
+            {
+              text: "Reload",
+              onPress: () => {
+                setReload((prevReload) => !prevReload);
+              },
+            },
+            { text: "OK" },
+          ]
+        );
+      } finally {
         setIsLoading(false);
       }
     };
@@ -77,33 +88,10 @@ export default function Floorplan({ currentMall, currentLevel, children }) {
 
   const composed = Gesture.Simultaneous(pinchGesture, panGesture);
 
-  // handling error fetching floorplan data
-  useEffect(() => {
-    if (error) {
-      Alert.alert(
-        "Error in fetching map data",
-        "Try reloading the app with better internet connection",
-        [
-          {
-            text: "Reload",
-            onPress: () => {
-              setReload((prevReload) => !prevReload); // use functional update here as well
-              // console.log("close map fetch error & reload")
-            },
-          },
-          {
-            text: "Exit",
-            onPress: () => {
-              // console.log("close map fetch error & not reload")
-            },
-          },
-        ]
-      );
-    }
-  }, [error]); // this effect depends on error and reload
-
   return isLoading ? (
-    <ActivityIndicator size="large" /> // show spinner if isLoading is true
+    <View style={styles.loadingContainer}>
+      <ActivityIndicator size="large" color="#5500dc" />
+    </View>
   ) : (
     <GestureDetector gesture={composed}>
       <Animated.View style={animatedStyle}>
@@ -114,7 +102,50 @@ export default function Floorplan({ currentMall, currentLevel, children }) {
           height="100%"
           testID="svg-image"
         />
-        {children}
+        <Svg
+          style={styles.overlay}
+          height="100%"
+          width="100%"
+          viewBox="0 0 600 760"
+        >
+          {path
+            .filter((node) => graph[node].level === currentLevel)
+            .map((node, index, levelNodes) => {
+              if (index < levelNodes.length - 1) {
+                const currentNode = graph[node];
+                const nextNode = graph[levelNodes[index + 1]];
+                return (
+                  <Line
+                    x1={currentNode.coordinates.x}
+                    y1={currentNode.coordinates.y}
+                    x2={nextNode.coordinates.x}
+                    y2={nextNode.coordinates.y}
+                    stroke="red"
+                    strokeWidth="2"
+                    key={node}
+                  />
+                );
+              }
+              return null;
+            })}
+          {stores
+            .filter((store) => store.level === currentLevel)
+            .map((store) => (
+              <Path
+                d={store.coordinates}
+                fill="none"
+                stroke="transparent"
+                strokeWidth="1"
+                key={store.id}
+                onPress={() =>
+                  router.push({
+                    pathname: "/storeDetails",
+                    params: { locName: store.id },
+                  })
+                }
+              />
+            ))}
+        </Svg>
       </Animated.View>
     </GestureDetector>
   );
@@ -123,9 +154,36 @@ export default function Floorplan({ currentMall, currentLevel, children }) {
 Floorplan.propTypes = {
   currentMall: PropTypes.string.isRequired,
   currentLevel: PropTypes.number.isRequired,
-  children: PropTypes.node,
+  stores: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      level: PropTypes.number.isRequired,
+      coordinates: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+  path: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+  graph: PropTypes.objectOf(
+    PropTypes.shape({
+      level: PropTypes.number.isRequired,
+      coordinates: PropTypes.shape({
+        x: PropTypes.number.isRequired,
+        y: PropTypes.number.isRequired,
+      }).isRequired,
+    })
+  ).isRequired,
 };
 
-Floorplan.defaultProps = {
-  children: null,
-};
+const styles = StyleSheet.create({
+  overlay: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+  },
+  loadingContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+});

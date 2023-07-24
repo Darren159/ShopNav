@@ -68,5 +68,6 @@ const styles = StyleSheet.create({
     width: 300,
     borderWidth: 0.5,
     justifyContent: "center",
+    backgroundColor: "white",
   },
 });

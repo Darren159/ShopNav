@@ -1,10 +1,10 @@
-import { useState, useEffect, useContext, useCallback } from "react";
+import { useState, useContext, useCallback } from "react";
 import {
-  Text,
   View,
   ActivityIndicator,
   StyleSheet,
   SafeAreaView,
+  Alert,
 } from "react-native";
 import { collection, getDocs } from "firebase/firestore";
 import { Stack } from "expo-router";
@@ -17,7 +17,6 @@ export default function StoreSearch() {
   const { currentMall } = useContext(MallContext);
   const [isLoading, setIsLoading] = useState(false);
   const [data, setData] = useState([]);
-  const [error, setError] = useState(null);
   const [fullData, setFullData] = useState([]);
 
   // for filtering search function
@@ -39,60 +38,43 @@ export default function StoreSearch() {
     [fullData]
   );
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const colRef = collection(db, "malls", currentMall, "stores");
+  const fetchData = async () => {
+    try {
+      const colRef = collection(db, "malls", currentMall, "stores");
 
-        // await until data is fetched
-        const storeListSnapShot = await getDocs(colRef);
+      // await until data is fetched
+      const storeListSnapShot = await getDocs(colRef);
 
-        const storeList = storeListSnapShot.docs.map((doc) => ({
-          id: doc.id,
-          ...doc.data(),
-        }));
+      const storeList = storeListSnapShot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
 
-        // console.log(storeList);
-        // sorting the list by alphabets
-        storeList.sort((a, b) =>
-          a.name.toLowerCase().localeCompare(b.name.toLowerCase())
-        );
+      // console.log(storeList);
+      // sorting the list by alphabets
+      storeList.sort((a, b) =>
+        a.name.toLowerCase().localeCompare(b.name.toLowerCase())
+      );
 
-        setFullData(storeList);
+      setFullData(storeList);
 
-        // set data to full data set initially
-        setData(storeList);
-      } catch (err) {
-        // console.error("Error fetching data: ", err);
-        setError(err);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-    if (!data.length) {
-      setIsLoading(true);
-      fetchData();
+      // set data to full data set initially
+      setData(storeList);
+    } catch (err) {
+      Alert.alert(
+        "Error",
+        "Error in fetching data ... Please check your internet connection!",
+        [{ text: "OK" }],
+        {
+          cancelable: false,
+        }
+      );
+    } finally {
+      setIsLoading(false);
     }
-  }, [currentMall, data]);
-
-  // loading interface
-  if (isLoading) {
-    return (
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-        <ActivityIndicator size="large" color="#5500dc" />
-      </View>
-    );
-  }
-
-  // error interface
-  if (error) {
-    return (
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-        <Text>
-          Error in fetching data ... Please check your internet connection!
-        </Text>
-      </View>
-    );
+  };
+  if (!data.length) {
+    fetchData();
   }
 
   return (
@@ -102,14 +84,20 @@ export default function StoreSearch() {
           headerRight: null,
         }}
       />
-      <SafeAreaView style={styles.mainContainer}>
-        {currentMall && (
-          <View style={{ flex: 1, paddingBottom: 70 }}>
-            <SearchBar onSearch={handleSearch} />
-            <StoreList data={data} />
-          </View>
-        )}
-      </SafeAreaView>
+      {isLoading ? (
+        <View style={styles.loadingContainer}>
+          <ActivityIndicator size="large" color="#5500dc" />
+        </View>
+      ) : (
+        <SafeAreaView style={styles.mainContainer}>
+          {currentMall && (
+            <View style={{ flex: 1, paddingBottom: 70 }}>
+              <SearchBar onSearch={handleSearch} />
+              <StoreList data={data} />
+            </View>
+          )}
+        </SafeAreaView>
+      )}
     </>
   );
 }
@@ -118,5 +106,10 @@ const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
     marginHorizontal: 20,
+  },
+  loadingContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
   },
 });

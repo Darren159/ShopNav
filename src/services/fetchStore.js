@@ -9,5 +9,5 @@ export default async function fetchStore(currentMall, storeName) {
   if (docSnap.exists()) {
     return docSnap.id;
   }
-  throw new Error();
+  throw new Error("Invalid Store Name");
 }

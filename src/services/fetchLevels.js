@@ -14,5 +14,5 @@ export default async function fetchLevels(currentMall) {
       return levelsData;
     }
   }
-  return [];
+  throw new Error("Error retrieving level data");
 }
