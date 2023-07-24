@@ -1,5 +1,13 @@
 import { useState, useContext } from "react";
-import { ActivityIndicator, Alert, Text, View, StyleSheet } from "react-native";
+import {
+  Alert,
+  ActivityIndicator,
+  Text,
+  View,
+  StyleSheet,
+  KeyboardAvoidingView,
+  Platform,
+} from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Entypo, FontAwesome5 } from "@expo/vector-icons";
 import { MallContext } from "./context/mallProvider";
@@ -9,6 +17,7 @@ import StoreInput from "../components/StoreInput";
 import useStoreInput from "../hooks/useStoreInput";
 import Floorplan from "../components/Floorplan";
 import LevelButtons from "../components/LevelButtons";
+import Loader from "../components/Loader";
 
 export default function Directory() {
   const { currentMall } = useContext(MallContext);
@@ -39,65 +48,68 @@ export default function Directory() {
 
   return (
     <SafeAreaView style={styles.safeAreaView}>
-      <View style={styles.row}>
-        <View style={styles.inputContainer}>
-          <StoreInput
-            icon="circle"
-            storeName={startStore.storeName}
-            setStoreName={startStore.setStoreName}
-            error={startStore.storeError}
-            placeholder="Enter starting point"
-          />
-          <Entypo
-            name="dots-three-vertical"
-            size={24}
-            color="black"
-            style={styles.iconStyle}
-          />
-          <StoreInput
-            icon="map-pin"
-            storeName={endStore.storeName}
-            setStoreName={endStore.setStoreName}
-            placeholder="Enter destination"
-          />
-        </View>
-        {isLoading ? (
-          <View>
-            <ActivityIndicator size="large" color="#5500dc" />
-            <Text style={{ fontSize: 12 }}>Navigating...</Text>
-          </View>
-        ) : (
-          <FontAwesome5.Button
-            name="directions"
-            backgroundColor="#515151"
-            borderRadius={13}
-            onPress={calculatePath}
-          >
-            Go!
-          </FontAwesome5.Button>
-        )}
-      </View>
-      {currentMall ? (
-        <>
-          <View style={styles.mapContainer}>
-            <Floorplan
-              currentMall={currentMall}
-              currentLevel={currentLevel}
-              path={path}
-              graph={graph}
+      <KeyboardAvoidingView
+        behavior={Platform.OS === "ios" ? "padding" : "height"}
+        style={styles.safeAreaView}
+      >
+        <View style={styles.row}>
+          <View style={styles.inputContainer}>
+            <StoreInput
+              icon="circle"
+              storeName={startStore.storeName}
+              setStoreName={startStore.setStoreName}
+              error={startStore.storeError}
+              placeholder="Enter starting point"
+            />
+            <Entypo
+              name="dots-three-vertical"
+              size={24}
+              color="black"
+              style={styles.iconStyle}
+            />
+            <StoreInput
+              icon="map-pin"
+              storeName={endStore.storeName}
+              setStoreName={endStore.setStoreName}
+              placeholder="Enter destination"
             />
           </View>
-          <LevelButtons
-            currentMall={currentMall}
-            currentLevel={currentLevel}
-            setCurrentLevel={setCurrentLevel}
-          />
-        </>
-      ) : (
-        <View style={styles.loadingContainer}>
-          <ActivityIndicator size="large" color="#5500dc" />
+          {isLoading ? (
+            <View>
+              <ActivityIndicator size="large" color="#5500dc" />
+              <Text style={{ fontSize: 12 }}>Navigating...</Text>
+            </View>
+          ) : (
+            <FontAwesome5.Button
+              name="directions"
+              backgroundColor="#515151"
+              borderRadius={13}
+              onPress={calculatePath}
+            >
+              Go!
+            </FontAwesome5.Button>
+          )}
         </View>
-      )}
+        {currentMall ? (
+          <>
+            <View style={styles.mapContainer}>
+              <Floorplan
+                currentMall={currentMall}
+                currentLevel={currentLevel}
+                path={path}
+                graph={graph}
+              />
+            </View>
+            <LevelButtons
+              currentMall={currentMall}
+              currentLevel={currentLevel}
+              setCurrentLevel={setCurrentLevel}
+            />
+          </>
+        ) : (
+          <Loader />
+        )}
+      </KeyboardAvoidingView>
     </SafeAreaView>
   );
 }
@@ -113,17 +125,12 @@ const styles = StyleSheet.create({
   },
   inputContainer: {
     alignItems: "center",
-    flex: 0.8,
+    flex: 0.85,
   },
   iconStyle: {
-    marginVertical: 10,
+    marginVertical: 5,
   },
   mapContainer: {
     flex: 0.85,
-  },
-  loadingContainer: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
   },
 });

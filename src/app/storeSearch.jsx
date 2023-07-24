@@ -1,27 +1,24 @@
 import { useState, useContext, useEffect } from "react";
-import {
-  ActivityIndicator,
-  Alert,
-  View,
-  StyleSheet,
-  SafeAreaView,
-} from "react-native";
+import { Alert, StyleSheet, SafeAreaView } from "react-native";
 import { Stack } from "expo-router";
 import SearchBar from "../components/SearchBar";
 import { MallContext } from "./context/mallProvider";
 import StoreList from "../components/StoreList";
 import fetchStoreList from "../services/fetchStoreList";
 import handleSearch from "../utils/handleSearch";
+import Loader from "../components/Loader";
 
 export default function StoreSearch() {
   const { currentMall } = useContext(MallContext);
   const [query, setQuery] = useState("");
   const [fullData, setFullData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const loadStores = async () => {
       try {
+        setIsLoading(true);
         const storeList = await fetchStoreList(currentMall);
         if (storeList) {
           storeList.sort((a, b) =>
@@ -34,6 +31,8 @@ export default function StoreSearch() {
         Alert.alert("Error", error.message, [{ text: "OK" }], {
           cancelable: false,
         });
+      } finally {
+        setIsLoading(false);
       }
     };
     if (currentMall) {
@@ -57,16 +56,8 @@ export default function StoreSearch() {
         }}
       />
       <SafeAreaView style={styles.mainContainer}>
-        <View>
-          <SearchBar onSearch={setQuery} />
-          {currentMall ? (
-            <StoreList data={filteredData} />
-          ) : (
-            <View style={styles.loadingContainer}>
-              <ActivityIndicator size="large" color="#5500dc" />
-            </View>
-          )}
-        </View>
+        <SearchBar onSearch={setQuery} />
+        {isLoading ? <Loader /> : <StoreList data={filteredData} />}
       </SafeAreaView>
     </>
   );
@@ -80,6 +71,5 @@ const styles = StyleSheet.create({
   loadingContainer: {
     flex: 1,
     justifyContent: "center",
-    alignItems: "center",
   },
 });

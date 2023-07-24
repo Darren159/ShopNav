@@ -8,6 +8,8 @@ export default async function fetchPlaceDetails(placeId) {
   const response = await fetch(url);
   const data = await response.json();
   // console.log(data);
-
-  return data.result;
+  if (data) {
+    return data.result;
+  }
+  throw new Error("Error retrieving place details");
 }

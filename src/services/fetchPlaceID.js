@@ -20,5 +20,5 @@ export default async function fetchPlaceId(storeName) {
     // console.log(`place id: ${data.predictions[0].place_id}`);
     return data.predictions[0].place_id;
   }
-  return null;
+  throw new Error("Error retrieving place id");
 }

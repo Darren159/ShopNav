@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { Svg, SvgUri, Line, Path } from "react-native-svg";
-import { View, ActivityIndicator, Alert, StyleSheet } from "react-native";
+import { Alert, StyleSheet } from "react-native";
 import { GestureDetector, Gesture } from "react-native-gesture-handler";
 import Animated, {
   useSharedValue,
@@ -9,13 +9,14 @@ import Animated, {
 } from "react-native-reanimated";
 import { router } from "expo-router";
 import fetchSVGUrl from "../services/fetchSVGUrl";
-import useStoreList from "../hooks/useStoreList";
+import fetchStoreList from "../services/fetchStoreList";
+import Loader from "./Loader";
 
 export default function Floorplan({ currentMall, currentLevel, path, graph }) {
   const [svgUrl, setSVGUrl] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [reload, setReload] = useState(false);
-  const { stores } = useStoreList(currentMall);
+  const [storeList, setStoreList] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -24,6 +25,8 @@ export default function Floorplan({ currentMall, currentLevel, path, graph }) {
           setIsLoading(true);
           const url = await fetchSVGUrl(currentMall, currentLevel);
           setSVGUrl(url);
+          const stores = await fetchStoreList(currentMall);
+          setStoreList(stores);
         }
       } catch (err) {
         Alert.alert(
@@ -85,9 +88,7 @@ export default function Floorplan({ currentMall, currentLevel, path, graph }) {
   const composed = Gesture.Simultaneous(pinchGesture, panGesture);
 
   return isLoading ? (
-    <View style={styles.loadingContainer}>
-      <ActivityIndicator size="large" color="#5500dc" />
-    </View>
+    <Loader />
   ) : (
     <GestureDetector gesture={composed}>
       <Animated.View style={animatedStyle}>
@@ -124,7 +125,7 @@ export default function Floorplan({ currentMall, currentLevel, path, graph }) {
               }
               return null;
             })}
-          {stores
+          {storeList
             .filter((store) => store.level === currentLevel)
             .map((store) => (
               <Path
@@ -136,7 +137,10 @@ export default function Floorplan({ currentMall, currentLevel, path, graph }) {
                 onPress={() =>
                   router.push({
                     pathname: "/storeDetails",
-                    params: { locName: store.id },
+                    params: {
+                      locName: store.id,
+                      promoInfo: store.promo ? store.promo : "",
+                    },
                   })
                 }
               />
