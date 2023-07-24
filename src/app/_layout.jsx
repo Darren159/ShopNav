@@ -40,7 +40,12 @@ function Icons() {
         <Ionicons name="search-outline" size={24} color="black" />
       </Link>
       <Link href="/(auth)/sign-in" asChild>
-        <Ionicons name="hammer-outline" size={24} color="black" />
+        <Ionicons
+          name="hammer-outline"
+          size={24}
+          color="black"
+          style={{ paddingLeft: 10 }}
+        />
       </Link>
     </View>
   );

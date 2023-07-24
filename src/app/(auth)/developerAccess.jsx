@@ -1,9 +1,8 @@
 import { useState, useContext } from "react";
 import { Stack, router } from "expo-router";
-import { Button, View, StyleSheet, TextInput } from "react-native";
+import { Button, StyleSheet, TextInput } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { AuthContext } from "../context/auth";
-import MallPicker from "../../components/MallPicker";
 import { MallContext } from "../context/mallProvider";
 import StoreInput from "../../components/StoreInput";
 import UploadButton from "../../components/UploadButton";
@@ -11,7 +10,7 @@ import useUploadSvg from "../../hooks/useUploadSvg";
 import useUploadStore from "../../hooks/useUploadStore";
 
 export default function DeveloperAccess() {
-  const { malls, currentMall, setCurrentMall } = useContext(MallContext);
+  const { currentMall } = useContext(MallContext);
   const [storeName, setStoreName] = useState("");
   const [storeError, setStoreError] = useState(false);
   const [promoInfo, setPromoInfo] = useState("");
@@ -39,13 +38,6 @@ export default function DeveloperAccess() {
       <SafeAreaView style={styles.safeAreaView}>
         {currentMall && (
           <>
-            <View style={styles.mallPickerContainer}>
-              <MallPicker
-                currentMall={currentMall}
-                setCurrentMall={setCurrentMall}
-                malls={malls}
-              />
-            </View>
             <UploadButton title="Upload SVG" onPress={uploadSvg} />
             <StoreInput
               storeName={storeName}
