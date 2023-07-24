@@ -28,18 +28,10 @@ export function AuthProvider({ children }) {
       user,
       setUser,
       signin: async (email, password) => {
-        try {
-          await signInWithEmailAndPassword(auth, email, password);
-        } catch (e) {
-          console.error(e);
-        }
+        await signInWithEmailAndPassword(auth, email, password);
       },
       signout: async () => {
-        try {
-          await signOut(auth);
-        } catch (e) {
-          console.error(e);
-        }
+        await signOut(auth);
       },
     }),
     [user]

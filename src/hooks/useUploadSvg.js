@@ -15,16 +15,26 @@ export default function useUploadSvg(currentMall) {
       const filename = result.assets[0].name;
       const svguri = result.assets[0].uri;
       const svgString = await FileSystem.readAsStringAsync(svguri);
+
       const uploadSVGData = httpsCallable(functions, "uploadSVGData");
-      await uploadSVGData({ svg: svgString, mall: currentMall });
+      const svgResponse = await uploadSVGData({
+        svg: svgString,
+        mall: currentMall,
+      });
+      if (!svgResponse.data.success) {
+        throw new Error(svgResponse.data.message);
+      }
+
       const uploadMallLayout = httpsCallable(functions, "uploadMallLayout");
-      await uploadMallLayout({
+      const layoutResponse = await uploadMallLayout({
         svg: svgString,
         mall: currentMall,
         filename,
       });
+      if (!layoutResponse.data.success) {
+        throw new Error(layoutResponse.data.message);
+      }
     }
   };
-
   return uploadSvg;
 }

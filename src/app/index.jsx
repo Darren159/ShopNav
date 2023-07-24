@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from "react";
-import { View, StyleSheet, ActivityIndicator } from "react-native";
+import { Alert, View, StyleSheet, ActivityIndicator } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Svg, { Line, Path } from "react-native-svg";
 import { useRouter } from "expo-router";
@@ -7,7 +7,6 @@ import { Entypo, FontAwesome5 } from "@expo/vector-icons";
 import useStoreList from "../hooks/useStoreList";
 import dijkstra from "../utils/dijkstra";
 import fetchNodes from "../services/fetchNodes";
-import fetchStore from "../services/fetchStore";
 import StoreInput from "../components/StoreInput";
 import useStoreInput from "../hooks/useStoreInput";
 import Floorplan from "../components/Floorplan";
@@ -36,12 +35,15 @@ export default function Directory() {
 
   const calculatePath = async () => {
     setIsLoading(true);
-    const startNodeId = `${await startStore.handleClick(fetchStore)}-node`;
-    const endNodeId = `${await endStore.handleClick(fetchStore)}-node`;
-
-    if (startNodeId && endNodeId) {
+    try {
+      const startNodeId = `${await startStore.handleClick()}-node`;
+      const endNodeId = `${await endStore.handleClick()}-node`;
       const shortestPath = dijkstra(graph, startNodeId, endNodeId);
       setPath(shortestPath !== null ? shortestPath : []);
+    } catch (error) {
+      Alert.alert("Error", error.message, [{ text: "OK" }], {
+        cancelable: true,
+      });
     }
 
     setIsLoading(false);
@@ -77,7 +79,6 @@ export default function Directory() {
                 icon="map-pin"
                 storeName={endStore.storeName}
                 setStoreName={endStore.setStoreName}
-                error={endStore.storeError}
                 placeholder="Enter destination"
               />
             </View>
