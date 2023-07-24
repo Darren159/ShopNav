@@ -1,23 +1,18 @@
 import { useState, useEffect } from "react";
-import { collection, getDocs } from "firebase/firestore";
-import { db } from "../../firebaseConfig";
+import fetchStoreList from "../services/fetchStoreList";
 
 export default function useStoreList(currentMall) {
   const [stores, setStores] = useState([]);
 
   useEffect(() => {
-    const fetchStores = async () => {
-      const storeCollection = collection(db, "malls", currentMall, "stores");
-      const storeSnapshot = await getDocs(storeCollection);
-      const storeList = storeSnapshot.docs.map((storeDoc) => ({
-        id: storeDoc.id,
-        ...storeDoc.data(),
-      }));
-      setStores(storeList);
+    const fetchAndSetStores = async () => {
+      if (currentMall) {
+        const storeList = await fetchStoreList(currentMall);
+        setStores(storeList);
+      }
     };
-    if (currentMall) {
-      fetchStores();
-    }
+    fetchAndSetStores();
   }, [currentMall]);
+
   return { stores };
 }

@@ -49,8 +49,6 @@ const styles = StyleSheet.create({
     fontWeight: "600",
   },
   image: {
-    borderWidth: 1,
-    borderColor: "black",
     width: 50,
     height: 50,
     resizeMode: "contain",

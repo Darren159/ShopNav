@@ -13,7 +13,7 @@ import {
 import { useLocalSearchParams, Stack } from "expo-router";
 import { Entypo, FontAwesome, Feather } from "@expo/vector-icons";
 import fetchImage from "../services/fetchImage";
-import fetchPlaceID from "../services/fetchPlaceID";
+import fetchPlaceId from "../services/fetchPlaceId";
 import fetchPlaceDetails from "../services/fetchPlaceDetails";
 import StarRating from "../components/StarRating";
 
@@ -38,7 +38,7 @@ export default function StoreDetails() {
       try {
         setIsLoading(true);
         // get place_Id using google places API
-        const placeId = await fetchPlaceID(locName);
+        const placeId = await fetchPlaceId(locName);
 
         // using place_Id to get unique place details
         const results = await fetchPlaceDetails(placeId);

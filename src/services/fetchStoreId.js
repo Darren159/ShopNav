@@ -1,7 +1,7 @@
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../../firebaseConfig";
 
-export default async function fetchStore(currentMall, storeName) {
+export default async function fetchStoreId(currentMall, storeName) {
   const formattedStoreName = storeName.replace(/\s/g, "-").toLowerCase();
   const documentID = `${currentMall.toLowerCase()}-${formattedStoreName}`;
   const docRef = doc(db, "malls", currentMall, "stores", documentID);

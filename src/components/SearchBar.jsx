@@ -4,11 +4,6 @@ import PropTypes from "prop-types";
 
 export default function SearchBar({ onSearch }) {
   const [searchQuery, setSearchQuery] = useState("");
-  const handleSearch = (query) => {
-    setSearchQuery(query);
-    // Call the onSearch prop when the user presses the search button
-    onSearch(query);
-  };
 
   return (
     <View>
@@ -19,7 +14,10 @@ export default function SearchBar({ onSearch }) {
         autoCapitalize="none"
         autoCorrect={false}
         value={searchQuery}
-        onChangeText={(query) => handleSearch(query)}
+        onChangeText={(query) => {
+          setSearchQuery(query);
+          onSearch(query);
+        }}
       />
     </View>
   );
@@ -28,11 +26,10 @@ export default function SearchBar({ onSearch }) {
 const styles = StyleSheet.create({
   searchBar: {
     marginTop: 10,
-    paddingHorizontal: 20,
-    paddingVertical: 10,
-    borderColor: "#ccc",
+    paddingLeft: 10,
+    borderColor: "grey",
     borderWidth: 1,
-    borderRadius: 8,
+    borderRadius: 10,
     height: 40,
   },
 });

@@ -2,19 +2,17 @@ import { useState, useContext } from "react";
 import { ActivityIndicator, Alert, Text, View, StyleSheet } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Entypo, FontAwesome5 } from "@expo/vector-icons";
-import useStoreList from "../hooks/useStoreList";
+import { MallContext } from "./context/mallProvider";
 import dijkstra from "../utils/dijkstra";
 import fetchNodes from "../services/fetchNodes";
 import StoreInput from "../components/StoreInput";
 import useStoreInput from "../hooks/useStoreInput";
 import Floorplan from "../components/Floorplan";
-import { MallContext } from "./context/mallProvider";
 import LevelButtons from "../components/LevelButtons";
 
 export default function Directory() {
   const { currentMall } = useContext(MallContext);
   const [path, setPath] = useState([]);
-  const { stores } = useStoreList(currentMall);
   const [currentLevel, setCurrentLevel] = useState(1);
   const startStore = useStoreInput(currentMall);
   const endStore = useStoreInput(currentMall);
@@ -85,7 +83,6 @@ export default function Directory() {
             <Floorplan
               currentMall={currentMall}
               currentLevel={currentLevel}
-              stores={stores}
               path={path}
               graph={graph}
             />

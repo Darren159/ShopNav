@@ -9,17 +9,13 @@ import Animated, {
 } from "react-native-reanimated";
 import { router } from "expo-router";
 import fetchSVGUrl from "../services/fetchSVGUrl";
+import useStoreList from "../hooks/useStoreList";
 
-export default function Floorplan({
-  currentMall,
-  currentLevel,
-  stores,
-  path,
-  graph,
-}) {
+export default function Floorplan({ currentMall, currentLevel, path, graph }) {
   const [svgUrl, setSVGUrl] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [reload, setReload] = useState(false);
+  const { stores } = useStoreList(currentMall);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -154,13 +150,6 @@ export default function Floorplan({
 Floorplan.propTypes = {
   currentMall: PropTypes.string.isRequired,
   currentLevel: PropTypes.number.isRequired,
-  stores: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      level: PropTypes.number.isRequired,
-      coordinates: PropTypes.string.isRequired,
-    })
-  ).isRequired,
   path: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
   graph: PropTypes.objectOf(
     PropTypes.shape({
