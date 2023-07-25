@@ -2,10 +2,7 @@ import { render, waitFor, fireEvent } from "@testing-library/react-native";
 import LevelButtons from "../LevelButtons";
 import fetchLevels from "../../services/fetchLevels";
 
-jest.mock("../../services/fetchLevels", () => ({
-  __esModule: true,
-  default: jest.fn(),
-}));
+jest.mock("../../services/fetchLevels");
 
 const setCurrentLevelMock = jest.fn();
 const currentMall = "testMall";

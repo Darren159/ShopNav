@@ -5,15 +5,9 @@ import fetchSVGUrl from "../../services/fetchSvgUrl";
 import fetchStoreList from "../../services/fetchStoreList";
 import Floorplan from "../Floorplan";
 
-jest.mock("../../services/fetchSVGUrl", () => ({
-  __esModule: true,
-  default: jest.fn(),
-}));
+jest.mock("../../services/fetchSVGUrl");
 
-jest.mock("../../services/fetchStoreList", () => ({
-  __esModule: true,
-  default: jest.fn(),
-}));
+jest.mock("../../services/fetchStoreList");
 
 jest.mock("react-native-svg");
 

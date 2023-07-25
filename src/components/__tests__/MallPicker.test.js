@@ -2,10 +2,7 @@ import { render, fireEvent } from "@testing-library/react-native";
 import MallPicker from "../MallPicker";
 import { MallContext } from "../../app/context/mallProvider";
 
-jest.mock("../../services/fetchMalls", () => ({
-  __esModule: true,
-  default: jest.fn(),
-}));
+jest.mock("../../services/fetchMalls");
 
 const setCurrentMallMock = jest.fn();
 
