@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   Text,
   StyleSheet,
+  ActivityIndicator,
 } from "react-native";
 import { AuthContext } from "../context/auth";
 
@@ -14,6 +15,7 @@ export default function SignIn() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { signin, user } = useContext(AuthContext);
+  const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
     if (user) {
       // If `user` is not `null`, redirect the user to the developer access page
@@ -23,11 +25,14 @@ export default function SignIn() {
 
   const handleSignIn = async () => {
     try {
+      setIsLoading(true);
       await signin(email, password);
     } catch (e) {
       Alert.alert("Sign In Error", "Invalid Email/Password", [{ text: "OK" }], {
         cancelable: false,
       });
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -60,9 +65,17 @@ export default function SignIn() {
           autoCompleteType="password"
           textContentType="password"
         />
-        <TouchableOpacity style={styles.buttonInput} onPress={handleSignIn}>
-          <Text style={{ color: "white" }}>Login</Text>
-        </TouchableOpacity>
+        {isLoading ? (
+          <ActivityIndicator
+            size="large"
+            color="#5500dc"
+            style={styles.loadingContainer}
+          />
+        ) : (
+          <TouchableOpacity style={styles.button} onPress={handleSignIn}>
+            <Text style={{ color: "white" }}>Login</Text>
+          </TouchableOpacity>
+        )}
       </View>
     </>
   );
@@ -78,7 +91,8 @@ const styles = StyleSheet.create({
     textAlign: "left",
     marginBottom: 5,
   },
-  buttonInput: {
+  loadingContainer: { marginTop: 12 },
+  button: {
     width: "80%",
     marginTop: 10,
     padding: 10,

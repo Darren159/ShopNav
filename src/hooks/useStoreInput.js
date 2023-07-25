@@ -1,12 +1,12 @@
 import { useState } from "react";
-import fetchStoreId from "../services/fetchStoreId";
+import fetchNodeId from "../services/fetchNodeId";
 
 export default function useStoreInput(currentMall) {
   const [storeName, setStoreName] = useState("");
 
   const handleStore = async () => {
-    const storeId = await fetchStoreId(currentMall, storeName);
-    return storeId;
+    const nodeId = await fetchNodeId(currentMall, storeName);
+    return nodeId;
   };
 
   return { storeName, setStoreName, handleStore };

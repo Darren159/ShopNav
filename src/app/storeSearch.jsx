@@ -1,11 +1,15 @@
 import { useState, useContext, useEffect } from "react";
-import { Alert, StyleSheet, SafeAreaView } from "react-native";
+import {
+  ActivityIndicator,
+  Alert,
+  StyleSheet,
+  SafeAreaView,
+} from "react-native";
 import SearchBar from "../components/SearchBar";
 import { MallContext } from "./context/mallProvider";
 import StoreList from "../components/StoreList";
 import fetchStoreList from "../services/fetchStoreList";
 import handleSearch from "../utils/handleSearch";
-import Loader from "../components/Loader";
 
 export default function StoreSearch() {
   const { currentMall } = useContext(MallContext);
@@ -50,18 +54,25 @@ export default function StoreSearch() {
   return (
     <SafeAreaView style={styles.mainContainer}>
       <SearchBar onSearch={setQuery} />
-      {isLoading ? <Loader /> : <StoreList data={filteredData} />}
+      {isLoading ? (
+        <ActivityIndicator
+          size="large"
+          color="#5500dc"
+          style={styles.loadingContainer}
+        />
+      ) : (
+        <StoreList data={filteredData} />
+      )}
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
+  loadingContainer: {
+    flex: 1,
+  },
   mainContainer: {
     flex: 1,
     marginHorizontal: 20,
-  },
-  loadingContainer: {
-    flex: 1,
-    justifyContent: "center",
   },
 });

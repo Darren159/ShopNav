@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { Svg, SvgUri, Line, Path } from "react-native-svg";
-import { Alert, StyleSheet } from "react-native";
+import { ActivityIndicator, Alert, StyleSheet } from "react-native";
 import { GestureDetector, Gesture } from "react-native-gesture-handler";
 import Animated, {
   useSharedValue,
@@ -10,7 +10,6 @@ import Animated, {
 import { router } from "expo-router";
 import fetchSVGUrl from "../services/fetchSVGUrl";
 import fetchStoreList from "../services/fetchStoreList";
-import Loader from "./Loader";
 
 export default function Floorplan({ currentMall, currentLevel, path, graph }) {
   const [svgUrl, setSVGUrl] = useState(null);
@@ -88,7 +87,11 @@ export default function Floorplan({ currentMall, currentLevel, path, graph }) {
   const composed = Gesture.Simultaneous(pinchGesture, panGesture);
 
   return isLoading ? (
-    <Loader />
+    <ActivityIndicator
+      size="large"
+      color="#5500dc"
+      style={styles.loadingContainer}
+    />
   ) : (
     <GestureDetector gesture={composed}>
       <Animated.View style={animatedStyle}>
@@ -140,6 +143,7 @@ export default function Floorplan({ currentMall, currentLevel, path, graph }) {
                     params: {
                       locName: store.id,
                       promoInfo: store.promo ? store.promo : "",
+                      storeName: store.name,
                     },
                   })
                 }
@@ -176,7 +180,5 @@ const styles = StyleSheet.create({
   },
   loadingContainer: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
   },
 });

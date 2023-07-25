@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import {
+  ActivityIndicator,
   Alert,
   ScrollView,
   View,
@@ -12,7 +13,6 @@ import { useLocalSearchParams } from "expo-router";
 import { Entypo, FontAwesome, Feather } from "@expo/vector-icons";
 import fetchPlaceId from "../services/fetchPlaceId";
 import fetchPlaceDetails from "../services/fetchPlaceDetails";
-import Loader from "../components/Loader";
 import ImageCarousel from "../components/ImageCarousel";
 import ReviewCarousel from "../components/ReviewCarousel";
 
@@ -27,7 +27,7 @@ export default function StoreDetails() {
   const [placeDetails, setPlaceDetails] = useState(null);
 
   // check locName is the name of the item user pressed
-  const { locName, promoInfo } = useLocalSearchParams();
+  const { locName, promoInfo, storeName } = useLocalSearchParams();
   // console.log(locName);
 
   useEffect(() => {
@@ -55,117 +55,125 @@ export default function StoreDetails() {
     fetchDetails();
   }, [locName]);
 
-  return !placeDetails ? (
-    <Loader />
-  ) : (
+  return (
     <SafeAreaView style={styles.mainContainer}>
-      <ScrollView showsVerticalScrollIndicator={false}>
-        <Text style={styles.placeName}>{placeDetails.name}</Text>
-        {placeDetails.photos && <ImageCarousel photos={placeDetails.photos} />}
-        <View style={styles.detailsContainer}>
-          <FontAwesome name="map-marker" size={24} color="grey" />
-          <Text style={styles.formattedAddressText}>
-            {placeDetails.formatted_address}
-          </Text>
-          <Text style={styles.ratingText}>{placeDetails.rating} </Text>
-          <FontAwesome name="star" size={24} color="#FDCC0D" />
-        </View>
-        {placeDetails.business_status && (
+      {!placeDetails ? (
+        <ActivityIndicator
+          size="large"
+          color="#5500dc"
+          style={styles.loadingContainer}
+        />
+      ) : (
+        <ScrollView showsVerticalScrollIndicator={false}>
+          <Text style={styles.placeName}>{storeName}</Text>
+          {placeDetails.photos && (
+            <ImageCarousel photos={placeDetails.photos} />
+          )}
           <View style={styles.detailsContainer}>
-            <FontAwesome
-              name={
-                placeDetails.business_status === "OPERATIONAL"
-                  ? "check-circle"
-                  : "times-circle"
-              }
-              size={24}
-              color={
-                placeDetails.business_status === "OPERATIONAL" ? "green" : "red"
-              }
-            />
-            <Text
-              style={[
-                styles.details,
-                {
-                  color:
-                    placeDetails.business_status === "OPERATIONAL"
+            <FontAwesome name="map-marker" size={24} color="grey" />
+            <Text style={styles.formattedAddressText}>
+              {placeDetails.formatted_address}
+            </Text>
+            <Text style={styles.ratingText}>{placeDetails.rating} </Text>
+            <FontAwesome name="star" size={24} color="#FDCC0D" />
+          </View>
+          {placeDetails.business_status && (
+            <View style={styles.detailsContainer}>
+              <FontAwesome
+                name={
+                  placeDetails.business_status === "OPERATIONAL"
+                    ? "check-circle"
+                    : "times-circle"
+                }
+                size={24}
+                color={
+                  placeDetails.business_status === "OPERATIONAL"
+                    ? "green"
+                    : "red"
+                }
+              />
+              <Text
+                style={[
+                  styles.details,
+                  {
+                    color:
+                      placeDetails.business_status === "OPERATIONAL"
+                        ? "green"
+                        : "red",
+                  },
+                ]}
+              >
+                {placeDetails.business_status.charAt(0) +
+                  placeDetails.business_status.slice(1).toLowerCase()}
+              </Text>
+            </View>
+          )}
+          {placeDetails.formatted_phone_number && (
+            <View style={styles.detailsContainer}>
+              <FontAwesome name="phone" size={24} color="grey" />
+              <Text style={styles.details}>
+                {placeDetails.formatted_phone_number}
+              </Text>
+            </View>
+          )}
+          {placeDetails.opening_hours && (
+            <TouchableOpacity
+              onPress={toggleCollapse}
+              style={styles.detailsContainer}
+            >
+              <Feather name="clock" size={24} color="grey" />
+              <Text style={styles.details}>Operating Hours:</Text>
+              <Text
+                style={[
+                  styles.details,
+                  { paddingLeft: 5 },
+                  {
+                    color: placeDetails.opening_hours.open_now
                       ? "green"
                       : "red",
-                },
-              ]}
-            >
-              {placeDetails.business_status.charAt(0) +
-                placeDetails.business_status.slice(1).toLowerCase()}
-            </Text>
-          </View>
-        )}
-        {placeDetails.formatted_phone_number && (
-          <View style={styles.detailsContainer}>
-            <FontAwesome name="phone" size={24} color="grey" />
-            <Text style={styles.details}>
-              {placeDetails.formatted_phone_number}
-            </Text>
-          </View>
-        )}
-        {placeDetails.opening_hours && (
-          <TouchableOpacity
-            onPress={toggleCollapse}
-            style={styles.detailsContainer}
-          >
-            <Feather name="clock" size={24} color="grey" />
-            <Text style={styles.details}>Operating Hours:</Text>
-            <Text
-              style={[
-                styles.details,
-                { paddingLeft: 5 },
-                {
-                  color: placeDetails.opening_hours.open_now ? "green" : "red",
-                },
-              ]}
-            >
-              {placeDetails.opening_hours.open_now ? "Open" : "Closed"}
-            </Text>
-            <Entypo
-              name={isCollapsed ? "chevron-thin-down" : "chevron-thin-up"}
-              size={24}
-              color="grey"
-              style={{ marginLeft: "auto" }}
-            />
-          </TouchableOpacity>
-        )}
+                  },
+                ]}
+              >
+                {placeDetails.opening_hours.open_now ? "Open" : "Closed"}
+              </Text>
+              <Entypo
+                name={isCollapsed ? "chevron-thin-down" : "chevron-thin-up"}
+                size={24}
+                color="grey"
+                style={{ marginLeft: "auto" }}
+              />
+            </TouchableOpacity>
+          )}
 
-        {!isCollapsed &&
-          placeDetails.opening_hours.weekday_text.map((item) => (
-            <View style={{ padding: 5, paddingLeft: 45 }} key={item.id}>
-              <Text>{item.text}</Text>
+          {!isCollapsed &&
+            placeDetails.opening_hours.weekday_text.map((item) => (
+              <View style={{ padding: 5, paddingLeft: 45 }} key={item.id}>
+                <Text>{item.text}</Text>
+              </View>
+            ))}
+          {promoInfo ? (
+            <View style={styles.detailsContainer}>
+              <FontAwesome name="tags" size={24} color="grey" />
+              <Text style={styles.details}>{promoInfo}</Text>
             </View>
-          ))}
-        {promoInfo ? (
-          <View style={styles.detailsContainer}>
-            <FontAwesome name="tags" size={24} color="grey" />
-            <Text style={styles.details}>{promoInfo}</Text>
-          </View>
-        ) : null}
-        {placeDetails.reviews && (
-          <>
-            <View style={[styles.detailsContainer, { borderBottomWidth: 0 }]}>
-              <FontAwesome name="commenting" size={24} color="grey" />
-              <Text style={styles.details}>Reviews:</Text>
-            </View>
-            <ReviewCarousel reviews={placeDetails.reviews} />
-          </>
-        )}
-      </ScrollView>
+          ) : null}
+          {placeDetails.reviews && (
+            <>
+              <View style={[styles.detailsContainer, { borderBottomWidth: 0 }]}>
+                <FontAwesome name="commenting" size={24} color="grey" />
+                <Text style={styles.details}>Reviews:</Text>
+              </View>
+              <ReviewCarousel reviews={placeDetails.reviews} />
+            </>
+          )}
+        </ScrollView>
+      )}
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  loadingContainer: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
+  loadingContainer: { flex: 1 },
   mainContainer: {
     flex: 1,
     marginHorizontal: 20,
