@@ -1,12 +1,21 @@
 import { useState, useContext, useEffect } from "react";
 import { Stack, router } from "expo-router";
-import { View, TextInput, Alert, TouchableOpacity, Text } from "react-native";
+import {
+  View,
+  TextInput,
+  Alert,
+  TouchableOpacity,
+  Text,
+  StyleSheet,
+  ActivityIndicator,
+} from "react-native";
 import { AuthContext } from "../context/auth";
 
 export default function SignIn() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { signin, user } = useContext(AuthContext);
+  const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
     if (user) {
       // If `user` is not `null`, redirect the user to the developer access page
@@ -16,11 +25,14 @@ export default function SignIn() {
 
   const handleSignIn = async () => {
     try {
+      setIsLoading(true);
       await signin(email, password);
     } catch (e) {
       Alert.alert("Sign In Error", "Invalid Email/Password", [{ text: "OK" }], {
-        cancelable: true,
+        cancelable: false,
       });
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -32,45 +44,61 @@ export default function SignIn() {
         }}
       />
       <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-        <View style={{ borderBottomWidth: 0.3, width: 300, padding: 10 }}>
-          <TextInput
-            placeholder="Email"
-            value={email}
-            onChangeText={setEmail}
-            autoCapitalize="none"
-            autoCompleteType="email"
-            keyboardType="email-address"
-            textContentType="emailAddress"
-          />
-        </View>
+        <TextInput
+          style={styles.textInput}
+          placeholder="Email"
+          value={email}
+          onChangeText={setEmail}
+          autoCapitalize="none"
+          autoCompleteType="email"
+          keyboardType="email-address"
+          textContentType="emailAddress"
+        />
 
-        <View style={{ borderBottomWidth: 0.3, width: 300, padding: 10 }}>
-          <TextInput
-            placeholder="Password"
-            value={password}
-            onChangeText={setPassword}
-            secureTextEntry
-            autoCapitalize="none"
-            autoCompleteType="password"
-            textContentType="password"
+        <TextInput
+          style={styles.textInput}
+          placeholder="Password"
+          value={password}
+          onChangeText={setPassword}
+          secureTextEntry
+          autoCapitalize="none"
+          autoCompleteType="password"
+          textContentType="password"
+        />
+        {isLoading ? (
+          <ActivityIndicator
+            size="large"
+            color="#5500dc"
+            style={styles.loadingContainer}
           />
-        </View>
-        <TouchableOpacity onPress={handleSignIn}>
-          <View
-            style={{
-              width: 300,
-              padding: 10,
-              marginTop: 30,
-              borderColor: "grey",
-              backgroundColor: "#B6D0D0",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <Text style={{ color: "white" }}> Sign In</Text>
-          </View>
-        </TouchableOpacity>
+        ) : (
+          <TouchableOpacity style={styles.button} onPress={handleSignIn}>
+            <Text style={{ color: "white" }}>Login</Text>
+          </TouchableOpacity>
+        )}
       </View>
     </>
   );
 }
+
+const styles = StyleSheet.create({
+  textInput: {
+    borderColor: "grey",
+    borderWidth: 1,
+    borderRadius: 10,
+    width: "80%",
+    padding: 10,
+    textAlign: "left",
+    marginBottom: 5,
+  },
+  loadingContainer: { marginTop: 12 },
+  button: {
+    width: "80%",
+    marginTop: 10,
+    padding: 10,
+    borderColor: "grey",
+    backgroundColor: "#8AB9EF",
+    borderRadius: 10,
+    alignItems: "center",
+  },
+});

@@ -1,128 +1,83 @@
 import { useState, useEffect } from "react";
 import {
+  ActivityIndicator,
+  Alert,
   ScrollView,
   View,
   Text,
-  FlatList,
-  ActivityIndicator,
   StyleSheet,
-  Image,
   SafeAreaView,
   TouchableOpacity,
 } from "react-native";
-import { useLocalSearchParams, Stack } from "expo-router";
+import { useLocalSearchParams } from "expo-router";
 import { Entypo, FontAwesome, Feather } from "@expo/vector-icons";
-import fetchImage from "../services/fetchImage";
-import fetchPlaceID from "../services/fetchPlaceID";
+import fetchPlaceId from "../services/fetchPlaceId";
 import fetchPlaceDetails from "../services/fetchPlaceDetails";
-import StarRating from "../components/StarRating";
+import ImageCarousel from "../components/ImageCarousel";
+import ReviewCarousel from "../components/ReviewCarousel";
 
 export default function StoreDetails() {
   // collapsible opening hours
   const [isCollapsed, setIsCollapsed] = useState(true);
 
-  const handlePress = () => {
+  const toggleCollapse = () => {
     setIsCollapsed(!isCollapsed);
   };
 
   const [placeDetails, setPlaceDetails] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(null);
 
   // check locName is the name of the item user pressed
-  const { locName } = useLocalSearchParams();
+  const { locName, promoInfo, storeName } = useLocalSearchParams();
   // console.log(locName);
 
   useEffect(() => {
     const fetchDetails = async () => {
       try {
-        setIsLoading(true);
         // get place_Id using google places API
-        const placeId = await fetchPlaceID(locName);
-
+        const placeId = await fetchPlaceId(locName);
         // using place_Id to get unique place details
         const results = await fetchPlaceDetails(placeId);
-        results.opening_hours.weekday_text =
-          results.opening_hours.weekday_text.map((text, index) => ({
-            text,
-            id: `text-${index}`,
-          }));
 
+        if (results.opening_hours && results.opening_hours.weekday_text) {
+          results.opening_hours.weekday_text =
+            results.opening_hours.weekday_text.map((text, index) => ({
+              text,
+              id: `text-${index}`,
+            }));
+        }
         setPlaceDetails(results);
-        setIsLoading(false);
-        // check results obtained
-      } catch (err) {
-        setError(err);
-        setIsLoading(false);
+      } catch (error) {
+        Alert.alert("Error", "Error Loading Store Details", [{ text: "OK" }], {
+          cancelable: false,
+        });
       }
     };
-
     fetchDetails();
   }, [locName]);
 
-  // console.log(placeDetails);
-
-  // loading interface
-  if (isLoading) {
-    return (
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-        <ActivityIndicator size="large" color="#5500dc" />
-      </View>
-    );
-  }
-
-  // error interface
-  if (error) {
-    return (
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-        <Text>
-          Error in fetching data ... Please check your internet connection!
-        </Text>
-      </View>
-    );
-  }
-  if (placeDetails != null) {
-    return (
-      <>
-        <Stack.Screen
-          options={{
-            headerRight: null,
-            headerLeft: null,
-          }}
+  return (
+    <SafeAreaView style={styles.mainContainer}>
+      {!placeDetails ? (
+        <ActivityIndicator
+          size="large"
+          color="#5500dc"
+          style={styles.loadingContainer}
         />
-        <SafeAreaView style={styles.mainContainer}>
-          <ScrollView showsVerticalScrollIndicator={false}>
-            <Text style={styles.placeName}>{placeDetails.name}</Text>
-
-            <FlatList
-              data={placeDetails.photos}
-              keyExtractor={(item, index) => index.toString()}
-              renderItem={({ item }) => (
-                <Image
-                  source={{ uri: fetchImage(item.photo_reference) }}
-                  style={styles.googleImage}
-                />
-              )}
-              horizontal
-              showsHorizontalScrollIndicator={false}
-              decelerationRate="fast"
-              snapToInterval={
-                styles.googleImage.width + 2 * styles.googleImage.margin
-              }
-              snapToAlignment="center"
-            />
-
-            <View style={styles.detailsContainer}>
-              <FontAwesome name="map-marker" size={24} color="grey" />
-
-              <Text style={styles.formattedAddressText}>
-                {placeDetails.formatted_address}
-              </Text>
-
-              <Text style={styles.ratingText}>{placeDetails.rating} </Text>
-              <FontAwesome name="star" size={24} color="#FDCC0D" />
-            </View>
-
+      ) : (
+        <ScrollView showsVerticalScrollIndicator={false}>
+          <Text style={styles.placeName}>{storeName}</Text>
+          {placeDetails.photos && (
+            <ImageCarousel photos={placeDetails.photos} />
+          )}
+          <View style={styles.detailsContainer}>
+            <FontAwesome name="map-marker" size={24} color="grey" />
+            <Text style={styles.formattedAddressText}>
+              {placeDetails.formatted_address}
+            </Text>
+            <Text style={styles.ratingText}>{placeDetails.rating} </Text>
+            <FontAwesome name="star" size={24} color="#FDCC0D" />
+          </View>
+          {placeDetails.business_status && (
             <View style={styles.detailsContainer}>
               <FontAwesome
                 name={
@@ -152,16 +107,18 @@ export default function StoreDetails() {
                   placeDetails.business_status.slice(1).toLowerCase()}
               </Text>
             </View>
-
+          )}
+          {placeDetails.formatted_phone_number && (
             <View style={styles.detailsContainer}>
               <FontAwesome name="phone" size={24} color="grey" />
               <Text style={styles.details}>
                 {placeDetails.formatted_phone_number}
               </Text>
             </View>
-
+          )}
+          {placeDetails.opening_hours && (
             <TouchableOpacity
-              onPress={handlePress}
+              onPress={toggleCollapse}
               style={styles.detailsContainer}
             >
               <Feather name="clock" size={24} color="grey" />
@@ -186,76 +143,45 @@ export default function StoreDetails() {
                 style={{ marginLeft: "auto" }}
               />
             </TouchableOpacity>
-            {!isCollapsed &&
-              placeDetails.opening_hours.weekday_text.map((item) => (
-                <View style={{ padding: 5, paddingLeft: 45 }} key={item.id}>
-                  <Text>{item.text}</Text>
-                </View>
-              ))}
-            <View style={[styles.detailsContainer, { borderBottomWidth: 0 }]}>
-              <FontAwesome name="commenting" size={24} color="grey" />
-              <Text style={styles.details}>Reviews:</Text>
+          )}
+
+          {!isCollapsed &&
+            placeDetails.opening_hours.weekday_text.map((item) => (
+              <View style={{ padding: 5, paddingLeft: 45 }} key={item.id}>
+                <Text>{item.text}</Text>
+              </View>
+            ))}
+          {promoInfo ? (
+            <View style={styles.detailsContainer}>
+              <FontAwesome name="tags" size={24} color="grey" />
+              <Text style={styles.details}>{promoInfo}</Text>
             </View>
-
-            <FlatList
-              data={placeDetails.reviews}
-              keyExtractor={(item, index) => index.toString()}
-              renderItem={({ item }) => (
-                <View style={styles.itemContainer}>
-                  <Image
-                    style={{ height: 75, width: 75 }}
-                    source={{ uri: item.profile_photo_url }}
-                  />
-                  <Text style={{ fontSize: 20, fontWeight: "bold" }}>
-                    {item.author_name}
-                  </Text>
-                  <Text>{item.relative_time_description}</Text>
-                  <StarRating rating={item.rating} />
-
-                  <Text>{item.text}</Text>
-                </View>
-              )}
-              horizontal
-              showsHorizontalScrollIndicator={false}
-              pagingEnabled
-              decelerationRate="fast"
-              snapToInterval={
-                styles.itemContainer.width + 2 * styles.itemContainer.margin
-              }
-              snapToAlignment="center"
-            />
-          </ScrollView>
-        </SafeAreaView>
-      </>
-    );
-  }
+          ) : null}
+          {placeDetails.reviews && (
+            <>
+              <View style={[styles.detailsContainer, { borderBottomWidth: 0 }]}>
+                <FontAwesome name="commenting" size={24} color="grey" />
+                <Text style={styles.details}>Reviews:</Text>
+              </View>
+              <ReviewCarousel reviews={placeDetails.reviews} />
+            </>
+          )}
+        </ScrollView>
+      )}
+    </SafeAreaView>
+  );
 }
 
 const styles = StyleSheet.create({
+  loadingContainer: { flex: 1 },
   mainContainer: {
     flex: 1,
     marginHorizontal: 20,
-  },
-  itemContainer: {
-    alignItems: "center",
-    padding: 10,
-    borderRadius: 10,
-    borderWidth: 1,
-    width: 300,
-    margin: 5,
   },
   placeName: {
     fontSize: 40,
     fontWeight: "bold",
     textAlign: "center",
-  },
-  googleImage: {
-    width: 300,
-    height: 300,
-    borderWidth: 1,
-    borderRadius: 10,
-    borderColor: "black",
-    margin: 5,
   },
   detailsContainer: {
     flexDirection: "row",

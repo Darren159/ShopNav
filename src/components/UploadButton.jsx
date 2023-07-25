@@ -1,10 +1,11 @@
 import { useState } from "react";
 import {
+  ActivityIndicator,
   TouchableOpacity,
   View,
   Text,
-  ActivityIndicator,
   Alert,
+  StyleSheet,
 } from "react-native";
 import PropTypes from "prop-types";
 
@@ -34,27 +35,15 @@ export default function UploadButton({ title, onPress }) {
     }
   };
 
-  if (isLoading) {
-    return (
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-        <ActivityIndicator size="large" color="#5500dc" />
-      </View>
-    );
-  }
-
-  return (
+  return isLoading ? (
+    <ActivityIndicator
+      size="large"
+      color="#5500dc"
+      style={styles.loadingContainer}
+    />
+  ) : (
     <TouchableOpacity onPress={handlePress}>
-      <View
-        style={{
-          width: 300,
-          padding: 10,
-          marginTop: 30,
-          borderColor: "grey",
-          backgroundColor: "#B6D0D0",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
+      <View style={styles.button}>
         <Text style={{ color: "white" }}> {title} </Text>
       </View>
     </TouchableOpacity>
@@ -65,3 +54,17 @@ UploadButton.propTypes = {
   title: PropTypes.string.isRequired,
   onPress: PropTypes.func.isRequired,
 };
+
+const styles = StyleSheet.create({
+  loadingContainer: { padding: 5 },
+  button: {
+    width: 300,
+    padding: 10,
+    marginTop: 5,
+    borderWidth: 1,
+    borderRadius: 10,
+    borderColor: "grey",
+    backgroundColor: "#8AB9EF",
+    alignItems: "center",
+  },
+});

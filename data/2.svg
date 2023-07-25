@@ -25,9 +25,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#505050"
      showgrid="true"
-     inkscape:zoom="3.045231"
-     inkscape:cx="310.32128"
-     inkscape:cy="368.11657"
+     inkscape:zoom="1.5226155"
+     inkscape:cx="441.34583"
+     inkscape:cy="345.45819"
      inkscape:window-width="2560"
      inkscape:window-height="1494"
      inkscape:window-x="-11"
@@ -1322,17 +1322,15 @@ name=Honolulu Cafe</desc>
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="Nodes"
-     style="fill:none"
-     sodipodi:insensitive="true">
+     style="fill:none">
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-escalator-node-2-1"
-       cx="-689.4032"
-       cy="194.76321"
+       cx="194.76321"
+       cy="689.4032"
        inkscape:label="westgate-escalator-node-2-1"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7118">adjacent=westgate-node-2-1, westgate-escalator-node-1-1
 level=2</desc>
@@ -1340,12 +1338,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-1"
-       cx="-653.54755"
-       cy="196.3884"
+       cx="196.3884"
+       cy="653.54755"
        inkscape:label="westgate-node-2-2"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7118-2">adjacent=westgate-node-2-1, westgate-escalator-node-2-1
 level=2</desc>
@@ -1353,12 +1350,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-2"
-       cx="-653.54755"
-       cy="217.65927"
+       cx="217.65927"
+       cy="653.54755"
        inkscape:label="westgate-node-2-2"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7118-2-6">adjacent=westgate-node-2-1, westgate-node-2-3, westgate-node-2-50
 level=2</desc>
@@ -1366,12 +1362,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-3"
-       cx="-523.41821"
-       cy="216.03406"
+       cx="216.03406"
+       cy="523.41821"
        inkscape:label="westgate-node-2-3"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7118-2-6-4">adjacent=westgate-miam-miam-node, westgate-node-2-2, westgate-node-2-4
 level=2</desc>
@@ -1379,12 +1374,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-4"
-       cx="-523.41821"
-       cy="173.7197"
+       cx="173.7197"
+       cy="523.41821"
        inkscape:label="westgate-node-2-4"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7118-2-6-4-58">adjacent=westgate-pavilion-banana-leaf-node, westgate-node-2-3, westgate-node-2-5, westgate-node-2-6
 level=2</desc>
@@ -1392,12 +1386,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-6"
-       cx="-434.67343"
-       cy="221.92966"
+       cx="221.92966"
+       cy="434.67343"
        inkscape:label="westgate-node-2-6"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7118-2-6-4-58-93">adjacent=westgate-node-2-4, westgate-node-2-7
 level=2</desc>
@@ -1405,12 +1398,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-10"
-       cx="-413.49487"
-       cy="191.36496"
+       cx="191.36496"
+       cy="413.49487"
        inkscape:label="westgate-node-2-10"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7118-2-6-4-58-93-5">adjacent=westgate-node-2-6, westgate-node-2-11
 level=2</desc>
@@ -1418,12 +1410,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-11"
-       cx="-344.06134"
-       cy="232.05563"
+       cx="232.05563"
+       cy="344.06134"
        inkscape:label="westgate-node-2-11"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7118-2-6-4-58-93-5-2">adjacent=westgate-yishion-node, westgate-node-2-10, westgate-node-2-12
 level=2</desc>
@@ -1431,12 +1422,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-yishion-node"
-       cx="-337.17157"
-       cy="219.03604"
+       cx="219.03604"
+       cy="337.17157"
        inkscape:label="westgate-yishion-node"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7118-2-6-4-58-93-5-2-9">adjacent=westgate-yishion-node, westgate-node-2-11
 level=2</desc>
@@ -1444,12 +1434,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-7"
-       cx="-441.69531"
-       cy="235.89948"
+       cx="235.89948"
+       cy="441.69531"
        inkscape:label="westgate-node-2-7"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7118-2-6-4-58-93-9">adjacent=westgate-node-2-6, westgate-node-2-8
 level=2</desc>
@@ -1457,12 +1446,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-8"
-       cx="-409.30957"
-       cy="256.13947"
+       cx="256.13947"
+       cy="409.30957"
        inkscape:label="westgate-node-2-8"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7118-2-6-4-58-93-9-7">adjacent=westgate-talismans-node, westgate-refash-node, westgate-node-2-7, westgate-node-2-9
 level=2</desc>
@@ -1470,12 +1458,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-9"
-       cx="-371.71201"
-       cy="277.44876"
+       cx="277.44876"
+       cy="371.71201"
        inkscape:label="westgate-node-2-9"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7118-2-6-4-58-93-9-7-7">adjacent=westgate-node-2-8, westgate-node-2-12
 level=2</desc>
@@ -1483,12 +1470,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-refash-node"
-       cx="-414.46643"
-       cy="264.5271"
+       cx="264.5271"
+       cy="414.46643"
        inkscape:label="westgate-refash-node"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7118-2-6-4-58-93-9-7-2">adjacent=westgate-node-2-8
 level=2</desc>
@@ -1496,12 +1482,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-talismans-node"
-       cx="-404.8938"
-       cy="248.16254"
+       cx="248.16254"
+       cy="404.8938"
        inkscape:label="westgate-talismans-node"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7118-2-6-4-58-93-9-7-5">adjacent=westgate-node-2-8
 level=2</desc>
@@ -1509,12 +1494,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-5"
-       cx="-523.41821"
-       cy="143.66061"
+       cx="143.66061"
+       cy="523.41821"
        inkscape:label="westgate-node-2-5"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7118-2-6-4-58-9">adjacent=westgate-gong-cha-and-coconut-queen-node, westgate-artary-node, westgate-node-2-4
 level=2</desc>
@@ -1522,12 +1506,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-gong-cha-and-coconut-queen-node"
-       cx="-537.30255"
-       cy="135.82161"
+       cx="135.82161"
+       cy="537.30255"
        inkscape:label="westgate-gong-cha-and-coconut-queen-node"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7118-2-6-4-58-9-2">adjacent=westgate-node-2-5
 level=2</desc>
@@ -1535,12 +1518,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-artary-node"
-       cx="-507.09265"
-       cy="114.81776"
+       cx="114.81776"
+       cy="507.09265"
        inkscape:label="westgate-artary-node"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7118-2-6-4-58-9-2-5">adjacent=westgate-node-2-5
 level=2</desc>
@@ -1548,12 +1530,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-pavilion-banana-leaf-node"
-       cx="-546.79657"
-       cy="173.7197"
+       cx="173.7197"
+       cy="546.79657"
        inkscape:label="westgate-pavilion-banana-leaf-node"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7118-2-6-4-58-5">adjacent=westgate-node-2-4
 level=2</desc>
@@ -1561,12 +1542,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-miam-miam-node"
-       cx="-523.41821"
-       cy="228.55023"
+       cx="228.55023"
+       cy="523.41821"
        inkscape:label="westgate-miam-miam-node"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7118-2-6-4-5">adjacent=westgate-node-2-3
 level=2</desc>
@@ -1574,12 +1554,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;paint-order:stroke fill markers"
        id="westgate-elevator-node-2-2"
-       cx="-736.44415"
-       cy="328.76321"
+       cx="328.76321"
+       cy="736.44415"
        inkscape:label="westgate-elevator-node-2-2"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc8860">adjacent=westgate-node-2-48, westgate-elevator-node-1-2
 level=2</desc>
@@ -1587,12 +1566,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-escalator-node-2-2"
-       cx="-370.08517"
-       cy="253.76318"
+       cx="253.76318"
+       cy="370.08517"
        inkscape:label="westgate-escalator-node-2-2"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880">adjacent=westgate-node-2-12, westgate-escalator-node-1-2
 level=2</desc>
@@ -1600,12 +1578,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-13"
-       cx="-332.42334"
-       cy="279.07397"
+       cx="279.07397"
+       cy="332.42334"
        inkscape:label="westgate-node-2-13"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3">adjacent=westgate-the-wallet-shop-node, westgate-node-2-12, westgate-node-2-14
 level=2</desc>
@@ -1613,12 +1590,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-12"
-       cx="-361.9498"
-       cy="258.81641"
+       cx="258.81641"
+       cy="361.9498"
        inkscape:label="westgate-node-2-12"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-8">adjacent=westgate-node-2-9, westgate-node-2-11, westgate-node-2-13, westgate-escalator-node-2-2
 level=2</desc>
@@ -1626,12 +1602,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-14"
-       cx="-311.26279"
-       cy="292.33612"
+       cx="292.33612"
+       cy="311.26279"
        inkscape:label="westgate-node-2-14"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7">adjacent=westgate-recoil-node, westgate-kimoj-node, westgate-node-2-13, westgate-node-2-15
 level=2</desc>
@@ -1639,12 +1614,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-15"
-       cx="-275.2662"
-       cy="312.85028"
+       cx="312.85028"
+       cy="275.2662"
        inkscape:label="westgate-node-2-15"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3">adjacent=westgate-glimpse-node, westgate-owndays-node, westgate-node-2-14, westgate-node-2-16
 level=2</desc>
@@ -1652,12 +1626,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-16"
-       cx="-238.46527"
-       cy="334.4357"
+       cx="334.4357"
+       cy="238.46527"
        inkscape:label="westgate-node-2-16"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0">adjacent=westgate-node-2-15, westgate-node-2-17, westgate-node-2-28
 level=2</desc>
@@ -1665,12 +1638,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-28"
-       cx="-250.35397"
-       cy="354.38232"
+       cx="354.38232"
+       cy="250.35397"
        inkscape:label="westgate-node-2-28"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-0">adjacent=westgate-oro-gold-cosmetics-node, westgate-node-2-16, westgate-node-2-29
 level=2</desc>
@@ -1678,12 +1650,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-29"
-       cx="-211.95917"
-       cy="376.51016"
+       cx="376.51016"
+       cy="211.95917"
        inkscape:label="westgate-node-2-29"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-0-3">adjacent=westgate-irvins-salted-egg-node, westgate-node-2-28, westgate-node-2-30
 level=2</desc>
@@ -1691,12 +1662,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-irvins-salted-egg-node"
-       cx="-208.86969"
-       cy="370.56573"
+       cx="370.56573"
+       cy="208.86969"
        inkscape:label="westgate-irvins-salted-egg-node"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-0-3-3">adjacent=westgate-node-2-29
 level=2</desc>
@@ -1704,12 +1674,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-30"
-       cx="-162.87518"
-       cy="397.41"
+       cx="397.41"
+       cy="162.87518"
        inkscape:label="westgate-node-2-30"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-0-3-7">adjacent=westgate-node-2-23, westgate-node-2-24, westgate-node-2-25, westgate-node-2-29, westgate-node-2-31
 level=2</desc>
@@ -1717,12 +1686,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-31"
-       cx="-162.87518"
-       cy="436.09174"
+       cx="436.09174"
+       cy="162.87518"
        inkscape:label="westgate-node-2-31"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-0-3-7-3-6">adjacent=westgate-node-2-30, westgate-node-2-32, westgate-node-2-33, westgate-escalator-node-2-3
 level=2</desc>
@@ -1730,12 +1698,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-33"
-       cx="-220.48016"
-       cy="436.09174"
+       cx="436.09174"
+       cy="220.48016"
        inkscape:label="westgate-node-2-33"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-0-3-7-3-6-3">adjacent=westgate-hysses-node, westgate-the-underground-node, westgate-node-2-31, westgate-node-2-34
 level=2</desc>
@@ -1743,12 +1710,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-34"
-       cx="-254.38153"
-       cy="436.09174"
+       cx="436.09174"
+       cy="254.38153"
        inkscape:label="westgate-node-2-34"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-0-3-7-3-6-3-49">adjacent=westgate-yves-rocher-node, westgate-bega-node, westgate-node-2-33, westgate-node-2-35
 level=2</desc>
@@ -1756,12 +1722,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-35"
-       cx="-295.74948"
-       cy="436.09174"
+       cx="436.09174"
+       cy="295.74948"
        inkscape:label="westgate-node-2-35"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6">adjacent=westgate-miniso-node, westgate-node-2-34, westgate-node-2-36
 level=2</desc>
@@ -1769,12 +1734,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-36"
-       cx="-336.55099"
-       cy="436.09174"
+       cx="436.09174"
+       cy="336.55099"
        inkscape:label="westgate-node-2-36"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9">adjacent=westgate-ncat-node, westgate-node-2-35, westgate-node-2-37
 level=2</desc>
@@ -1782,12 +1746,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-37"
-       cx="-373.16562"
-       cy="436.09174"
+       cx="436.09174"
+       cy="373.16562"
        inkscape:label="westgate-node-2-37"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4">adjacent=westgate-osmose-node, westgate-curry-times-node, westgate-node-2-36, westgate-node-2-38
 level=2</desc>
@@ -1795,12 +1758,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-38"
-       cx="-430.97067"
-       cy="436.09174"
+       cx="436.09174"
+       cy="430.97067"
        inkscape:label="westgate-node-2-38"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-9">adjacent=westgate-pop-mart-node, westgate-node-2-37, westgate-node-2-39
 level=2</desc>
@@ -1808,12 +1770,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-39"
-       cx="-481.01004"
-       cy="436.09174"
+       cx="436.09174"
+       cy="481.01004"
        inkscape:label="westgate-node-2-39"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-9-95">adjacent=westgate-thefaceshop-node, westgate-menya-musashi-node, westgate-node-2-38, westgate-node-2-40
 level=2</desc>
@@ -1821,12 +1782,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-40"
-       cx="-519.57983"
-       cy="436.09174"
+       cx="436.09174"
+       cy="519.57983"
        inkscape:label="westgate-node-2-40"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-9-95-5">adjacent=westgate-typo-node, westgate-node-2-39, westgate-node-2-41
 level=2</desc>
@@ -1834,12 +1794,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-41"
-       cx="-534.09961"
-       cy="436.09174"
+       cx="436.09174"
+       cy="534.09961"
        inkscape:label="westgate-node-2-41"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-9-95-5-3">adjacent=westgate-honolulu-cafe-node, westgate-node-2-40, westgate-node-2-42
 level=2</desc>
@@ -1847,12 +1806,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-honolulu-cafe-node"
-       cx="-534.09961"
-       cy="511.6557"
+       cx="511.6557"
+       cy="534.09961"
        inkscape:label="westgate-honolulu-cafe-node"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-9-95-5-3-9">adjacent=westgate-node-2-41
 level=2</desc>
@@ -1860,12 +1818,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-42"
-       cx="-558.29114"
-       cy="436.09174"
+       cx="436.09174"
+       cy="558.29114"
        inkscape:label="westgate-node-2-42"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-9-95-5-3-8">adjacent=westgate-fancl-node, westgate-souperstar-node, westgate-node-2-41, westgate-node-2-43
 level=2</desc>
@@ -1873,12 +1830,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-43"
-       cx="-618.35718"
-       cy="436.09174"
+       cx="436.09174"
+       cy="618.35718"
        inkscape:label="westgate-node-2-43"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-9-95-5-3-8-2">adjacent=westgate-jinjja-chicken-node, westgate-node-2-42, westgate-node-2-44
 level=2</desc>
@@ -1886,12 +1842,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-45"
-       cx="-688.73792"
-       cy="436.09174"
+       cx="436.09174"
+       cy="688.73792"
        inkscape:label="westgate-node-2-45"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-9-95-5-3-8-2-8">adjacent=westgate-starbucks-node, westgate-node-2-44, westgate-node-2-46
 level=2</desc>
@@ -1899,12 +1854,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-44"
-       cx="-653.54755"
-       cy="436.09174"
+       cx="436.09174"
+       cy="653.54755"
        inkscape:label="westgate-node-2-44"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-9-95-5-3-8-2-8-4">adjacent=westgate-node-2-43, westgate-node-2-45, westgate-node-2-47
 level=2</desc>
@@ -1912,12 +1866,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-47"
-       cx="-653.54755"
-       cy="377.63968"
+       cx="377.63968"
+       cy="653.54755"
        inkscape:label="westgate-node-2-47"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-9-95-5-3-8-2-8-4-1">adjacent=westgate-decathlon-node, westgate-node-2-44, westgate-node-2-48
 level=2</desc>
@@ -1925,12 +1878,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-48"
-       cx="-653.54755"
-       cy="328.76321"
+       cx="328.76321"
+       cy="653.54755"
        inkscape:label="westgate-node-2-48"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-9-95-5-3-8-2-8-4-1-0">adjacent=westgate-coffesmith-node, westgate-node-2-47, westgate-node-2-49, westgate-elevator-node-2-2
 level=2</desc>
@@ -1938,12 +1890,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-49"
-       cx="-653.54755"
-       cy="281.89246"
+       cx="281.89246"
+       cy="653.54755"
        inkscape:label="westgate-node-2-49"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-9-95-5-3-8-2-8-4-1-0-1">adjacent=westgate-lady-m-confections-node, westgate-node-2-48, westgate-node-2-50
 level=2</desc>
@@ -1951,12 +1902,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-50"
-       cx="-653.54755"
-       cy="261.45874"
+       cx="261.45874"
+       cy="653.54755"
        inkscape:label="westgate-node-2-50"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-9-95-5-3-8-2-8-4-1-0-1-2">adjacent=westgate-toast-box-node, westgate-node-2-49, westgate-node-2-2
 level=2</desc>
@@ -1964,12 +1914,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-toast-box-node"
-       cx="-705.92163"
-       cy="261.45874"
+       cx="261.45874"
+       cy="705.92163"
        inkscape:label="westgate-toast-box-node"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-9-95-5-3-8-2-8-4-1-0-1-2-5">adjacent=westgate-node-2-50
 level=2</desc>
@@ -1977,12 +1926,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-lady-m-confections-node"
-       cx="-601.50311"
-       cy="281.89246"
+       cx="281.89246"
+       cy="601.50311"
        inkscape:label="westgate-lady-m-confections-node"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-9-95-5-3-8-2-8-4-1-0-1-9">adjacent=westgate-node-2-49
 level=2</desc>
@@ -1990,12 +1938,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-coffesmith-node"
-       cx="-601.50311"
-       cy="328.76321"
+       cx="328.76321"
+       cy="601.50311"
        inkscape:label="westgate-coffesmith-node"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-9-95-5-3-8-2-8-4-1-0-6">adjacent=westgate-node-2-48
 level=2</desc>
@@ -2003,12 +1950,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-decathlon-node"
-       cx="-601.50311"
-       cy="377.63968"
+       cx="377.63968"
+       cy="601.50311"
        inkscape:label="westgate-decathlon-node"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-9-95-5-3-8-2-8-4-1-7">adjacent=westgate-node-2-47
 level=2</desc>
@@ -2016,12 +1962,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-46"
-       cx="-688.73792"
-       cy="416.38879"
+       cx="416.38879"
+       cy="688.73792"
        inkscape:label="westgate-node-2-46"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-9-95-5-3-8-2-8-9">adjacent=westgate-breadtalk-cafe-node, westgate-node-2-45
 level=2</desc>
@@ -2029,12 +1974,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-breadtalk-cafe-node"
-       cx="-707.10779"
-       cy="416.38879"
+       cx="416.38879"
+       cy="707.10779"
        inkscape:label="westgate-breadtalk-cafe-node"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-9-95-5-3-8-2-8-9-9">adjacent=westgate-node-2-46
 level=2</desc>
@@ -2042,12 +1986,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-starbucks-node"
-       cx="-688.73792"
-       cy="482.74664"
+       cx="482.74664"
+       cy="688.73792"
        inkscape:label="westgate-starbucks-node"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-9-95-5-3-8-2-8-8">adjacent=westgate-node-2-45
 level=2</desc>
@@ -2055,12 +1998,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-jinjja-chicken-node"
-       cx="-618.35718"
-       cy="482.74664"
+       cx="482.74664"
+       cy="618.35718"
        inkscape:label="westgate-jinjja-chicken-node"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-9-95-5-3-8-2-7">adjacent=westgate-node-2-43
 level=2</desc>
@@ -2068,12 +2010,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-souperstar-node"
-       cx="-558.29114"
-       cy="480.72528"
+       cx="480.72528"
+       cy="558.29114"
        inkscape:label="westgate-souperstar-node"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-9-95-5-3-8-5">adjacent=westgate-node-2-42
 level=2</desc>
@@ -2081,12 +2022,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-fancl-node"
-       cx="-558.29114"
-       cy="404.14648"
+       cx="404.14648"
+       cy="558.29114"
        inkscape:label="westgate-fancl-node"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-9-95-5-3-8-5-6">adjacent=westgate-node-2-42
 level=2</desc>
@@ -2094,12 +2034,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-typo-node"
-       cx="-519.57983"
-       cy="404.14648"
+       cx="404.14648"
+       cy="519.57983"
        inkscape:label="westgate-typo-node"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-9-95-5-5">adjacent=westgate-node-2-40
 level=2</desc>
@@ -2107,12 +2046,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-thefaceshop-node"
-       cx="-481.01004"
-       cy="403.77936"
+       cx="403.77936"
+       cy="481.01004"
        inkscape:label="westgate-thefaceshop-node"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-9-95-0">adjacent=westgate-node-2-39
 level=2</desc>
@@ -2120,12 +2058,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-menya-musashi-node"
-       cx="-481.01004"
-       cy="511.6557"
+       cx="511.6557"
+       cy="481.01004"
        inkscape:label="westgate-menya-musashi-node"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-9-95-0-7">adjacent=westgate-node-2-39
 level=2</desc>
@@ -2133,12 +2070,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-pop-mart-node"
-       cx="-430.44821"
-       cy="403.44986"
+       cx="403.44986"
+       cy="430.44821"
        inkscape:label="westgate-pop-mart-node"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-9-9">adjacent=westgate-node-2-38
 level=2</desc>
@@ -2146,12 +2082,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-curry-times-node"
-       cx="-373.16562"
-       cy="496.56262"
+       cx="496.56262"
+       cy="373.16562"
        inkscape:label="westgate-curry-times-node"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-5">adjacent=westgate-node-2-37
 level=2</desc>
@@ -2159,12 +2094,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-osmose-node"
-       cx="-373.16562"
-       cy="403.67905"
+       cx="403.67905"
+       cy="373.16562"
        inkscape:label="westgate-osmose-node"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-4-5-5">adjacent=westgate-node-2-37
 level=2</desc>
@@ -2172,12 +2106,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-ncat-node"
-       cx="-336.55099"
-       cy="403.67905"
+       cx="403.67905"
+       cy="336.55099"
        inkscape:label="westgate-ncat-node"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-9-7">adjacent=westgate-node-2-36
 level=2</desc>
@@ -2185,12 +2118,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-miniso-node"
-       cx="-295.74948"
-       cy="469.99713"
+       cx="469.99713"
+       cy="295.74948"
        inkscape:label="westgate-miniso-node"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-0-3-7-3-6-3-49-6-8">adjacent=westgate-node-2-35
 level=2</desc>
@@ -2198,12 +2130,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-yves-rocher-node"
-       cx="-254.38153"
-       cy="418.3591"
+       cx="418.3591"
+       cy="254.38153"
        inkscape:label="westgate-yves-rocher-node"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-0-3-7-3-6-3-49-1">adjacent=westgate-node-2-34
 level=2</desc>
@@ -2211,12 +2142,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-bega-node"
-       cx="-254.38153"
-       cy="469.2583"
+       cx="469.2583"
+       cy="254.38153"
        inkscape:label="westgate-bega-node"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-0-3-7-3-6-3-49-1-1">adjacent=westgate-node-2-34
 level=2</desc>
@@ -2224,12 +2154,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-hysses-node"
-       cx="-220.48016"
-       cy="418.3591"
+       cx="418.3591"
+       cy="220.48016"
        inkscape:label="westgate-hysses-node"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-0-3-7-3-6-3-4">adjacent=westgate-node-2-33
 level=2</desc>
@@ -2237,12 +2166,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-the-underground-node"
-       cx="-220.48016"
-       cy="469.2583"
+       cx="469.2583"
+       cy="220.48016"
        inkscape:label="westgate-the-underground-node"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-0-3-7-3-6-3-6">adjacent=westgate-node-2-33
 level=2</desc>
@@ -2250,12 +2178,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-32"
-       cx="-107.89337"
-       cy="436.20782"
+       cx="436.20782"
+       cy="107.89337"
        inkscape:label="westgate-node-2-32"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-0-3-7-3-6-9">adjacent=westgate-paradise-dynasty-node, westgate-node-2-25, westgate-node-2-31
 level=2</desc>
@@ -2263,12 +2190,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-paradise-dynasty-node"
-       cx="-106.26654"
-       cy="481.03198"
+       cx="481.03198"
+       cy="106.26654"
        inkscape:label="westgate-paradise-dynasty-node"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-0-3-7-3-6-9-2">adjacent=westgate-node-2-32
 level=2</desc>
@@ -2276,12 +2202,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-17"
-       cx="-221.53796"
-       cy="307.31094"
+       cx="307.31094"
+       cy="221.53796"
        inkscape:label="westgate-node-2-17"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-9">adjacent=westgate-superga-node, westgate-node-2-16, westgate-node-2-18
 level=2</desc>
@@ -2289,12 +2214,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-18"
-       cx="-202.5719"
-       cy="317.27725"
+       cx="317.27725"
+       cy="202.5719"
        inkscape:label="westgate-node-2-18"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-9-6">adjacent=westgate-node-2-17, westgate-node-2-19, westgate-node-2-22
 level=2</desc>
@@ -2302,12 +2226,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-22"
-       cx="-184.98047"
-       cy="326.75577"
+       cx="326.75577"
+       cy="184.98047"
        inkscape:label="westgate-node-2-22"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-9-6-8">adjacent=westgate-myeureka-node, westgate-laneige-node, westgate-node-2-18, westgate-node-2-23
 level=2</desc>
@@ -2315,12 +2238,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-23"
-       cx="-147.93231"
-       cy="348.8161"
+       cx="348.8161"
+       cy="147.93231"
        inkscape:label="westgate-node-2-23"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-9-6-8-52">adjacent=westgate-kaleido-node, westgate-node-2-22, westgate-node-2-24, westgate-node-2-30
 level=2</desc>
@@ -2328,12 +2250,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-24"
-       cx="-107.89337"
-       cy="370.69644"
+       cx="370.69644"
+       cy="107.89337"
        inkscape:label="westgate-node-2-24"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-9-6-8-52-9">adjacent=westgate-lenskart-node, westgate-node-2-23, westgate-node-2-25, westgate-node-2-30
 level=2</desc>
@@ -2341,12 +2262,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-25"
-       cx="-107.89337"
-       cy="412.01096"
+       cx="412.01096"
+       cy="107.89337"
        inkscape:label="westgate-node-2-25"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-9-6-8-52-9-73">adjacent=westgate-node-2-24, westgate-node-2-26, westgate-node-2-30, westgate-node-2-32
 level=2</desc>
@@ -2354,12 +2274,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-26"
-       cx="-87.800171"
-       cy="411.89487"
+       cx="411.89487"
+       cy="87.800171"
        inkscape:label="westgate-node-2-26"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-9-6-8-52-9-73-8">adjacent=westgate-node-2-25, westgate-node-2-27, westgate-elevator-node-2-1
 level=2</desc>
@@ -2367,12 +2286,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-27"
-       cx="-60.712643"
-       cy="411.89487"
+       cx="411.89487"
+       cy="60.712643"
        inkscape:label="westgate-node-2-27"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-9-6-8-52-9-73-8-92">adjacent=westgate-xpressflowercom-node, westgate-canton-paradise-node, westgate-node-2-26
 level=2</desc>
@@ -2380,12 +2298,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-canton-paradise-node"
-       cx="-60.712643"
-       cy="451.27942"
+       cx="451.27942"
+       cy="60.712643"
        inkscape:label="westgate-canton-paradise-node"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-9-6-8-52-9-73-8-92-4">adjacent=westgate-node-2-27
 level=2</desc>
@@ -2393,12 +2310,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-xpressflowercom-node"
-       cx="-46.783325"
-       cy="411.89487"
+       cx="411.89487"
+       cy="46.783325"
        inkscape:label="westgate-xpressflowercom-node"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-9-6-8-52-9-73-8-9">adjacent=westgate-node-2-27
 level=2</desc>
@@ -2406,12 +2322,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-lenskart-node"
-       cx="-103.24652"
-       cy="362.21597"
+       cx="362.21597"
+       cy="103.24652"
        inkscape:label="westgate-lenskart-node"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-9-6-8-52-9-7">adjacent=westgate-node-2-24
 level=2</desc>
@@ -2419,12 +2334,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-kaleido-node"
-       cx="-141.99701"
-       cy="338.28156"
+       cx="338.28156"
+       cy="141.99701"
        inkscape:label="westgate-kaleido-node"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-9-6-8-52-7">adjacent=westgate-node-2-23
 level=2</desc>
@@ -2432,12 +2346,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-laneige-node"
-       cx="-179.47833"
-       cy="315.11423"
+       cx="315.11423"
+       cy="179.47833"
        inkscape:label="westgate-laneige-node"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-9-6-8-5">adjacent=westgate-node-2-22
 level=2</desc>
@@ -2445,12 +2358,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-myeureka-node"
-       cx="-191.02753"
-       cy="338.52753"
+       cx="338.52753"
+       cy="191.02753"
        inkscape:label="westgate-myeureka-node"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-9-6-8-5-4">adjacent=westgate-node-2-22
 level=2</desc>
@@ -2458,12 +2370,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-19"
-       cx="-157.94452"
-       cy="242.16486"
+       cx="242.16486"
+       cy="157.94452"
        inkscape:label="westgate-node-2-19"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-9-6-6">adjacent=westgate-eagle-eye-centre-node, westgate-adrift-anapauo-massage-and-spa-node, westgate-node-2-18, westgate-node-2-20
 level=2</desc>
@@ -2471,12 +2382,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-20"
-       cx="-141.10864"
-       cy="215.40903"
+       cx="215.40903"
+       cy="141.10864"
        inkscape:label="westgate-node-2-20"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-9-6-6-0">adjacent=westgate-singapore-post-node, westgate-node-2-19, westgate-node-2-21
 level=2</desc>
@@ -2484,12 +2394,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-node-2-21"
-       cx="-127.10339"
-       cy="188.5253"
+       cx="188.5253"
+       cy="127.10339"
        inkscape:label="westgate-node-2-21"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-9-6-6-0-6">adjacent=westgate-income-node, westgate-node-2-20
 level=2</desc>
@@ -2497,12 +2406,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-income-node"
-       cx="-120.16125"
-       cy="191.30145"
+       cx="191.30145"
+       cy="120.16125"
        inkscape:label="westgate-income-node"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-9-6-6-0-6-5">adjacent=westgate-node-2-21
 level=2</desc>
@@ -2510,12 +2418,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-singapore-post-node"
-       cx="-135.0448"
-       cy="218.04922"
+       cx="218.04922"
+       cy="135.0448"
        inkscape:label="westgate-singapore-post-node"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-9-6-6-0-3">adjacent=westgate-node-2-20
 level=2</desc>
@@ -2523,12 +2430,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-adrift-anapauo-massage-and-spa-node"
-       cx="-152.07074"
-       cy="245.41525"
+       cx="245.41525"
+       cy="152.07074"
        inkscape:label="westgate-adrift-anapauo-massage-and-spa-node"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-9-6-6-6">adjacent=westgate-node-2-19
 level=2</desc>
@@ -2536,12 +2442,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-eagle-eye-centre-node"
-       cx="-165.89363"
-       cy="237.50009"
+       cx="237.50009"
+       cy="165.89363"
        inkscape:label="westgate-eagle-eye-centre-node"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-9-6-6-9">adjacent=westgate-node-2-19
 level=2</desc>
@@ -2549,12 +2454,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-oro-gold-cosmetics-node"
-       cx="-254.38153"
-       cy="361.52069"
+       cx="361.52069"
+       cy="254.38153"
        inkscape:label="westgate-oro-gold-cosmetics-node"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-1">adjacent=westgate-node-2-28
 level=2</desc>
@@ -2562,12 +2466,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-superga-node"
-       cx="-214.83606"
-       cy="295.5477"
+       cx="295.5477"
+       cy="214.83606"
        inkscape:label="westgate-superga-node"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-0-1-0">adjacent=westgate-node-2-17
 level=2</desc>
@@ -2575,12 +2478,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-glimpse-node"
-       cx="-289.78351"
-       cy="339.99332"
+       cx="339.99332"
+       cy="289.78351"
        inkscape:label="westgate-glimpse-node"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-8">adjacent=westgate-node-2-15
 level=2</desc>
@@ -2588,12 +2490,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-owndays-node"
-       cx="-251.79236"
-       cy="272.81134"
+       cx="272.81134"
+       cy="251.79236"
        inkscape:label="westgate-owndays-node"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-3-8-6">adjacent=westgate-node-2-15
 level=2</desc>
@@ -2601,12 +2502,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-kimoj-node"
-       cx="-326.50262"
-       cy="317.8616"
+       cx="317.8616"
+       cy="326.50262"
        inkscape:label="westgate-kimoj-node"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-7">adjacent= westgate-node-2-14
 level=2</desc>
@@ -2614,12 +2514,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-recoil-node"
-       cx="-286.20505"
-       cy="250.05908"
+       cx="250.05908"
+       cy="286.20505"
        inkscape:label="westgate-recoil-node"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-7-7-7">adjacent= westgate-node-2-14
 level=2</desc>
@@ -2627,12 +2526,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="westgate-the-wallet-shop-node"
-       cx="-348.32947"
-       cy="305.21692"
+       cx="305.21692"
+       cy="348.32947"
        inkscape:label="westgate-the-wallet-shop-node"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc7880-3-9">adjacent=westgate-node-2-13
 level=2</desc>
@@ -2640,12 +2538,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;paint-order:stroke fill markers"
        id="westgate-elevator-node-2-1"
-       cx="-87.800171"
-       cy="394.10721"
+       cx="394.10721"
+       cy="87.800171"
        inkscape:label="westgate-elevator-node-2-1"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc8289">adjacent=westgate-node-2-26, westgate-elevator-node-1-1
 level=2</desc>
@@ -2653,12 +2550,11 @@ level=2</desc>
     <ellipse
        style="display:inline;fill:none;stroke:none;stroke-width:0.0610304;stroke-linejoin:bevel;stroke-dasharray:none;paint-order:stroke fill markers"
        id="westgate-escalator-node-2-3"
-       cx="-162.87518"
-       cy="450.76318"
+       cx="450.76318"
+       cy="162.87518"
        inkscape:label="westgate-escalator-node-2-3"
        rx="1.6268204"
-       ry="1.6252006"
-       transform="rotate(-90)">
+       ry="1.6252006">
       <desc
          id="desc8293">adjacent=westgate-node-1-26, westgate-escalator-node-1-3
 level=2</desc>

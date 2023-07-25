@@ -1,7 +1,7 @@
 import { createContext, useState, useEffect, useMemo } from "react";
+import { Alert } from "react-native";
 import PropTypes from "prop-types";
-import { collection, getDocs } from "firebase/firestore";
-import { db } from "../../../firebaseConfig";
+import fetchMalls from "../../services/fetchMalls";
 
 export const MallContext = createContext();
 
@@ -10,14 +10,18 @@ export function MallProvider({ children }) {
   const [currentMall, setCurrentMall] = useState(null);
 
   useEffect(() => {
-    const fetchMalls = async () => {
-      const mallCollection = collection(db, "malls");
-      const mallSnapshot = await getDocs(mallCollection);
-      const mallList = mallSnapshot.docs.map((mall) => mall.id);
-      setMalls(mallList);
-      setCurrentMall(mallList[0]); // Set the first mall as the current mall
+    const initializeMalls = async () => {
+      try {
+        const mallList = await fetchMalls();
+        setMalls(mallList);
+        setCurrentMall(mallList[0]); // Set the first mall as the current mall
+      } catch (error) {
+        Alert.alert("Error", error.message, [{ text: "OK" }], {
+          cancelable: false,
+        });
+      }
     };
-    fetchMalls();
+    initializeMalls();
   }, []);
   const value = useMemo(
     () => ({ malls, currentMall, setCurrentMall }),

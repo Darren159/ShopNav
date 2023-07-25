@@ -1,6 +1,7 @@
 import { Text, View, FlatList, Image, StyleSheet } from "react-native";
 import PropTypes from "prop-types";
 import { Link } from "expo-router";
+import { AntDesign } from "@expo/vector-icons";
 
 export default function StoreList({ data }) {
   return (
@@ -12,18 +13,29 @@ export default function StoreList({ data }) {
           <Link
             href={{
               pathname: "/storeDetails",
-              params: { locName: item.id },
+              params: {
+                locName: item.id,
+                promoInfo: item.promo ? item.promo : "",
+                storeName: item.name,
+              },
             }}
           >
             <View style={styles.innerContainer}>
-              <Image
-                source={{
-                  uri:
-                    item.logo ||
-                    "https://frameandkeyrealestate.files.wordpress.com/2019/04/clock-icon.png",
-                }}
-                style={styles.image}
-              />
+              {item.logo ? (
+                <Image
+                  source={{
+                    uri: item.logo,
+                  }}
+                  style={styles.image}
+                />
+              ) : (
+                <AntDesign
+                  name="clockcircleo"
+                  size={36}
+                  color="black"
+                  style={styles.clock}
+                />
+              )}
               <Text style={styles.textName}>{item.name}</Text>
               {/* {console.log(JSON.stringify(item))} */}
             </View>
@@ -49,11 +61,12 @@ const styles = StyleSheet.create({
     fontWeight: "600",
   },
   image: {
-    borderWidth: 1,
-    borderColor: "black",
     width: 50,
     height: 50,
     resizeMode: "contain",
+    marginRight: 10,
+  },
+  clock: {
     marginRight: 10,
   },
 });
