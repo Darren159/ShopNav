@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1690311398770" clover="3.2.0">
-  <project timestamp="1690311398770" name="All files">
-    <metrics statements="153" coveredstatements="117" conditionals="22" coveredconditionals="15" methods="57" coveredmethods="39" elements="232" coveredelements="171" complexity="0" loc="153" ncloc="153" packages="3" files="15" classes="15"/>
+<coverage generated="1690313696511" clover="3.2.0">
+  <project timestamp="1690313696511" name="All files">
+    <metrics statements="189" coveredstatements="153" conditionals="32" coveredconditionals="24" methods="63" coveredmethods="46" elements="284" coveredelements="223" complexity="0" loc="189" ncloc="189" packages="3" files="17" classes="17"/>
     <package name="app.context">
       <metrics statements="28" coveredstatements="4" conditionals="2" coveredconditionals="0" methods="10" coveredmethods="0"/>
       <file name="auth.jsx" path="C:\Users\Darre\Projects\ShopNav\src\app\context\auth.jsx">
@@ -40,7 +40,7 @@
       </file>
     </package>
     <package name="components">
-      <metrics statements="123" coveredstatements="113" conditionals="20" coveredconditionals="15" methods="46" coveredmethods="39"/>
+      <metrics statements="123" coveredstatements="114" conditionals="20" coveredconditionals="15" methods="46" coveredmethods="40"/>
       <file name="Floorplan.jsx" path="C:\Users\Darre\Projects\ShopNav\src\components\Floorplan.jsx">
         <metrics statements="45" coveredstatements="37" conditionals="8" coveredconditionals="5" methods="15" coveredmethods="10"/>
         <line num="15" count="19" type="stmt"/>
@@ -98,7 +98,7 @@
         <line num="37" count="1" type="stmt"/>
       </file>
       <file name="LevelButtons.jsx" path="C:\Users\Darre\Projects\ShopNav\src\components\LevelButtons.jsx">
-        <metrics statements="11" coveredstatements="10" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="4"/>
+        <metrics statements="11" coveredstatements="11" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="5"/>
         <line num="11" count="6" type="stmt"/>
         <line num="13" count="6" type="stmt"/>
         <line num="14" count="3" type="stmt"/>
@@ -107,7 +107,7 @@
         <line num="17" count="3" type="stmt"/>
         <line num="21" count="6" type="stmt"/>
         <line num="24" count="6" type="stmt"/>
-        <line num="30" count="0" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
         <line num="39" count="1" type="stmt"/>
         <line num="65" count="1" type="stmt"/>
       </file>
@@ -202,11 +202,53 @@
       </file>
     </package>
     <package name="utils">
-      <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <metrics statements="38" coveredstatements="35" conditionals="10" coveredconditionals="9" methods="7" coveredmethods="6"/>
+      <file name="dijkstra.js" path="C:\Users\Darre\Projects\ShopNav\src\utils\dijkstra.js">
+        <metrics statements="32" coveredstatements="31" conditionals="10" coveredconditionals="9" methods="4" coveredmethods="4"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="10" count="6" type="stmt"/>
+        <line num="11" count="6" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="16" count="6" type="stmt"/>
+        <line num="17" count="7" type="cond" truecount="1" falsecount="1"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="20" count="7" type="stmt"/>
+        <line num="22" count="6" type="cond" truecount="4" falsecount="0"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="25" count="2" type="stmt"/>
+        <line num="26" count="2" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="31" count="5" type="stmt"/>
+        <line num="32" count="12" type="stmt"/>
+        <line num="34" count="5" type="stmt"/>
+        <line num="35" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="37" count="5" type="stmt"/>
+        <line num="42" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="43" count="3" type="stmt"/>
+        <line num="44" count="3" type="stmt"/>
+        <line num="49" count="1" type="stmt"/>
+        <line num="54" count="5" type="stmt"/>
+        <line num="55" count="5" type="stmt"/>
+        <line num="56" count="5" type="stmt"/>
+      </file>
       <file name="handleImage.js" path="C:\Users\Darre\Projects\ShopNav\src\utils\handleImage.js">
         <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
+      </file>
+      <file name="handleSearch.js" path="C:\Users\Darre\Projects\ShopNav\src\utils\handleSearch.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="15" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
       </file>
     </package>
   </project>
