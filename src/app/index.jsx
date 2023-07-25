@@ -14,7 +14,7 @@ import { MallContext } from "./context/mallProvider";
 import dijkstra from "../utils/dijkstra";
 import fetchNodes from "../services/fetchNodes";
 import StoreInput from "../components/StoreInput";
-import useStoreInput from "../hooks/useStoreInput";
+import useNodeInput from "../hooks/useNodeInput";
 import Floorplan from "../components/Floorplan";
 import LevelButtons from "../components/LevelButtons";
 
@@ -22,8 +22,8 @@ export default function Directory() {
   const { currentMall } = useContext(MallContext);
   const [path, setPath] = useState([]);
   const [currentLevel, setCurrentLevel] = useState(1);
-  const startStore = useStoreInput(currentMall);
-  const endStore = useStoreInput(currentMall);
+  const startStore = useNodeInput(currentMall);
+  const endStore = useNodeInput(currentMall);
   const [graph, setGraph] = useState({});
   const [isLoading, setIsLoading] = useState(false);
 

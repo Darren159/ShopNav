@@ -5,7 +5,12 @@ import { functions } from "../../firebaseConfig";
 
 export default function useUploadSvg(currentMall, svgUri, filename) {
   const uploadSvg = async () => {
-    const svgString = await FileSystem.readAsStringAsync(svgUri);
+    let svgString;
+    try {
+      svgString = await FileSystem.readAsStringAsync(svgUri);
+    } catch (error) {
+      throw new Error("Failed to read file. Please try again.");
+    }
 
     const uploadSVGData = httpsCallable(functions, "uploadSVGData");
     const svgResponse = await uploadSVGData({
@@ -13,7 +18,9 @@ export default function useUploadSvg(currentMall, svgUri, filename) {
       mall: currentMall,
     });
     if (!svgResponse.data.success) {
-      throw new Error(svgResponse.data.message);
+      throw new Error(
+        "Failed to Upload SVG Data. Please check that you have the correct file."
+      );
     }
 
     const uploadMallLayout = httpsCallable(functions, "uploadMallLayout");
@@ -23,7 +30,9 @@ export default function useUploadSvg(currentMall, svgUri, filename) {
       filename,
     });
     if (!layoutResponse.data.success) {
-      throw new Error(layoutResponse.data.message);
+      throw new Error(
+        "Failed to Upload Mall Layout. Please check that you have the correct file"
+      );
     }
   };
   return uploadSvg;

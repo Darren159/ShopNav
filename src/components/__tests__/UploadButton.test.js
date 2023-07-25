@@ -1,22 +1,51 @@
-import { render, fireEvent } from "@testing-library/react-native";
-
+import { render, fireEvent, waitFor } from "@testing-library/react-native";
+import { Alert } from "react-native";
 import UploadButton from "../UploadButton";
 
+jest.spyOn(Alert, "alert");
+
 describe("<UploadButton />", () => {
-  it("renders correctly", () => {
+  it("renders correctly", async () => {
     const { getByText } = render(
       <UploadButton title="Test Button" onPress={() => {}} />
     );
-    expect(getByText("Test Button")).toBeTruthy();
+    await waitFor(() => {
+      expect(getByText("Test Button")).toBeTruthy();
+    });
   });
 
-  it("calls onPress function when pressed", () => {
+  it("calls onPress function when pressed", async () => {
     const onPressMock = jest.fn();
     const { getByText } = render(
       <UploadButton title="Test Button" onPress={onPressMock} />
     );
 
     fireEvent.press(getByText("Test Button"));
-    expect(onPressMock).toHaveBeenCalled();
+    await waitFor(() => {
+      expect(onPressMock).toHaveBeenCalled();
+    });
+  });
+
+  it("shows error alert on failed press", async () => {
+    const onPressMock = jest.fn(() => {
+      throw new Error("Test error");
+    });
+    const { getByText } = render(
+      <UploadButton title="Test Button" onPress={onPressMock} />
+    );
+
+    fireEvent.press(getByText("Test Button"));
+
+    await waitFor(() => {
+      expect(Alert.alert).toHaveBeenCalledWith(
+        "Error in Test Button",
+        "Test error",
+        [
+          {
+            text: "Ok",
+          },
+        ]
+      );
+    });
   });
 });

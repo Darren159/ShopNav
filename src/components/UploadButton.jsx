@@ -19,17 +19,11 @@ export default function UploadButton({ title, onPress }) {
       await onPress();
       Alert.alert("Success", "Upload successful!");
     } catch (error) {
-      Alert.alert(
-        `Error in ${title}`,
-        error.message === "Invalid Store Name"
-          ? error.message
-          : `Failed to ${title}`,
-        [
-          {
-            text: "Ok",
-          },
-        ]
-      );
+      Alert.alert(`Error in ${title}`, error.message, [
+        {
+          text: "Ok",
+        },
+      ]);
     } finally {
       setIsLoading(false);
     }

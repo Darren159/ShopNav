@@ -1,7 +1,7 @@
 import { httpsCallable } from "firebase/functions";
 import { functions } from "../../firebaseConfig";
 
-export default function useUploadStore(currentMall, storeName, promoInfo) {
+export default function useUploadStore(currentMall, promoInfo) {
   const uploadStore = async (storeDocId) => {
     const uploadStoreData = httpsCallable(functions, "uploadStoreData");
     const storeResponse = await uploadStoreData({
@@ -10,7 +10,9 @@ export default function useUploadStore(currentMall, storeName, promoInfo) {
       promo: promoInfo,
     });
     if (!storeResponse.data.success) {
-      throw new Error(storeResponse.data.message);
+      throw new Error(
+        "Failed to Upload Store Data. Please check your internet connection"
+      );
     }
   };
 

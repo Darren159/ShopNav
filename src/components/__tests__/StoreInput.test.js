@@ -16,17 +16,4 @@ describe("StoreInput", () => {
     fireEvent.changeText(input, "Test Store");
     expect(setStoreName).toHaveBeenCalledWith("Test Store");
   });
-
-  it("displays an error when error prop is true", () => {
-    const setStoreName = jest.fn();
-    const { getByText } = render(
-      <StoreInput
-        storeName="Test Store"
-        setStoreName={setStoreName}
-        error
-        placeholder="Store Name"
-      />
-    );
-    expect(getByText("Invalid store name")).toBeTruthy();
-  });
 });

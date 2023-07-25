@@ -12,15 +12,15 @@ import SelectButton from "../../components/SelectButton";
 
 export default function DeveloperAccess() {
   const { currentMall } = useContext(MallContext);
-  const { storeName, setStoreName, handleStore } = useStoreInput(currentMall);
   const [promoInfo, setPromoInfo] = useState("");
   const { selectFile, svgUri, filename } = useSelectFile(currentMall);
+  const storeName = useStoreInput(currentMall);
   const uploadSvg = useUploadSvg(currentMall, svgUri, filename);
   const uploadStore = useUploadStore(currentMall, promoInfo);
 
   const handleUploadStore = async () => {
     // Fetch the store
-    const storeDocId = await handleStore();
+    const storeDocId = await storeName.handleStore();
 
     // If store exists, upload the store info
     await uploadStore(storeDocId);
@@ -47,8 +47,8 @@ export default function DeveloperAccess() {
             <Text style={styles.title}>Store Info</Text>
             <View style={{ padding: 10 }}>
               <StoreInput
-                storeName={storeName}
-                setStoreName={setStoreName}
+                storeName={storeName.storeName}
+                setStoreName={storeName.setStoreName}
                 placeholder="Enter Store"
               />
             </View>

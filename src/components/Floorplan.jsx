@@ -8,11 +8,11 @@ import Animated, {
   useAnimatedStyle,
 } from "react-native-reanimated";
 import { router } from "expo-router";
-import fetchSVGUrl from "../services/fetchSVGUrl";
+import fetchSvgUrl from "../services/fetchSvgUrl";
 import fetchStoreList from "../services/fetchStoreList";
 
 export default function Floorplan({ currentMall, currentLevel, path, graph }) {
-  const [svgUrl, setSVGUrl] = useState(null);
+  const [svgUrl, setSvgUrl] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [reload, setReload] = useState(false);
   const [storeList, setStoreList] = useState([]);
@@ -22,8 +22,8 @@ export default function Floorplan({ currentMall, currentLevel, path, graph }) {
       try {
         if (currentMall) {
           setIsLoading(true);
-          const url = await fetchSVGUrl(currentMall, currentLevel);
-          setSVGUrl(url);
+          const url = await fetchSvgUrl(currentMall, currentLevel);
+          setSvgUrl(url);
           const stores = await fetchStoreList(currentMall);
           setStoreList(stores);
         }
@@ -95,13 +95,7 @@ export default function Floorplan({ currentMall, currentLevel, path, graph }) {
   ) : (
     <GestureDetector gesture={composed}>
       <Animated.View style={animatedStyle}>
-        <SvgUri
-          key={currentLevel}
-          uri={svgUrl}
-          width="100%"
-          height="100%"
-          testID="svg-image"
-        />
+        <SvgUri key={currentLevel} uri={svgUrl} width="100%" height="100%" />
         <Svg
           style={styles.overlay}
           height="100%"
