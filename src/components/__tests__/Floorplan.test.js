@@ -110,9 +110,7 @@ describe("Floorplan", () => {
     ]);
 
     // Call the 'onPress' function for the 'Reload' button
-    await waitFor(async () => {
-      reloadButton.onPress();
-    });
+    await waitFor(() => reloadButton.onPress());
 
     // Check that the component is re-rendered after reload
     rerender(
@@ -125,5 +123,33 @@ describe("Floorplan", () => {
     );
 
     expect(fetchSVGUrl).toHaveBeenCalledTimes(2);
+  });
+
+  it("shows a loading indicator while fetching", async () => {
+    fetchSVGUrl.mockResolvedValue("http://example.com/test.svg");
+    fetchStoreList.mockResolvedValue([
+      {
+        id: "1",
+        level: 1,
+        coordinates: "M0,0 L100,100",
+        name: "Store 1",
+        promo: null,
+      },
+    ]);
+
+    const { getByTestId, queryByTestId } = render(
+      <Floorplan
+        currentMall={currentMall}
+        currentLevel={currentLevel}
+        path={path}
+        graph={graph}
+      />
+    );
+
+    // The loading indicator should be in the document
+    expect(getByTestId("loading")).toBeTruthy();
+
+    // Expect that the loading indicator eventually is removed
+    await waitFor(() => expect(queryByTestId("loading")).toBeNull());
   });
 });

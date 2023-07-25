@@ -34,6 +34,7 @@ export default function UploadButton({ title, onPress }) {
       size="large"
       color="#5500dc"
       style={styles.loadingContainer}
+      testID="loading"
     />
   ) : (
     <TouchableOpacity onPress={handlePress}>

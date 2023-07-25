@@ -1,29 +1,39 @@
 import { useState, useContext } from "react";
 import { View, StyleSheet, TextInput, Text } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import * as DocumentPicker from "expo-document-picker";
 import { MallContext } from "../context/mallProvider";
 import StoreInput from "../../components/StoreInput";
 import UploadButton from "../../components/UploadButton";
-import useStoreInput from "../../hooks/useStoreInput";
-import useUploadSvg from "../../hooks/useUploadSvg";
-import useUploadStore from "../../hooks/useUploadStore";
-import useSelectFile from "../../hooks/useSelectFile";
-import SelectButton from "../../components/SelectButton";
+import uploadSvg from "../../services/uploadSvg";
+import SelectFile from "../../components/SelectFile";
+import uploadStore from "../../services/uploadStore";
+import fetchStoreId from "../../services/fetchStoreId";
 
 export default function DeveloperAccess() {
   const { currentMall } = useContext(MallContext);
   const [promoInfo, setPromoInfo] = useState("");
-  const { selectFile, svgUri, filename } = useSelectFile(currentMall);
-  const storeName = useStoreInput(currentMall);
-  const uploadSvg = useUploadSvg(currentMall, svgUri, filename);
-  const uploadStore = useUploadStore(currentMall, promoInfo);
+  const [storeName, setStoreName] = useState("");
+  const [filename, setFilename] = useState("");
+  const [svgUri, setSvgUri] = useState("");
+
+  const selectFile = async () => {
+    const result = await DocumentPicker.getDocumentAsync({
+      type: "image/svg+xml",
+      copyToCacheDirectory: true,
+    });
+    if (result.type !== "cancel") {
+      setFilename(result.assets[0].name);
+      setSvgUri(result.assets[0].uri);
+    }
+  };
 
   const handleUploadStore = async () => {
     // Fetch the store
-    const storeDocId = await storeName.handleStore();
+    const storeDocId = await fetchStoreId(currentMall, storeName);
 
     // If store exists, upload the store info
-    await uploadStore(storeDocId);
+    await uploadStore(currentMall, storeDocId, promoInfo);
   };
 
   return (
@@ -37,18 +47,21 @@ export default function DeveloperAccess() {
             </View>
 
             <View style={styles.button}>
-              <SelectButton title="Select SVG" onPress={selectFile} />
+              <SelectFile title="Select SVG" onPress={selectFile} />
             </View>
             <View style={styles.button}>
-              <UploadButton title="Upload SVG" onPress={uploadSvg} />
+              <UploadButton
+                title="Upload SVG"
+                onPress={() => uploadSvg(currentMall, svgUri, filename)}
+              />
             </View>
           </View>
           <View style={styles.container}>
             <Text style={styles.title}>Store Info</Text>
             <View style={{ padding: 10 }}>
               <StoreInput
-                storeName={storeName.storeName}
-                setStoreName={storeName.setStoreName}
+                storeName={storeName}
+                setStoreName={setStoreName}
                 placeholder="Enter Store"
               />
             </View>

@@ -27,6 +27,7 @@ export default function StoreList({ data }) {
                     uri: item.logo,
                   }}
                   style={styles.image}
+                  testID={`logo-${item.id}`}
                 />
               ) : (
                 <AntDesign
@@ -34,10 +35,10 @@ export default function StoreList({ data }) {
                   size={36}
                   color="black"
                   style={styles.clock}
+                  testID={`default-logo-${item.id}`}
                 />
               )}
               <Text style={styles.textName}>{item.name}</Text>
-              {/* {console.log(JSON.stringify(item))} */}
             </View>
           </Link>
         </View>

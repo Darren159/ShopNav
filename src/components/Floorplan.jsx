@@ -91,6 +91,7 @@ export default function Floorplan({ currentMall, currentLevel, path, graph }) {
       size="large"
       color="#5500dc"
       style={styles.loadingContainer}
+      testID="loading"
     />
   ) : (
     <GestureDetector gesture={composed}>

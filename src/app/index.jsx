@@ -14,24 +14,24 @@ import { MallContext } from "./context/mallProvider";
 import dijkstra from "../utils/dijkstra";
 import fetchNodes from "../services/fetchNodes";
 import StoreInput from "../components/StoreInput";
-import useNodeInput from "../hooks/useNodeInput";
 import Floorplan from "../components/Floorplan";
 import LevelButtons from "../components/LevelButtons";
+import fetchNodeId from "../services/fetchNodeId";
 
 export default function Directory() {
   const { currentMall } = useContext(MallContext);
   const [path, setPath] = useState([]);
   const [currentLevel, setCurrentLevel] = useState(1);
-  const startStore = useNodeInput(currentMall);
-  const endStore = useNodeInput(currentMall);
+  const [startStoreName, setStartStoreName] = useState(""); // <-- add this line
+  const [endStoreName, setEndStoreName] = useState("");
   const [graph, setGraph] = useState({});
   const [isLoading, setIsLoading] = useState(false);
 
   const calculatePath = async () => {
     try {
       setIsLoading(true);
-      const startNodeId = await startStore.handleStore();
-      const endNodeId = await endStore.handleStore();
+      const startNodeId = await fetchNodeId(currentMall, startStoreName);
+      const endNodeId = await fetchNodeId(currentMall, endStoreName);
       const nodes = await fetchNodes(currentMall);
       setGraph(nodes);
       const shortestPath = dijkstra(nodes, startNodeId, endNodeId);
@@ -55,9 +55,8 @@ export default function Directory() {
           <View style={styles.inputContainer}>
             <StoreInput
               icon="circle"
-              storeName={startStore.storeName}
-              setStoreName={startStore.setStoreName}
-              error={startStore.storeError}
+              storeName={startStoreName}
+              setStoreName={setStartStoreName}
               placeholder="Enter starting point"
             />
             <Entypo
@@ -68,8 +67,8 @@ export default function Directory() {
             />
             <StoreInput
               icon="map-pin"
-              storeName={endStore.storeName}
-              setStoreName={endStore.setStoreName}
+              storeName={endStoreName}
+              setStoreName={setEndStoreName}
               placeholder="Enter destination"
             />
           </View>

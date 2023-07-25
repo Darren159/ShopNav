@@ -9,6 +9,7 @@ describe("<UploadButton />", () => {
     const { getByText } = render(
       <UploadButton title="Test Button" onPress={() => {}} />
     );
+
     await waitFor(() => {
       expect(getByText("Test Button")).toBeTruthy();
     });
@@ -21,6 +22,7 @@ describe("<UploadButton />", () => {
     );
 
     fireEvent.press(getByText("Test Button"));
+
     await waitFor(() => {
       expect(onPressMock).toHaveBeenCalled();
     });
@@ -47,5 +49,20 @@ describe("<UploadButton />", () => {
         ]
       );
     });
+  });
+
+  it("shows loading indicator on press", async () => {
+    const onPressMock = jest.fn();
+
+    const { getByText, getByTestId, queryByTestId } = render(
+      <UploadButton title="Test Button" onPress={onPressMock} />
+    );
+
+    fireEvent.press(getByText("Test Button"));
+
+    expect(getByTestId("loading")).toBeTruthy();
+
+    // Expect that the loading indicator eventually is removed
+    await waitFor(() => expect(queryByTestId("loading")).toBeNull());
   });
 });

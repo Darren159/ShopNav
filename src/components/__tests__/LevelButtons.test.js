@@ -46,6 +46,7 @@ describe("LevelButtons", () => {
       expect(queryByText("3")).toBeNull();
     });
   });
+
   it("changes the current level when a level button is pressed", async () => {
     fetchLevels.mockResolvedValue([1, 2, 3]);
     const { getByText } = render(
@@ -67,8 +68,6 @@ describe("LevelButtons", () => {
     fireEvent.press(getByText("2"));
 
     // Check that setCurrentLevel was called with the correct level
-    await waitFor(() => {
-      expect(setCurrentLevelMock).toHaveBeenCalledWith(2);
-    });
+    await waitFor(() => expect(setCurrentLevelMock).toHaveBeenCalledWith(2));
   });
 });
