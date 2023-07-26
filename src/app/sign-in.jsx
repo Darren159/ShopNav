@@ -9,7 +9,7 @@ import {
   StyleSheet,
   ActivityIndicator,
 } from "react-native";
-import { AuthContext } from "../context/auth";
+import { AuthContext } from "./context/auth";
 
 export default function SignIn() {
   const [email, setEmail] = useState("");

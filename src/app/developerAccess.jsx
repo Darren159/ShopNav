@@ -2,13 +2,13 @@ import { useState, useContext } from "react";
 import { View, StyleSheet, TextInput, Text } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import * as DocumentPicker from "expo-document-picker";
-import { MallContext } from "../context/mallProvider";
-import StoreInput from "../../components/StoreInput";
-import UploadButton from "../../components/UploadButton";
-import uploadSvg from "../../services/uploadSvg";
-import SelectFile from "../../components/SelectFile";
-import uploadStore from "../../services/uploadStore";
-import fetchStoreId from "../../services/fetchStoreId";
+import { MallContext } from "./context/mallProvider";
+import StoreInput from "../components/StoreInput";
+import UploadButton from "../components/UploadButton";
+import uploadSvg from "../services/uploadSvg";
+import SelectFile from "../components/SelectFile";
+import uploadStore from "../services/uploadStore";
+import fetchStoreId from "../services/fetchStoreId";
 
 export default function DeveloperAccess() {
   const { currentMall } = useContext(MallContext);

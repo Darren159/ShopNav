@@ -28,7 +28,7 @@ describe("<UploadButton />", () => {
     });
   });
 
-  it("shows error alert on failed press", async () => {
+  it("shows an error alert on failed press", async () => {
     const onPressMock = jest.fn(() => {
       throw new Error("Test error");
     });
@@ -38,7 +38,7 @@ describe("<UploadButton />", () => {
 
     fireEvent.press(getByText("Test Button"));
 
-    await waitFor(() => {
+    await waitFor(() =>
       expect(Alert.alert).toHaveBeenCalledWith(
         "Error in Test Button",
         "Test error",
@@ -47,8 +47,8 @@ describe("<UploadButton />", () => {
             text: "Ok",
           },
         ]
-      );
-    });
+      )
+    );
   });
 
   it("shows loading indicator on press", async () => {

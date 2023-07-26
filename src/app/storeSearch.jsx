@@ -59,6 +59,7 @@ export default function StoreSearch() {
           size="large"
           color="#5500dc"
           style={styles.loadingContainer}
+          testID="loading"
         />
       ) : (
         <StoreList data={filteredData} />

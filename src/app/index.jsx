@@ -75,7 +75,11 @@ export default function Directory() {
           <View style={{ width: 75 }}>
             {isLoading ? (
               <View style={styles.loadingContainer}>
-                <ActivityIndicator size="large" color="#5500dc" />
+                <ActivityIndicator
+                  size="large"
+                  color="#5500dc"
+                  testID="button-loading"
+                />
                 <Text style={{ fontSize: 12 }}>Navigating...</Text>
               </View>
             ) : (
@@ -111,6 +115,7 @@ export default function Directory() {
             size="large"
             color="#5500dc"
             style={styles.largeLoadingContainer}
+            testID="map-loading"
           />
         )}
       </KeyboardAvoidingView>

@@ -76,7 +76,6 @@ StoreList.propTypes = {
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
-      level: PropTypes.number.isRequired,
     })
   ).isRequired,
 };
