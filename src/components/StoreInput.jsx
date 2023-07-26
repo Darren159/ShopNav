@@ -32,6 +32,7 @@ const styles = StyleSheet.create({
   },
   textInput: {
     flex: 1,
+    paddingVertical: 5,
     paddingLeft: 5,
   },
 });

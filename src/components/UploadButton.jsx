@@ -1,7 +1,13 @@
 import { useState } from "react";
-import { TouchableOpacity, View, Text, Alert, StyleSheet } from "react-native";
+import {
+  ActivityIndicator,
+  TouchableOpacity,
+  View,
+  Text,
+  Alert,
+  StyleSheet,
+} from "react-native";
 import PropTypes from "prop-types";
-import Loader from "./Loader";
 
 export default function UploadButton({ title, onPress }) {
   const [isLoading, setIsLoading] = useState(false);
@@ -30,7 +36,11 @@ export default function UploadButton({ title, onPress }) {
   };
 
   return isLoading ? (
-    <Loader />
+    <ActivityIndicator
+      size="large"
+      color="#5500dc"
+      style={styles.loadingContainer}
+    />
   ) : (
     <TouchableOpacity onPress={handlePress}>
       <View style={styles.button}>

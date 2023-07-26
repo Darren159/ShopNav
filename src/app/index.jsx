@@ -17,7 +17,6 @@ import StoreInput from "../components/StoreInput";
 import useStoreInput from "../hooks/useStoreInput";
 import Floorplan from "../components/Floorplan";
 import LevelButtons from "../components/LevelButtons";
-import Loader from "../components/Loader";
 
 export default function Directory() {
   const { currentMall } = useContext(MallContext);
@@ -31,8 +30,8 @@ export default function Directory() {
   const calculatePath = async () => {
     try {
       setIsLoading(true);
-      const startNodeId = `${await startStore.handleStore()}-node`;
-      const endNodeId = `${await endStore.handleStore()}-node`;
+      const startNodeId = await startStore.handleStore();
+      const endNodeId = await endStore.handleStore();
       const nodes = await fetchNodes(currentMall);
       setGraph(nodes);
       const shortestPath = dijkstra(nodes, startNodeId, endNodeId);
@@ -74,21 +73,23 @@ export default function Directory() {
               placeholder="Enter destination"
             />
           </View>
-          {isLoading ? (
-            <View>
-              <ActivityIndicator size="large" color="#5500dc" />
-              <Text style={{ fontSize: 12 }}>Navigating...</Text>
-            </View>
-          ) : (
-            <FontAwesome5.Button
-              name="directions"
-              backgroundColor="#515151"
-              borderRadius={13}
-              onPress={calculatePath}
-            >
-              Go!
-            </FontAwesome5.Button>
-          )}
+          <View style={{ width: 75 }}>
+            {isLoading ? (
+              <View style={styles.loadingContainer}>
+                <ActivityIndicator size="large" color="#5500dc" />
+                <Text style={{ fontSize: 12 }}>Navigating...</Text>
+              </View>
+            ) : (
+              <FontAwesome5.Button
+                name="directions"
+                backgroundColor="#515151"
+                borderRadius={13}
+                onPress={calculatePath}
+              >
+                Go!
+              </FontAwesome5.Button>
+            )}
+          </View>
         </View>
         {currentMall ? (
           <>
@@ -107,7 +108,11 @@ export default function Directory() {
             />
           </>
         ) : (
-          <Loader />
+          <ActivityIndicator
+            size="large"
+            color="#5500dc"
+            style={styles.largeLoadingContainer}
+          />
         )}
       </KeyboardAvoidingView>
     </SafeAreaView>
@@ -122,7 +127,10 @@ const styles = StyleSheet.create({
     alignItems: "center",
     flex: 0.15,
     zIndex: 1,
+    marginTop: 5,
   },
+  loadingContainer: { alignItems: "center" },
+  largeLoadingContainer: { flex: 1 },
   inputContainer: {
     alignItems: "center",
     flex: 0.85,

@@ -1,5 +1,5 @@
 import { useState, useContext } from "react";
-import { View, StyleSheet, TextInput, Text } from "react-native";
+import { View, StyleSheet, Text } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { MallContext } from "../context/mallProvider";
 import StoreInput from "../../components/StoreInput";
@@ -45,20 +45,20 @@ export default function DeveloperAccess() {
           </View>
           <View style={styles.container}>
             <Text style={styles.title}>Store Info</Text>
-            <View style={{ padding: 10 }}>
+            <View style={styles.inputContainer}>
+              <View style={{ marginBottom: 5 }}>
+                <StoreInput
+                  storeName={storeName}
+                  setStoreName={setStoreName}
+                  placeholder="Enter Store"
+                />
+              </View>
               <StoreInput
-                storeName={storeName}
-                setStoreName={setStoreName}
-                placeholder="Enter Store"
+                storeName={promoInfo}
+                setStoreName={setPromoInfo}
+                placeholder="Input Promo Info"
               />
             </View>
-
-            <TextInput
-              onChangeText={setPromoInfo}
-              value={promoInfo}
-              placeholder="Input Promo Info"
-              style={styles.promoInput}
-            />
 
             <View style={styles.button}>
               <UploadButton
@@ -82,18 +82,12 @@ const styles = StyleSheet.create({
     margin: 10,
     padding: 10,
   },
+  inputContainer: {
+    padding: 10,
+  },
   button: { alignItems: "center" },
   title: {
     fontSize: 18,
     fontWeight: "bold",
-  },
-  promoInput: {
-    borderWidth: 1,
-    borderRadius: 10,
-    textAlign: "left",
-    marginHorizontal: 10,
-    paddingVertical: 3,
-    paddingLeft: 10,
-    backgroundColor: "#fff",
   },
 });

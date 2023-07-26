@@ -16,6 +16,7 @@ export default function StoreList({ data }) {
               params: {
                 locName: item.id,
                 promoInfo: item.promo ? item.promo : "",
+                storeName: item.name,
               },
             }}
           >
