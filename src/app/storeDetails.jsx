@@ -37,17 +37,9 @@ export default function StoreDetails() {
         const placeId = await fetchPlaceId(locName);
         // using place_Id to get unique place details
         const results = await fetchPlaceDetails(placeId);
-
-        if (results.opening_hours && results.opening_hours.weekday_text) {
-          results.opening_hours.weekday_text =
-            results.opening_hours.weekday_text.map((text, index) => ({
-              text,
-              id: `text-${index}`,
-            }));
-        }
         setPlaceDetails(results);
       } catch (error) {
-        Alert.alert("Error", "Error Loading Store Details", [{ text: "OK" }], {
+        Alert.alert("Error", error.message, [{ text: "OK" }], {
           cancelable: false,
         });
       }
@@ -62,6 +54,7 @@ export default function StoreDetails() {
           size="large"
           color="#5500dc"
           style={styles.loadingContainer}
+          testID="loading"
         />
       ) : (
         <ScrollView showsVerticalScrollIndicator={false}>
@@ -147,8 +140,8 @@ export default function StoreDetails() {
 
           {!isCollapsed &&
             placeDetails.opening_hours.weekday_text.map((item) => (
-              <View style={{ padding: 5, paddingLeft: 45 }} key={item.id}>
-                <Text>{item.text}</Text>
+              <View style={{ padding: 5, paddingLeft: 45 }} key={item}>
+                <Text>{item}</Text>
               </View>
             ))}
           {promoInfo ? (

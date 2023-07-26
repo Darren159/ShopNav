@@ -8,10 +8,11 @@ export default function ReviewCarousel({ reviews }) {
       data={reviews}
       keyExtractor={(item, index) => index.toString()}
       renderItem={({ item }) => (
-        <View style={styles.itemContainer}>
+        <View style={styles.itemContainer} testId="image-carousel">
           <Image
             style={{ height: 75, width: 75 }}
             source={{ uri: item.profile_photo_url }}
+            testID={item.profile_photo_url}
           />
           <Text style={{ fontSize: 20, fontWeight: "bold" }}>
             {item.author_name}

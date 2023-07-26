@@ -13,12 +13,25 @@ export default function StarRating({ rating }) {
         // If the current index is less than the rating, render a yellow star
         if (index < rating) {
           return (
-            <FontAwesome key={key} name="star" size={24} color="#FDCC0D" />
+            <FontAwesome
+              name="star"
+              size={24}
+              color="#FDCC0D"
+              testID="star-filled"
+              key={key}
+            />
           );
         }
         // Otherwise render a grey star
-
-        return <FontAwesome key={key} name="star" size={24} color="grey" />;
+        return (
+          <FontAwesome
+            key={key}
+            name="star"
+            size={24}
+            color="grey"
+            testID="star-unfilled"
+          />
+        );
       })}
     </View>
   );

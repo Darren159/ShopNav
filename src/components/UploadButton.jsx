@@ -19,17 +19,11 @@ export default function UploadButton({ title, onPress }) {
       await onPress();
       Alert.alert("Success", "Upload successful!");
     } catch (error) {
-      Alert.alert(
-        `Error in ${title}`,
-        error.message === "Invalid Store Name"
-          ? error.message
-          : `Failed to ${title}`,
-        [
-          {
-            text: "Ok",
-          },
-        ]
-      );
+      Alert.alert(`Error in ${title}`, error.message, [
+        {
+          text: "Ok",
+        },
+      ]);
     } finally {
       setIsLoading(false);
     }
@@ -40,6 +34,7 @@ export default function UploadButton({ title, onPress }) {
       size="large"
       color="#5500dc"
       style={styles.loadingContainer}
+      testID="loading"
     />
   ) : (
     <TouchableOpacity onPress={handlePress}>

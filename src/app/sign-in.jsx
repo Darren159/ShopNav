@@ -9,7 +9,7 @@ import {
   StyleSheet,
   ActivityIndicator,
 } from "react-native";
-import { AuthContext } from "../context/auth";
+import { AuthContext } from "./context/auth";
 
 export default function SignIn() {
   const [email, setEmail] = useState("");
@@ -70,6 +70,7 @@ export default function SignIn() {
             size="large"
             color="#5500dc"
             style={styles.loadingContainer}
+            testID="loading"
           />
         ) : (
           <TouchableOpacity style={styles.button} onPress={handleSignIn}>

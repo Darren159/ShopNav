@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StoreDetails renders correctly 1`] = `
+<RCTSafeAreaView
+  style={
+    {
+      "flex": 1,
+      "marginHorizontal": 20,
+    }
+  }
+>
+  <ActivityIndicator
+    color="#5500dc"
+    size="large"
+    style={
+      {
+        "flex": 1,
+      }
+    }
+    testID="loading"
+  />
+</RCTSafeAreaView>
+`;

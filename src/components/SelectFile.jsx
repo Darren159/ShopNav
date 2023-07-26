@@ -1,7 +1,7 @@
 import { TouchableOpacity, View, Text, Alert, StyleSheet } from "react-native";
 import PropTypes from "prop-types";
 
-export default function UploadButton({ title, onPress }) {
+export default function SelectFile({ title, onPress }) {
   const handlePress = async () => {
     try {
       await onPress();
@@ -23,7 +23,7 @@ export default function UploadButton({ title, onPress }) {
   );
 }
 
-UploadButton.propTypes = {
+SelectFile.propTypes = {
   title: PropTypes.string.isRequired,
   onPress: PropTypes.func.isRequired,
 };

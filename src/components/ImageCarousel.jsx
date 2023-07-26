@@ -9,6 +9,7 @@ export default function ImageCarousel({ photos }) {
       keyExtractor={(item, index) => index.toString()}
       renderItem={({ item }) => (
         <Image
+          testID={`image-${item.photo_reference}`}
           source={{ uri: handleImage(item.photo_reference) }}
           style={styles.image}
         />
