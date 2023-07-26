@@ -10,7 +10,7 @@ import {
 } from "react-native";
 import { useLocalSearchParams } from "expo-router";
 import { Entypo, FontAwesome, Feather } from "@expo/vector-icons";
-import fetchPlaceId from "../services/fetchPlaceId";
+import fetchPlaceId from "../services/fetchPlaceID";
 import fetchPlaceDetails from "../services/fetchPlaceDetails";
 import Loader from "../components/Loader";
 import ImageCarousel from "../components/ImageCarousel";
