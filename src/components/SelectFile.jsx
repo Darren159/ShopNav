@@ -1,11 +1,19 @@
 import { TouchableOpacity, View, Text, Alert, StyleSheet } from "react-native";
 import PropTypes from "prop-types";
 
+// The SelectFile function component renders a button that allows the user to select a file.
 export default function SelectFile({ title, onPress }) {
+
+  // Define the handlePress function which calls the onPress function passed as prop and handles potential errors.
   const handlePress = async () => {
     try {
+
+      // Call the onPress function asynchronously
       await onPress();
+
+      
     } catch (error) {
+      // If an error is caught, an alert will be shown with the title "Error" and the message "Invalid File"
       Alert.alert(`Error`, "Invalid File", [
         {
           text: "Ok",

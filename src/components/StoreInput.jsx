@@ -2,6 +2,7 @@ import { View, TextInput, StyleSheet } from "react-native";
 import { Feather } from "@expo/vector-icons";
 import PropTypes from "prop-types";
 
+// This is a functional component representing an input field for a store.
 export default function StoreInput({
   storeName,
   setStoreName,

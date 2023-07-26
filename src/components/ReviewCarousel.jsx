@@ -2,6 +2,7 @@ import { FlatList, View, Image, Text, StyleSheet } from "react-native";
 import PropTypes from "prop-types";
 import StarRating from "./StarRating";
 
+// The ReviewCarousel function component renders a carousel of reviews.
 export default function ReviewCarousel({ reviews }) {
   return (
     <FlatList

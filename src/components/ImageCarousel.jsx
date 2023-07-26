@@ -2,7 +2,8 @@ import { FlatList, Image, StyleSheet } from "react-native";
 import PropTypes from "prop-types";
 import handleImage from "../utils/handleImage";
 
-export default function ImageCarousel({ photos }) {
+// The ImageCarousel function component displays a horizontal carousel of images. Used for Store Details page
+export default function ImageCarousel({ photos }) { // The array of photo data objects to display in the carousel.
   return (
     <FlatList
       data={photos}

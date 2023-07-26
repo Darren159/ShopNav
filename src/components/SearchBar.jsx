@@ -2,7 +2,10 @@ import { useState } from "react";
 import { View, TextInput, StyleSheet } from "react-native";
 import PropTypes from "prop-types";
 
+// The SearchBar function component renders a search bar that allows the user to enter a search query. Used for Store Search page here
 export default function SearchBar({ onSearch }) {
+
+  // Define the searchQuery state and its corresponding setter function.
   const [searchQuery, setSearchQuery] = useState("");
 
   return (

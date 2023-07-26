@@ -3,7 +3,10 @@ import PropTypes from "prop-types";
 import { Link } from "expo-router";
 import { AntDesign } from "@expo/vector-icons";
 
+// This is a functional component representing a list of stores.
 export default function StoreList({ data }) {
+  // The FlatList component is used to display a list of stores.
+  // The `data` prop is an array of strings which are the name of the stores
   return (
     <FlatList
       data={data}

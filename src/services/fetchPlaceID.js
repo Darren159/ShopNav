@@ -1,21 +1,24 @@
+// This is an asynchronous function that fetches the Google Places ID for a given store in Singapore using the Google Places API.
+// Parameter: 
+// storeName - The name of the store for which the Places ID needs to be fetched.
 export default async function fetchPlaceId(storeName) {
-  // encode the location string to be URL-friendly
+  // URL-encode the store name to make it URL-friendly, appending 'Singapore' to ensure the search is locale-specific.
   const encodedLocation = encodeURIComponent(`${storeName} Singapore `);
 
+   // Construct the request URL using the encoded store name and the Google Places API key.
   const requestUrl = `https://maps.googleapis.com/maps/api/place/autocomplete/json?input=${encodedLocation}&key=${process.env.GOOGLE_PLACES_API_KEY}`;
 
+   // Fetch the response from the Google Places API.
   const response = await fetch(requestUrl);
 
   // parse the JSON response
   const data = await response.json();
-  // console.log(data);
 
-  // the data object now contains the details about the location
-  // for example, you might display the first prediction's description -- it is working and alert is showing, but how do i make it into a new page with all the details
+  // If the response contains predictions and there's at least one prediction,
   if (data.predictions && data.predictions.length > 0) {
-    // console.log(`Top result: ${data.predictions[0].description}`);
-    // console.log(`place id: ${data.predictions[0].place_id}`);
     return data.predictions[0].place_id;
   }
+
+  // If no predictions were found or if there was an error with the API request, throw an error.
   throw new Error("Error retrieving place id");
 }

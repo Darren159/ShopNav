@@ -9,22 +9,40 @@ import {
 } from "react-native";
 import PropTypes from "prop-types";
 
+  // This is a functional component representing a button used to upload data.
 export default function UploadButton({ title, onPress }) {
+  
+  // isLoading is a state variable that indicates whether the upload is in progress.
+  // setIsLoading is a function to set the isLoading state.
   const [isLoading, setIsLoading] = useState(false);
 
+  // handlePress is an async function that handles the button press.
   const handlePress = async () => {
+    // Set isLoading to true to indicate that the upload has started.
     setIsLoading(true);
 
     try {
+
+      // Call the onPress function that was passed as a prop. This is expected to be a function that handles the upload process.
       await onPress();
+      
+      // If the upload is successful, display an alert saying so.
       Alert.alert("Success", "Upload successful!");
     } catch (error) {
-      Alert.alert(`Error in ${title}`, error.message, [
-        {
-          text: "Ok",
-        },
-      ]);
+      // If an error is encountered during the upload process, display an alert with the error message.
+      Alert.alert(
+        `Error in ${title}`,
+        error.message === "Invalid Store Name"
+          ? error.message
+          : `Failed to ${title}`,
+        [
+          {
+            text: "Ok",
+          },
+        ]
+      );
     } finally {
+      // Whether the upload was successful or an error was encountered, set isLoading to false to indicate that the upload process has ended.
       setIsLoading(false);
     }
   };
@@ -34,7 +52,6 @@ export default function UploadButton({ title, onPress }) {
       size="large"
       color="#5500dc"
       style={styles.loadingContainer}
-      testID="loading"
     />
   ) : (
     <TouchableOpacity onPress={handlePress}>
