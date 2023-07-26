@@ -15,10 +15,10 @@ jest.spyOn(Alert, "alert");
 
 const currentMall = "testMall";
 const currentLevel = 1;
-const path = ["1"];
-const graph = {
-  1: { level: 1, coordinates: { x: 0, y: 0 } },
-};
+const path = [
+  { level: 1, coordinates: { x: 0, y: 0 } },
+  { level: 1, coordinates: { x: 100, y: 100 } },
+];
 const svgUrl = "http://example.com/test.svg";
 const storeList = [
   {
@@ -39,7 +39,6 @@ describe("Floorplan", () => {
         currentMall={currentMall}
         currentLevel={currentLevel}
         path={path}
-        graph={graph}
       />
     );
 
@@ -63,7 +62,6 @@ describe("Floorplan", () => {
         currentMall={currentMall}
         currentLevel={currentLevel}
         path={path}
-        graph={graph}
       />
     );
 
@@ -95,7 +93,6 @@ describe("Floorplan", () => {
         currentMall={currentMall}
         currentLevel={currentLevel}
         path={path}
-        graph={graph}
       />
     );
 
@@ -111,7 +108,6 @@ describe("Floorplan", () => {
         currentMall={currentMall}
         currentLevel={currentLevel}
         path={path}
-        graph={graph}
       />
     );
 

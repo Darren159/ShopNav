@@ -11,7 +11,7 @@ import { router } from "expo-router";
 import fetchSvgUrl from "../services/fetchSvgUrl";
 import fetchStoreList from "../services/fetchStoreList";
 
-export default function Floorplan({ currentMall, currentLevel, path, graph }) {
+export default function Floorplan({ currentMall, currentLevel, path }) {
   const [svgUrl, setSvgUrl] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [reload, setReload] = useState(false);
@@ -20,13 +20,11 @@ export default function Floorplan({ currentMall, currentLevel, path, graph }) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        if (currentMall) {
-          setIsLoading(true);
-          const url = await fetchSvgUrl(currentMall, currentLevel);
-          setSvgUrl(url);
-          const stores = await fetchStoreList(currentMall);
-          setStoreList(stores);
-        }
+        setIsLoading(true);
+        const url = await fetchSvgUrl(currentMall, currentLevel);
+        setSvgUrl(url);
+        const stores = await fetchStoreList(currentMall);
+        setStoreList(stores);
       } catch (err) {
         Alert.alert(
           "Error in fetching map data",
@@ -104,11 +102,12 @@ export default function Floorplan({ currentMall, currentLevel, path, graph }) {
           viewBox="0 0 600 760"
         >
           {path
-            .filter((node) => graph[node].level === currentLevel)
+            .filter((node) => node.level === currentLevel)
             .map((node, index, levelNodes) => {
               if (index < levelNodes.length - 1) {
-                const currentNode = graph[node];
-                const nextNode = graph[levelNodes[index + 1]];
+                const currentNode = node;
+                const nextNode = levelNodes[index + 1];
+                const key = `${currentNode.coordinates.x}-${currentNode.coordinates.y}-${nextNode.coordinates.x}-${nextNode.coordinates.y}`;
                 return (
                   <Line
                     x1={currentNode.coordinates.x}
@@ -117,7 +116,7 @@ export default function Floorplan({ currentMall, currentLevel, path, graph }) {
                     y2={nextNode.coordinates.y}
                     stroke="red"
                     strokeWidth="2"
-                    key={node}
+                    key={key}
                   />
                 );
               }
@@ -153,8 +152,7 @@ export default function Floorplan({ currentMall, currentLevel, path, graph }) {
 Floorplan.propTypes = {
   currentMall: PropTypes.string.isRequired,
   currentLevel: PropTypes.number.isRequired,
-  path: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
-  graph: PropTypes.objectOf(
+  path: PropTypes.arrayOf(
     PropTypes.shape({
       level: PropTypes.number.isRequired,
       coordinates: PropTypes.shape({

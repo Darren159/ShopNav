@@ -26,7 +26,20 @@ describe("Dijkstra function", () => {
     const result = dijkstra(graph, "A", "D");
 
     // Verify the result
-    expect(result).toEqual(["A", "B", "D"]);
+    expect(result).toEqual([
+      {
+        coordinates: { x: 0, y: 0 },
+        adjacent: ["B", "C"],
+      },
+      {
+        coordinates: { x: 1, y: 1 },
+        adjacent: ["A", "C", "D"],
+      },
+      {
+        coordinates: { x: 3, y: 3 },
+        adjacent: ["B", "C"],
+      },
+    ]);
   });
 
   it("returns null if there is no path", () => {

@@ -79,11 +79,31 @@ describe("Directory", () => {
     await waitFor(() => expect(queryByTestId("button-loading")).toBeTruthy());
   });
 
-  it("shows an error alert when calculatePath fails", async () => {
+  it("shows an error alert when fetchNodes fails", async () => {
+    const error = new Error("An error occurred");
+
+    fetchNodes.mockRejectedValue(error);
+
+    render(
+      <MallContext.Provider value={mockedContextValue}>
+        <Directory />
+      </MallContext.Provider>
+    );
+
+    await waitFor(() =>
+      expect(Alert.alert).toHaveBeenCalledWith(
+        "Error",
+        error.message,
+        [{ text: "OK" }],
+        { cancelable: false }
+      )
+    );
+  });
+
+  it("shows an error alert when fetchNodeId fails", async () => {
     const error = new Error("An error occurred");
 
     fetchNodeId.mockRejectedValue(error);
-    fetchNodes.mockRejectedValue(error);
 
     const { getByText } = render(
       <MallContext.Provider value={mockedContextValue}>

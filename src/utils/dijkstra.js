@@ -22,10 +22,10 @@ export default function dijkstra(graph, startNode, endNode) {
     if (currentNode === endNode && previousNodes[currentNode] !== null) {
       const path = [];
       while (previousNodes[currentNode] !== null) {
-        path.unshift(currentNode);
+        path.unshift(graph[currentNode]);
         currentNode = previousNodes[currentNode];
       }
-      path.unshift(currentNode);
+      path.unshift(graph[currentNode]);
       return path;
     }
     visitedNodes[currentNode] = true;

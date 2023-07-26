@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import {
   Alert,
   ActivityIndicator,
@@ -27,14 +27,29 @@ export default function Directory() {
   const [graph, setGraph] = useState({});
   const [isLoading, setIsLoading] = useState(false);
 
+  useEffect(() => {
+    const fetchData = async () => {
+      if (currentMall) {
+        try {
+          const nodes = await fetchNodes(currentMall);
+          setGraph(nodes);
+          setPath([]);
+        } catch (error) {
+          Alert.alert("Error", error.message, [{ text: "OK" }], {
+            cancelable: false,
+          });
+        }
+      }
+    };
+    fetchData();
+  }, [currentMall]);
+
   const calculatePath = async () => {
     try {
       setIsLoading(true);
       const startNodeId = await fetchNodeId(currentMall, startStoreName);
       const endNodeId = await fetchNodeId(currentMall, endStoreName);
-      const nodes = await fetchNodes(currentMall);
-      setGraph(nodes);
-      const shortestPath = dijkstra(nodes, startNodeId, endNodeId);
+      const shortestPath = dijkstra(graph, startNodeId, endNodeId);
       setPath(shortestPath !== null ? shortestPath : []);
     } catch (error) {
       Alert.alert("Error", error.message, [{ text: "OK" }], {
@@ -101,7 +116,6 @@ export default function Directory() {
                 currentMall={currentMall}
                 currentLevel={currentLevel}
                 path={path}
-                graph={graph}
               />
             </View>
             <LevelButtons
