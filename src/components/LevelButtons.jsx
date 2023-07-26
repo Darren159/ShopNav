@@ -3,17 +3,27 @@ import PropTypes from "prop-types";
 import { View, TouchableOpacity, Text, StyleSheet } from "react-native";
 import fetchLevels from "../services/fetchLevels";
 
+// The LevelButtons function component allows the user to select a level in a mall.
 export default function LevelButtons({
-  currentMall,
-  currentLevel,
-  setCurrentLevel,
+  currentMall, // The current mall selected by the user.
+  currentLevel, // The current level selected by the user.
+  setCurrentLevel, // Function to set the current level.
 }) {
+
+  // State to hold the levels in the current mall.
   const [levels, setLevels] = useState([]);
 
+  // Run the effect whenever the current mall or the function to set the current level changes.
   useEffect(() => {
     (async () => {
+
+      // Fetch the levels in the current mall.
       const levelsData = await fetchLevels(currentMall);
+
+      // Set the levels.
       setLevels(levelsData);
+
+      // Set the current level to the first level.
       setCurrentLevel(levelsData[0]);
     })();
   }, [currentMall, setCurrentLevel]);

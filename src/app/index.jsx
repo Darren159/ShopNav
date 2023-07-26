@@ -18,23 +18,49 @@ import Floorplan from "../components/Floorplan";
 import LevelButtons from "../components/LevelButtons";
 import fetchNodeId from "../services/fetchNodeId";
 
+// The Directory function component provides a user interface and functionality 
+// for fetching and displaying a directory of a specific mall.
 export default function Directory() {
+
+  // Current mall context.
   const { currentMall } = useContext(MallContext);
+
+  // Path array state.
   const [path, setPath] = useState([]);
+
+  // Current level state.
   const [currentLevel, setCurrentLevel] = useState(1);
-  const [startStoreName, setStartStoreName] = useState(""); // <-- add this line
+
+  // Start store name state.
+  const [startStoreName, setStartStoreName] = useState(""); 
+
+  // End store name state.
   const [endStoreName, setEndStoreName] = useState("");
+
+  // Graph state for holding nodes.
   const [graph, setGraph] = useState({});
+
+  // Loading state.
   const [isLoading, setIsLoading] = useState(false);
 
+
+  // UseEffect to fetch nodes based on the current mall context.
   useEffect(() => {
     const fetchData = async () => {
       if (currentMall) {
         try {
+
+          // Fetch nodes.
           const nodes = await fetchNodes(currentMall);
+
+          // Set fetched nodes to graph state.
           setGraph(nodes);
+
+          // Reset path state.
           setPath([]);
         } catch (error) {
+          
+          // On catch, alert the user with an error message.
           Alert.alert("Error", error.message, [{ text: "OK" }], {
             cancelable: false,
           });
@@ -44,18 +70,33 @@ export default function Directory() {
     fetchData();
   }, [currentMall]);
 
+  // Async function to calculate the shortest path between two stores.
   const calculatePath = async () => {
     try {
+
+      // Set loading to true as the calculation starts.
       setIsLoading(true);
+
+      // Fetch start node ID.
       const startNodeId = await fetchNodeId(currentMall, startStoreName);
+
+      // Fetch end node ID.
       const endNodeId = await fetchNodeId(currentMall, endStoreName);
+
+      // Calculate shortest path using Dijkstra's algorithm.
       const shortestPath = dijkstra(graph, startNodeId, endNodeId);
+
+      // Set calculated path to path state. If shortestPath is null, set path to an empty array.
       setPath(shortestPath !== null ? shortestPath : []);
     } catch (error) {
+
+      // On catch, alert the user with an error message.
       Alert.alert("Error", error.message, [{ text: "OK" }], {
         cancelable: false,
       });
     } finally {
+
+      // Once the calculation ends, set loading to false.
       setIsLoading(false);
     }
   };

@@ -11,21 +11,42 @@ import { router } from "expo-router";
 import fetchSvgUrl from "../services/fetchSvgUrl";
 import fetchStoreList from "../services/fetchStoreList";
 
+// The Floorplan function component displays the floorplan of a specified mall and level.
 export default function Floorplan({ currentMall, currentLevel, path }) {
+
+  // The URL of the SVG to display.
   const [svgUrl, setSvgUrl] = useState(null);
+
+  // A flag indicating whether the component is currently loading data.
   const [isLoading, setIsLoading] = useState(false);
+
+  // A flag that triggers a re-fetch of data when toggled.
   const [reload, setReload] = useState(false);
+
+  // An array of stores at the current mall and level.
   const [storeList, setStoreList] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
+
+        // Set loading state to true while fetching data.
         setIsLoading(true);
+        
+        // Fetch the URL of the SVG.
         const url = await fetchSvgUrl(currentMall, currentLevel);
+
+        // Update svgUrl state.
         setSvgUrl(url);
+
+        // Fetch the list of stores at the current mall and level.
         const stores = await fetchStoreList(currentMall);
+
+        // Update storeList state.
         setStoreList(stores);
       } catch (err) {
+
+        // If an error occurs, alert the user and offer a reload option.
         Alert.alert(
           "Error in fetching map data",
           "Try reloading the app with better internet connection",
@@ -40,9 +61,12 @@ export default function Floorplan({ currentMall, currentLevel, path }) {
           ]
         );
       } finally {
+        // Set loading state to false after fetching data.
         setIsLoading(false);
       }
     };
+
+    // Fetch data when component mounts and when currentMall, currentLevel, or reload changes.
     fetchData();
   }, [currentMall, currentLevel, reload]);
 

@@ -10,24 +10,46 @@ import SelectFile from "../components/SelectFile";
 import uploadStore from "../services/uploadStore";
 import fetchStoreId from "../services/fetchStoreId";
 
+// The DeveloperAccess function component provides a user interface and functionality 
+// for developers to upload promotion information and SVG images related to specific stores.
 export default function DeveloperAccess() {
+
+  // Current mall context.
   const { currentMall } = useContext(MallContext);
+
+  // Promotion info state.
   const [promoInfo, setPromoInfo] = useState("");
+
+  // Store name state.
   const [storeName, setStoreName] = useState("");
+
+  // Filename state for uploaded SVG.
   const [filename, setFilename] = useState("");
+
+  // SVG URI state.
   const [svgUri, setSvgUri] = useState("");
 
+  // Async function to select a file from the user's device.
   const selectFile = async () => {
     const result = await DocumentPicker.getDocumentAsync({
+
+      // Only SVG images are allowed.
       type: "image/svg+xml",
+
+      // Copies the selected file to cache directory.
       copyToCacheDirectory: true,
     });
     if (result.type !== "cancel") {
+
+      // Set the filename state to the selected file's name.
       setFilename(result.assets[0].name);
+
+      // Set the SVG URI state to the selected file's URI.
       setSvgUri(result.assets[0].uri);
     }
   };
 
+  // Async function to upload the store and its related promotion information.
   const handleUploadStore = async () => {
     // Fetch the store
     const storeDocId = await fetchStoreId(currentMall, storeName);

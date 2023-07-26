@@ -16,34 +16,47 @@ import fetchPlaceDetails from "../services/fetchPlaceDetails";
 import ImageCarousel from "../components/ImageCarousel";
 import ReviewCarousel from "../components/ReviewCarousel";
 
+// The StoreDetails function component provides detailed information about a specific store,
+// such as name, address, rating, business status, phone number, operating hours, reviews, etc.
 export default function StoreDetails() {
+
   // collapsible opening hours
   const [isCollapsed, setIsCollapsed] = useState(true);
 
+  // Toggles the state of the opening hours' collapsed or expanded view.
   const toggleCollapse = () => {
     setIsCollapsed(!isCollapsed);
   };
 
+  // The detailed information of the place (store).
   const [placeDetails, setPlaceDetails] = useState(null);
 
-  // check locName is the name of the item user pressed
+  // The name of the location (store) the user selected, promo information and store name.
   const { locName, promoInfo, storeName } = useLocalSearchParams();
-  // console.log(locName);
 
+  // Fetch the details of the store when the location name changes.
   useEffect(() => {
     const fetchDetails = async () => {
       try {
-        // get place_Id using google places API
+
+        // Get place_Id using google places API
         const placeId = await fetchPlaceId(locName);
-        // using place_Id to get unique place details
+
+        // Using place_Id to get unique place details
         const results = await fetchPlaceDetails(placeId);
+
+        // Store the details of the place.
         setPlaceDetails(results);
       } catch (error) {
+
+        // If an error occurs, display an alert with the error message.
         Alert.alert("Error", error.message, [{ text: "OK" }], {
           cancelable: false,
         });
       }
     };
+
+    // Fetch the details.
     fetchDetails();
   }, [locName]);
 

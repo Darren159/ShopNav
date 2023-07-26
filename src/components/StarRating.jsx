@@ -2,6 +2,7 @@ import { View } from "react-native";
 import PropTypes from "prop-types";
 import { FontAwesome } from "@expo/vector-icons";
 
+// The StarRating function component renders a star rating out of 5.
 export default function StarRating({ rating }) {
   // Create an array of 5 elements for 5 stars
   const stars = new Array(5).fill(0);

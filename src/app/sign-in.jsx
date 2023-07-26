@@ -11,11 +11,23 @@ import {
 } from "react-native";
 import { AuthContext } from "./context/auth";
 
+// The SignIn function component provides a user interface and functionality for user authentication.
 export default function SignIn() {
+
+  // Email state for holding user email input.
   const [email, setEmail] = useState("");
+
+  // Password state for holding user password input.
   const [password, setPassword] = useState("");
+
+  // Authentication context with signin function and user object.
   const { signin, user } = useContext(AuthContext);
-  const [isLoading, setIsLoading] = useState(false);
+
+  // Loading state to manage the loading indicator.
+  const [isLoading, setIsLoading] = useState(false); 
+
+  // UseEffect to track the 'user' state.
+  // If a user is authenticated, it will redirect the user to the developer access page.
   useEffect(() => {
     if (user) {
       // If `user` is not `null`, redirect the user to the developer access page
@@ -23,15 +35,26 @@ export default function SignIn() {
     }
   }, [user]);
 
+  // Async function to handle sign in action.
+  // If email and password are valid, it will call the 'signin' function from AuthContext.
+  // It also manages loading state and displays an error alert on failure.
   const handleSignIn = async () => {
     try {
+
+      // Set loading to true as sign in process starts.
       setIsLoading(true);
+
+      // Call signin function with entered email and password.
       await signin(email, password);
     } catch (e) {
+
+      // On catch, alert the user with an error message.
       Alert.alert("Sign In Error", "Invalid Email/Password", [{ text: "OK" }], {
         cancelable: false,
       });
     } finally {
+
+      // Once sign in process ends, set loading to false.
       setIsLoading(false);
     }
   };
