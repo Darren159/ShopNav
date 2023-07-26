@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1690374073439" clover="3.2.0">
-  <project timestamp="1690374073439" name="All files">
+<coverage generated="1690374526376" clover="3.2.0">
+  <project timestamp="1690374526376" name="All files">
     <metrics statements="303" coveredstatements="272" conditionals="92" coveredconditionals="69" methods="88" coveredmethods="76" elements="483" coveredelements="417" complexity="0" loc="303" ncloc="303" packages="5" files="25" classes="25"/>
     <package name="app">
       <metrics statements="101" coveredstatements="101" conditionals="56" coveredconditionals="45" methods="23" coveredmethods="23"/>
@@ -295,10 +295,10 @@
       </file>
       <file name="StoreInput.jsx" path="C:\Users\Darre\Projects\ShopNav\src\components\StoreInput.jsx">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="11" count="76" type="stmt"/>
+        <line num="11" count="86" type="stmt"/>
         <line num="24" count="4" type="stmt"/>
-        <line num="38" count="4" type="stmt"/>
-        <line num="45" count="4" type="stmt"/>
+        <line num="39" count="4" type="stmt"/>
+        <line num="46" count="4" type="stmt"/>
       </file>
       <file name="StoreList.jsx" path="C:\Users\Darre\Projects\ShopNav\src\components\StoreList.jsx">
         <metrics statements="5" coveredstatements="5" conditionals="4" coveredconditionals="3" methods="3" coveredmethods="3"/>

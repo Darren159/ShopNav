@@ -36,6 +36,7 @@ exports[`Directory renders correctly 1`] = `
           "flex": 0.15,
           "flexDirection": "row",
           "justifyContent": "center",
+          "marginTop": 5,
           "zIndex": 1,
         }
       }
@@ -68,6 +69,7 @@ exports[`Directory renders correctly 1`] = `
               {
                 "flex": 1,
                 "paddingLeft": 5,
+                "paddingVertical": 5,
               }
             }
             value=""
@@ -94,6 +96,7 @@ exports[`Directory renders correctly 1`] = `
               {
                 "flex": 1,
                 "paddingLeft": 5,
+                "paddingVertical": 5,
               }
             }
             value=""
