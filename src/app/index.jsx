@@ -145,6 +145,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     flex: 0.15,
     zIndex: 1,
+    marginTop: 5,
   },
   loadingContainer: { alignItems: "center" },
   largeLoadingContainer: { flex: 1 },
