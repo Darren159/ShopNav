@@ -8,11 +8,11 @@ import Animated, {
   useAnimatedStyle,
 } from "react-native-reanimated";
 import { router } from "expo-router";
-import fetchSVGUrl from "../services/fetchSVGUrl";
+import fetchSvgUrl from "../services/fetchSvgUrl";
 import fetchStoreList from "../services/fetchStoreList";
 
-export default function Floorplan({ currentMall, currentLevel, path, graph }) {
-  const [svgUrl, setSVGUrl] = useState(null);
+export default function Floorplan({ currentMall, currentLevel, path }) {
+  const [svgUrl, setSvgUrl] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [reload, setReload] = useState(false);
   const [storeList, setStoreList] = useState([]);
@@ -20,13 +20,11 @@ export default function Floorplan({ currentMall, currentLevel, path, graph }) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        if (currentMall) {
-          setIsLoading(true);
-          const url = await fetchSVGUrl(currentMall, currentLevel);
-          setSVGUrl(url);
-          const stores = await fetchStoreList(currentMall);
-          setStoreList(stores);
-        }
+        setIsLoading(true);
+        const url = await fetchSvgUrl(currentMall, currentLevel);
+        setSvgUrl(url);
+        const stores = await fetchStoreList(currentMall);
+        setStoreList(stores);
       } catch (err) {
         Alert.alert(
           "Error in fetching map data",
@@ -60,8 +58,8 @@ export default function Floorplan({ currentMall, currentLevel, path, graph }) {
     .onUpdate((event) => {
       const newX = event.translationX + context.value.x;
       const newY = event.translationY + context.value.y;
-      translateX.value = Math.min(Math.max(newX, -100), 200);
-      translateY.value = Math.min(Math.max(newY, -200), 100);
+      translateX.value = Math.min(Math.max(newX, -200), 200);
+      translateY.value = Math.min(Math.max(newY, -200), 200);
     });
 
   const scale = useSharedValue(1);
@@ -91,17 +89,12 @@ export default function Floorplan({ currentMall, currentLevel, path, graph }) {
       size="large"
       color="#5500dc"
       style={styles.loadingContainer}
+      testID="loading"
     />
   ) : (
     <GestureDetector gesture={composed}>
       <Animated.View style={animatedStyle}>
-        <SvgUri
-          key={currentLevel}
-          uri={svgUrl}
-          width="100%"
-          height="100%"
-          testID="svg-image"
-        />
+        <SvgUri key={currentLevel} uri={svgUrl} width="100%" height="100%" />
         <Svg
           style={styles.overlay}
           height="100%"
@@ -109,11 +102,12 @@ export default function Floorplan({ currentMall, currentLevel, path, graph }) {
           viewBox="0 0 600 760"
         >
           {path
-            .filter((node) => graph[node].level === currentLevel)
+            .filter((node) => node.level === currentLevel)
             .map((node, index, levelNodes) => {
               if (index < levelNodes.length - 1) {
-                const currentNode = graph[node];
-                const nextNode = graph[levelNodes[index + 1]];
+                const currentNode = node;
+                const nextNode = levelNodes[index + 1];
+                const key = `${currentNode.coordinates.x}-${currentNode.coordinates.y}-${nextNode.coordinates.x}-${nextNode.coordinates.y}`;
                 return (
                   <Line
                     x1={currentNode.coordinates.x}
@@ -122,7 +116,7 @@ export default function Floorplan({ currentMall, currentLevel, path, graph }) {
                     y2={nextNode.coordinates.y}
                     stroke="red"
                     strokeWidth="2"
-                    key={node}
+                    key={key}
                   />
                 );
               }
@@ -158,8 +152,7 @@ export default function Floorplan({ currentMall, currentLevel, path, graph }) {
 Floorplan.propTypes = {
   currentMall: PropTypes.string.isRequired,
   currentLevel: PropTypes.number.isRequired,
-  path: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
-  graph: PropTypes.objectOf(
+  path: PropTypes.arrayOf(
     PropTypes.shape({
       level: PropTypes.number.isRequired,
       coordinates: PropTypes.shape({

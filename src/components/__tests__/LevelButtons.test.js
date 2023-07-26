@@ -1,26 +1,20 @@
 import { render, waitFor, fireEvent } from "@testing-library/react-native";
 import LevelButtons from "../LevelButtons";
-import getLevels from "../../services/fetchLevels";
+import fetchLevels from "../../services/fetchLevels";
 
-jest.mock("../../services/getLevels", () => ({
-  __esModule: true,
-  default: jest.fn(),
-}));
+jest.mock("../../services/fetchLevels");
+
+const setCurrentLevelMock = jest.fn();
+const currentMall = "testMall";
+const currentLevel = 1;
 
 describe("LevelButtons", () => {
-  const setCurrentLevelMock = jest.fn();
-  const currentMall = "testMall";
-
-  afterEach(() => {
-    jest.resetAllMocks();
-  });
-
-  it("renders levels after getLevels is called", async () => {
-    getLevels.mockResolvedValue([1, 2, 3]);
+  it("renders levels after fetchLevels is called", async () => {
+    fetchLevels.mockResolvedValue([1, 2, 3]);
     const { getByText } = render(
       <LevelButtons
         currentMall={currentMall}
-        currentLevel={1}
+        currentLevel={currentLevel}
         setCurrentLevel={setCurrentLevelMock}
       />
     );
@@ -33,12 +27,12 @@ describe("LevelButtons", () => {
   });
 
   it("does nothing when there are no levels", async () => {
-    getLevels.mockResolvedValue([]);
+    fetchLevels.mockResolvedValue([]);
 
     const { queryByText } = render(
       <LevelButtons
         currentMall={currentMall}
-        currentLevel={1}
+        currentLevel={currentLevel}
         setCurrentLevel={setCurrentLevelMock}
       />
     );
@@ -49,12 +43,13 @@ describe("LevelButtons", () => {
       expect(queryByText("3")).toBeNull();
     });
   });
+
   it("changes the current level when a level button is pressed", async () => {
-    getLevels.mockResolvedValue([1, 2, 3]);
+    fetchLevels.mockResolvedValue([1, 2, 3]);
     const { getByText } = render(
       <LevelButtons
         currentMall={currentMall}
-        currentLevel={1}
+        currentLevel={currentLevel}
         setCurrentLevel={setCurrentLevelMock}
       />
     );
@@ -70,8 +65,6 @@ describe("LevelButtons", () => {
     fireEvent.press(getByText("2"));
 
     // Check that setCurrentLevel was called with the correct level
-    await waitFor(() => {
-      expect(setCurrentLevelMock).toHaveBeenCalledWith(2);
-    });
+    await waitFor(() => expect(setCurrentLevelMock).toHaveBeenCalledWith(2));
   });
 });

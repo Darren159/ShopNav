@@ -40,7 +40,7 @@ export default function Layout() {
             }}
           />
           <Stack.Screen
-            name="(auth)/developerAccess"
+            name="developerAccess"
             options={{
               headerRight: SignOutButton,
             }}
@@ -55,14 +55,20 @@ function Icons() {
   return (
     <View style={{ flexDirection: "row" }}>
       <Link href="/storeSearch" asChild>
-        <Ionicons name="search-outline" size={24} color="black" />
+        <Ionicons
+          name="search-outline"
+          size={24}
+          color="black"
+          testID="storeSearch-icon"
+        />
       </Link>
-      <Link href="/(auth)/sign-in" asChild>
+      <Link href="/sign-in" asChild>
         <Ionicons
           name="hammer-outline"
           size={24}
           color="black"
           style={{ paddingLeft: 10 }}
+          testID="developerAccess-icon"
         />
       </Link>
     </View>

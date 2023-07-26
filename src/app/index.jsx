@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import {
   Alert,
   ActivityIndicator,
@@ -14,27 +14,42 @@ import { MallContext } from "./context/mallProvider";
 import dijkstra from "../utils/dijkstra";
 import fetchNodes from "../services/fetchNodes";
 import StoreInput from "../components/StoreInput";
-import useStoreInput from "../hooks/useStoreInput";
 import Floorplan from "../components/Floorplan";
 import LevelButtons from "../components/LevelButtons";
+import fetchNodeId from "../services/fetchNodeId";
 
 export default function Directory() {
   const { currentMall } = useContext(MallContext);
   const [path, setPath] = useState([]);
   const [currentLevel, setCurrentLevel] = useState(1);
-  const startStore = useStoreInput(currentMall);
-  const endStore = useStoreInput(currentMall);
+  const [startStoreName, setStartStoreName] = useState(""); // <-- add this line
+  const [endStoreName, setEndStoreName] = useState("");
   const [graph, setGraph] = useState({});
   const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      if (currentMall) {
+        try {
+          const nodes = await fetchNodes(currentMall);
+          setGraph(nodes);
+          setPath([]);
+        } catch (error) {
+          Alert.alert("Error", error.message, [{ text: "OK" }], {
+            cancelable: false,
+          });
+        }
+      }
+    };
+    fetchData();
+  }, [currentMall]);
 
   const calculatePath = async () => {
     try {
       setIsLoading(true);
-      const startNodeId = await startStore.handleStore();
-      const endNodeId = await endStore.handleStore();
-      const nodes = await fetchNodes(currentMall);
-      setGraph(nodes);
-      const shortestPath = dijkstra(nodes, startNodeId, endNodeId);
+      const startNodeId = await fetchNodeId(currentMall, startStoreName);
+      const endNodeId = await fetchNodeId(currentMall, endStoreName);
+      const shortestPath = dijkstra(graph, startNodeId, endNodeId);
       setPath(shortestPath !== null ? shortestPath : []);
     } catch (error) {
       Alert.alert("Error", error.message, [{ text: "OK" }], {
@@ -55,9 +70,8 @@ export default function Directory() {
           <View style={styles.inputContainer}>
             <StoreInput
               icon="circle"
-              storeName={startStore.storeName}
-              setStoreName={startStore.setStoreName}
-              error={startStore.storeError}
+              storeName={startStoreName}
+              setStoreName={setStartStoreName}
               placeholder="Enter starting point"
             />
             <Entypo
@@ -68,15 +82,19 @@ export default function Directory() {
             />
             <StoreInput
               icon="map-pin"
-              storeName={endStore.storeName}
-              setStoreName={endStore.setStoreName}
+              storeName={endStoreName}
+              setStoreName={setEndStoreName}
               placeholder="Enter destination"
             />
           </View>
           <View style={{ width: 75 }}>
             {isLoading ? (
               <View style={styles.loadingContainer}>
-                <ActivityIndicator size="large" color="#5500dc" />
+                <ActivityIndicator
+                  size="large"
+                  color="#5500dc"
+                  testID="button-loading"
+                />
                 <Text style={{ fontSize: 12 }}>Navigating...</Text>
               </View>
             ) : (
@@ -98,7 +116,6 @@ export default function Directory() {
                 currentMall={currentMall}
                 currentLevel={currentLevel}
                 path={path}
-                graph={graph}
               />
             </View>
             <LevelButtons
@@ -112,6 +129,7 @@ export default function Directory() {
             size="large"
             color="#5500dc"
             style={styles.largeLoadingContainer}
+            testID="map-loading"
           />
         )}
       </KeyboardAvoidingView>

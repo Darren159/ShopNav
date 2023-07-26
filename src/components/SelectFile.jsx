@@ -1,42 +1,20 @@
-import { useState } from "react";
-import {
-  ActivityIndicator,
-  TouchableOpacity,
-  View,
-  Text,
-  Alert,
-  StyleSheet,
-} from "react-native";
+import { TouchableOpacity, View, Text, Alert, StyleSheet } from "react-native";
 import PropTypes from "prop-types";
 
-export default function UploadButton({ title, onPress }) {
-  const [isLoading, setIsLoading] = useState(false);
-
+export default function SelectFile({ title, onPress }) {
   const handlePress = async () => {
-    setIsLoading(true);
-
     try {
       await onPress();
-      Alert.alert("Success", "Upload successful!");
     } catch (error) {
-      Alert.alert(`Error in ${title}`, error.message, [
+      Alert.alert(`Error`, "Invalid File", [
         {
           text: "Ok",
         },
       ]);
-    } finally {
-      setIsLoading(false);
     }
   };
 
-  return isLoading ? (
-    <ActivityIndicator
-      size="large"
-      color="#5500dc"
-      style={styles.loadingContainer}
-      testID="loading"
-    />
-  ) : (
+  return (
     <TouchableOpacity onPress={handlePress}>
       <View style={styles.button}>
         <Text style={{ color: "white" }}> {title} </Text>
@@ -45,13 +23,12 @@ export default function UploadButton({ title, onPress }) {
   );
 }
 
-UploadButton.propTypes = {
+SelectFile.propTypes = {
   title: PropTypes.string.isRequired,
   onPress: PropTypes.func.isRequired,
 };
 
 const styles = StyleSheet.create({
-  loadingContainer: { padding: 5 },
   button: {
     width: 300,
     padding: 10,
