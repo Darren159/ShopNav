@@ -1,4 +1,3 @@
-// useUploadSvg.js
 import { httpsCallable } from "firebase/functions";
 import * as FileSystem from "expo-file-system";
 import { functions } from "../../firebaseConfig";

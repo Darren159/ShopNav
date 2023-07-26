@@ -70,6 +70,7 @@ export default function SignIn() {
             size="large"
             color="#5500dc"
             style={styles.loadingContainer}
+            testID="loading"
           />
         ) : (
           <TouchableOpacity style={styles.button} onPress={handleSignIn}>
