@@ -15,7 +15,7 @@ describe("<UploadButton />", () => {
     });
   });
 
-  it("calls onPress function when pressed", async () => {
+  it("calls onPress prop when pressed", async () => {
     const onPressMock = jest.fn();
     const { getByText } = render(
       <UploadButton title="Test Button" onPress={onPressMock} />
@@ -28,7 +28,7 @@ describe("<UploadButton />", () => {
     });
   });
 
-  it("shows an error alert on failed press", async () => {
+  it("displays an alert if an error occurs", async () => {
     const onPressMock = jest.fn(() => {
       throw new Error("Test error");
     });

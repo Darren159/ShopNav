@@ -7,7 +7,6 @@ describe("StoreInput", () => {
       <StoreInput
         storeName=""
         setStoreName={jest.fn()}
-        error={false}
         placeholder="Store Name"
       />
     );
@@ -21,7 +20,6 @@ describe("StoreInput", () => {
       <StoreInput
         storeName=""
         setStoreName={setStoreNameMock}
-        error={false}
         placeholder="Store Name"
       />
     );

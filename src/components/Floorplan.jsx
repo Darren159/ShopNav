@@ -13,7 +13,6 @@ import fetchStoreList from "../services/fetchStoreList";
 
 // The Floorplan function component displays the floorplan of a specified mall and level.
 export default function Floorplan({ currentMall, currentLevel, path }) {
-
   // The URL of the SVG to display.
   const [svgUrl, setSvgUrl] = useState(null);
 
@@ -29,10 +28,9 @@ export default function Floorplan({ currentMall, currentLevel, path }) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-
         // Set loading state to true while fetching data.
         setIsLoading(true);
-        
+
         // Fetch the URL of the SVG.
         const url = await fetchSvgUrl(currentMall, currentLevel);
 
@@ -45,7 +43,6 @@ export default function Floorplan({ currentMall, currentLevel, path }) {
         // Update storeList state.
         setStoreList(stores);
       } catch (err) {
-
         // If an error occurs, alert the user and offer a reload option.
         Alert.alert(
           "Error in fetching map data",
@@ -74,6 +71,7 @@ export default function Floorplan({ currentMall, currentLevel, path }) {
   const translateX = useSharedValue(0);
   const translateY = useSharedValue(0);
 
+  // Panning gesture
   const panGesture = Gesture.Pan()
     .withTestId("pan")
     .onStart(() => {
@@ -89,6 +87,7 @@ export default function Floorplan({ currentMall, currentLevel, path }) {
   const scale = useSharedValue(1);
   const savedScale = useSharedValue(1);
 
+  // Pinching gesture
   const pinchGesture = Gesture.Pinch()
     .withTestId("pinch")
     .onUpdate((e) => {
@@ -106,6 +105,7 @@ export default function Floorplan({ currentMall, currentLevel, path }) {
     ],
   }));
 
+  // Compose the two gestures to allow simultaneous pinching and zooming.
   const composed = Gesture.Simultaneous(pinchGesture, panGesture);
 
   return isLoading ? (

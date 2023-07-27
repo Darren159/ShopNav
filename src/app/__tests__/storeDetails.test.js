@@ -75,7 +75,7 @@ describe("StoreDetails", () => {
     });
   });
 
-  it("shows an error alert when fetch fails", async () => {
+  it("shows an error alert when fetchPlaceDetails fails", async () => {
     const error = new Error("An error occurred");
 
     fetchPlaceDetails.mockRejectedValue(error);

@@ -65,7 +65,7 @@ describe("StoreSearch", () => {
     });
   });
 
-  it("shows an error alert when calculatePath fails", async () => {
+  it("shows an error alert when fetchStoreList fails", async () => {
     const error = new Error("An error occurred");
 
     fetchStoreList.mockRejectedValue(error);

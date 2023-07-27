@@ -4,7 +4,7 @@ import SelectFile from "../SelectFile";
 
 jest.spyOn(Alert, "alert");
 
-describe("SelectButton", () => {
+describe("SelectFile", () => {
   it("renders correctly", () => {
     const { getByText } = render(
       <SelectFile title="Test Button" onPress={jest.fn()} />
