@@ -5,8 +5,7 @@ import {
   Text,
   View,
   StyleSheet,
-  KeyboardAvoidingView,
-  Platform,
+  Switch,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Entypo, FontAwesome5 } from "@expo/vector-icons";
@@ -18,38 +17,23 @@ import Floorplan from "../components/Floorplan";
 import LevelButtons from "../components/LevelButtons";
 import fetchNodeId from "../services/fetchNodeId";
 
-// The Directory function component provides a user interface and functionality 
+// The Directory function component provides a user interface and functionality
 // for fetching and displaying a directory of a specific mall.
 export default function Directory() {
-
-  // Current mall context.
   const { currentMall } = useContext(MallContext);
-
-  // Path array state.
   const [path, setPath] = useState([]);
-
-  // Current level state.
   const [currentLevel, setCurrentLevel] = useState(1);
-
-  // Start store name state.
-  const [startStoreName, setStartStoreName] = useState(""); 
-
-  // End store name state.
+  const [startStoreName, setStartStoreName] = useState("");
   const [endStoreName, setEndStoreName] = useState("");
-
-  // Graph state for holding nodes.
   const [graph, setGraph] = useState({});
-
-  // Loading state.
   const [isLoading, setIsLoading] = useState(false);
-
+  const [isElevatorOnly, setIsElevatorOnly] = useState(false);
 
   // UseEffect to fetch nodes based on the current mall context.
   useEffect(() => {
     const fetchData = async () => {
       if (currentMall) {
         try {
-
           // Fetch nodes.
           const nodes = await fetchNodes(currentMall);
 
@@ -59,7 +43,6 @@ export default function Directory() {
           // Reset path state.
           setPath([]);
         } catch (error) {
-          
           // On catch, alert the user with an error message.
           Alert.alert("Error", error.message, [{ text: "OK" }], {
             cancelable: false,
@@ -73,7 +56,6 @@ export default function Directory() {
   // Async function to calculate the shortest path between two stores.
   const calculatePath = async () => {
     try {
-
       // Set loading to true as the calculation starts.
       setIsLoading(true);
 
@@ -84,18 +66,21 @@ export default function Directory() {
       const endNodeId = await fetchNodeId(currentMall, endStoreName);
 
       // Calculate shortest path using Dijkstra's algorithm.
-      const shortestPath = dijkstra(graph, startNodeId, endNodeId);
+      const shortestPath = dijkstra(
+        graph,
+        startNodeId,
+        endNodeId,
+        isElevatorOnly
+      );
 
       // Set calculated path to path state. If shortestPath is null, set path to an empty array.
       setPath(shortestPath !== null ? shortestPath : []);
     } catch (error) {
-
       // On catch, alert the user with an error message.
       Alert.alert("Error", error.message, [{ text: "OK" }], {
         cancelable: false,
       });
     } finally {
-
       // Once the calculation ends, set loading to false.
       setIsLoading(false);
     }
@@ -103,77 +88,79 @@ export default function Directory() {
 
   return (
     <SafeAreaView style={styles.safeAreaView}>
-      <KeyboardAvoidingView
-        behavior={Platform.OS === "ios" ? "padding" : "height"}
-        style={styles.safeAreaView}
-      >
-        <View style={styles.row}>
-          <View style={styles.inputContainer}>
-            <StoreInput
-              icon="circle"
-              storeName={startStoreName}
-              setStoreName={setStartStoreName}
-              placeholder="Enter starting point"
-            />
-            <Entypo
-              name="dots-three-vertical"
-              size={24}
-              color="black"
-              style={styles.iconStyle}
-            />
-            <StoreInput
-              icon="map-pin"
-              storeName={endStoreName}
-              setStoreName={setEndStoreName}
-              placeholder="Enter destination"
-            />
-          </View>
-          <View style={{ width: 75 }}>
-            {isLoading ? (
-              <View style={styles.loadingContainer}>
-                <ActivityIndicator
-                  size="large"
-                  color="#5500dc"
-                  testID="button-loading"
-                />
-                <Text style={{ fontSize: 12 }}>Navigating...</Text>
-              </View>
-            ) : (
-              <FontAwesome5.Button
-                name="directions"
-                backgroundColor="#515151"
-                borderRadius={13}
-                onPress={calculatePath}
-              >
-                Go!
-              </FontAwesome5.Button>
-            )}
-          </View>
+      <View style={styles.row}>
+        <View style={styles.inputContainer}>
+          <StoreInput
+            icon="circle"
+            storeName={startStoreName}
+            setStoreName={setStartStoreName}
+            placeholder="Enter starting point"
+          />
+          <Entypo
+            name="dots-three-vertical"
+            size={24}
+            color="black"
+            style={styles.iconStyle}
+          />
+          <StoreInput
+            icon="map-pin"
+            storeName={endStoreName}
+            setStoreName={setEndStoreName}
+            placeholder="Enter destination"
+          />
         </View>
-        {currentMall ? (
-          <>
-            <View style={styles.mapContainer}>
-              <Floorplan
-                currentMall={currentMall}
-                currentLevel={currentLevel}
-                path={path}
+        <View style={{ width: 75 }}>
+          <Text>Elevators Only</Text>
+          <Switch
+            trackColor={{ false: "#767577", true: "#81b0ff" }}
+            thumbColor={isElevatorOnly ? "#f5dd4b" : "#f4f3f4"}
+            onValueChange={(value) => setIsElevatorOnly(value)}
+            value={isElevatorOnly}
+          />
+          {isLoading ? (
+            <View style={styles.loadingContainer}>
+              <ActivityIndicator
+                size="large"
+                color="#5500dc"
+                testID="button-loading"
               />
+              <Text style={{ fontSize: 12 }}>Navigating...</Text>
             </View>
-            <LevelButtons
+          ) : (
+            <FontAwesome5.Button
+              name="directions"
+              backgroundColor="#515151"
+              borderRadius={13}
+              onPress={calculatePath}
+            >
+              Go!
+            </FontAwesome5.Button>
+          )}
+        </View>
+      </View>
+      {currentMall ? (
+        <>
+          <View style={styles.mapContainer}>
+            <Floorplan
               currentMall={currentMall}
               currentLevel={currentLevel}
-              setCurrentLevel={setCurrentLevel}
+              path={path}
             />
-          </>
-        ) : (
-          <ActivityIndicator
-            size="large"
-            color="#5500dc"
-            style={styles.largeLoadingContainer}
-            testID="map-loading"
+          </View>
+          <LevelButtons
+            currentMall={currentMall}
+            currentLevel={currentLevel}
+            setCurrentLevel={setCurrentLevel}
           />
-        )}
-      </KeyboardAvoidingView>
+        </>
+      ) : (
+        <ActivityIndicator
+          size="large"
+          color="#5500dc"
+          style={styles.largeLoadingContainer}
+          testID="map-loading"
+        />
+      )}
     </SafeAreaView>
   );
 }
@@ -191,6 +178,7 @@ const styles = StyleSheet.create({
   loadingContainer: { alignItems: "center" },
   largeLoadingContainer: { flex: 1 },
   inputContainer: {
+    marginTop: 10,
     alignItems: "center",
     flex: 0.85,
   },

@@ -1,6 +1,6 @@
 /* eslint-disable no-restricted-syntax */
 // The dijkstra function finds the shortest path between two nodes
-export default function dijkstra(graph, startNode, endNode) {
+export default function dijkstra(graph, startNode, endNode, elevatorsOnly) {
   let unvisitedNodes = Object.keys(graph);
   const distances = {};
   const previousNodes = {};
@@ -32,16 +32,18 @@ export default function dijkstra(graph, startNode, endNode) {
     unvisitedNodes = unvisitedNodes.filter((node) => node !== currentNode);
 
     for (const adjacentNode of graph[currentNode].adjacent) {
-      if (!visitedNodes[adjacentNode]) {
-        const newDistance =
-          distances[currentNode] +
-          distance(
-            graph[currentNode].coordinates,
-            graph[adjacentNode].coordinates
-          );
-        if (newDistance < distances[adjacentNode]) {
-          distances[adjacentNode] = newDistance;
-          previousNodes[adjacentNode] = currentNode;
+      if (!(elevatorsOnly && graph[adjacentNode].isEscalator)) {
+        if (!visitedNodes[adjacentNode]) {
+          const newDistance =
+            distances[currentNode] +
+            distance(
+              graph[currentNode].coordinates,
+              graph[adjacentNode].coordinates
+            );
+          if (newDistance < distances[adjacentNode]) {
+            distances[adjacentNode] = newDistance;
+            previousNodes[adjacentNode] = currentNode;
+          }
         }
       }
     }
