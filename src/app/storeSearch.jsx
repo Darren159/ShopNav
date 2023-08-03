@@ -24,16 +24,13 @@ export default function StoreSearch() {
   useEffect(() => {
     const loadStores = async () => {
       try {
-
         // Set loading state to true while fetching data.
         setIsLoading(true);
 
         // Fetch the list of stores in the current mall.
         const storeList = await fetchStoreList(currentMall);
 
-
         if (storeList) {
-
           // If the store list is not null or undefined, sort it by store name and update the state.
           storeList.sort((a, b) =>
             a.name.toLowerCase().localeCompare(b.name.toLowerCase())
@@ -43,13 +40,11 @@ export default function StoreSearch() {
           setFilteredData(storeList);
         }
       } catch (error) {
-
         // If an error occurs, show an alert with the error message.
         Alert.alert("Error", error.message, [{ text: "OK" }], {
           cancelable: false,
         });
       } finally {
-
         // Set loading state to false after fetching data.
         setIsLoading(false);
       }

@@ -219,6 +219,7 @@ exports[`DeveloperAccess renders correctly 1`] = `
         style={
           {
             "marginBottom": 5,
+            "zIndex": 1000,
           }
         }
       >
@@ -231,6 +232,8 @@ exports[`DeveloperAccess renders correctly 1`] = `
               "borderWidth": 1,
               "flexDirection": "row",
               "paddingLeft": 5,
+              "width": "100%",
+              "zIndex": 5,
             }
           }
         >
@@ -258,6 +261,8 @@ exports[`DeveloperAccess renders correctly 1`] = `
             "borderWidth": 1,
             "flexDirection": "row",
             "paddingLeft": 5,
+            "width": "100%",
+            "zIndex": 5,
           }
         }
       >
