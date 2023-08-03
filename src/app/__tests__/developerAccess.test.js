@@ -18,6 +18,8 @@ jest.mock("../../services/uploadSvg");
 
 jest.mock("../../services/uploadStore");
 
+jest.mock("../../services/fetchStoreList");
+
 const setCurrentMallMock = jest.fn();
 
 const mockedContextValue = {

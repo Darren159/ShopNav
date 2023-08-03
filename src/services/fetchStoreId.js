@@ -1,14 +1,16 @@
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../../firebaseConfig";
 
-// This asynchronous function fetches the ID of a store in a given mall based on its name. 
-// Parameters: 
+// This asynchronous function fetches the ID of a store in a given mall based on its name.
+// Parameters:
 // currentMall - The ID or name of the mall where the store is located
 // storeName - The name of the store whose ID needs to be fetched
 export default async function fetchStoreId(currentMall, storeName) {
-
   // Format the store name by replacing spaces with hyphens and converting to lowercase
-  const formattedStoreName = `${storeName.replace(/\s/g, "-").toLowerCase()}`;
+  const formattedStoreName = `${storeName
+    .replace(/[^\w\s]/g, "")
+    .replace(/\s/g, "-")
+    .toLowerCase()}`;
 
   // Construct two potential document IDs (the combination of mall and store names can be in two orders)
   const documentID1 = `${currentMall.toLowerCase()}-${formattedStoreName}`;
@@ -32,6 +34,6 @@ export default async function fetchStoreId(currentMall, storeName) {
     return docSnap2.id;
   }
 
-   // If neither document exists (i.e., the store name is invalid), throw an error
+  // If neither document exists (i.e., the store name is invalid), throw an error
   throw new Error("Invalid Store Name");
 }

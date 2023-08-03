@@ -39,6 +39,7 @@ describe("Floorplan", () => {
         currentMall={currentMall}
         currentLevel={currentLevel}
         path={path}
+        storeList={storeList}
       />
     );
 
@@ -62,6 +63,7 @@ describe("Floorplan", () => {
         currentMall={currentMall}
         currentLevel={currentLevel}
         path={path}
+        storeList={storeList}
       />
     );
 
@@ -93,6 +95,7 @@ describe("Floorplan", () => {
         currentMall={currentMall}
         currentLevel={currentLevel}
         path={path}
+        storeList={storeList}
       />
     );
 
@@ -108,6 +111,7 @@ describe("Floorplan", () => {
         currentMall={currentMall}
         currentLevel={currentLevel}
         path={path}
+        storeList={storeList}
       />
     );
 

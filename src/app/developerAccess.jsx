@@ -1,5 +1,5 @@
-import { useState, useContext } from "react";
-import { View, StyleSheet, Text } from "react-native";
+import { useState, useContext, useEffect } from "react";
+import { Alert, View, StyleSheet, Text } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import * as DocumentPicker from "expo-document-picker";
 import { MallContext } from "./context/mallProvider";
@@ -9,30 +9,41 @@ import uploadSvg from "../services/uploadSvg";
 import SelectFile from "../components/SelectFile";
 import uploadStore from "../services/uploadStore";
 import fetchStoreId from "../services/fetchStoreId";
+import fetchStoreList from "../services/fetchStoreList";
 
-// The DeveloperAccess function component provides a user interface and functionality 
+// The DeveloperAccess function component provides a user interface and functionality
 // for developers to upload promotion information and SVG images related to specific stores.
 export default function DeveloperAccess() {
-
-  // Current mall context.
   const { currentMall } = useContext(MallContext);
-
-  // Promotion info state.
   const [promoInfo, setPromoInfo] = useState("");
-
-  // Store name state.
   const [storeName, setStoreName] = useState("");
-
-  // Filename state for uploaded SVG.
   const [filename, setFilename] = useState("");
-
-  // SVG URI state.
   const [svgUri, setSvgUri] = useState("");
+  const [storeList, setStoreList] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      if (currentMall) {
+        try {
+          // Fetch the list of stores at the current mall and level.
+          const stores = await fetchStoreList(currentMall);
+
+          // Update storeList state.
+          setStoreList(stores);
+        } catch (error) {
+          // On catch, alert the user with an error message.
+          Alert.alert("Error", error.message, [{ text: "OK" }], {
+            cancelable: false,
+          });
+        }
+      }
+    };
+    fetchData();
+  }, [currentMall]);
 
   // Async function to select a file from the user's device.
   const selectFile = async () => {
     const result = await DocumentPicker.getDocumentAsync({
-
       // Only SVG images are allowed.
       type: "image/svg+xml",
 
@@ -40,7 +51,6 @@ export default function DeveloperAccess() {
       copyToCacheDirectory: true,
     });
     if (result.type !== "cancel") {
-
       // Set the filename state to the selected file's name.
       setFilename(result.assets[0].name);
 
@@ -81,11 +91,12 @@ export default function DeveloperAccess() {
           <View style={styles.container}>
             <Text style={styles.title}>Store Info</Text>
             <View style={styles.inputContainer}>
-              <View style={{ marginBottom: 5 }}>
+              <View style={{ marginBottom: 5, zIndex: 1000 }}>
                 <StoreInput
                   storeName={storeName}
                   setStoreName={setStoreName}
                   placeholder="Enter Store"
+                  storeList={storeList}
                 />
               </View>
               <StoreInput

@@ -9,21 +9,17 @@ import Animated, {
 } from "react-native-reanimated";
 import { router } from "expo-router";
 import fetchSvgUrl from "../services/fetchSvgUrl";
-import fetchStoreList from "../services/fetchStoreList";
 
 // The Floorplan function component displays the floorplan of a specified mall and level.
-export default function Floorplan({ currentMall, currentLevel, path }) {
-  // The URL of the SVG to display.
+export default function Floorplan({
+  currentMall,
+  currentLevel,
+  path,
+  storeList,
+}) {
   const [svgUrl, setSvgUrl] = useState(null);
-
-  // A flag indicating whether the component is currently loading data.
   const [isLoading, setIsLoading] = useState(false);
-
-  // A flag that triggers a re-fetch of data when toggled.
   const [reload, setReload] = useState(false);
-
-  // An array of stores at the current mall and level.
-  const [storeList, setStoreList] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -36,12 +32,6 @@ export default function Floorplan({ currentMall, currentLevel, path }) {
 
         // Update svgUrl state.
         setSvgUrl(url);
-
-        // Fetch the list of stores at the current mall and level.
-        const stores = await fetchStoreList(currentMall);
-
-        // Update storeList state.
-        setStoreList(stores);
       } catch (err) {
         // If an error occurs, alert the user and offer a reload option.
         Alert.alert(
@@ -185,6 +175,7 @@ Floorplan.propTypes = {
       }).isRequired,
     })
   ).isRequired,
+  storeList: PropTypes.arrayOf(PropTypes.shape).isRequired,
 };
 
 const styles = StyleSheet.create({
