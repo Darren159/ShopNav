@@ -4,21 +4,24 @@ import {
   Alert,
   StyleSheet,
   SafeAreaView,
+  View,
 } from "react-native";
 import SearchBar from "../components/SearchBar";
-import { MallContext } from "./context/mallProvider";
 import StoreList from "../components/StoreList";
+import CategoryPicker from "../components/CategoryPicker";
+import { MallContext } from "./context/mallProvider";
 import fetchStoreList from "../services/fetchStoreList";
 import handleSearch from "../utils/handleSearch";
 
 // The StoreSearch function component displays a list of stores in a specific mall.
 // It also provides a search functionality to filter the list of stores based on a search query.
 export default function StoreSearch() {
-  const { currentMall } = useContext(MallContext); // The current mall context.
-  const [query, setQuery] = useState(""); // The search query.
-  const [fullData, setFullData] = useState([]); // The complete list of stores.
-  const [filteredData, setFilteredData] = useState([]); // The list of stores after applying the search filter.
-  const [isLoading, setIsLoading] = useState(false); // A flag indicating whether the component is currently loading data.export default function StoreSearch() {
+  const { currentMall } = useContext(MallContext);
+  const [query, setQuery] = useState("");
+  const [fullData, setFullData] = useState([]);
+  const [filteredData, setFilteredData] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState("");
 
   // Fetch the list of stores for the current mall when the mall changes
   useEffect(() => {
@@ -56,16 +59,22 @@ export default function StoreSearch() {
   }, [currentMall]);
 
   useEffect(() => {
-    if (query) {
-      setFilteredData(handleSearch(fullData, query));
+    if (query || selectedCategory) {
+      setFilteredData(handleSearch(fullData, query, selectedCategory));
     } else {
       setFilteredData(fullData);
     }
-  }, [query, fullData]);
+  }, [query, fullData, selectedCategory]);
 
   return (
     <SafeAreaView style={styles.mainContainer}>
-      <SearchBar onSearch={setQuery} />
+      <View style={styles.barContainer}>
+        <SearchBar onSearch={setQuery} />
+        <CategoryPicker
+          selectedCategory={selectedCategory}
+          setSelectedCategory={setSelectedCategory}
+        />
+      </View>
       {isLoading ? (
         <ActivityIndicator
           size="large"
@@ -81,6 +90,10 @@ export default function StoreSearch() {
 }
 
 const styles = StyleSheet.create({
+  barContainer: {
+    marginTop: 10,
+    flexDirection: "row",
+  },
   loadingContainer: {
     flex: 1,
   },

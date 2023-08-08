@@ -5,13 +5,11 @@ import { MallContext } from "../app/context/mallProvider";
 
 // The MallPicker function component allows the user to select a mall from a dropdown menu.
 export default function MallPicker() {
-
   // State to control the visibility of the modal.
   const [modalVisible, setModalVisible] = useState(false);
 
   // Access the mall-related context.
   const { currentMall, setCurrentMall, malls } = useContext(MallContext);
-
 
   const handleSelect = (value) => {
     setCurrentMall(value); // Set the current mall.

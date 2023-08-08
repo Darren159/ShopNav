@@ -4,12 +4,11 @@ import PropTypes from "prop-types";
 
 // The SearchBar function component renders a search bar that allows the user to enter a search query. Used for Store Search page here
 export default function SearchBar({ onSearch }) {
-
   // Define the searchQuery state and its corresponding setter function.
   const [searchQuery, setSearchQuery] = useState("");
 
   return (
-    <View>
+    <View style={{ flex: 1 }}>
       <TextInput
         style={styles.searchBar}
         placeholder="Search..."
@@ -28,7 +27,6 @@ export default function SearchBar({ onSearch }) {
 
 const styles = StyleSheet.create({
   searchBar: {
-    marginTop: 10,
     paddingLeft: 10,
     borderColor: "grey",
     borderWidth: 1,
