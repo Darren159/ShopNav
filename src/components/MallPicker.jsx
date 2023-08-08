@@ -65,12 +65,13 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+    backgroundColor: 'rgba(0,0,0,0.5)'
   },
   button: { marginLeft: 10 },
   textContainer: {
     height: 40,
     width: 300,
-    borderWidth: 0.5,
+    borderWidth: 0.2,
     justifyContent: "center",
     backgroundColor: "white",
   },
