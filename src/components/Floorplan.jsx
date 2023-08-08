@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useContext, useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { Svg, SvgUri, Line, Path } from "react-native-svg";
 import { ActivityIndicator, Alert, StyleSheet } from "react-native";
@@ -9,14 +9,11 @@ import Animated, {
 } from "react-native-reanimated";
 import { router } from "expo-router";
 import fetchSvgUrl from "../services/fetchSvgUrl";
+import { MallContext } from "../app/context/mallProvider";
 
 // The Floorplan function component displays the floorplan of a specified mall and level.
-export default function Floorplan({
-  currentMall,
-  currentLevel,
-  path,
-  storeList,
-}) {
+export default function Floorplan({ currentLevel, path }) {
+  const { currentMall, storeList } = useContext(MallContext);
   const [svgUrl, setSvgUrl] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [reload, setReload] = useState(false);
@@ -164,7 +161,6 @@ export default function Floorplan({
 }
 
 Floorplan.propTypes = {
-  currentMall: PropTypes.string.isRequired,
   currentLevel: PropTypes.number.isRequired,
   path: PropTypes.arrayOf(
     PropTypes.shape({
@@ -175,7 +171,6 @@ Floorplan.propTypes = {
       }).isRequired,
     })
   ).isRequired,
-  storeList: PropTypes.arrayOf(PropTypes.shape).isRequired,
 };
 
 const styles = StyleSheet.create({

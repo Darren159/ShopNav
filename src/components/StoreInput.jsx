@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useContext, useState, useEffect, useRef } from "react";
 import {
   FlatList,
   TouchableOpacity,
@@ -9,6 +9,7 @@ import {
 } from "react-native";
 import { Feather } from "@expo/vector-icons";
 import PropTypes from "prop-types";
+import { MallContext } from "../app/context/mallProvider";
 
 // This is a functional component representing an input field for a store.
 export default function StoreInput({
@@ -16,8 +17,8 @@ export default function StoreInput({
   setStoreName,
   placeholder,
   icon,
-  storeList,
 }) {
+  const { storeList } = useContext(MallContext);
   const [filteredStores, setFilteredStores] = useState([]);
   const [isDropdownVisible, setDropdownVisible] = useState(false);
 
@@ -109,7 +110,6 @@ StoreInput.propTypes = {
   setStoreName: PropTypes.func.isRequired,
   placeholder: PropTypes.string.isRequired,
   icon: PropTypes.string,
-  storeList: PropTypes.arrayOf(PropTypes.shape).isRequired,
 };
 
 StoreInput.defaultProps = {
