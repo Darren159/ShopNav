@@ -68,7 +68,7 @@ export default function StoreSearch() {
 
   return (
     <SafeAreaView style={styles.mainContainer}>
-      <View style={styles.barContainer}>
+      <View style={styles.searchContainer}>
         <SearchBar onSearch={setQuery} />
         <CategoryPicker
           selectedCategory={selectedCategory}
@@ -90,9 +90,8 @@ export default function StoreSearch() {
 }
 
 const styles = StyleSheet.create({
-  barContainer: {
+  searchContainer: {
     marginTop: 10,
-    flexDirection: "row",
   },
   loadingContainer: {
     flex: 1,

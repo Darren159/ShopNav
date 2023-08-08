@@ -1,5 +1,5 @@
 import { useState, useContext, useEffect } from "react";
-import { Alert, View, StyleSheet, Text } from "react-native";
+import { Alert, View, StyleSheet, Text, TextInput } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import * as DocumentPicker from "expo-document-picker";
 import { MallContext } from "./context/mallProvider";
@@ -91,7 +91,7 @@ export default function DeveloperAccess() {
           <View style={styles.container}>
             <Text style={styles.title}>Store Info</Text>
             <View style={styles.inputContainer}>
-              <View style={{ marginBottom: 5, zIndex: 1000 }}>
+              <View style={{ marginBottom: 5 }}>
                 <StoreInput
                   storeName={storeName}
                   setStoreName={setStoreName}
@@ -99,10 +99,11 @@ export default function DeveloperAccess() {
                   storeList={storeList}
                 />
               </View>
-              <StoreInput
-                storeName={promoInfo}
-                setStoreName={setPromoInfo}
+              <TextInput
+                onChangeText={setPromoInfo}
+                value={promoInfo}
                 placeholder="Input Promo Info"
+                style={styles.textInput}
               />
             </View>
 
@@ -127,6 +128,13 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     margin: 10,
     padding: 10,
+  },
+  textInput: {
+    paddingVertical: 5,
+    borderWidth: 1,
+    borderRadius: 10,
+    paddingLeft: 10,
+    backgroundColor: "#fff",
   },
   inputContainer: {
     padding: 10,

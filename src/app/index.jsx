@@ -119,8 +119,8 @@ export default function Directory() {
             storeList={storeList}
           />
         </View>
-        <View style={{ width: 75 }}>
-          <Text style={{ textAlign: "center" }}>Elevators Only</Text>
+        <View style={styles.actionsContainer}>
+          <Text>Elevators Only</Text>
           <Switch
             trackColor={{ false: "#767577", true: "#81b0ff" }}
             thumbColor={isElevatorOnly ? "#f5dd4b" : "#f4f3f4"}
@@ -180,15 +180,19 @@ const styles = StyleSheet.create({
   safeAreaView: { flex: 1 },
   row: {
     flexDirection: "row",
-    justifyContent: "center",
     flex: 0.15,
     zIndex: 1,
+    marginLeft: 10,
   },
   loadingContainer: { alignItems: "center" },
   largeLoadingContainer: { flex: 1 },
   inputContainer: {
     alignItems: "center",
-    flex: 0.85,
+    flex: 0.7,
+  },
+  actionsContainer: {
+    flex: 0.3,
+    alignItems: "center",
   },
   iconStyle: {
     marginVertical: 5,

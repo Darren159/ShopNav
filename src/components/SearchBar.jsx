@@ -8,7 +8,7 @@ export default function SearchBar({ onSearch }) {
   const [searchQuery, setSearchQuery] = useState("");
 
   return (
-    <View style={{ flex: 1 }}>
+    <View>
       <TextInput
         style={styles.searchBar}
         placeholder="Search..."
@@ -32,6 +32,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 10,
     height: 40,
+    marginBottom: 5,
   },
 });
 

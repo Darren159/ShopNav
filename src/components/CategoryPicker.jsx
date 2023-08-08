@@ -78,17 +78,14 @@ const styles = StyleSheet.create({
   pickerContainer: {
     flexDirection: "row",
     alignItems: "center",
-    marginLeft: 10,
   },
   container: {
     height: 40,
-    width: 175,
     paddingLeft: 10,
     paddingRight: 10,
     borderWidth: 1,
     borderRadius: 10,
     backgroundColor: "#ECEEF0",
-    justifyContent: "space-between",
     flexDirection: "row",
     alignItems: "center",
   },
