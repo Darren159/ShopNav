@@ -26,6 +26,10 @@ const mockedContextValue = {
   currentMall: "Mall 1",
   setCurrentMall: setCurrentMallMock,
   malls: ["Mall 1", "Mall 2", "Mall 3"],
+  storeList: [
+    { id: "1", name: "Store 1" },
+    { id: "2", name: "Store 2" },
+  ],
 };
 
 jest.spyOn(Alert, "alert");

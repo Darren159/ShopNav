@@ -6,8 +6,6 @@ import { MallContext } from "../context/mallProvider";
 import fetchNodeId from "../../services/fetchNodeId";
 import fetchNodes from "../../services/fetchNodes";
 import fetchLevels from "../../services/fetchLevels";
-import fetchStoreList from "../../services/fetchStoreList";
-import fetchMalls from "../../services/fetchMalls";
 
 jest.mock("firebase/auth", () => ({
   onAuthStateChanged: jest.fn(),
@@ -37,14 +35,14 @@ const setCurrentMallMock = jest.fn();
 const mockedContextValue = {
   currentMall: "Mall 1",
   setCurrentMall: setCurrentMallMock,
-  malls: ["Mall 1"],
+  malls: ["Mall 1", "Mall 2", "Mall 3"],
+  storeList: [
+    { id: "1", name: "Store 1" },
+    { id: "2", name: "Store 2" },
+  ],
 };
 
 fetchLevels.mockResolvedValue([1]);
-
-fetchStoreList.mockResolvedValue([{ id: "1", name: "Store 1", level: 1 }]);
-
-fetchMalls.mockResolvedValue();
 
 jest.spyOn(Alert, "alert");
 

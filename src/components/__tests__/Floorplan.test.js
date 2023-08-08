@@ -2,45 +2,46 @@ import { Alert } from "react-native";
 import { render, waitFor } from "@testing-library/react-native";
 import { SvgUri } from "react-native-svg";
 import fetchSVGUrl from "../../services/fetchSvgUrl";
-import fetchStoreList from "../../services/fetchStoreList";
 import Floorplan from "../Floorplan";
+import { MallContext } from "../../app/context/mallProvider";
 
-jest.mock("../../services/fetchSVGUrl");
+jest.mock("../../services/fetchMalls");
 
 jest.mock("../../services/fetchStoreList");
+
+jest.mock("../../services/fetchSVGUrl");
 
 jest.mock("react-native-svg");
 
 jest.spyOn(Alert, "alert");
 
-const currentMall = "testMall";
+const setCurrentMallMock = jest.fn();
+
+const mockedContextValue = {
+  currentMall: "Mall 1",
+  setCurrentMall: setCurrentMallMock,
+  malls: ["Mall 1", "Mall 2", "Mall 3"],
+  storeList: [
+    { id: "1", name: "Store 1" },
+    { id: "2", name: "Store 2" },
+  ],
+};
+
 const currentLevel = 1;
 const path = [
   { level: 1, coordinates: { x: 0, y: 0 } },
   { level: 1, coordinates: { x: 100, y: 100 } },
 ];
 const svgUrl = "http://example.com/test.svg";
-const storeList = [
-  {
-    id: "1",
-    level: 1,
-    coordinates: "M0,0 L100,100",
-    name: "Store 1",
-  },
-];
 
 describe("Floorplan", () => {
   it("renders the floorplan with the correct uri", async () => {
     fetchSVGUrl.mockResolvedValue(svgUrl);
-    fetchStoreList.mockResolvedValue(storeList);
 
     render(
-      <Floorplan
-        currentMall={currentMall}
-        currentLevel={currentLevel}
-        path={path}
-        storeList={storeList}
-      />
+      <MallContext.Provider value={mockedContextValue}>
+        <Floorplan currentLevel={currentLevel} path={path} />{" "}
+      </MallContext.Provider>
     );
 
     // Verify that SVG map is displayed with correct URL
@@ -56,15 +57,11 @@ describe("Floorplan", () => {
     const error = new Error("fetch error");
 
     fetchSVGUrl.mockRejectedValue(error);
-    fetchStoreList.mockRejectedValue(error);
 
     const { rerender } = render(
-      <Floorplan
-        currentMall={currentMall}
-        currentLevel={currentLevel}
-        path={path}
-        storeList={storeList}
-      />
+      <MallContext.Provider value={mockedContextValue}>
+        <Floorplan currentLevel={currentLevel} path={path} />
+      </MallContext.Provider>
     );
 
     // Ensure alert has been shown
@@ -84,19 +81,15 @@ describe("Floorplan", () => {
 
     // Simulate a successful fetch after reload
     fetchSVGUrl.mockResolvedValue("svgUrl");
-    fetchStoreList.mockResolvedValue([storeList]);
 
     // Call the 'onPress' function for the 'Reload' button
     await waitFor(() => reloadButton.onPress());
 
     // Check that the component is re-rendered after reload
     rerender(
-      <Floorplan
-        currentMall={currentMall}
-        currentLevel={currentLevel}
-        path={path}
-        storeList={storeList}
-      />
+      <MallContext.Provider value={mockedContextValue}>
+        <Floorplan currentLevel={currentLevel} path={path} />{" "}
+      </MallContext.Provider>
     );
 
     expect(fetchSVGUrl).toHaveBeenCalledTimes(2);
@@ -104,15 +97,11 @@ describe("Floorplan", () => {
 
   it("shows loading indicator while fetching data", async () => {
     fetchSVGUrl.mockResolvedValue(svgUrl);
-    fetchStoreList.mockResolvedValue(storeList);
 
     const { getByTestId, queryByTestId } = render(
-      <Floorplan
-        currentMall={currentMall}
-        currentLevel={currentLevel}
-        path={path}
-        storeList={storeList}
-      />
+      <MallContext.Provider value={mockedContextValue}>
+        <Floorplan currentLevel={currentLevel} path={path} />{" "}
+      </MallContext.Provider>
     );
 
     // The loading indicator should be in the document

@@ -16,7 +16,6 @@ import StoreInput from "../components/StoreInput";
 import Floorplan from "../components/Floorplan";
 import LevelButtons from "../components/LevelButtons";
 import fetchNodeId from "../services/fetchNodeId";
-import fetchStoreList from "../services/fetchStoreList";
 
 // The Directory function component provides a user interface and functionality
 // for fetching and displaying a directory of a specific mall.
@@ -29,7 +28,6 @@ export default function Directory() {
   const [graph, setGraph] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const [isElevatorOnly, setIsElevatorOnly] = useState(false);
-  const [storeList, setStoreList] = useState([]);
 
   // UseEffect to fetch nodes based on the current mall context.
   useEffect(() => {
@@ -44,12 +42,6 @@ export default function Directory() {
 
           // Reset path state.
           setPath([]);
-
-          // Fetch the list of stores at the current mall and level.
-          const stores = await fetchStoreList(currentMall);
-
-          // Update storeList state.
-          setStoreList(stores);
         } catch (error) {
           // On catch, alert the user with an error message.
           Alert.alert("Error", error.message, [{ text: "OK" }], {
@@ -103,7 +95,6 @@ export default function Directory() {
             storeName={startStoreName}
             setStoreName={setStartStoreName}
             placeholder="Enter starting point"
-            storeList={storeList}
           />
           <Entypo
             name="dots-three-vertical"
@@ -116,11 +107,10 @@ export default function Directory() {
             storeName={endStoreName}
             setStoreName={setEndStoreName}
             placeholder="Enter destination"
-            storeList={storeList}
           />
         </View>
-        <View style={{ width: 75 }}>
-          <Text style={{ textAlign: "center" }}>Elevators Only</Text>
+        <View style={styles.actionsContainer}>
+          <Text>Elevators Only</Text>
           <Switch
             trackColor={{ false: "#767577", true: "#81b0ff" }}
             thumbColor={isElevatorOnly ? "#f5dd4b" : "#f4f3f4"}
@@ -151,15 +141,9 @@ export default function Directory() {
       {currentMall ? (
         <>
           <View style={styles.mapContainer}>
-            <Floorplan
-              currentMall={currentMall}
-              currentLevel={currentLevel}
-              path={path}
-              storeList={storeList}
-            />
+            <Floorplan currentLevel={currentLevel} path={path} />
           </View>
           <LevelButtons
-            currentMall={currentMall}
             currentLevel={currentLevel}
             setCurrentLevel={setCurrentLevel}
           />
@@ -180,15 +164,19 @@ const styles = StyleSheet.create({
   safeAreaView: { flex: 1 },
   row: {
     flexDirection: "row",
-    justifyContent: "center",
     flex: 0.15,
     zIndex: 1,
+    marginLeft: 10,
   },
   loadingContainer: { alignItems: "center" },
   largeLoadingContainer: { flex: 1 },
   inputContainer: {
     alignItems: "center",
-    flex: 0.85,
+    flex: 0.7,
+  },
+  actionsContainer: {
+    flex: 0.3,
+    alignItems: "center",
   },
   iconStyle: {
     marginVertical: 5,
