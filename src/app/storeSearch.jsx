@@ -29,9 +29,9 @@ export default function StoreSearch() {
       );
     }
     if (query || selectedCategory) {
-      setFilteredData(handleSearch(storeList, query, selectedCategory));
+      setFilteredData(handleSearch(sortedStores, query, selectedCategory));
     } else {
-      setFilteredData(storeList);
+      setFilteredData(sortedStores);
     }
   }, [query, storeList, selectedCategory]);
 
