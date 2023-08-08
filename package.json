@@ -24,7 +24,7 @@
     "expo-file-system": "~15.4.2",
     "expo-linking": "~5.0.2",
     "expo-router": "2.0.1",
-    "expo-splash-screen": "~0.20.4",
+    "expo-splash-screen": "~0.20.5",
     "expo-status-bar": "~1.6.0",
     "firebase": "^10.0.0",
     "firebase-admin": "^11.9.0",
