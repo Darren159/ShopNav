@@ -17,6 +17,7 @@ export default function StoreInput({
   setStoreName,
   placeholder,
   icon,
+  zIndex,
 }) {
   const { storeList } = useContext(MallContext);
   const [filteredStores, setFilteredStores] = useState([]);
@@ -44,7 +45,7 @@ export default function StoreInput({
     }
   }, [storeList, storeName]);
   return (
-    <View>
+    <View style={{ zIndex }}>
       <View style={styles.inputContainer}>
         <Feather name={icon} size={24} color="black" />
         <TextInput
@@ -99,7 +100,6 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 10,
     borderColor: "#ccc",
-    zIndex: 5,
   },
   dropdownText: {
     padding: 5,
@@ -110,6 +110,7 @@ StoreInput.propTypes = {
   setStoreName: PropTypes.func.isRequired,
   placeholder: PropTypes.string.isRequired,
   icon: PropTypes.string,
+  zIndex: PropTypes.number.isRequired,
 };
 
 StoreInput.defaultProps = {

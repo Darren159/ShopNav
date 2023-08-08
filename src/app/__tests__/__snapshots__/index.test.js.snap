@@ -34,7 +34,13 @@ exports[`Directory renders correctly 1`] = `
         }
       }
     >
-      <View>
+      <View
+        style={
+          {
+            "zIndex": 2,
+          }
+        }
+      >
         <View
           style={
             {
@@ -64,7 +70,13 @@ exports[`Directory renders correctly 1`] = `
         </View>
       </View>
       <Text />
-      <View>
+      <View
+        style={
+          {
+            "zIndex": 1,
+          }
+        }
+      >
         <View
           style={
             {

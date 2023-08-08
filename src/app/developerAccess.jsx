@@ -74,6 +74,7 @@ export default function DeveloperAccess() {
                   storeName={storeName}
                   setStoreName={setStoreName}
                   placeholder="Enter Store"
+                  zIndex={1}
                 />
               </View>
               <TextInput
