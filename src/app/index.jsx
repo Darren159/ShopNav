@@ -95,6 +95,7 @@ export default function Directory() {
             storeName={startStoreName}
             setStoreName={setStartStoreName}
             placeholder="Enter starting point"
+            zIndex={2}
           />
           <Entypo
             name="dots-three-vertical"
@@ -107,6 +108,7 @@ export default function Directory() {
             storeName={endStoreName}
             setStoreName={setEndStoreName}
             placeholder="Enter destination"
+            zIndex={1}
           />
         </View>
         <View style={styles.actionsContainer}>

@@ -222,7 +222,13 @@ exports[`DeveloperAccess renders correctly 1`] = `
           }
         }
       >
-        <View>
+        <View
+          style={
+            {
+              "zIndex": 1,
+            }
+          }
+        >
           <View
             style={
               {

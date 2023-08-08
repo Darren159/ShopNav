@@ -26,6 +26,7 @@ describe("StoreInput", () => {
           storeName=""
           setStoreName={jest.fn()}
           placeholder="Store Name"
+          zIndex={1}
         />
       </MallContext.Provider>
     );
@@ -41,6 +42,7 @@ describe("StoreInput", () => {
           storeName=""
           setStoreName={setStoreNameMock}
           placeholder="Store Name"
+          zIndex={1}
         />
       </MallContext.Provider>
     );
