@@ -110,7 +110,7 @@ export default function Floorplan({ currentLevel, path }) {
           style={styles.overlay}
           height="100%"
           width="100%"
-          viewBox="0 0 600 760"
+          viewBox="0 0 628 975"
         >
           {path
             .filter((node) => node.level === currentLevel)
