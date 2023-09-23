@@ -32,7 +32,7 @@ Having a **search function** also makes it easier for users to find specific sho
 
 Additionally, our **personalized recommendation** feature introduces users to shops they may be interested in, enhancing their shopping experience and potentially increasing foot traffic for stores. This solution makes shopping trips more efficient and enjoyable, benefiting both shoppers and stores.
 
-## Core Features & User Stories(UNSURE OF STORIES)
+## Core Features & User Stories
 
 1. **Mall Directory**: As a user, I want to be able to see the layout of the mall so that I know what are the stores available.
 2. **Mall Navigation**: As a user, I want to be able to navigate the mall efficiently so I can spend less time finding the stores I need.
